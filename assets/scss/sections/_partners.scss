@@ -1,0 +1,78 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.partners {
+    &--section {
+        background: $bg-gradient;
+    }
+    &__content {
+        max-width: 1440px;
+        padding: 40px 0;
+
+        @include media-query(breakpoint-md) {
+            padding: 64px 0;
+        }
+        @include media-query(breakpoint-xl) {
+            padding: 90px 0;
+        }
+        @include media-query(breakpoint-xxl-2) {
+            padding: 90px 0 100px;
+        }
+    }
+
+    &__header {
+        max-width: 1164px;
+    }
+
+    &__slider {
+        &__item {
+            margin-bottom: 20px;
+            @include media-query(breakpoint-md) {
+                margin-bottom: 32px;
+            }
+            @include media-query(breakpoint-xxl) {
+                margin-bottom: 48px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    & .swiper {
+        &-wrapper {
+            transition-timing-function: linear;
+        }
+    }
+
+    & .card {
+        &--partner {
+            width: 200px;
+            height: 80px;
+
+            @include media-query(breakpoint-lg) {
+                width: 240px;
+                height: 96px;
+            }
+            @include media-query(breakpoint-xxl-2) {
+                width: 276px;
+                height: 110px;
+            }
+
+            img {
+                max-width: 160px;
+                max-height: 56px;
+
+                @include media-query(breakpoint-lg) {
+                    max-width: 192px;
+                    max-height: 72px;
+                }
+                @include media-query(breakpoint-xxl-2) {
+                    max-width: 224px;
+                    max-height: 88px;
+                }
+            }
+        }
+    }
+}
