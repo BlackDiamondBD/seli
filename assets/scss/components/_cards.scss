@@ -2,301 +2,365 @@
 @use '../base/' as *;
 
 .card {
-    // Explore-houses-cars- Card-start
-    border: none;
-    &--explore {
-        border-radius: 10px;
-        background-color: #fff;
-        box-shadow: 0px 4px 4px 0px #9999991a;
+  // Explore-houses-cars- Card-start
+  border: none;
+  &--explore {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px 0px #9999991a;
 
-        & .card {
-            &__thumb {
-                position: relative;
-                width: 100%;
-                height: 118px;
-                @include media-query(breakpoint-md) {
-                    height: 230px;
-                }
-                & .wishlistBtn {
-                    width: 30px;
-                    height: 30px;
-                    background: #0000004d;
-                    border-radius: 50%;
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    backdrop-filter: blur(14px);
-                    position: absolute;
-                    top: 10px;
-                    right: 10px;
-                    @include media-query(breakpoint-md) {
-                        top: 11px;
-                        right: 19px;
-                    }
-                }
-                &-img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: center;
-                    border-radius: 10px;
-                }
-            }
-            &__content {
-                padding: 10px 10px;
-                @include media-query(breakpoint-md) {
-                    padding: 15px 15px;
-                }
-                &-info {
-                    margin-bottom: 5px;
-                    @include media-query(breakpoint-md) {
-                        margin-bottom: 20px;
-                    }
-                    & span.price {
-                        font-weight: bold;
-                        color: $primary;
-                        font-size: 16px;
-                        @include media-query(breakpoint-md) {
-                            font-size: 20px;
-                        }
-                    }
-                    & .message {
-                        padding: 0px;
-                        line-height: 1;
-                        border: none;
-                        background-color: transparent;
-                        & svg {
-                            max-width: 20px;
-                            max-height: 20px;
-                            @include media-query(breakpoint-md) {
-                                max-width: 24px;
-                                max-height: 24px;
-                            }
-                        }
-                    }
-                    & .btn {
-                        padding: 9px 12px;
-                        font-size: 12px;
-                        font-weight: 600;
-                        height: auto;
-                        min-width: inherit;
-                    }
-                }
-                &-text {
-                    margin-bottom: 10px;
-                    @include media-query(breakpoint-md) {
-                        margin-bottom: 20px;
-                    }
-                    & h4 {
-                        margin-bottom: 4px;
-                        @include media-query(breakpoint-md) {
-                            margin-bottom: 6px;
-                        }
-                        & a {
-                            font-size: 12px;
-                            font-weight: bold;
-                            color: $text-black;
-                            display: block;
-                            text-decoration: none;
-                            @include media-query(breakpoint-md) {
-                                font-size: 16px;
-                            }
-                        }
-                    }
-                    & .location {
-                        display: inline-flex;
-                        align-items: center;
-                        gap: 8px;
-                        font-size: 12px;
-                        font-weight: 500;
-                        color: $dark-gray;
-                        @include media-query(breakpoint-md) {
-                            font-size: 14px;
-                            font-weight: 600;
-                        }
-                        & span.icon svg {
-                            max-width: 14px;
-                            max-height: 14px;
-                            @include media-query(breakpoint-md) {
-                                max-width: 18px;
-                                max-height: 18px;
-                            }
-                        }
-                    }
-                }
-                &-meta {
-                    padding-top: 10px;
-                    border-top: 1px solid $cool-gray;
-                    @include media-query(breakpoint-md) {
-                        padding-top: 20px;
-                    }
-                    & ul {
-                        margin: 0;
-                        padding: 0;
-                        display: flex;
-                        align-items: center;
-                        gap: 6px 10px;
-                        flex-wrap: wrap;
-                        & li {
-                            font-size: 12px;
-                            font-weight: 500;
-                            color: $dark-gray;
-                            line-height: 1;
-                            display: inline-flex;
-                            align-items: center;
-                            gap: 8px;
-                            &:not(:last-child) {
-                                padding-right: 10px;
-                                border-right: 1px solid $cool-gray;
-                                @include media-query(breakpoint-lg) {
-                                    padding-right: 7px;
-                                }
-                            }
-                            @include media-query(breakpoint-md) {
-                                font-size: 14px;
-                            }
-                            @include media-query(breakpoint-lg) {
-                                gap: 6px;
-                            }
-                            @include media-query(breakpoint-xxl) {
-                                font-size: 14px;
-                            }
-                            & span.icon {
-                                & img {
-                                    max-width: 14px;
-                                    max-height: 14px;
-                                    @include media-query(breakpoint-md) {
-                                        max-width: 18px;
-                                        max-height: 18px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+    & .card {
+      &__thumb {
+        position: relative;
+        width: 100%;
+        height: 118px;
+        @include media-query(breakpoint-md) {
+          height: 230px;
         }
-    }
-    // Explore-houses-cars- Card---end
-
-    // Service Cards Css Start ====
-    &--service {
-        background-color: $white-color;
-        padding: 7px 0px;
-        border-radius: 15px;
-        @include media-query(breakpoint-xl) {
-            padding: 11px 0px;
-            border-radius: 20px;
+        & .wishlistBtn {
+          width: 30px;
+          height: 30px;
+          background: #0000004d;
+          border-radius: 50%;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          backdrop-filter: blur(14px);
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          transition: all 0.3s ease;
+          &:hover {
+            background-color: #0000008c;
+          }
+          @include media-query(breakpoint-md) {
+            top: 11px;
+            right: 19px;
+          }
         }
-        & .card {
-            &__thumb {
-                position: relative;
-                &-img {
-                    width: 100%;
-                    height: 295px;
-                    border-radius: 15px;
-                    @include media-query(breakpoint-md) {
-                        height: 360px;
-                    }
-                    @include media-query(breakpoint-xxl) {
-                        height: 460px;
-                    }
-                }
-                &-info {
-                    max-width: 212px;
-                    background-color: $white-color;
-                    padding: 10px 10px;
-                    border-radius: 15px;
-                    position: absolute;
-                    left: 12px;
-                    bottom: 12px;
-                    @include media-query(breakpoint-md) {
-                        padding: 17px 18px 25px 21px;
-                        border-radius: 15px;
-                        max-width: 300px;
-                        bottom: 10px;
-                        left: 8px;
-                    }
-                    @include media-query(breakpoint-xxl) {
-                        padding: 17px 18px 25px 21px;
-                        border-radius: 20px;
-                        max-width: 358px;
-                        bottom: 10px;
-                        left: 8px;
-                    }
-                    & h5 {
-                        color: #000;
-                        font-size: 15px;
-                        font-weight: 600;
-                        margin-bottom: 6px;
-                        @include media-query(breakpoint-md) {
-                            font-size: 18px;
-                            line-height: 1;
-                            margin-bottom: 10px;
-                        }
-                        @include media-query(breakpoint-xxl) {
-                            font-size: 25px;
-                            line-height: 1;
-                            margin-bottom: 12px;
-                        }
-                    }
-                    & p {
-                        font-size: 12px;
-                        line-height: 14px;
-                        color: $text-black;
-                        font-weight: 700;
-                        line-height: 14px;
-                        @include media-query(breakpoint-md) {
-                            font-size: 13px;
-                            line-height: 22px;
-                            font-weight: 500;
-                        }
-                        @include media-query(breakpoint-xxl) {
-                            font-size: 16px;
-                            line-height: 24px;
-                            font-weight: 500;
-                        }
-                    }
-                }
-            }
+        &-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 10px;
         }
-    }
-    // Service Cards Css   end ====
-
-    // Testimonial Card Start
-    &--testimonial {
-        padding: 15px;
-        border-radius: 15px;
-        border: 1px solid $light-gray;
-        background-color: $body-color;
-        @include transition-common;
-
-        &:hover {
-            background-color: $white-color;
-            box-shadow: 0px 4px 14px 0px rgba(153, 153, 153, 0.08);
-            border-color: transparent;
+      }
+      &__content {
+        padding: 10px 10px;
+        @include media-query(breakpoint-md) {
+          padding: 15px 15px;
         }
-
-        & .card {
-            &__para {
-                font-size: 14px;
-                line-height: 1.78;
-            }
-        }
-        .client {
-            gap: 15px;
+        &-info {
+          margin-bottom: 5px;
+          @include media-query(breakpoint-md) {
             margin-bottom: 20px;
-
-            &__name {
-                font-size: 16px;
-                margin-bottom: 10px;
+          }
+          & span.price {
+            font-weight: bold;
+            color: $primary;
+            font-size: 16px;
+            @include media-query(breakpoint-md) {
+              font-size: 20px;
             }
-
-            &__thumb {
-                width: 60px;
-                height: 60px;
+          }
+          & .message {
+            padding: 0px;
+            line-height: 1;
+            border: none;
+            background-color: transparent;
+            & svg {
+              max-width: 20px;
+              max-height: 20px;
+              @include media-query(breakpoint-md) {
+                max-width: 24px;
+                max-height: 24px;
+              }
             }
+          }
+          & .btn {
+            padding: 9px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            height: auto;
+            min-width: inherit;
+          }
         }
+        &-text {
+          margin-bottom: 10px;
+          @include media-query(breakpoint-md) {
+            margin-bottom: 20px;
+          }
+          & h4 {
+            margin-bottom: 4px;
+            @include media-query(breakpoint-md) {
+              margin-bottom: 6px;
+            }
+            & a {
+              font-size: 12px;
+              font-weight: bold;
+              color: $text-black;
+              display: block;
+              text-decoration: none;
+              @include media-query(breakpoint-md) {
+                font-size: 16px;
+              }
+            }
+          }
+          & .location {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 500;
+            color: $dark-gray;
+            @include media-query(breakpoint-md) {
+              font-size: 14px;
+              font-weight: 600;
+            }
+            & span.icon svg {
+              max-width: 14px;
+              max-height: 14px;
+              @include media-query(breakpoint-md) {
+                max-width: 18px;
+                max-height: 18px;
+              }
+            }
+          }
+        }
+        &-meta {
+          padding-top: 10px;
+          border-top: 1px solid $cool-gray;
+          @include media-query(breakpoint-md) {
+            padding-top: 20px;
+          }
+          & ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 6px 0px;
+            flex-wrap: wrap;
+            & li {
+              font-size: 12px;
+              font-weight: 500;
+              color: $dark-gray;
+              line-height: 1;
+              display: inline-flex;
+              align-items: center;
+              gap: 8px;
+              position: relative;
+              padding: 0px 8px;
+              &:first-child {
+                padding-left: 0px !important;
+              }
+              &:last-child {
+                padding-right: 0px !important;
+              }
+              &:not(:last-child) {
+                &::after {
+                  position: absolute;
+                  right: 0;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  content: '';
+                  width: 1px;
+                  height: 14px;
+                  background-color: $dark-gray;
+                }
+                @include media-query(breakpoint-md) {
+                  padding: 0px 10px;
+                }
+                @include media-query(breakpoint-xxl) {
+                  padding: 0px 12px;
+                }
+              }
+              @include media-query(breakpoint-md) {
+                font-size: 14px;
+              }
+              @include media-query(breakpoint-lg) {
+                gap: 6px;
+              }
+              @include media-query(breakpoint-xxl) {
+                font-size: 14px;
+              }
+              & span.icon {
+                & img {
+                  max-width: 14px;
+                  max-height: 14px;
+                  @include media-query(breakpoint-md) {
+                    max-width: 18px;
+                    max-height: 18px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
-    // Testimonial Card End
+  }
+  // Explore-houses-cars- Card---end
+
+  // Service Cards Css Start ====
+  &--service {
+    background-color: $white-color;
+    padding: 7px 0px;
+    border-radius: 15px;
+    @include media-query(breakpoint-xl) {
+      padding: 11px 0px;
+      border-radius: 20px;
+    }
+    & .card {
+      &__thumb {
+        position: relative;
+        &-img {
+          width: 100%;
+          height: 295px;
+          border-radius: 15px;
+          @include media-query(breakpoint-md) {
+            height: 360px;
+          }
+          @include media-query(breakpoint-xxl) {
+            height: 460px;
+          }
+        }
+        &-info {
+          max-width: 212px;
+          background-color: $white-color;
+          padding: 10px 10px;
+          border-radius: 15px;
+          position: absolute;
+          left: 12px;
+          bottom: 12px;
+          @include media-query(breakpoint-md) {
+            padding: 17px 18px 25px 21px;
+            border-radius: 15px;
+            max-width: 300px;
+            bottom: 10px;
+            left: 8px;
+          }
+          @include media-query(breakpoint-xxl) {
+            padding: 17px 18px 25px 21px;
+            border-radius: 20px;
+            max-width: 358px;
+            bottom: 10px;
+            left: 8px;
+          }
+          & h5 {
+            color: #000;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            @include media-query(breakpoint-md) {
+              font-size: 18px;
+              line-height: 1;
+              margin-bottom: 10px;
+            }
+            @include media-query(breakpoint-xxl) {
+              font-size: 25px;
+              line-height: 1;
+              margin-bottom: 12px;
+            }
+          }
+          & p {
+            font-size: 12px;
+            line-height: 14px;
+            color: $text-black;
+            font-weight: 700;
+            line-height: 14px;
+            @include media-query(breakpoint-md) {
+              font-size: 13px;
+              line-height: 22px;
+              font-weight: 500;
+            }
+            @include media-query(breakpoint-xxl) {
+              font-size: 16px;
+              line-height: 24px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+  // Service Cards Css   end ====
+
+  // About Cards Css Start ===
+  &--about {
+    background-color: transparent;
+    border-radius: 0px;
+    & .card {
+      &__thumbnail {
+        height: 200px;
+        max-width: 216px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        & img {
+          max-width: 100%;
+        }
+      }
+      &__content {
+        & h4 {
+          font-size: 20px;
+          margin-bottom: 10px;
+          @include media-query(breakpoint-lg) {
+            font-size: 25px;
+            margin-bottom: 18px;
+          }
+        }
+        & p {
+          font-size: 14px;
+          line-height: 24px;
+          font-weight: bold;
+          color: $text-black;
+          max-width: 384px;
+          margin: 0 auto;
+          @include media-query(breakpoint-lg) {
+            font-size: 16px;
+            font-weight: 500;
+            max-width: 368px;
+          }
+        }
+      }
+    }
+  }
+  // About Cards Css End ===
+
+  // Testimonial Card Start
+  &--testimonial {
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid $light-gray;
+    background-color: $body-color;
+    @include transition-common;
+
+    &:hover {
+      background-color: $white-color;
+      box-shadow: 0px 4px 14px 0px rgba(153, 153, 153, 0.08);
+      border-color: transparent;
+    }
+
+    & .card {
+      &__para {
+        font-size: 14px;
+        line-height: 1.78;
+      }
+    }
+    .client {
+      gap: 15px;
+      margin-bottom: 20px;
+
+      &__name {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      &__thumb {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+  // Testimonial Card End
 }

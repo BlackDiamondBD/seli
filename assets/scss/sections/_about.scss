@@ -1,0 +1,17 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.about {
+  &--section {
+    padding: 40px 0px 40px;
+    @include media-query(breakpoint-lg) {
+      padding: 120px 0px 120px;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+    @include media-query(breakpoint-lg) {
+      margin-bottom: 60px;
+    }
+  }
+}

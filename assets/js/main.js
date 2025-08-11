@@ -1,32 +1,32 @@
 // Language Switcher
-const langSwitcherBtn = document.getElementById('lang-switcher__btn');
-langSwitcherBtn.addEventListener('click', ()=>{
-    langSwitcherBtn.classList.toggle('active')
+const langSwitcherBtn = document.getElementById('lang-switcher__btn')
+langSwitcherBtn.addEventListener('click', () => {
+  langSwitcherBtn.classList.toggle('active')
 })
 
 // Accordion Left Border
-const accordionItems = document.querySelectorAll('.accordion-item');
-const accordionButtons = document.querySelectorAll('.accordion-button');
+const accordionItems = document.querySelectorAll('.accordion-item')
+const accordionButtons = document.querySelectorAll('.accordion-button')
 
 function updateAccordionExpandedClasses() {
-    accordionItems.forEach((elem) => {
-        const button = elem.querySelector('.accordion-button');
-        if (button && button.getAttribute('aria-expanded') === 'true') {
-            elem.classList.add('expanded');
-        } else {
-            elem.classList.remove('expanded');
-        }
-    });
+  accordionItems.forEach((elem) => {
+    const button = elem.querySelector('.accordion-button')
+    if (button && button.getAttribute('aria-expanded') === 'true') {
+      elem.classList.add('expanded')
+    } else {
+      elem.classList.remove('expanded')
+    }
+  })
 }
-updateAccordionExpandedClasses();
+updateAccordionExpandedClasses()
 
 accordionButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-        setTimeout(() => {
-            updateAccordionExpandedClasses();
-        }, 10);
-    });
-});
+  btn.addEventListener('click', () => {
+    setTimeout(() => {
+      updateAccordionExpandedClasses()
+    }, 10)
+  })
+})
 
 // Slider For Service cards
 const swiper = new Swiper('.service__slider', {
@@ -34,6 +34,7 @@ const swiper = new Swiper('.service__slider', {
   spaceBetween: 20,
   slidesPerView: 1.4,
   centeredSlides: true,
+  speed: 700,
   autoplay: {
     delay: 10000,
     disableOnInteraction: false,

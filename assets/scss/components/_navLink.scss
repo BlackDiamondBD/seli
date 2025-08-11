@@ -1,0 +1,25 @@
+@use '../utils/' as *;
+
+.navlink {
+  &--menu {
+    padding: 14px 0px;
+    margin-bottom: 30px;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    & li {
+      & a {
+        font-size: 18px;
+        font-weight: 600;
+        color: #6a6d6f;
+        text-decoration: none;
+        display: inline-block;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
