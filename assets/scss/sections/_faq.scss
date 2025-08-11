@@ -1,0 +1,23 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.faq {
+    &--section {
+        background-color: $primary;
+    }
+
+    &__content {
+        max-width: 1776px;
+        padding: 40px 0;
+
+		@include media-query(breakpoint-lg) {
+			padding: 48px 0;
+		}
+    }
+
+    &__head {
+        .section__title {
+            line-height: normal;
+        }
+    }
+}

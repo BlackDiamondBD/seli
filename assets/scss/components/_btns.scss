@@ -1,0 +1,152 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: $primary;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: normal;
+    white-space: nowrap;
+    border: 1.5px solid $primary;
+    border-radius: 100px;
+    padding: 10px 24px;
+    cursor: pointer;
+
+    @include media-query(breakpoint-lg) {
+        height: 54px;
+        font-size: 18px;
+        padding: 10px 35px;
+    }
+    @include media-query(breakpoint-xxl) {
+        min-width: 200px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    &:hover {
+        color: $white-color;
+        border-color: $primary;
+        background-color: $primary;
+
+        // For Animation
+        .btn__icon__symbol {
+            animation: arrow-slide 0.6s ease forwards;
+        }
+        .btn__icon__shake {
+            animation: icon-shake 1s linear infinite;
+        }
+    }
+
+    // Button Primary BG
+    &--primary {
+        color: $white-color;
+        border-color: $primary;
+        background-color: $primary;
+
+        &:hover {
+            color: $primary;
+            background-color: transparent;
+        }
+    }
+
+    // Button DM
+    &--dm {
+        padding: 10px;
+        aspect-ratio: 1/1;
+        border: none;
+        background: $bg-gradient;
+        @include media-query(breakpoint-lg) {
+            width: 54px;
+            height: 54px;
+        }
+        @include media-query(breakpoint-xxl) {
+            min-width: auto;
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    // Button Animations CSS
+    &__icon {
+        width: 20px;
+        height: 20px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        @include media-query(breakpoint-lg) {
+            width: 23px;
+            height: 23px;
+        }
+        @include media-query(breakpoint-xxl) {
+            width: 25px;
+            height: 25px;
+        }
+
+        // Arrow Animation CSS
+        &__symbol {
+            display: block;
+            width: 100%;
+            height: 100%;
+            transform: translateX(0);
+        }
+
+        // Shake Animation CSS
+        &__shake {
+            display: inline-block;
+            transform-origin: center;
+            will-change: transform;
+        }
+    }
+}
+
+// Arrow Animation
+@keyframes arrow-slide {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    40% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    41% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+// Shake Animation
+@keyframes icon-shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    15% {
+        transform: rotate(-8deg);
+    }
+    30% {
+        transform: rotate(8deg);
+    }
+    45% {
+        transform: rotate(-6deg);
+    }
+    60% {
+        transform: rotate(6deg);
+    }
+    75% {
+        transform: rotate(-3deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

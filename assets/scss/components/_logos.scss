@@ -1,0 +1,13 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.logo {
+    max-width: 80px;
+
+    @include media-query(breakpoint-lg) {
+        max-width: 100px;
+    }
+    @include media-query(breakpoint-xxl) {
+        max-width: 132px;
+    }
+}

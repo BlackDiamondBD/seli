@@ -1,0 +1,64 @@
+@use '../utils/' as *;
+
+
+// Containers Width
+.container {
+    width: 100%;
+    margin: auto;
+    padding: 0 16px;
+
+    @include media-query(breakpoint-sm) {
+        max-width: 540px;
+    }
+    @include media-query(breakpoint-md) {
+        max-width: 720px;
+    }
+    @include media-query(breakpoint-lg) {
+        max-width: 960px;
+    }
+    @include media-query(breakpoint-xl) {
+        max-width: 1140px;
+    }
+    @include media-query(breakpoint-xxl) {
+        max-width: 1320px;
+    }
+    @include media-query(breakpoint-xxl-2) {
+        max-width: 1472px;
+        width: 100%;
+    }
+}
+
+// colors
+.text {
+  &-black {
+    color: $text-black !important;
+  }
+  &-primary {
+    color: $primary !important;
+  }
+  &-secondary {
+    color: $secondary !important;
+  }
+  &-dark {
+    &-gray {
+      color: $dark-gray !important;
+    }
+  }
+  &-cool-gray {
+    color: $cool-gray !important;
+  }
+  &-light-gray {
+    color: $light-gray !important;
+  }
+}
+
+// section-css
+.section {
+  &__title {
+    & .lead-text {
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+}

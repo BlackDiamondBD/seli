@@ -1,0 +1,46 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.menu {
+    &-offcanvas-show {
+        width: 32px;
+        height: 32px;
+
+        @include media-query(breakpoint-lg) {
+            width: 40px;
+            height: 40px;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .offcanvas {
+        background-color: $body-color;
+    }
+
+    &__item {
+        border-bottom: 1px solid $cool-gray;
+    }
+
+    &__link {
+        color: $dark-gray;
+        font-weight: 600;
+        padding: 14px 0;
+
+        &:hover,
+        &.active {
+            color: $secondary;
+        }
+
+        &.active {
+            font-weight: 700;
+        }
+    }
+
+    &__contact__title {
+        border-bottom: 1px solid $cool-gray;
+    }
+}

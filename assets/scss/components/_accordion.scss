@@ -1,0 +1,141 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.accordion {
+    padding: 0 16px;
+    border-radius: 14px;
+    box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.08);
+    background-color: $white-color;
+
+    @include media-query(breakpoint-sm) {
+        padding: 8px 24px;
+    }
+    @include media-query(breakpoint-xxl) {
+        padding: 12px 32px;
+    }
+    @include media-query(breakpoint-xxl-2) {
+        padding: 14px 50px;
+    }
+
+    &-item {
+        position: relative;
+        padding: 16px 4px;
+        padding-left: 0;
+        @include transition-common;
+
+        @include media-query(breakpoint-xl) {
+            padding: 20px 10px;
+        }
+        @include media-query(breakpoint-xxl-2) {
+            padding: 26px 20px;
+        }
+
+        &.expanded {
+            padding-left: 10px;
+
+            @include media-query(breakpoint-sm) {
+                padding-left: 16px;
+            }
+            @include media-query(breakpoint-xl) {
+                padding: 20px 10px;
+            }
+            @include media-query(breakpoint-xl) {
+                padding: 26px 20px;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 0;
+            background-color: $black-color;
+            @include transition-common;
+        }
+        &.expanded {
+            &::before {
+                height: calc(100% - 32px);
+
+                @include media-query(breakpoint-sm) {
+                }
+            }
+        }
+    }
+
+    &-button {
+        padding: 0;
+        box-shadow: unset;
+        gap: 16px;
+
+        &:focus {
+            box-shadow: unset;
+        }
+
+        &:not(.collapsed) {
+            box-shadow: unset;
+            background-color: transparent;
+        }
+
+        &::after {
+            display: none;
+        }
+
+        &__text {
+            color: $dark-gray;
+            @include transition-common;
+
+			@include media-query(breakpoint-xl) {
+				font-size: 18px;
+			}
+        }
+        &[aria-expanded='true'] .accordion-button__text {
+            color: $black-color;
+        }
+
+        &__icon {
+            width: 20px;
+            height: 20px;
+            position: relative;
+
+            @include media-query(breakpoint-xl) {
+                width: 24px;
+                height: 24px;
+            }
+
+            span {
+                width: 60%;
+                height: 1.25px;
+                display: inline-block;
+                border-radius: 10px;
+                background-color: #282930;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                @include transition-common;
+
+                @include media-query(breakpoint-xl) {
+                    height: 1.5px;
+                }
+            }
+        }
+        &[aria-expanded='true'] .accordion-button__icon .plus {
+            transform: translate(-50%, -50%) rotate(-270deg);
+        }
+        &[aria-expanded='true'] .accordion-button__icon .minus {
+            transform: translate(-50%, -50%) rotate(-180deg);
+        }
+    }
+
+    &-body {
+        padding: 16px 0 0;
+        padding-right: 16px;
+        color: $black-color;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.66;
+    }
+}

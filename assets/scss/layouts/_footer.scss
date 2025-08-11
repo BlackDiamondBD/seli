@@ -1,0 +1,117 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.footer {
+
+    &__content {
+        max-width: 1888px;        padding: 40px 0;
+
+        @include media-query(breakpoint-lg) {
+            padding: 64px 0;
+        }
+        @include media-query(breakpoint-xxl) {
+            padding: 64px 0 50px;
+        }
+    }
+
+    &__wrapper {
+        gap: 32px;
+        margin-bottom: 40px;
+
+        @include media-query(breakpoint-md) {
+            gap: 48px;
+            margin-bottom: 52px;
+        }
+        @include media-query(breakpoint-lg) {
+            margin-bottom: 80px;
+        }
+        @include media-query(breakpoint-xxl) {
+            margin-bottom: 102px;
+        }
+    }
+
+    &__nav {
+        width: 100%;
+        @include media-query(breakpoint-lg) {
+            width: auto;
+        }
+
+        &__ul {
+            gap: 14px;
+            @include media-query(breakpoint-lg) {
+                gap: 24px;
+            }
+            @include media-query(breakpoint-xl) {
+                gap: 32px;
+            }
+            @include media-query(breakpoint-xxl) {
+                gap: 40px;
+            }
+        }
+        &__link {
+            color: $text-black;
+            font-weight: 600;
+
+            @include media-query(breakpoint-xl) {
+                font-size: 18px;
+            }
+
+            &:hover {
+                color: $secondary;
+            }
+        }
+    }
+
+    &__copyright {
+        p {
+            color: $text-black;
+            font-size: 14px;
+
+            @include media-query(breakpoint-lg) {
+                font-size: 16px;
+            }
+
+            @include media-query(breakpoint-xxl) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__obj {
+		gap: 20px;
+        &__item {
+            max-width: 856px;
+            width: 100%;
+			margin: auto;
+            object-fit: contain;
+
+			@include media-query(breakpoint-lg) {
+				max-width: 46%;
+			}
+        }
+    }
+}
+
+/* Social Contact */
+.social-contact {
+    gap: 20px;
+
+    &__link {
+        width: 20px;
+        height: 22px;
+        color: $text-black;
+        @include transition-common;
+        @include media-query(breakpoint-xl) {
+            width: 24px;
+            height: 26px;
+        }
+
+        &:hover {
+            color: $secondary;
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.header {
+    &--section {
+        padding: 15px 0;
+    }
+
+    &__nav {
+        margin-right: 52px;
+        @include media-query(breakpoint-xl) {
+            margin-right: 80px;
+        }
+        @include media-query(breakpoint-xxl-2) {
+            margin-right: 104px;
+        }
+
+        &__ul {
+            gap: 25px;
+            @include media-query(breakpoint-xl) {
+                gap: 36px;
+            }
+            @include media-query(breakpoint-xxl-2) {
+                gap: 50px;
+            }
+        }
+
+        &__link {
+            color: $dark-gray;
+            font-weight: 600;
+
+            @include media-query(breakpoint-xl) {
+                font-size: 18px;
+            }
+
+            &:hover,
+            &.active {
+                color: $secondary;
+            }
+
+            &.active {
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__action__btns {
+        margin-right: 24px;
+        @include media-query(breakpoint-xxl) {
+            margin-right: 40px;
+        }
+    }
+}

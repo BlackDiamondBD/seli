@@ -1,0 +1,46 @@
+// Customize Bootstrap class and Add.
+@use '../utils/' as *;
+@use '../base/' as *;
+.form {
+  &-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: $cool-gray;
+    margin-bottom: 6px;
+    line-height: 1;
+    @include media-query(breakpoint-xl) {
+      margin-bottom: 10px;
+    }
+  }
+  &-control {
+    color: $text-black;
+    border: 1px solid $cool-gray;
+    height: 48px;
+    border-radius: 12px;
+    @include media-query(breakpoint-xl) {
+      height: 60px;
+      padding: 20px 20px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+  &-select {
+    color: $text-black;
+    border: 1px solid $cool-gray;
+    height: 48px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    background-image: url('../images/icons/arrow-down.svg');
+    &:focus {
+      border: 1px solid $cool-gray !important;
+    }
+    @include media-query(breakpoint-xl) {
+      height: 60px;
+      padding: 0px 20px;
+      font-size: 20px;
+      font-weight: 600;
+      background-size: 24px;
+    }
+  }
+}

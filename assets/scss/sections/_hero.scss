@@ -1,0 +1,215 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+.hero {
+  & .container {
+    padding: 0px;
+    & > div {
+      padding: 0px;
+    }
+  }
+  &__main {
+    position: relative;
+    padding: 30px 16px 190px;
+    overflow: hidden;
+    background: linear-gradient(
+      90deg,
+      rgba(60, 205, 170, 0.35) 0%,
+      rgba(5, 60, 90, 0.35) 97.99%
+    );
+    @include media-query(breakpoint-lg) {
+      padding: 90px 30px 150px;
+    }
+    @include media-query(breakpoint-md) {
+      border-radius: 30px;
+    }
+    @include media-query(breakpoint-xl) {
+      padding: 120px 80px 158px;
+    }
+    @include media-query(breakpoint-xxl) {
+      padding: 130px 90px 200px;
+      background: linear-gradient(
+        90deg,
+        rgba(60, 205, 170, 0.2) 0%,
+        rgba(5, 60, 90, 0.2) 97.99%
+      );
+    }
+    &-content {
+      max-width: 480px;
+      @include media-query(breakpoint-xl) {
+        max-width: 600px;
+      }
+      @include media-query(breakpoint-xxl) {
+        max-width: 650px;
+      }
+      & h1 {
+        color: $primary;
+
+        @media screen and (max-width: 1199px) {
+          font-size: 42px !important;
+        }
+        @media screen and (max-width: 991px) {
+          font-size: 36px !important;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 28px !important;
+        }
+        @include media-query(breakpoint-lg) {
+          margin-bottom: 14px;
+          line-height: 1.4;
+        }
+        @include media-query(breakpoint-md) {
+          margin-bottom: 12px;
+        }
+      }
+      & p {
+        font-size: 12px;
+        line-height: 18px;
+        color: $text-black;
+        max-width: 360px;
+        @include media-query(breakpoint-md) {
+          max-width: 420px;
+          font-size: 15px;
+          line-height: 18px;
+        }
+        @include media-query(breakpoint-lg) {
+          font-size: 16px;
+          line-height: 24px;
+          max-width: 445px;
+        }
+
+        @include media-query(breakpoint-xxl) {
+          font-size: 20px;
+          max-width: 600px;
+          line-height: 30px;
+        }
+      }
+    }
+    &-img {
+      position: absolute;
+      max-width: 282px;
+      position: absolute;
+      bottom: 0;
+      right: 0px;
+      @include media-query(breakpoint-md) {
+        max-width: 380px;
+      }
+      @include media-query(breakpoint-lg) {
+        max-width: 480px;
+      }
+      @include media-query(breakpoint-xl) {
+        max-width: 570px;
+      }
+      @include media-query(breakpoint-xxl) {
+        max-width: 680px;
+      }
+      @include media-query(breakpoint-xxl) {
+        max-width: 748px;
+      }
+    }
+    &-obj {
+      position: absolute;
+      left: 16px;
+      top: 0px;
+      max-width: 166px;
+      @include media-query(breakpoint-xl) {
+        left: 0px;
+      }
+      &--bottom {
+        @include media-query(breakpoint-xl) {
+          display: block !important;
+          bottom: 0;
+          top: inherit;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &__form {
+    margin-top: -80px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 2px 20px 0px #92929233;
+    border-radius: 20px;
+    &-contents {
+      background-color: $white-color;
+      padding: 15px 16px 15px 16px;
+      border-radius: 20px;
+      border-top-left-radius: 0px;
+      @include media-query(breakpoint-xl) {
+        padding: 30px 30px 28px 20px;
+      }
+    }
+    &-content {
+      --bs-gutter-x: 15px;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    &-col {
+      &__mHalf {
+        width: 50%;
+      }
+      @include media-query(breakpoint-md) {
+        width: 50%;
+      }
+      @include media-query(breakpoint-lg) {
+        width: 25%;
+      }
+      @include media-query(breakpoint-xl) {
+        width: 20%;
+      }
+    }
+    &-nav {
+      background-color: $white-color;
+      padding: 15px 16px 0px 16px;
+      border-radius: 20px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      display: inline-block;
+      @include media-query(breakpoint-xl) {
+        padding: 15px 18px 0px 18px;
+      }
+      & ul {
+        display: inline-flex;
+        border-radius: 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        gap: 15px;
+        border: none;
+        margin-bottom: 14px;
+        & li {
+          & button {
+            border-radius: 10px;
+            border-color: $cool-gray;
+            color: $dark-gray;
+            font-weight: 600;
+            padding: 11px 10px;
+            line-height: 1;
+            height: auto;
+            min-width: inherit;
+            @include media-query(breakpoint-lg) {
+              padding: 13px 26px;
+            }
+            @include media-query(breakpoint-xxl) {
+              font-size: 20px;
+              font-weight: 600;
+              padding: 16px 26px;
+              min-width: 200px;
+            }
+            &.active {
+              background-color: $primary;
+              color: $white-color;
+            }
+          }
+        }
+      }
+    }
+    &-control {
+      & .btn {
+        @include media-query(breakpoint-xl) {
+          width: 100%;
+          max-height: 60px;
+        }
+      }
+    }
+  }
+}
