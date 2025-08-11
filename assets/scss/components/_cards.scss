@@ -29,6 +29,10 @@
                     position: absolute;
                     top: 10px;
                     right: 10px;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        background-color: #0000008c;
+                    }
                     @include media-query(breakpoint-md) {
                         top: 11px;
                         right: 19px;
@@ -135,7 +139,7 @@
                         padding: 0;
                         display: flex;
                         align-items: center;
-                        gap: 6px 10px;
+                        gap: 6px 0px;
                         flex-wrap: wrap;
                         & li {
                             font-size: 12px;
@@ -145,11 +149,30 @@
                             display: inline-flex;
                             align-items: center;
                             gap: 8px;
+                            position: relative;
+                            padding: 0px 8px;
+                            &:first-child {
+                                padding-left: 0px !important;
+                            }
+                            &:last-child {
+                                padding-right: 0px !important;
+                            }
                             &:not(:last-child) {
-                                padding-right: 10px;
-                                border-right: 1px solid $cool-gray;
-                                @include media-query(breakpoint-lg) {
-                                    padding-right: 7px;
+                                &::after {
+                                    position: absolute;
+                                    right: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    content: '';
+                                    width: 1px;
+                                    height: 14px;
+                                    background-color: $dark-gray;
+                                }
+                                @include media-query(breakpoint-md) {
+                                    padding: 0px 10px;
+                                }
+                                @include media-query(breakpoint-xxl) {
+                                    padding: 0px 12px;
                                 }
                             }
                             @include media-query(breakpoint-md) {
@@ -262,6 +285,47 @@
         }
     }
     // Service Cards Css   end ====
+
+    // About Cards Css Start ===
+    &--about {
+        background-color: transparent;
+        border-radius: 0px;
+        & .card {
+            &__thumbnail {
+                height: 200px;
+                max-width: 216px;
+                margin: 0 auto;
+                margin-bottom: 20px;
+                & img {
+                    max-width: 100%;
+                }
+            }
+            &__content {
+                & h4 {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                    @include media-query(breakpoint-lg) {
+                        font-size: 25px;
+                        margin-bottom: 18px;
+                    }
+                }
+                & p {
+                    font-size: 14px;
+                    line-height: 24px;
+                    font-weight: bold;
+                    color: $text-black;
+                    max-width: 384px;
+                    margin: 0 auto;
+                    @include media-query(breakpoint-lg) {
+                        font-size: 16px;
+                        font-weight: 500;
+                        max-width: 368px;
+                    }
+                }
+            }
+        }
+    }
+    // About Cards Css End
 
     // Testimonial Card Start
     &--testimonial {

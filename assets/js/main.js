@@ -29,11 +29,12 @@ accordionButtons.forEach((btn) => {
 });
 
 // Slider For Service cards
-var swiper = new Swiper('.service__slider', {
+var serviceSwiper = new Swiper('.service__slider', {
     loop: true,
     spaceBetween: 20,
     slidesPerView: 1.4,
     centeredSlides: true,
+    speed: 700,
     autoplay: {
         delay: 10000,
         disableOnInteraction: false,
@@ -69,9 +70,9 @@ var swiper = new Swiper('.partners__slider__active', {
     loop: true,
     spaceBetween: 20,
     slidesPerView: 'auto',
-    /* autoplay: {
+    autoplay: {
         delay: 1,
-    }, */
+    },
     speed: 5000,
     992: {
         slidesPerView: 'auto',
@@ -87,10 +88,10 @@ var swiper = new Swiper('.partners__slide__rtl', {
     loop: true,
     spaceBetween: 20,
     slidesPerView: 'auto',
-    /* autoplay: {
+    autoplay: {
         delay: 1,
         reverseDirection: true,
-    }, */
+    },
     speed: 5000,
     992: {
         slidesPerView: 'auto',
