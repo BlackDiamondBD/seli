@@ -866,8 +866,13 @@ h6 {
     padding: 0.9375rem 0.9375rem;
   }
 }
+@media (min-width: 75rem) {
+  .card--explore .card__content {
+    padding: 0.9375rem 0.9375rem 1.1875rem 0.9375rem;
+  }
+}
 .card--explore .card__content-info {
-  margin-bottom: 0.3125rem;
+  margin-bottom: 5px;
 }
 @media (min-width: 48rem) {
   .card--explore .card__content-info {
@@ -1064,7 +1069,7 @@ h6 {
 }
 @media (min-width: 87.5rem) {
   .card--service .card__thumb-img {
-    height: 28.75rem;
+    height: 31rem;
   }
 }
 .card--service .card__thumb-info {
@@ -1151,6 +1156,7 @@ h6 {
 .card--about .card__content h3 {
   font-size: 1.25rem;
   margin-bottom: 0.625rem;
+  text-transform: capitalize;
 }
 @media (min-width: 62rem) {
   .card--about .card__content h3 {
@@ -1165,6 +1171,7 @@ h6 {
   color: #212529;
   max-width: 24rem;
   margin: 0 auto;
+  text-transform: capitalize;
 }
 @media (min-width: 62rem) {
   .card--about .card__content p {
@@ -1226,9 +1233,27 @@ h6 {
   font-size: 1rem;
   margin-bottom: 0.625rem;
 }
+@media (min-width: 75rem) {
+  .card--testimonial .client__name {
+    font-size: 1.25rem;
+    line-height: 40px;
+  }
+}
+@media (min-width: 75rem) {
+  .card--testimonial .client__designation {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+}
 .card--testimonial .client__thumb {
   width: 3.75rem;
   height: 3.75rem;
+}
+@media (min-width: 75rem) {
+  .card--testimonial .client__thumb {
+    width: 5.125rem;
+    height: 5.125rem;
+  }
 }
 .card--partner {
   padding: 0.5rem;
@@ -1629,7 +1654,7 @@ h6 {
 }
 @media (min-width: 87.5rem) {
   .hero__main {
-    padding: 8.125rem 5.625rem 12.5rem;
+    padding: 7.5rem 5rem 9.875rem;
     background: linear-gradient(90deg, rgba(60, 205, 170, 0.2) 0%, rgba(5, 60, 90, 0.2) 97.99%);
   }
 }
@@ -1768,13 +1793,18 @@ h6 {
 }
 @media (min-width: 75rem) {
   .hero__form-contents {
-    padding: 1.875rem 1.875rem 1.75rem 1.25rem;
+    padding: 2.5rem 1.875rem 1.75rem 1.25rem;
   }
 }
 .hero__form-content {
   --bs-gutter-x: 0.9375rem;
   justify-content: center;
   align-items: flex-end;
+}
+@media (min-width: 75rem) {
+  .hero__form-content {
+    --bs-gutter-x: 1.869rem;
+  }
 }
 .hero__form-col__mHalf {
   width: 50%;
@@ -1923,6 +1953,16 @@ h6 {
   --bs-gutter-x: 0.9375rem;
   --bs-gutter-y: 0.9375rem;
 }
+@media (min-width: 75rem) {
+  .explore__block-row {
+    --bs-gutter-x: 1.5375rem;
+  }
+}
+@media (min-width: 87.5rem) {
+  .explore__block-row {
+    --bs-gutter-x: 1.875rem;
+  }
+}
 
 .service--section {
   position: relative;
@@ -1995,12 +2035,11 @@ h6 {
   }
 }
 
-.partners--section {
-  background: linear-gradient(to right, rgba(60, 205, 171, 0.2) 0%, rgba(5, 60, 90, 0.2));
-}
 .partners__content {
+  background: linear-gradient(90deg, rgba(60, 205, 170, 0.06) 0%, rgba(5, 60, 90, 0.06) 97.99%);
   max-width: 90rem;
   padding: 2.5rem 0;
+  border-radius: 1.25rem;
 }
 @media (min-width: 48rem) {
   .partners__content {

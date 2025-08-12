@@ -3,11 +3,17 @@
 
 .partners {
   &--section {
-    background: $bg-gradient;
   }
   &__content {
+    background: linear-gradient(
+      90deg,
+      rgba(60, 205, 170, 0.06) 0%,
+      rgba(5, 60, 90, 0.06) 97.99%
+    );
+
     max-width: 90rem;
     padding: 2.5rem 0;
+    border-radius: 1.25rem;
 
     @include media-query(breakpoint-md) {
       padding: 4rem 0;
