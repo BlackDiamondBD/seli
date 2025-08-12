@@ -9,10 +9,10 @@
       padding: 4rem 0 2.5rem;
     }
     @include media-query(breakpoint-xl) {
-      padding: 6rem 0 2.5rem;
+      padding: 6rem 0 .625rem;
     }
     @include media-query(breakpoint-xxl-2) {
-      padding: 7.5rem 0 2.5rem;
+      padding: 7.5rem 0 .625rem;
     }
   }
 
@@ -27,6 +27,9 @@
 
     @include media-query(breakpoint-md) {
       max-height: 40rem;
+    }
+    @include media-query(breakpoint-xxl) {
+      max-height: 52.5rem;
     }
 
     &__row {
@@ -60,6 +63,10 @@
       height: 14.125rem;
       background: linear-gradient(to bottom, #f3f3f300 0%, #f3f3f3 87%);
       @include transition-common;
+
+      @include media-query(breakpoint-xxl) {
+        height: 31.875rem;
+      }
     }
     &-btn {
       width: 2.625rem;
@@ -85,10 +92,12 @@
       @include media-query(breakpoint-xl) {
         width: 3.875rem;
         height: 3.875rem;
+        margin-bottom: 1.25rem;
       }
       @include media-query(breakpoint-xxl-2) {
         width: 4.5rem;
         height: 4.5rem;
+        margin-bottom: 2.5rem;
       }
 
       &:hover {

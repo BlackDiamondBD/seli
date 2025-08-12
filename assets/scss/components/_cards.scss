@@ -355,6 +355,7 @@
       &__para {
         font-size: 0.875rem;
         line-height: 1.78;
+        text-transform: capitalize;
 
         @include media-query(breakpoint-xl) {
           font-size: 1rem;
@@ -381,7 +382,8 @@
         margin-bottom: 0.625rem;
         @include media-query(breakpoint-xl) {
           font-size: 1.25rem;
-          line-height: 40px;
+          line-height: 1.5;
+          max-width: 15rem;
         }
       }
       &__designation {

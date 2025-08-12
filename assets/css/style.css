@@ -390,7 +390,7 @@ h6 {
 }
 @media (min-width: 87.5rem) {
   .footer__content {
-    padding: 4rem 0 3.125rem;
+    padding: 32px 0 36px;
   }
 }
 .footer__wrapper {
@@ -1203,6 +1203,7 @@ h6 {
 .card--testimonial .card__para {
   font-size: 0.875rem;
   line-height: 1.78;
+  text-transform: capitalize;
 }
 @media (min-width: 75rem) {
   .card--testimonial .card__para {
@@ -1236,7 +1237,8 @@ h6 {
 @media (min-width: 75rem) {
   .card--testimonial .client__name {
     font-size: 1.25rem;
-    line-height: 40px;
+    line-height: 1.5;
+    max-width: 15rem;
   }
 }
 @media (min-width: 75rem) {
@@ -1409,16 +1411,19 @@ h6 {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+.accordion-button__icon span.plus {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
 @media (min-width: 75rem) {
   .accordion-button__icon span {
     height: 0.0938rem;
   }
 }
 .accordion-button[aria-expanded=true] .accordion-button__icon .plus {
-  transform: translate(-50%, -50%) rotate(-270deg);
+  transform: translate(-50%, -50%) rotate(360deg);
 }
 .accordion-button[aria-expanded=true] .accordion-button__icon .minus {
-  transform: translate(-50%, -50%) rotate(-180deg);
+  transform: translate(-50%, -50%) rotate(180deg);
 }
 .accordion-body {
   padding: 1rem 0 0;
@@ -1547,9 +1552,19 @@ h6 {
     height: 13.75rem;
   }
 }
-.intro__card__thumb img {
+.intro__card__thumb__img {
   max-width: 100%;
   max-height: 100%;
+}
+@media (min-width: 75rem) {
+  .intro__card__thumb__img--one {
+    margin-bottom: -12px;
+  }
+}
+@media (min-width: 100rem) {
+  .intro__card__thumb__img--one {
+    margin-bottom: -24px;
+  }
 }
 .intro__card__text {
   margin-bottom: 1.75rem;
@@ -2121,12 +2136,12 @@ h6 {
 }
 @media (min-width: 75rem) {
   .testimonial--section {
-    padding: 6rem 0 2.5rem;
+    padding: 6rem 0 0.625rem;
   }
 }
 @media (min-width: 100rem) {
   .testimonial--section {
-    padding: 7.5rem 0 2.5rem;
+    padding: 7.5rem 0 0.625rem;
   }
 }
 .testimonial__header {
@@ -2142,6 +2157,11 @@ h6 {
 @media (min-width: 48rem) {
   .testimonial__cards {
     max-height: 40rem;
+  }
+}
+@media (min-width: 87.5rem) {
+  .testimonial__cards {
+    max-height: 52.5rem;
   }
 }
 @media (min-width: 48rem) {
@@ -2179,6 +2199,11 @@ h6 {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+@media (min-width: 87.5rem) {
+  .testimonial-collapse-gradient {
+    height: 31.875rem;
+  }
+}
 .testimonial-collapse-btn {
   width: 2.625rem;
   height: 2.625rem;
@@ -2208,12 +2233,14 @@ h6 {
   .testimonial-collapse-btn {
     width: 3.875rem;
     height: 3.875rem;
+    margin-bottom: 1.25rem;
   }
 }
 @media (min-width: 100rem) {
   .testimonial-collapse-btn {
     width: 4.5rem;
     height: 4.5rem;
+    margin-bottom: 2.5rem;
   }
 }
 .testimonial-collapse-btn:hover {

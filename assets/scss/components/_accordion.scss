@@ -2,140 +2,143 @@
 @use '../base/' as *;
 
 .accordion {
-  padding: 0 1rem;
-  border-radius: 0.875rem;
-  box-shadow: 0 0.25rem 3.75rem 0 rgba(0, 0, 0, 0.08);
-  background-color: $white-color;
+    padding: 0 1rem;
+    border-radius: 0.875rem;
+    box-shadow: 0 0.25rem 3.75rem 0 rgba(0, 0, 0, 0.08);
+    background-color: $white-color;
 
-  @include media-query(breakpoint-sm) {
-    padding: 0.5rem 1.5rem;
-  }
-  @include media-query(breakpoint-xxl) {
-    padding: 0.75rem 2rem;
-  }
-  @include media-query(breakpoint-xxl-2) {
-    padding: 0.875rem 3.125rem;
-  }
-
-  &-item {
-    position: relative;
-    padding: 1rem 0.25rem;
-    padding-left: 0;
-    @include transition-common;
-
-    @include media-query(breakpoint-xl) {
-      padding: 1.25rem 0.625rem;
+    @include media-query(breakpoint-sm) {
+        padding: 0.5rem 1.5rem;
+    }
+    @include media-query(breakpoint-xxl) {
+        padding: 0.75rem 2rem;
     }
     @include media-query(breakpoint-xxl-2) {
-      padding: 1.625rem 1.25rem;
+        padding: 0.875rem 3.125rem;
     }
 
-    &.expanded {
-      padding-left: 0.625rem;
-
-      @include media-query(breakpoint-sm) {
-        padding-left: 1rem;
-      }
-      @include media-query(breakpoint-xl) {
-        padding: 1.25rem 0.625rem;
-      }
-      @include media-query(breakpoint-xl) {
-        padding: 1.625rem 1.25rem;
-      }
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 0.0625rem;
-      height: 0;
-      background-color: $black-color;
-      @include transition-common;
-    }
-    &.expanded {
-      &::before {
-        height: calc(100% - 2rem);
-
-        @include media-query(breakpoint-sm) {
-        }
-      }
-    }
-  }
-
-  &-button {
-    padding: 0;
-    box-shadow: unset;
-    gap: 1rem;
-
-    &:focus {
-      box-shadow: unset;
-    }
-
-    &:not(.collapsed) {
-      box-shadow: unset;
-      background-color: transparent;
-    }
-
-    &::after {
-      display: none;
-    }
-
-    &__text {
-      color: $dark-gray;
-      @include transition-common;
-
-      @include media-query(breakpoint-xl) {
-        font-size: 1.125rem;
-      }
-    }
-    &[aria-expanded='true'] .accordion-button__text {
-      color: $black-color;
-    }
-
-    &__icon {
-      width: 1.25rem;
-      height: 1.25rem;
-      position: relative;
-
-      @include media-query(breakpoint-xl) {
-        width: 1.5rem;
-        height: 1.5rem;
-      }
-
-      span {
-        width: 60%;
-        height: 0.0781rem;
-        display: inline-block;
-        border-radius: 0.625rem;
-        background-color: #282930;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    &-item {
+        position: relative;
+        padding: 1rem 0.25rem;
+        padding-left: 0;
         @include transition-common;
 
         @include media-query(breakpoint-xl) {
-          height: 0.0938rem;
+            padding: 1.25rem 0.625rem;
         }
-      }
-    }
-    &[aria-expanded='true'] .accordion-button__icon .plus {
-      transform: translate(-50%, -50%) rotate(-270deg);
-    }
-    &[aria-expanded='true'] .accordion-button__icon .minus {
-      transform: translate(-50%, -50%) rotate(-180deg);
-    }
-  }
+        @include media-query(breakpoint-xxl-2) {
+            padding: 1.625rem 1.25rem;
+        }
 
-  &-body {
-    padding: 1rem 0 0;
-    padding-right: 1rem;
-    color: $black-color;
-    font-size: 0.875rem;
-    font-weight: 500;
-    line-height: 1.66;
-  }
+        &.expanded {
+            padding-left: 0.625rem;
+
+            @include media-query(breakpoint-sm) {
+                padding-left: 1rem;
+            }
+            @include media-query(breakpoint-xl) {
+                padding: 1.25rem 0.625rem;
+            }
+            @include media-query(breakpoint-xl) {
+                padding: 1.625rem 1.25rem;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0.0625rem;
+            height: 0;
+            background-color: $black-color;
+            @include transition-common;
+        }
+        &.expanded {
+            &::before {
+                height: calc(100% - 2rem);
+
+                @include media-query(breakpoint-sm) {
+                }
+            }
+        }
+    }
+
+    &-button {
+        padding: 0;
+        box-shadow: unset;
+        gap: 1rem;
+
+        &:focus {
+            box-shadow: unset;
+        }
+
+        &:not(.collapsed) {
+            box-shadow: unset;
+            background-color: transparent;
+        }
+
+        &::after {
+            display: none;
+        }
+
+        &__text {
+            color: $dark-gray;
+            @include transition-common;
+
+            @include media-query(breakpoint-xl) {
+                font-size: 1.125rem;
+            }
+        }
+        &[aria-expanded='true'] .accordion-button__text {
+            color: $black-color;
+        }
+
+        &__icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            position: relative;
+
+            @include media-query(breakpoint-xl) {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
+            span {
+                width: 60%;
+                height: 0.0781rem;
+                display: inline-block;
+                border-radius: 0.625rem;
+                background-color: #282930;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                &.plus {
+                    transform: translate(-50%, -50%) rotate(90deg);
+                }
+                @include transition-common;
+
+                @include media-query(breakpoint-xl) {
+                    height: 0.0938rem;
+                }
+            }
+        }
+        &[aria-expanded='true'] .accordion-button__icon .plus {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+        &[aria-expanded='true'] .accordion-button__icon .minus {
+            transform: translate(-50%, -50%) rotate(180deg);
+        }
+    }
+
+    &-body {
+        padding: 1rem 0 0;
+        padding-right: 1rem;
+        color: $black-color;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.66;
+    }
 }
