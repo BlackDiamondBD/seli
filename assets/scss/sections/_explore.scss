@@ -47,6 +47,12 @@
     &-row {
       --bs-gutter-x: 0.9375rem;
       --bs-gutter-y: 0.9375rem;
+      @include media-query(breakpoint-xl) {
+        --bs-gutter-x: 1.5375rem;
+      }
+      @include media-query(breakpoint-xxl) {
+        --bs-gutter-x: 1.875rem;
+      }
     }
   }
 }

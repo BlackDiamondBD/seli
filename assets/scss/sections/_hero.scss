@@ -26,7 +26,7 @@
       padding: 7.5rem 5rem 9.875rem;
     }
     @include media-query(breakpoint-xxl) {
-      padding: 8.125rem 5.625rem 12.5rem;
+      padding: 7.5rem 5rem 9.875rem;
       background: linear-gradient(
         90deg,
         rgba(60, 205, 170, 0.2) 0%,
@@ -136,13 +136,16 @@
       border-radius: 1.25rem;
       border-top-left-radius: 0rem;
       @include media-query(breakpoint-xl) {
-        padding: 1.875rem 1.875rem 1.75rem 1.25rem;
+        padding: 2.5rem 1.875rem 1.75rem 1.25rem;
       }
     }
     &-content {
       --bs-gutter-x: 0.9375rem;
       justify-content: center;
       align-items: flex-end;
+      @include media-query(breakpoint-xl) {
+        --bs-gutter-x: 1.869rem;
+      }
     }
     &-col {
       &__mHalf {

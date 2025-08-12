@@ -51,8 +51,11 @@
         @include media-query(breakpoint-md) {
           padding: 0.9375rem 0.9375rem;
         }
+        @include media-query(breakpoint-xl) {
+          padding: 0.9375rem 0.9375rem 1.1875rem 0.9375rem;
+        }
         &-info {
-          margin-bottom: 0.3125rem;
+          margin-bottom: 5px;
           @include media-query(breakpoint-md) {
             margin-bottom: 1.25rem;
           }
@@ -222,7 +225,7 @@
             height: 22.5rem;
           }
           @include media-query(breakpoint-xxl) {
-            height: 28.75rem;
+            height: 31rem;
           }
         }
         &-info {
@@ -304,6 +307,7 @@
         & h3 {
           font-size: 1.25rem;
           margin-bottom: 0.625rem;
+          text-transform: capitalize;
           @include media-query(breakpoint-lg) {
             font-size: 1.5625rem;
             margin-bottom: 1.125rem;
@@ -316,6 +320,7 @@
           color: $text-black;
           max-width: 24rem;
           margin: 0 auto;
+          text-transform: capitalize;
           @include media-query(breakpoint-lg) {
             font-size: 1rem;
             font-weight: 500;
@@ -374,11 +379,25 @@
       &__name {
         font-size: 1rem;
         margin-bottom: 0.625rem;
+        @include media-query(breakpoint-xl) {
+          font-size: 1.25rem;
+          line-height: 40px;
+        }
+      }
+      &__designation {
+        @include media-query(breakpoint-xl) {
+          font-size: 1.25rem;
+          line-height: 1.5;
+        }
       }
 
       &__thumb {
         width: 3.75rem;
         height: 3.75rem;
+        @include media-query(breakpoint-xl) {
+          width: 5.125rem;
+          height: 5.125rem;
+        }
       }
     }
   }
