@@ -2,12 +2,12 @@
 @use '../base/' as *;
 
 .logo {
-    max-width: 80px;
+  max-width: 5rem;
 
-    @include media-query(breakpoint-lg) {
-        max-width: 100px;
-    }
-    @include media-query(breakpoint-xxl) {
-        max-width: 132px;
-    }
+  @include media-query(breakpoint-lg) {
+    max-width: 6.25rem;
+  }
+  @include media-query(breakpoint-xxl) {
+    max-width: 8.25rem;
+  }
 }

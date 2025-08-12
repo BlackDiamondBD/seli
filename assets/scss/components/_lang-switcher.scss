@@ -2,104 +2,105 @@
 @use '../base/' as *;
 
 .lang-switcher {
-    &__btn {
-        gap: 5px;
+  &__btn {
+    cursor: pointer;
+    gap: 0.3125rem;
+  }
+
+  &__btn__text,
+  &__link {
+    color: $text-black;
+    font-size: 1rem;
+    font-weight: 600;
+
+    @include media-query(breakpoint-lg) {
+      font-size: 1.125rem;
+    }
+    @include media-query(breakpoint-xxl) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__icon {
+    max-width: 0.875rem;
+    @include media-query(breakpoint-lg) {
+      max-width: 1.25rem;
     }
 
-    &__btn__text,
-    &__link {
-        color: $text-black;
-        font-size: 16px;
-        font-weight: 600;
-
-        @include media-query(breakpoint-lg) {
-            font-size: 18px;
-        }
-        @include media-query(breakpoint-xxl) {
-            font-size: 20px;
-        }
+    svg {
+      width: 100%;
     }
+  }
 
-    &__icon {
-        max-width: 14px;
-        @include media-query(breakpoint-lg) {
-            max-width: 20px;
-        }
+  &__box {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    min-width: 10.375rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 0.125rem 1.25rem 0 rgba(146, 146, 146, 0.2);
+    background-color: $white-color;
+    margin-top: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    @include transition-common;
 
-        svg {
-            width: 100%;
-        }
+    @include media-query(breakpoint-xl) {
+      margin-top: 2.5rem;
     }
-
-    &__box {
-        position: absolute;
-        right: 0;
-        top: 100%;
-        min-width: 166px;
-        padding: 8px 12px;
-        border-radius: 20px;
-        box-shadow: 0 2px 20px 0 rgba(146, 146, 146, 0.2);
-        background-color: $white-color;
-        margin-top: 24px;
-        opacity: 0;
-        visibility: hidden;
-        @include transition-common;
+  }
+  &__btn {
+    &.active {
+      .lang-switcher__box {
+        margin-top: 0.625rem;
+        opacity: 1;
+        visibility: visible;
 
         @include media-query(breakpoint-xl) {
-            margin-top: 40px;
+          margin-top: 1.5rem;
         }
+      }
     }
-    &__btn {
-        &.active {
-            .lang-switcher__box {
-                margin-top: 10px;
-                opacity: 1;
-                visibility: visible;
+  }
 
-                @include media-query(breakpoint-xl) {
-                    margin-top: 24px;
-                }
-            }
-        }
+  &__link {
+    padding: 0.75rem 0;
+    padding-left: 0.375rem;
+    border-bottom: 0.0625rem solid $cool-gray;
+    cursor: pointer;
+    &__icon {
+      width: 1rem;
+      height: 1rem;
+      display: inline-block;
+      border-radius: 50%;
+      border: 0.0625rem solid $cool-gray;
+      background-color: $light-gray;
+      position: relative;
+      @include transition-common;
+
+      &::after {
+        content: '';
+        width: 33.3333%;
+        height: 33.3333%;
+        border-radius: 50%;
+        background-color: $primary;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        @include transition-common;
+      }
     }
+    &:hover,
+    &.active {
+      .lang-switcher__link__icon {
+        border-color: $primary;
 
-    &__link {
-        padding: 12px 0;
-        padding-left: 6px;
-        border-bottom: 1px solid $cool-gray;
-        cursor: pointer;
-        &__icon {
-            width: 16px;
-            height: 16px;
-            display: inline-block;
-            border-radius: 50%;
-            border: 1px solid $cool-gray;
-            background-color: $light-gray;
-            position: relative;
-            @include transition-common;
-
-            &::after {
-                content: '';
-                width: 33.3333%;
-                height: 33.3333%;
-                border-radius: 50%;
-                background-color: $primary;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%) scale(0);
-                @include transition-common;
-            }
+        &::after {
+          transform: translate(-50%, -50%) scale(1);
         }
-        &:hover,
-        &.active {
-            .lang-switcher__link__icon {
-                border-color: $primary;
-
-                &::after {
-                    transform: translate(-50%, -50%) scale(1);
-                }
-            }
-        }
+      }
     }
+  }
 }

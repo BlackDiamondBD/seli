@@ -2,16 +2,16 @@
 @use '../base/' as *;
 
 .about {
-    &--section {
-        padding: 40px 0px 40px;
-        @include media-query(breakpoint-lg) {
-            padding: 120px 0px 120px;
-        }
+  &--section {
+    padding: 2.5rem 0rem 2.5rem;
+    @include media-query(breakpoint-lg) {
+      padding: 7.5rem 0rem 7.5rem;
     }
-    &__title {
-        margin-bottom: 30px;
-        @include media-query(breakpoint-lg) {
-            margin-bottom: 60px;
-        }
+  }
+  &__title {
+    margin-bottom: 1.875rem;
+    @include media-query(breakpoint-lg) {
+      margin-bottom: 3.75rem;
     }
+  }
 }

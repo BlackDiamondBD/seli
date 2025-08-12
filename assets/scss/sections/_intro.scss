@@ -2,189 +2,189 @@
 @use '../base/' as *;
 
 .intro {
-    &--section {
-        background: $bg-gradient;
+  &--section {
+    background: $bg-gradient;
+  }
+  &__content {
+    max-width: 113.75rem;
+    padding: 3.75rem 0 3.75rem;
+    @include media-query(breakpoint-md) {
+      padding: 3.75rem 0 5.625rem;
     }
-    &__content {
-        max-width: 1820px;
-        padding: 60px 0 60px;
-        @include media-query(breakpoint-md) {
-            padding: 60px 0 90px;
-        }
-        @include media-query(breakpoint-xl) {
-            padding: 60px 0 120px;
-        }
+    @include media-query(breakpoint-xl) {
+      padding: 3.75rem 0 7.5rem;
     }
-    &__top {
-        margin-bottom: 32px;
+  }
+  &__top {
+    margin-bottom: 2rem;
 
-        @include media-query(breakpoint-xxl) {
-            margin-bottom: 12px;
-        }
+    @include media-query(breakpoint-xxl) {
+      margin-bottom: 0.75rem;
     }
-    &__badge {
-        color: $text-black;
-        padding: 6px 20px;
-        background-color: $white-color;
-        gap: 10px;
-        border-radius: 100px;
+  }
+  &__badge {
+    color: $text-black;
+    padding: 0.375rem 1.25rem;
+    background-color: $white-color;
+    gap: 0.625rem;
+    border-radius: 6.25rem;
 
-        @include media-query(breakpoint-lg) {
-            font-size: 18px;
-            padding: 7px 23px;
-        }
-
-        &__dot {
-            width: 8px;
-            height: 8px;
-            display: inline-block;
-            border-radius: 50%;
-            background-color: $secondary;
-        }
+    @include media-query(breakpoint-lg) {
+      font-size: 1.125rem;
+      padding: 0.4375rem 1.4375rem;
     }
+
+    &__dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      display: inline-block;
+      border-radius: 50%;
+      background-color: $secondary;
+    }
+  }
+  &__title {
+    margin-bottom: 1.25rem;
+  }
+  &__subtitle {
+    color: $text-black;
+
+    @include media-query(breakpoint-lg) {
+      font-size: 1.125rem;
+    }
+  }
+
+  &-wrapper {
+    &__row.g-4 {
+      --bs-gutter-x: 1.875rem;
+      --bs-gutter-y: 1.875rem;
+    }
+  }
+  &__card {
+    padding: 0 1.25rem 2rem;
+    position: relative;
+    z-index: 1;
+
+    @include media-query(breakpoint-xl) {
+      padding: 0 2rem 2.5rem;
+    }
+    @include media-query(breakpoint-xxl) {
+      padding: 0 3rem 3rem;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: calc(100% - 3.125rem);
+      background-color: $white-color;
+      border-radius: 0.625rem;
+      border: 0.0625rem solid $cool-gray;
+      z-index: -1;
+
+      @include media-query(breakpoint-lg) {
+        height: calc(100% - 5rem);
+      }
+      @include media-query(breakpoint-xl) {
+        border-radius: 1.25rem;
+      }
+      @include media-query(breakpoint-xxl) {
+        height: calc(100% - 6.875rem);
+      }
+    }
+
+    &__thumb {
+      width: 12.5rem;
+      height: 6.25rem;
+
+      @include media-query(breakpoint-lg) {
+        width: 18.75rem;
+        height: 10rem;
+      }
+      @include media-query(breakpoint-xxl) {
+        width: 24.5rem;
+        height: 13.75rem;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    &__text {
+      margin-bottom: 1.75rem;
+
+      @include media-query(breakpoint-lg) {
+        margin-bottom: 2.5rem;
+      }
+      @include media-query(breakpoint-xxl) {
+        margin-bottom: 3.25rem;
+      }
+    }
+
     &__title {
-        margin-bottom: 20px;
+      font-size: 1.25rem !important;
+      line-height: 1.43;
+
+      @include media-query(breakpoint-xl) {
+        font-size: 1.75rem !important;
+      }
+      @include media-query(breakpoint-xxl) {
+        font-size: 2rem !important;
+      }
+      @include media-query(breakpoint-xxl-2) {
+        font-size: 2.1875rem !important;
+      }
     }
-    &__subtitle {
-        color: $text-black;
+
+    &__desc {
+      line-height: 1.67;
+
+      @include media-query(breakpoint-lg) {
+        font-size: 1.125rem;
+      }
+    }
+
+    &__btns {
+      .btn {
+        min-width: 12.5rem;
 
         @include media-query(breakpoint-lg) {
-            font-size: 18px;
+          font-size: 1rem;
+          width: 50%;
         }
-    }
-
-    &-wrapper {
-        &__row.g-4 {
-            --bs-gutter-x: 30px;
-            --bs-gutter-y: 30px;
-        }
-    }
-    &__card {
-        padding: 0 20px 32px;
-        position: relative;
-        z-index: 1;
-
         @include media-query(breakpoint-xl) {
-            padding: 0 32px 40px;
+          font-size: 1.125rem;
         }
-        @include media-query(breakpoint-xxl) {
-            padding: 0 48px 48px;
-        }
+      }
+    }
+  }
 
+  // Intro Section for Home Page
+  &--home {
+    background: transparent;
+
+    .intro {
+      &__card {
         &::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: calc(100% - 50px);
-            background-color: $white-color;
-            border-radius: 10px;
-            border: 1px solid $cool-gray;
-            z-index: -1;
-
-            @include media-query(breakpoint-lg) {
-                height: calc(100% - 80px);
-            }
-            @include media-query(breakpoint-xl) {
-                border-radius: 20px;
-            }
-            @include media-query(breakpoint-xxl) {
-                height: calc(100% - 110px);
-            }
+          background: linear-gradient(
+            to right,
+            rgba(60, 205, 171, 0.04) 0%,
+            rgba(5, 60, 90, 0.04)
+          );
         }
+      }
 
-        &__thumb {
-            width: 200px;
-            height: 100px;
-
-            @include media-query(breakpoint-lg) {
-                width: 300px;
-                height: 160px;
-            }
-            @include media-query(breakpoint-xxl) {
-                width: 392px;
-                height: 220px;
-            }
-            img {
-                max-width: 100%;
-                max-height: 100%;
-            }
+      &__content {
+        padding: 2.5rem 0 3.75rem;
+        @include media-query(breakpoint-md) {
+          padding: 2.5rem 0 5.625rem;
         }
-
-        &__text {
-            margin-bottom: 28px;
-
-            @include media-query(breakpoint-lg) {
-                margin-bottom: 40px;
-            }
-            @include media-query(breakpoint-xxl) {
-                margin-bottom: 52px;
-            }
+        @include media-query(breakpoint-xl) {
+          padding: 2.5rem 0 7.5rem;
         }
-
-        &__title {
-            font-size: 20px !important;
-            line-height: 1.43;
-
-            @include media-query(breakpoint-xl) {
-                font-size: 28px !important;
-            }
-            @include media-query(breakpoint-xxl) {
-                font-size: 32px !important;
-            }
-            @include media-query(breakpoint-xxl-2) {
-                font-size: 35px !important;
-            }
-        }
-
-        &__desc {
-            line-height: 1.67;
-
-            @include media-query(breakpoint-lg) {
-                font-size: 18px;
-            }
-        }
-
-        &__btns {
-            .btn {
-                min-width: 200px;
-
-                @include media-query(breakpoint-lg) {
-                    font-size: 16px;
-                    width: 50%;
-                }
-                @include media-query(breakpoint-xl) {
-                    font-size: 18px;
-                }
-            }
-        }
+      }
     }
-
-    // Intro Section for Home Page
-    &--home {
-        background: transparent;
-
-        .intro {
-            &__card {
-                &::after {
-                    background: linear-gradient(
-                        to right,
-                        rgba(60, 205, 171, 0.04) 0%,
-                        rgba(5, 60, 90, 0.04)
-                    );
-                }
-            }
-
-            &__content {
-                padding: 40px 0 60px;
-                @include media-query(breakpoint-md) {
-                    padding: 40px 0 90px;
-                }
-                @include media-query(breakpoint-xl) {
-                    padding: 40px 0 120px;
-                }
-            }
-        }
-    }
+  }
 }

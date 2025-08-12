@@ -11,9 +11,9 @@ $cool-gray: #bebebe;
 $light-gray: #ebebeb;
 $dark-gray: #6a6d6f;
 $bg-gradient: linear-gradient(
-    to right,
-    rgba(60, 205, 171, 0.2) 0%,
-    rgba(5, 60, 90, 0.2)
+  to right,
+  rgba(60, 205, 171, 0.2) 0%,
+  rgba(5, 60, 90, 0.2)
 );
 
 // Custom Colors
@@ -23,9 +23,9 @@ $body-color: #f3f3f3;
 
 // Responsive Breakpoints (Mobile First Approach)
 $breakpoint-xsm: 100%;
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
-$breakpoint-xxl: 1400px;
-$breakpoint-xxl-2: 1600px;
+$breakpoint-sm: 36rem;
+$breakpoint-md: 48rem;
+$breakpoint-lg: 62rem;
+$breakpoint-xl: 75rem;
+$breakpoint-xxl: 87.5rem;
+$breakpoint-xxl-2: 100rem;
