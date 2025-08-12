@@ -2,22 +2,22 @@
 
 .navlink {
   &--menu {
-    padding: 14px 0px;
-    margin-bottom: 30px;
+    padding: 0.875rem 0rem;
+    margin-bottom: 1.875rem;
   }
   &__list {
     display: flex;
     align-items: center;
-    gap: 70px;
+    gap: 4.375rem;
     & li {
       & a {
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 600;
         color: #6a6d6f;
         text-decoration: none;
         display: inline-block;
         &:hover {
-          color: $primary;
+          color: $secondary;
         }
       }
     }

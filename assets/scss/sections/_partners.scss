@@ -2,77 +2,77 @@
 @use '../base/' as *;
 
 .partners {
-    &--section {
-        background: $bg-gradient;
-    }
-    &__content {
-        max-width: 1440px;
-        padding: 40px 0;
+  &--section {
+    background: $bg-gradient;
+  }
+  &__content {
+    max-width: 90rem;
+    padding: 2.5rem 0;
 
-        @include media-query(breakpoint-md) {
-            padding: 64px 0;
-        }
-        @include media-query(breakpoint-xl) {
-            padding: 90px 0;
+    @include media-query(breakpoint-md) {
+      padding: 4rem 0;
+    }
+    @include media-query(breakpoint-xl) {
+      padding: 5.625rem 0;
+    }
+    @include media-query(breakpoint-xxl-2) {
+      padding: 5.625rem 0 6.25rem;
+    }
+  }
+
+  &__header {
+    max-width: 72.75rem;
+  }
+
+  &__slider {
+    &__item {
+      margin-bottom: 1.25rem;
+      @include media-query(breakpoint-md) {
+        margin-bottom: 2rem;
+      }
+      @include media-query(breakpoint-xxl) {
+        margin-bottom: 3rem;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  & .swiper {
+    &-wrapper {
+      transition-timing-function: linear;
+    }
+  }
+
+  & .card {
+    &--partner {
+      width: 12.5rem;
+      height: 5rem;
+
+      @include media-query(breakpoint-lg) {
+        width: 15rem;
+        height: 6rem;
+      }
+      @include media-query(breakpoint-xxl-2) {
+        width: 17.25rem;
+        height: 6.875rem;
+      }
+
+      img {
+        max-width: 10rem;
+        max-height: 3.5rem;
+
+        @include media-query(breakpoint-lg) {
+          max-width: 12rem;
+          max-height: 4.5rem;
         }
         @include media-query(breakpoint-xxl-2) {
-            padding: 90px 0 100px;
+          max-width: 14rem;
+          max-height: 5.5rem;
         }
+      }
     }
-
-    &__header {
-        max-width: 1164px;
-    }
-
-    &__slider {
-        &__item {
-            margin-bottom: 20px;
-            @include media-query(breakpoint-md) {
-                margin-bottom: 32px;
-            }
-            @include media-query(breakpoint-xxl) {
-                margin-bottom: 48px;
-            }
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
-
-    & .swiper {
-        &-wrapper {
-            transition-timing-function: linear;
-        }
-    }
-
-    & .card {
-        &--partner {
-            width: 200px;
-            height: 80px;
-
-            @include media-query(breakpoint-lg) {
-                width: 240px;
-                height: 96px;
-            }
-            @include media-query(breakpoint-xxl-2) {
-                width: 276px;
-                height: 110px;
-            }
-
-            img {
-                max-width: 160px;
-                max-height: 56px;
-
-                @include media-query(breakpoint-lg) {
-                    max-width: 192px;
-                    max-height: 72px;
-                }
-                @include media-query(breakpoint-xxl-2) {
-                    max-width: 224px;
-                    max-height: 88px;
-                }
-            }
-        }
-    }
+  }
 }

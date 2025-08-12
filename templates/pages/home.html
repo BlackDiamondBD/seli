@@ -6,16 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Meta4BasicSEO -->
+    <!-- Basic SEO -->
     <meta name="description"
         content="Discover beautiful homes and cars, expert advice, and a smoother path to buying or selling your property." />
     <meta name="keywords"
         content="seli, car, homes, buy car, buy home, buying and selling, trusted car and home marketplace, buy and sell" />
     <meta name="author" content="seli" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:title" content="Discover Beautiful Homes and Cars" />
+    <meta property="og:description" content="Expert advice and a smoother path to buying or selling your property." />
+    <meta property="og:image" content="https://yourdomain.com/path-to-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:type" content="website" />
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Discover Beautiful Homes and Cars" />
+    <meta name="twitter:description" content="Expert advice and a smoother path to buying or selling your property." />
+    <meta name="twitter:image" content="https://yourdomain.com/path-to-image.jpg" />
+    <meta name="twitter:site" content="@YourTwitterHandle" />
+    <!-- Canonical -->
+    <link rel="canonical" href="https://yourdomain.com" />
+    <!-- Theme color & Icons -->
+    <meta name="theme-color" content="#053C5A" />
+
+
 
     <!-- Title&Favicon -->
     <title>Seli</title>
-    <link rel="shortcut icon" href="../../assets/images/logos-favicon/favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/logos-favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/logos-favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/logos-favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/images/logos-favicon/site.webmanifest">
 
     <!-- === CSS CDNs & StyleSheets === -->
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
@@ -176,7 +201,7 @@
 
                     <!-- Language Switcher -->
                     <div class="lang-switcher position-relative z-1">
-                        <button id="lang-switcher__btn" class="lang-switcher__btn d-inline-flex align-items-center">
+                        <div id="lang-switcher__btn" class="lang-switcher__btn d-inline-flex align-items-center">
                             <span class="lang-switcher__btn__text">
                                 En
                             </span>
@@ -214,7 +239,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </button>
+                        </div>
                     </div>
 
                     <!-- Mobile (Hamburger) Menu-->
@@ -257,17 +282,17 @@
                 </ul>
             </div>
         </div>
-        <!-- nav-links--end -->
+        <!-- nav-links-end -->
 
         <!-- Hero Section Start -->
         <section class="hero hero--section">
             <div class="container">
                 <div class="hero__wrapper position-relative">
                     <div class="hero__main">
-                        <img src="../../assets/images/thumbs/hero-pattern.svg" class="hero__main-obj"
-                            alt="pattern-img" />
+                        <img src="../../assets/images/thumbs/hero-pattern.svg" class="hero__main-obj" alt="pattern-img"
+                            aria-hidden="true" />
                         <img src="../../assets/images/thumbs/hero-pattern.svg"
-                            class="hero__main-obj hero__main-obj--bottom d-none" alt="pattern-img" />
+                            class="hero__main-obj hero__main-obj--bottom d-none" aria-hidden="true" alt="pattern-img" />
                         <div class="hero__main-content">
                             <h1 class="text-uppercase fw-bold fs-1">
                                 Your Home's <br class="" />
@@ -306,9 +331,10 @@
                                     <!-- hero-form-column -->
                                     <div class="hero__form-col">
                                         <div class="hero__form-control">
-                                            <label for="" class="form-label">Location</label>
+                                            <label for="locationName" class="form-label">Location</label>
                                             <div class="hero__form-control__input">
-                                                <select class="form-select" aria-label="Default select example">
+                                                <select id="locationName" class="form-select"
+                                                    aria-label="Default select example">
                                                     <option selected>
                                                         San Jose,CA
                                                     </option>
@@ -325,13 +351,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- hero-form-column--end -->
+                                    <!-- hero-form-column-end -->
                                     <!-- hero-form-column -->
                                     <div class="hero__form-col">
                                         <div class="hero__form-control">
-                                            <label for="" class="form-label">Property Type</label>
+                                            <label for="propertiyType" class="form-label">Property Type</label>
                                             <div class="hero__form-control__input">
-                                                <select class="form-select" aria-label="Default select example">
+                                                <select id="propertiyType" class="form-select"
+                                                    aria-label="Default select example">
                                                     <option selected>
                                                         Apartment
                                                     </option>
@@ -348,13 +375,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- hero-form-column--end -->
+                                    <!-- hero-form-column-end -->
                                     <!-- hero-form-column -->
                                     <div class="hero__form-col hero__form-col__mHalf">
                                         <div class="hero__form-control">
-                                            <label for="" class="form-label">Price</label>
+                                            <label for="housePrice" class="form-label">Price</label>
                                             <div class="hero__form-control__input">
-                                                <select class="form-select" aria-label="Default select example">
+                                                <select id="housePrice" class="form-select"
+                                                    aria-label="Default select example">
                                                     <option selected>
                                                         €2,000-€13,000
                                                     </option>
@@ -371,13 +399,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- hero-form-column--end -->
+                                    <!-- hero-form-column-end -->
                                     <!-- hero-form-column -->
                                     <div class="hero__form-col hero__form-col__mHalf">
                                         <div class="hero__form-control">
-                                            <label for="" class="form-label">Bedrooms</label>
+                                            <label for="bedrooms" class="form-label">Bedrooms</label>
                                             <div class="hero__form-control__input">
-                                                <select class="form-select" aria-label="Default select example">
+                                                <select id="bedrooms" class="form-select"
+                                                    aria-label="Default select example">
                                                     <option selected>
                                                         3-5
                                                     </option>
@@ -394,7 +423,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- hero-form-column--end -->
+                                    <!-- hero-form-column-end -->
                                     <!-- hero-form-column -->
                                     <div class="hero__form-col">
                                         <div class="hero__form-control text-center">
@@ -415,7 +444,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <!-- hero-form-column--end -->
+                                    <!-- hero-form-column-end -->
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="car-tab-pane" role="tabpanel" aria-labelledby="car-tab"
@@ -424,9 +453,10 @@
                                     <!-- hero-form-column -->
                                     <div class="hero__form-col">
                                         <div class="hero__form-control">
-                                            <label for="" class="form-label">Brand</label>
+                                            <label for="carBrand" class="form-label">Brand</label>
                                             <div class="hero__form-control__input">
-                                                <select class="form-select" aria-label="Default select example">
+                                                <select id="carBrand" class="form-select"
+                                                    aria-label="Default select example">
                                                     <option selected>
                                                         Hyundai
                                                     </option>
@@ -443,13 +473,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- hero-form-column--end -->
+                                    <!-- hero-form-column-end -->
                                     <!-- hero-form-column -->
                                     <div class="hero__form-col">
                                         <div class="hero__form-control">
-                                            <label for="" class="form-label">Fuel Type</label>
+                                            <label for="fuelType" class="form-label">Fuel Type</label>
                                             <div class="hero__form-control__input">
-                                                <select class="form-select" aria-label="Default select example">
+                                                <select id="fuelType" class="form-select"
+                                                    aria-label="Default select example">
                                                     <option selected>
                                                         Petrol
                                                     </option>
@@ -466,13 +497,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- hero-form-column--end -->
+                                    <!-- hero-form-column-end -->
                                     <!-- hero-form-column -->
                                     <div class="hero__form-col hero__form-col__mHalf">
                                         <div class="hero__form-control">
-                                            <label for="" class="form-label">Price</label>
+                                            <label for="carPrice" class="form-label">Price</label>
                                             <div class="hero__form-control__input">
-                                                <select class="form-select" aria-label="Default select example">
+                                                <select id="carPrice" class="form-select"
+                                                    aria-label="Default select example">
                                                     <option selected>
                                                         €2,000-€4,000
                                                     </option>
@@ -489,26 +521,31 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- hero-form-column--end -->
+                                    <!-- hero-form-column-end -->
                                     <!-- hero-form-column -->
                                     <div class="hero__form-col hero__form-col__mHalf">
                                         <div class="hero__form-control">
-                                            <label for="" class="form-label">Kilometers</label>
+                                            <label for="distanceType" class="form-label">Kilometers</label>
                                             <div class="hero__form-control__input">
-                                                <select class="form-select" aria-label="Default select example">
+                                                <select id="distanceType" class="form-select"
+                                                    aria-label="Default select example">
                                                     <option selected>
-                                                        <50,000km </option>
+                                                        &#8249; 50,000km
+                                                    </option>
                                                     <option value="1">
-                                                        <50,000km </option>
+                                                        &#8249; 50,000km
+                                                    </option>
                                                     <option value="2">
-                                                        <50,000km </option>
+                                                        &#8249; 50,000km
+                                                    </option>
                                                     <option value="3">
-                                                        <50,000km </option>
+                                                        &#8249;50,000km
+                                                    </option>
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- hero-form-column--end -->
+                                    <!-- hero-form-column-end -->
                                     <!-- hero-form-column -->
                                     <div class="hero__form-col">
                                         <div class="hero__form-control text-center">
@@ -529,7 +566,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <!-- hero-form-column--end -->
+                                    <!-- hero-form-column-end -->
                                 </div>
                             </div>
                         </div>
@@ -1185,16 +1222,16 @@
         <!-- services Section Start -->
         <section class="service service--section">
             <div class="service__obj">
-                <img src="../../assets/images/thumbs/hero-pattern.svg" class="service__obj-img" alt="Object Image"
-                    loading="lazy" />
-                <img src="../../assets/images/thumbs/hero-pattern.svg" class="service__obj-img service__obj-img--2"
+                <img src="../../assets/images/thumbs/hero-pattern.svg" aria-hidden="true" class="service__obj-img"
                     alt="Object Image" loading="lazy" />
+                <img src="../../assets/images/thumbs/hero-pattern.svg" aria-hidden="true"
+                    class="service__obj-img service__obj-img--2" alt="Object Image" loading="lazy" />
             </div>
             <div class="service__obj service__obj--right">
-                <img src="../../assets/images/thumbs/hero-pattern.svg" class="service__obj-img" alt="Object Image"
-                    loading="lazy" />
-                <img src="../../assets/images/thumbs/hero-pattern.svg" class="service__obj-img service__obj-img--2"
+                <img src="../../assets/images/thumbs/hero-pattern.svg" aria-hidden="true" class="service__obj-img"
                     alt="Object Image" loading="lazy" />
+                <img src="../../assets/images/thumbs/hero-pattern.svg" aria-hidden="true"
+                    class="service__obj-img service__obj-img--2" alt="Object Image" loading="lazy" />
             </div>
             <div class="container">
                 <div class="service__header section__title text-center">
@@ -1441,7 +1478,7 @@
                 </div>
             </div>
         </section>
-        <!-- About-Section-----End -->
+        <!-- About-Section-end -->
 
         <!-- Partners Section Start -->
         <section class="partners partners--section">
@@ -2300,7 +2337,7 @@
                 <!-- FAQ Section Object Image -->
                 <img src="../../assets/images/icons-objs/faq-obj.svg" alt="seli frequently asked questions"
                     class="faq__obj position-absolute start-0 top-0 h-100 w-auto z-n1 d-none d-lg-inline-block"
-                    loading="lazy" />
+                    loading="lazy" aria-hidden="true" />
             </div>
         </section>
         <!-- FAQ Section End -->
@@ -2401,9 +2438,9 @@
             <div
                 class="footer__obj position-absolute top-0 start-0 w-100 h-100 z-n1 d-flex flex-wrap justify-content-between align-items-center">
                 <img src="../../assets/images/icons-objs/footer-obj-sm.webp" alt="seli.md" class="footer__obj__item"
-                    loading="lazy" />
+                    loading="lazy" aria-hidden="true" />
                 <img src="../../assets/images/icons-objs/footer-obj-sm.webp" alt="seli.md" class="footer__obj__item"
-                    loading="lazy" />
+                    loading="lazy" aria-hidden="true" />
             </div>
         </div>
     </footer>

@@ -2,116 +2,116 @@
 @use '../base/' as *;
 
 .footer {
+  &__content {
+    max-width: 118rem;
+    padding: 2.5rem 0;
 
-    &__content {
-        max-width: 1888px;        padding: 40px 0;
+    @include media-query(breakpoint-lg) {
+      padding: 4rem 0;
+    }
+    @include media-query(breakpoint-xxl) {
+      padding: 4rem 0 3.125rem;
+    }
+  }
 
-        @include media-query(breakpoint-lg) {
-            padding: 64px 0;
-        }
-        @include media-query(breakpoint-xxl) {
-            padding: 64px 0 50px;
-        }
+  &__wrapper {
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+
+    @include media-query(breakpoint-md) {
+      gap: 3rem;
+      margin-bottom: 3.25rem;
+    }
+    @include media-query(breakpoint-lg) {
+      margin-bottom: 5rem;
+    }
+    @include media-query(breakpoint-xxl) {
+      margin-bottom: 6.375rem;
+    }
+  }
+
+  &__nav {
+    width: 100%;
+    @include media-query(breakpoint-lg) {
+      width: auto;
     }
 
-    &__wrapper {
-        gap: 32px;
-        margin-bottom: 40px;
-
-        @include media-query(breakpoint-md) {
-            gap: 48px;
-            margin-bottom: 52px;
-        }
-        @include media-query(breakpoint-lg) {
-            margin-bottom: 80px;
-        }
-        @include media-query(breakpoint-xxl) {
-            margin-bottom: 102px;
-        }
+    &__ul {
+      gap: 0.875rem;
+      @include media-query(breakpoint-lg) {
+        gap: 1.5rem;
+      }
+      @include media-query(breakpoint-xl) {
+        gap: 2rem;
+      }
+      @include media-query(breakpoint-xxl) {
+        gap: 2.5rem;
+      }
     }
+    &__link {
+      color: $text-black;
+      font-weight: 600;
 
-    &__nav {
-        width: 100%;
-        @include media-query(breakpoint-lg) {
-            width: auto;
-        }
+      @include media-query(breakpoint-xl) {
+        font-size: 1.125rem;
+      }
 
-        &__ul {
-            gap: 14px;
-            @include media-query(breakpoint-lg) {
-                gap: 24px;
-            }
-            @include media-query(breakpoint-xl) {
-                gap: 32px;
-            }
-            @include media-query(breakpoint-xxl) {
-                gap: 40px;
-            }
-        }
-        &__link {
-            color: $text-black;
-            font-weight: 600;
-
-            @include media-query(breakpoint-xl) {
-                font-size: 18px;
-            }
-
-            &:hover {
-                color: $secondary;
-            }
-        }
+      &:hover {
+        color: $secondary;
+      }
     }
+  }
 
-    &__copyright {
-        p {
-            color: $text-black;
-            font-size: 14px;
+  &__copyright {
+    p {
+      color: $text-black;
+      font-size: 0.875rem;
 
-            @include media-query(breakpoint-lg) {
-                font-size: 16px;
-            }
+      @include media-query(breakpoint-lg) {
+        font-size: 1rem;
+      }
 
-            @include media-query(breakpoint-xxl) {
-                font-size: 18px;
-            }
-        }
+      @include media-query(breakpoint-xxl) {
+        font-size: 1.125rem;
+      }
     }
+  }
 
-    &__obj {
-		gap: 20px;
-        &__item {
-            max-width: 856px;
-            width: 100%;
-			margin: auto;
-            object-fit: contain;
+  &__obj {
+    gap: 1.25rem;
+    &__item {
+      max-width: 53.5rem;
+      width: 100%;
+      margin: auto;
+      object-fit: contain;
 
-			@include media-query(breakpoint-lg) {
-				max-width: 46%;
-			}
-        }
+      @include media-query(breakpoint-lg) {
+        max-width: 46%;
+      }
     }
+  }
 }
 
 /* Social Contact */
 .social-contact {
-    gap: 20px;
+  gap: 1.25rem;
 
-    &__link {
-        width: 20px;
-        height: 22px;
-        color: $text-black;
-        @include transition-common;
-        @include media-query(breakpoint-xl) {
-            width: 24px;
-            height: 26px;
-        }
-
-        &:hover {
-            color: $secondary;
-        }
-        svg {
-            width: 100%;
-            height: 100%;
-        }
+  &__link {
+    width: 1.25rem;
+    height: 1.375rem;
+    color: $text-black;
+    @include transition-common;
+    @include media-query(breakpoint-xl) {
+      width: 1.5rem;
+      height: 1.625rem;
     }
+
+    &:hover {
+      color: $secondary;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }

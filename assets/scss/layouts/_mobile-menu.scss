@@ -2,45 +2,45 @@
 @use '../base/' as *;
 
 .menu {
-    &-offcanvas-show {
-        width: 32px;
-        height: 32px;
+  &-offcanvas-show {
+    width: 2rem;
+    height: 2rem;
 
-        @include media-query(breakpoint-lg) {
-            width: 40px;
-            height: 40px;
-        }
-
-        svg {
-            width: 100%;
-            height: 100%;
-        }
+    @include media-query(breakpoint-lg) {
+      width: 2.5rem;
+      height: 2.5rem;
     }
 
-    .offcanvas {
-        background-color: $body-color;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .offcanvas {
+    background-color: $body-color;
+  }
+
+  &__item {
+    border-bottom: 0.0625rem solid $cool-gray;
+  }
+
+  &__link {
+    color: $dark-gray;
+    font-weight: 600;
+    padding: 0.875rem 0;
+
+    &:hover,
+    &.active {
+      color: $secondary;
     }
 
-    &__item {
-        border-bottom: 1px solid $cool-gray;
+    &.active {
+      font-weight: 700;
     }
+  }
 
-    &__link {
-        color: $dark-gray;
-        font-weight: 600;
-        padding: 14px 0;
-
-        &:hover,
-        &.active {
-            color: $secondary;
-        }
-
-        &.active {
-            font-weight: 700;
-        }
-    }
-
-    &__contact__title {
-        border-bottom: 1px solid $cool-gray;
-    }
+  &__contact__title {
+    border-bottom: 0.0625rem solid $cool-gray;
+  }
 }

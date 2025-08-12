@@ -3,50 +3,50 @@
 
 .explore {
   &--section {
-    padding: 40px 0px 40px;
+    padding: 2.5rem 0rem 2.5rem;
     @include media-query(breakpoint-lg) {
-      padding: 80px 0px 80px;
+      padding: 5rem 0rem 5rem;
     }
     @include media-query(breakpoint-xl) {
-      padding: 100px 0px 100px;
+      padding: 6.25rem 0rem 6.25rem;
     }
     @include media-query(breakpoint-xxl) {
-      padding: 120px 0px 120px;
+      padding: 7.5rem 0rem 7.5rem;
     }
   }
   &__block {
     &--houses {
-      padding-bottom: 40px;
+      padding-bottom: 2.5rem;
       @include media-query(breakpoint-lg) {
-        padding-bottom: 80px;
+        padding-bottom: 5rem;
       }
       @include media-query(breakpoint-xl) {
-        padding-bottom: 100px;
+        padding-bottom: 6.25rem;
       }
       @include media-query(breakpoint-xxl) {
-        padding-bottom: 120px;
+        padding-bottom: 7.5rem;
       }
     }
     &-header {
-      margin-bottom: 15px;
+      margin-bottom: 0.9375rem;
       @include media-query(breakpoint-lg) {
-        margin-bottom: 44px;
+        margin-bottom: 2.75rem;
       }
       & h2 {
         font-weight: bold;
         color: $text-black;
         text-transform: uppercase;
-        @media screen and (max-width: 767px) {
-          font-size: 18px !important;
+        @media screen and (max-width: 47.9375rem) {
+          font-size: 1.125rem !important;
         }
       }
       & a.btn {
-        padding: 10px 15px;
+        padding: 0.625rem 0.9375rem;
       }
     }
     &-row {
-      --bs-gutter-x: 15px;
-      --bs-gutter-y: 15px;
+      --bs-gutter-x: 0.9375rem;
+      --bs-gutter-y: 0.9375rem;
     }
   }
 }
