@@ -3,11 +3,7 @@
 
 .partners {
   &__content {
-    background: linear-gradient(
-      90deg,
-      rgba(60, 205, 170, 0.06) 0%,
-      rgba(5, 60, 90, 0.06) 97.99%
-    );
+    background: $bg-gradient-light;
 
     max-width: 90rem;
     padding: 2.5rem 0;

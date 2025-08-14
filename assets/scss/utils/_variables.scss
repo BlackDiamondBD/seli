@@ -15,6 +15,11 @@ $bg-gradient: linear-gradient(
   rgba(60, 205, 171, 0.2) 0%,
   rgba(5, 60, 90, 0.2)
 );
+$bg-gradient-light: linear-gradient(
+  to right,
+  rgba(60, 205, 171, 0.06) 0%,
+  rgba(5, 60, 90, 0.06)
+);
 
 // Custom Colors
 $white-color: #fff;

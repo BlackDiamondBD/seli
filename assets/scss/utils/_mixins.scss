@@ -1,44 +1,40 @@
 @use 'variables' as *;
 
-@mixin box-shadow {
-  box-shadow: 0rem 1.25rem 1.5625rem 0rem rgba(4, 11, 20, 0.1);
-}
-
 @mixin transition-common {
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 // Media Query Mixins (Mobile First Approach)
 @mixin media-query($breakpoint) {
-  @if $breakpoint == breakpoint-xsm {
-    @media (min-width: $breakpoint-xsm) {
-      @content;
+    @if $breakpoint == breakpoint-xsm {
+        @media (min-width: $breakpoint-xsm) {
+            @content;
+        }
+    } @else if $breakpoint == breakpoint-sm {
+        @media (min-width: $breakpoint-sm) {
+            @content;
+        }
+    } @else if $breakpoint == breakpoint-md {
+        @media (min-width: $breakpoint-md) {
+            @content;
+        }
+    } @else if $breakpoint == breakpoint-lg {
+        @media (min-width: $breakpoint-lg) {
+            @content;
+        }
+    } @else if $breakpoint == breakpoint-xl {
+        @media (min-width: $breakpoint-xl) {
+            @content;
+        }
+    } @else if $breakpoint == breakpoint-xxl {
+        @media (min-width: $breakpoint-xxl) {
+            @content;
+        }
+    } @else if $breakpoint == breakpoint-xxl-2 {
+        @media (min-width: $breakpoint-xxl-2) {
+            @content;
+        }
     }
-  } @else if $breakpoint == breakpoint-sm {
-    @media (min-width: $breakpoint-sm) {
-      @content;
-    }
-  } @else if $breakpoint == breakpoint-md {
-    @media (min-width: $breakpoint-md) {
-      @content;
-    }
-  } @else if $breakpoint == breakpoint-lg {
-    @media (min-width: $breakpoint-lg) {
-      @content;
-    }
-  } @else if $breakpoint == breakpoint-xl {
-    @media (min-width: $breakpoint-xl) {
-      @content;
-    }
-  } @else if $breakpoint == breakpoint-xxl {
-    @media (min-width: $breakpoint-xxl) {
-      @content;
-    }
-  } @else if $breakpoint == breakpoint-xxl-2 {
-    @media (min-width: $breakpoint-xxl-2) {
-      @content;
-    }
-  }
 }

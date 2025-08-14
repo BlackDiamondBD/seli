@@ -71,6 +71,16 @@
     }
   }
 
+  // Button Transparent
+  &--trans {
+    padding: 0;
+    border: none;
+    &:hover {
+      color: $secondary;
+      background-color: transparent;
+    }
+  }
+
   // Button Animations CSS
   &__icon {
     width: 1.25rem;
