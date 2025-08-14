@@ -10,6 +10,10 @@
         padding-bottom: 102px;
     }
 
+    &__content {
+        margin-bottom: 30px;
+    }
+
     // Slider Part
     &__slider {
         margin-bottom: 30px;
@@ -241,5 +245,17 @@
 
     & .card--explore {
         box-shadow: unset;
+    }
+
+    // Siderbar Part
+    .sidebar {
+        &--detail {
+            &__buttons {
+                .btn {
+                    height: 52px;
+                    border-radius: 10px;
+                }
+            }
+        }
     }
 }
