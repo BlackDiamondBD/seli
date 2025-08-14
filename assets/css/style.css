@@ -291,6 +291,10 @@ h6 {
   }
 }
 
+.h-sm {
+  height: 2.375rem;
+}
+
 .header--section {
   padding: 0.9375rem 0;
 }
@@ -1393,6 +1397,21 @@ h6 {
 }
 .card--profileDetail .social-link svg {
   width: 64%;
+}
+.card-sequence .card .card-body {
+  background-color: #fff;
+}
+.card-sequence .card:nth-child(1) .card-body {
+  background-color: #EAF4F3;
+}
+.card-sequence .card:nth-child(2) .card-body {
+  background-color: #F5F9F9;
+}
+.gradient-border {
+  background-image: linear-gradient(to right, rgba(60, 205, 171, 0.2) 0%, rgba(5, 60, 90, 0.2));
+}
+.gradient-border > * {
+  border-radius: inherit;
 }
 
 .navlink--menu {
