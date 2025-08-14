@@ -2,415 +2,426 @@
 @use '../base/' as *;
 
 .card {
-  // Explore-houses-cars- Card-start
-  border: none;
-  &--explore {
-    border-radius: 0.625rem;
-    background-color: #fff;
-    box-shadow: 0rem 0.25rem 0.25rem 0rem #9999991a;
+    // Explore-houses-cars- Card-start
+    border: none;
+    &--explore {
+        border-radius: 0.625rem;
+        background-color: #fff;
+        box-shadow: 0rem 0.25rem 0.25rem 0rem #9999991a;
+        border: 1px solid $light-gray;
 
-    & .card {
-      &__thumb {
-        position: relative;
-        width: 100%;
-        height: 7.375rem;
-        @include media-query(breakpoint-md) {
-          height: 14.375rem;
-        }
-        & .wishlistBtn {
-          width: 1.875rem;
-          height: 1.875rem;
-          background: #0000004d;
-          border-radius: 50%;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          backdrop-filter: blur(0.875rem);
-          position: absolute;
-          top: 0.625rem;
-          right: 0.625rem;
-          transition: all 0.3s ease;
-          &:hover {
-            background-color: #0000008c;
-          }
-          @include media-query(breakpoint-md) {
-            top: 0.6875rem;
-            right: 1.1875rem;
-          }
-        }
-        &-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-          border-radius: 0.625rem;
-        }
-      }
-      &__content {
-        padding: 0.625rem 0.625rem;
-        @include media-query(breakpoint-md) {
-          padding: 0.9375rem 0.9375rem;
-        }
-        @include media-query(breakpoint-xl) {
-          padding: 0.9375rem 0.9375rem 1.1875rem 0.9375rem;
-        }
-        &-info {
-          margin-bottom: 5px;
-          @include media-query(breakpoint-md) {
-            margin-bottom: 1.25rem;
-          }
-          & span.price {
-            font-weight: bold;
-            color: $primary;
-            font-size: 1rem;
-            @include media-query(breakpoint-md) {
-              font-size: 1.25rem;
-            }
-          }
-          & .message {
-            padding: 0rem;
-            line-height: 1;
-            border: none;
-            background-color: transparent;
-            & svg {
-              max-width: 1.25rem;
-              max-height: 1.25rem;
-              @include media-query(breakpoint-md) {
-                max-width: 1.5rem;
-                max-height: 1.5rem;
-              }
-            }
-          }
-          & .btn {
-            padding: 0.5625rem 0.75rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            height: auto;
-            min-width: inherit;
-          }
-        }
-        &-text {
-          margin-bottom: 0.625rem;
-          @include media-query(breakpoint-md) {
-            margin-bottom: 1.25rem;
-          }
-          & h3 {
-            margin-bottom: 0.25rem;
-            @include media-query(breakpoint-md) {
-              margin-bottom: 0.375rem;
-            }
-            & a {
-              font-size: 0.75rem;
-              font-weight: bold;
-              color: $text-black;
-              display: block;
-              text-decoration: none;
-              @include media-query(breakpoint-md) {
-                font-size: 1rem;
-              }
-            }
-          }
-          & .location {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: $dark-gray;
-            @include media-query(breakpoint-md) {
-              font-size: 0.875rem;
-              font-weight: 600;
-            }
-            & span.icon svg {
-              max-width: 0.875rem;
-              max-height: 0.875rem;
-              @include media-query(breakpoint-md) {
-                max-width: 1.125rem;
-                max-height: 1.125rem;
-              }
-            }
-          }
-        }
-        &-meta {
-          padding-top: 0.625rem;
-          border-top: 0.0625rem solid $cool-gray;
-          @include media-query(breakpoint-md) {
-            padding-top: 1.25rem;
-          }
-          & ul {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            gap: 0.375rem 0rem;
-            flex-wrap: wrap;
-            & li {
-              font-size: 0.75rem;
-              font-weight: 500;
-              color: $dark-gray;
-              line-height: 1;
-              display: inline-flex;
-              align-items: center;
-              gap: 0.5rem;
-              position: relative;
-              padding: 0rem 0.5rem;
-              &:first-child {
-                padding-left: 0rem !important;
-              }
-              &:last-child {
-                padding-right: 0rem !important;
-              }
-              &:not(:last-child) {
-                &::after {
-                  position: absolute;
-                  right: 0;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  content: '';
-                  width: 0.0625rem;
-                  height: 0.875rem;
-                  background-color: $dark-gray;
-                }
+        & .card {
+            &__thumb {
+                position: relative;
+                width: 100%;
+                height: 7.375rem;
                 @include media-query(breakpoint-md) {
-                  padding: 0rem 0.625rem;
+                    height: 14.375rem;
                 }
-                @include media-query(breakpoint-xxl) {
-                  padding: 0rem 0.75rem;
+                & .wishlistBtn {
+                    width: 1.875rem;
+                    height: 1.875rem;
+                    background: #0000004d;
+                    border-radius: 50%;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    backdrop-filter: blur(0.875rem);
+                    position: absolute;
+                    top: 0.625rem;
+                    right: 0.625rem;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        background-color: #0000008c;
+                    }
+                    @include media-query(breakpoint-md) {
+                        top: 0.6875rem;
+                        right: 1.1875rem;
+                    }
                 }
-              }
-              @include media-query(breakpoint-md) {
-                font-size: 0.875rem;
-              }
-              @include media-query(breakpoint-lg) {
-                gap: 0.375rem;
-              }
-              @include media-query(breakpoint-xxl) {
-                font-size: 0.875rem;
-              }
-              & span.icon {
-                & img {
-                  max-width: 0.875rem;
-                  max-height: 0.875rem;
-                  @include media-query(breakpoint-md) {
-                    max-width: 1.125rem;
-                    max-height: 1.125rem;
-                  }
+                &-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 0.625rem;
                 }
-              }
             }
-          }
+            &__content {
+                padding: 0.625rem 0.625rem;
+                @include media-query(breakpoint-md) {
+                    padding: 0.9375rem 0.9375rem;
+                }
+                @include media-query(breakpoint-xl) {
+                    padding: 0.9375rem 0.9375rem 1.1875rem 0.9375rem;
+                }
+                &-info {
+                    margin-bottom: 5px;
+                    @include media-query(breakpoint-md) {
+                        margin-bottom: 1.25rem;
+                    }
+                    & span.price {
+                        font-weight: bold;
+                        color: $primary;
+                        font-size: 1rem;
+                        @include media-query(breakpoint-md) {
+                            font-size: 1.25rem;
+                        }
+                    }
+                    & .message {
+                        padding: 0rem;
+                        line-height: 1;
+                        border: none;
+                        background-color: transparent;
+                        & svg {
+                            max-width: 1.25rem;
+                            max-height: 1.25rem;
+                            @include media-query(breakpoint-md) {
+                                max-width: 1.5rem;
+                                max-height: 1.5rem;
+                            }
+                        }
+                    }
+                    & .btn {
+                        padding: 0.5625rem 0.75rem;
+                        font-size: 0.75rem;
+                        font-weight: 600;
+                        height: auto;
+                        min-width: inherit;
+                    }
+                }
+                &-text {
+                    margin-bottom: 0.625rem;
+                    @include media-query(breakpoint-md) {
+                        margin-bottom: 1.25rem;
+                    }
+                    & h3 {
+                        margin-bottom: 0.25rem;
+                        @include media-query(breakpoint-md) {
+                            margin-bottom: 0.375rem;
+                        }
+                        & a {
+                            font-size: 0.75rem;
+                            font-weight: bold;
+                            color: $text-black;
+                            display: block;
+                            text-decoration: none;
+                            @include media-query(breakpoint-md) {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                    & .location {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        font-size: 0.75rem;
+                        font-weight: 500;
+                        color: $dark-gray;
+                        @include media-query(breakpoint-md) {
+                            font-size: 0.875rem;
+                            font-weight: 600;
+                        }
+                        & span.icon svg {
+                            max-width: 0.875rem;
+                            max-height: 0.875rem;
+                            @include media-query(breakpoint-md) {
+                                max-width: 1.125rem;
+                                max-height: 1.125rem;
+                            }
+                        }
+                    }
+                }
+                &-meta {
+                    padding-top: 0.625rem;
+                    border-top: 0.0625rem solid $cool-gray;
+                    @include media-query(breakpoint-md) {
+                        padding-top: 1.25rem;
+                    }
+                    & ul {
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
+                        gap: 0.375rem 0rem;
+                        flex-wrap: wrap;
+                        & li {
+                            font-size: 0.75rem;
+                            font-weight: 500;
+                            color: $dark-gray;
+                            line-height: 1;
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 0.5rem;
+                            position: relative;
+                            padding-right: 0.5rem;
+                            margin-right: 0.5rem;
+                            &:last-child {
+                                padding-right: 0;
+                                margin-right: 0;
+                            }
+                            &:not(:last-child) {
+                                &::after {
+                                    position: absolute;
+                                    right: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    content: '';
+                                    width: 0.0625rem;
+                                    height: 0.875rem;
+                                    background-color: $dark-gray;
+                                }
+                                @include media-query(breakpoint-md) {
+                                    padding: 0rem 0.625rem;
+                                }
+                                @include media-query(breakpoint-xxl) {
+                                    padding: 0rem 0.75rem;
+                                }
+                            }
+                            @include media-query(breakpoint-md) {
+                                font-size: 0.875rem;
+                            }
+                            @include media-query(breakpoint-lg) {
+                                gap: 0.375rem;
+                            }
+                            @include media-query(breakpoint-xxl) {
+                                font-size: 0.875rem;
+                            }
+                            & span.icon {
+                                & img {
+                                    max-width: 0.875rem;
+                                    max-height: 0.875rem;
+                                    @include media-query(breakpoint-md) {
+                                        max-width: 1.125rem;
+                                        max-height: 1.125rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-      }
     }
-  }
-  // Explore-houses-cars- Card---end
+    // Explore-houses-cars- Card---end
 
-  // Service Cards Css Start ====
-  &--service {
-    background-color: $white-color;
-    padding: 0.4375rem 0rem;
-    border-radius: 0.9375rem;
-    @include media-query(breakpoint-xl) {
-      padding: 0.6875rem 0rem;
-      border-radius: 1.25rem;
-    }
-    & .card {
-      &__thumb {
-        position: relative;
-        &-img {
-          width: 100%;
-          height: 18.4375rem;
-          border-radius: 0.9375rem;
-          @include media-query(breakpoint-md) {
-            height: 22.5rem;
-          }
-          @include media-query(breakpoint-xxl) {
-            height: 31rem;
-          }
-        }
-        &-info {
-          max-width: 13.25rem;
-          background-color: $white-color;
-          padding: 0.625rem 0.625rem;
-          border-radius: 0.9375rem;
-          position: absolute;
-          left: 0.75rem;
-          bottom: 0.75rem;
-          @include media-query(breakpoint-md) {
-            padding: 1.0625rem 1.125rem 1.5625rem 1.3125rem;
-            border-radius: 0.9375rem;
-            max-width: 18.75rem;
-            bottom: 0.625rem;
-            left: 0.5rem;
-          }
-          @include media-query(breakpoint-xxl) {
-            padding: 1.0625rem 1.125rem 1.5625rem 1.3125rem;
+    // Service Cards Css Start ====
+    &--service {
+        background-color: $white-color;
+        padding: 0.4375rem 0rem;
+        border-radius: 0.9375rem;
+        @include media-query(breakpoint-xl) {
+            padding: 0.6875rem 0rem;
             border-radius: 1.25rem;
-            max-width: 22.375rem;
-            bottom: 0.625rem;
-            left: 0.5rem;
-          }
-          & h5 {
-            color: #000;
-            font-size: 0.9375rem;
-            font-weight: 600;
-            margin-bottom: 0.375rem;
-            @include media-query(breakpoint-md) {
-              font-size: 1.125rem;
-              line-height: 1;
-              margin-bottom: 0.625rem;
-            }
-            @include media-query(breakpoint-xxl) {
-              font-size: 1.5625rem;
-              line-height: 1;
-              margin-bottom: 0.75rem;
-            }
-          }
-          & p {
-            font-size: 0.75rem;
-            line-height: 0.875rem;
-            color: $text-black;
-            font-weight: 700;
-            line-height: 0.875rem;
-            @include media-query(breakpoint-md) {
-              font-size: 0.8125rem;
-              line-height: 1.375rem;
-              font-weight: 500;
-            }
-            @include media-query(breakpoint-xxl) {
-              font-size: 1rem;
-              line-height: 1.5rem;
-              font-weight: 500;
-            }
-          }
         }
-      }
-    }
-  }
-  // Service Cards Css   end ====
-
-  // About Cards Css Start ===
-  &--about {
-    background-color: transparent;
-    border-radius: 0rem;
-    & .card {
-      &__thumbnail {
-        height: 12.5rem;
-        max-width: 13.5rem;
-        margin: 0 auto;
-        margin-bottom: 1.25rem;
-        & img {
-          max-width: 100%;
+        & .card {
+            &__thumb {
+                position: relative;
+                &-img {
+                    width: 100%;
+                    height: 18.4375rem;
+                    border-radius: 0.9375rem;
+                    @include media-query(breakpoint-md) {
+                        height: 22.5rem;
+                    }
+                    @include media-query(breakpoint-xxl) {
+                        height: 31rem;
+                    }
+                }
+                &-info {
+                    max-width: 13.25rem;
+                    background-color: $white-color;
+                    padding: 0.625rem 0.625rem;
+                    border-radius: 0.9375rem;
+                    position: absolute;
+                    left: 0.75rem;
+                    bottom: 0.75rem;
+                    @include media-query(breakpoint-md) {
+                        padding: 1.0625rem 1.125rem 1.5625rem 1.3125rem;
+                        border-radius: 0.9375rem;
+                        max-width: 18.75rem;
+                        bottom: 0.625rem;
+                        left: 0.5rem;
+                    }
+                    @include media-query(breakpoint-xxl) {
+                        padding: 1.0625rem 1.125rem 1.5625rem 1.3125rem;
+                        border-radius: 1.25rem;
+                        max-width: 22.375rem;
+                        bottom: 0.625rem;
+                        left: 0.5rem;
+                    }
+                    & h5 {
+                        color: #000;
+                        font-size: 0.9375rem;
+                        font-weight: 600;
+                        margin-bottom: 0.375rem;
+                        @include media-query(breakpoint-md) {
+                            font-size: 1.125rem;
+                            line-height: 1;
+                            margin-bottom: 0.625rem;
+                        }
+                        @include media-query(breakpoint-xxl) {
+                            font-size: 1.5625rem;
+                            line-height: 1;
+                            margin-bottom: 0.75rem;
+                        }
+                    }
+                    & p {
+                        font-size: 0.75rem;
+                        line-height: 0.875rem;
+                        color: $text-black;
+                        font-weight: 700;
+                        line-height: 0.875rem;
+                        @include media-query(breakpoint-md) {
+                            font-size: 0.8125rem;
+                            line-height: 1.375rem;
+                            font-weight: 500;
+                        }
+                        @include media-query(breakpoint-xxl) {
+                            font-size: 1rem;
+                            line-height: 1.5rem;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
         }
-      }
-      &__content {
-        & h3 {
-          font-size: 1.25rem;
-          margin-bottom: 0.625rem;
-          text-transform: capitalize;
-          @include media-query(breakpoint-lg) {
-            font-size: 1.5625rem;
-            margin-bottom: 1.125rem;
-          }
+    }
+    // Service Cards Css   end ====
+
+    // About Cards Css Start ===
+    &--about {
+        background-color: transparent;
+        border-radius: 0rem;
+        & .card {
+            &__thumbnail {
+                height: 12.5rem;
+                max-width: 13.5rem;
+                margin: 0 auto;
+                margin-bottom: 1.25rem;
+                & img {
+                    max-width: 100%;
+                }
+            }
+            &__content {
+                & h3 {
+                    font-size: 1.25rem;
+                    margin-bottom: 0.625rem;
+                    text-transform: capitalize;
+                    @include media-query(breakpoint-lg) {
+                        font-size: 1.5625rem;
+                        margin-bottom: 1.125rem;
+                    }
+                }
+                & p {
+                    font-size: 0.875rem;
+                    line-height: 1.5rem;
+                    font-weight: bold;
+                    color: $text-black;
+                    max-width: 24rem;
+                    margin: 0 auto;
+                    text-transform: capitalize;
+                    @include media-query(breakpoint-lg) {
+                        font-size: 1rem;
+                        font-weight: 500;
+                        max-width: 23rem;
+                    }
+                }
+            }
         }
-        & p {
-          font-size: 0.875rem;
-          line-height: 1.5rem;
-          font-weight: bold;
-          color: $text-black;
-          max-width: 24rem;
-          margin: 0 auto;
-          text-transform: capitalize;
-          @include media-query(breakpoint-lg) {
-            font-size: 1rem;
-            font-weight: 500;
-            max-width: 23rem;
-          }
-        }
-      }
     }
-  }
-  // About Cards Css End
+    // About Cards Css End
 
-  // Testimonial Card Start
-  &--testimonial {
-    padding: 0.9375rem;
-    border-radius: 0.9375rem;
-    border: 0.0625rem solid $cool-gray;
-    background-color: $body-color;
-    @include transition-common;
-
-    @include media-query(breakpoint-xl) {
-      padding: 1.25rem;
-      border-radius: 1.25rem;
-    }
-
-    &:hover {
-      background-color: $white-color;
-      box-shadow: 0rem 0.25rem 0.875rem 0rem rgba(153, 153, 153, 0.08);
-      border-color: transparent;
-    }
-
-    & .card {
-      &__para {
-        font-size: 0.875rem;
-        line-height: 1.78;
-        text-transform: capitalize;
+    // Testimonial Card Start
+    &--testimonial {
+        padding: 0.9375rem;
+        border-radius: 0.9375rem;
+        border: 0.0625rem solid $cool-gray;
+        background-color: $body-color;
+        @include transition-common;
 
         @include media-query(breakpoint-xl) {
-          font-size: 1rem;
-          line-height: 1.66;
+            padding: 1.25rem;
+            border-radius: 1.25rem;
         }
-        @include media-query(breakpoint-xxl-2) {
-          font-size: 1.125rem;
+
+        &:hover {
+            background-color: $white-color;
+            box-shadow: 0rem 0.25rem 0.875rem 0rem rgba(153, 153, 153, 0.08);
+            border-color: transparent;
         }
-      }
+
+        & .card {
+            &__para {
+                font-size: 0.875rem;
+                line-height: 1.78;
+                text-transform: capitalize;
+
+                @include media-query(breakpoint-xl) {
+                    font-size: 1rem;
+                    line-height: 1.66;
+                }
+                @include media-query(breakpoint-xxl-2) {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+        .client {
+            gap: 0.9375rem;
+            margin-bottom: 1.25rem;
+
+            @include media-query(breakpoint-xl) {
+                margin-bottom: 1.75rem;
+            }
+            @include media-query(breakpoint-xxl-2) {
+                margin-bottom: 2.25rem;
+            }
+
+            &__name {
+                font-size: 1rem;
+                margin-bottom: 0.625rem;
+                @include media-query(breakpoint-xl) {
+                    font-size: 1.25rem;
+                    line-height: 1.5;
+                    max-width: 15rem;
+                }
+            }
+            &__designation {
+                @include media-query(breakpoint-xl) {
+                    font-size: 1.25rem;
+                    line-height: 1.5;
+                }
+            }
+
+            &__thumb {
+                width: 3.75rem;
+                height: 3.75rem;
+                @include media-query(breakpoint-xl) {
+                    width: 5.125rem;
+                    height: 5.125rem;
+                }
+            }
+        }
     }
-    .client {
-      gap: 0.9375rem;
-      margin-bottom: 1.25rem;
+    // Testimonial Card End
 
-      @include media-query(breakpoint-xl) {
-        margin-bottom: 1.75rem;
-      }
-      @include media-query(breakpoint-xxl-2) {
-        margin-bottom: 2.25rem;
-      }
-
-      &__name {
-        font-size: 1rem;
-        margin-bottom: 0.625rem;
-        @include media-query(breakpoint-xl) {
-          font-size: 1.25rem;
-          line-height: 1.5;
-          max-width: 15rem;
-        }
-      }
-      &__designation {
-        @include media-query(breakpoint-xl) {
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-      }
-
-      &__thumb {
-        width: 3.75rem;
-        height: 3.75rem;
-        @include media-query(breakpoint-xl) {
-          width: 5.125rem;
-          height: 5.125rem;
-        }
-      }
+    // Partners Card Start
+    &--partner {
+        padding: 0.5rem;
+        border-radius: 0.625rem;
+        box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(153, 153, 153, 0.1);
+        background-color: $white-color;
     }
-  }
-  // Testimonial Card End
+    // Partners Card End
 
-  // Partners Card Start
-  &--partner {
-    padding: 0.5rem;
-    border-radius: 0.625rem;
-    box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(153, 153, 153, 0.1);
-    background-color: $white-color;
-  }
-  // Partners Card End
+    // Ads Card Start
+    &--ads {
+        width: 100%;
+        height: 300px;
+        padding: 0.5rem;
+        border-radius: 0.625rem;
+        box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(153, 153, 153, 0.1);
+        background-color: $white-color;
+    }
+    // Ads Card End
 }

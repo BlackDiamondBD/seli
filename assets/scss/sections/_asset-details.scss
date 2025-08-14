@@ -1,0 +1,245 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.asset-detail {
+    padding-bottom: 48px;
+    @include media-query(breakpoint-md) {
+        padding-bottom: 64px;
+    }
+    @include media-query(breakpoint-xl) {
+        padding-bottom: 102px;
+    }
+
+    // Slider Part
+    &__slider {
+        margin-bottom: 30px;
+        @include media-query(breakpoint-xl) {
+            margin-bottom: 40px;
+        }
+
+        .featured {
+            &__item {
+                border-radius: 10px;
+                overflow: hidden;
+                background-color: $white-color;
+                width: 100%;
+                aspect-ratio: 1 / 0.681;
+
+                .badge {
+                    position: absolute;
+                    left: 0;
+                    top: 15px;
+                }
+                .wishlistBtn {
+                    position: absolute;
+                    right: 15px;
+                    top: 15px;
+                }
+            }
+            .swiper {
+                &-pagination {
+                    bottom: 10px;
+                    &-bullet {
+                        width: 8px;
+                        height: 8px;
+                        background-color: $cool-gray;
+                        opacity: 1;
+                        margin: 0 5px;
+                        @include transition-common;
+
+                        &-active {
+                            background-color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Detail Information Part
+    &__info {
+        .details {
+            &-info {
+                &__header {
+                    border-radius: 10px;
+                    border: 1px solid $light-gray;
+                    background-color: $white-color;
+                    box-shadow: 0 4px 4px 0 rgba(153, 153, 153, 0.07);
+                    overflow: hidden;
+                    margin-bottom: 30px;
+                }
+
+                &__nav {
+                    margin: 0 16px;
+                    overflow-x: auto;
+
+                    @include media-query(breakpoint-md) {
+                        padding: 22px;
+                    }
+                    @include media-query(breakpoint-xl) {
+                        padding: 28px 30px;
+                    }
+
+                    // Custom scrollbar
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                }
+
+                &__ul {
+                    gap: 20px;
+                }
+
+                &__link {
+                    padding: 18px 0;
+                    color: $dark-gray;
+                    font-weight: 500;
+                    @include transition-common;
+
+                    &::after {
+                        content: '';
+                        width: 50%;
+                        height: 2px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%) scale(0);
+                        background-color: $primary;
+                        @include transition-common;
+                        @include media-query(breakpoint-xl) {
+                            height: 3px;
+                        }
+                        @include media-query(breakpoint-xxl-2) {
+                            height: 4px;
+                        }
+                    }
+
+                    &:hover,
+                    &.active {
+                        color: $text-black;
+
+                        &::after {
+                            transform: translateX(-50%) scale(1);
+                        }
+                    }
+                    &.active {
+                        font-weight: 600;
+                    }
+
+                    @include media-query(breakpoint-xl) {
+                        font-size: 18px;
+                    }
+                    @include media-query(breakpoint-xxl-2) {
+                        font-size: 20px;
+                    }
+                }
+
+                &__blocks {
+                    gap: 16px;
+                    @include media-query(breakpoint-sm) {
+                        gap: 24px;
+                    }
+                    @include media-query(breakpoint-xl) {
+                        gap: 30px;
+                    }
+                    .block {
+                        &-item {
+                            padding: 20px;
+                            border-radius: 10px;
+                            border: 1px solid $light-gray;
+                            box-shadow: 0 4px 4px 0 rgba(153, 153, 153, 0.07);
+                            &--overview {
+                                background: $bg-gradient-light;
+                            }
+
+                            &__head {
+                                margin-bottom: 24px;
+                                @include media-query(breakpoint-xl) {
+                                    margin-bottom: 30px;
+                                }
+                            }
+
+                            &__title {
+                                color: $black-color;
+                                font-size: 18px;
+                                @include media-query(breakpoint-xl) {
+                                    font-size: 20px;
+                                }
+                                @include media-query(breakpoint-xxl-2) {
+                                    font-size: 22p;
+                                }
+                            }
+
+                            &__para {
+                                & a {
+                                    color: $primary;
+                                    &:hover {
+                                        color: $secondary;
+                                    }
+                                }
+                            }
+
+                            &__wrapper {
+                                &__row {
+                                    &.g-4 {
+                                        @include media-query(breakpoint-md) {
+                                            --bs-gutter-x: 30px;
+                                            --bs-gutter-y: 30px;
+                                        }
+                                    }
+                                }
+
+                                .item {
+                                    .icon {
+                                        width: 40px;
+                                        height: 40px;
+                                        margin-bottom: 10px;
+                                        @include media-query(breakpoint-xl) {
+                                            width: 50px;
+                                            height: 50px;
+                                        }
+                                        &__image {
+                                            width: 48%;
+                                            height: 48%;
+                                        }
+                                        &--trans {
+                                            width: 30px;
+                                            height: 30px;
+                                            margin-bottom: 8px;
+
+                                            & .icon__image {
+                                                width: 100%;
+                                                height: 100%;
+                                            }
+                                        }
+                                    }
+
+                                    .title {
+                                        font-size: 16px;
+                                        margin-bottom: 6px;
+                                        @include media-query(breakpoint-xl) {
+                                            font-size: 18px;
+                                        }
+                                    }
+
+                                    .para {
+                                        font-size: 14px;
+                                        @include media-query(breakpoint-xl) {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & .card--explore {
+        box-shadow: unset;
+    }
+}

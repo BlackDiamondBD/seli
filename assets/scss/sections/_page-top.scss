@@ -1,0 +1,103 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.page-top {
+    &__section {
+        padding: 36px 0 30px;
+        @include media-query(breakpoint-xl) {
+            padding: 45px 0 50px;
+        }
+    }
+
+    .info {
+        max-width: 676px;
+        gap: 15px;
+        @include media-query(breakpoint-xl) {
+            gap: 10px;
+        }
+        &__title {
+            font-size: 26px;
+            line-height: 1.23;
+            @include media-query(breakpoint-xl) {
+                font-size: 30px;
+            }
+            @include media-query(breakpoint-xxl-2) {
+                font-size: 35px;
+            }
+        }
+        &__overview {
+            gap: 8px 0;
+            &__item {
+                padding-right: 9px;
+                margin-right: 9px;
+                @include media-query(breakpoint-xl) {
+                    padding-right: 15px;
+                    margin-right: 15px;
+                }
+                gap: 5px;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 1px;
+                    height: 75%;
+                    border-radius: 4px;
+                    background-color: $text-black;
+                }
+                &:last-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+                .icon {
+                    width: 24px;
+                    height: 24px;
+
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .text {
+                    @include media-query(breakpoint-xl) {
+                        font-size: 18px;
+                    }
+                    @include media-query(breakpoint-xxl-2) {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .price-tag {
+        padding: 14px;
+        border: 1px solid rgba(5, 60, 90, 0.5);
+        border-radius: 8px;
+        background-color: $white-color;
+        color: $primary;
+        font-size: 20px;
+        font-weight: 700;
+        gap: 10px;
+
+        @include media-query(breakpoint-xl) {
+            padding: 17px 29px;
+            font-size: 28px;
+        }
+
+        @include media-query(breakpoint-xxl-2) {
+            font-size: 35px;
+        }
+
+        svg {
+            width: 20px;
+			height: 20px;
+            @include media-query(breakpoint-xxl) {
+                width: 26px;
+				height: 26px;
+            }
+        }
+    }
+}
