@@ -825,6 +825,7 @@ h6 {
   border-radius: 0.625rem;
   background-color: #fff;
   box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(153, 153, 153, 0.1019607843);
+  border: 1px solid #ebebeb;
 }
 .card--explore .card__thumb {
   position: relative;
@@ -998,13 +999,12 @@ h6 {
   align-items: center;
   gap: 0.5rem;
   position: relative;
-  padding: 0rem 0.5rem;
-}
-.card--explore .card__content-meta ul li:first-child {
-  padding-left: 0rem !important;
+  padding-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 .card--explore .card__content-meta ul li:last-child {
-  padding-right: 0rem !important;
+  padding-right: 0;
+  margin-right: 0;
 }
 .card--explore .card__content-meta ul li:not(:last-child)::after {
   position: absolute;
@@ -1266,6 +1266,14 @@ h6 {
   }
 }
 .card--partner {
+  padding: 0.5rem;
+  border-radius: 0.625rem;
+  box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(153, 153, 153, 0.1);
+  background-color: #fff;
+}
+.card--ads {
+  width: 100%;
+  height: 300px;
   padding: 0.5rem;
   border-radius: 0.625rem;
   box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(153, 153, 153, 0.1);
@@ -2668,6 +2676,9 @@ h6 {
   .asset-detail__info .details-info__blocks .block-item__wrapper .item .para {
     font-size: 16px;
   }
+}
+.asset-detail .card--explore {
+  box-shadow: unset;
 }
 
 /*# sourceMappingURL=style.css.map */

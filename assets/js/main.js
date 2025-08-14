@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Recommendation Slider (Detail Page)
     var featuredSwiper = new Swiper('.recommendation__slider', {
-        slidesPerView: 2,
+        slidesPerView: 1.25,
         spaceBetween: 15,
         grabCursor: true,
         loop: true,
