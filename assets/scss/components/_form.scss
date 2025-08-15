@@ -1,46 +1,117 @@
 // Customize Bootstrap class and Add.
-@use '../utils/' as *;
-@use '../base/' as *;
+@use "../utils/" as *;
+@use "../base/" as *;
 .form {
-  &-label {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: $cool-gray;
-    margin-bottom: 0.375rem;
-    line-height: 1;
-    @include media-query(breakpoint-xl) {
-      margin-bottom: 0.625rem;
+    &-label {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: $cool-gray;
+        margin-bottom: 0.375rem;
+        line-height: 1;
+        @include media-query(breakpoint-xl) {
+            margin-bottom: 0.625rem;
+        }
     }
-  }
-  &-control {
-    color: $text-black;
-    border: 0.0625rem solid $cool-gray;
-    height: 3rem;
-    border-radius: 0.75rem;
-    @include media-query(breakpoint-xl) {
-      height: 3.75rem;
-      padding: 1.25rem 1.25rem;
-      font-size: 1.25rem;
-      font-weight: 600;
+    &-control {
+        color: $text-black;
+        border: 0.0625rem solid $cool-gray;
+        height: 3rem;
+        border-radius: 0.75rem;
+        @include media-query(breakpoint-xl) {
+            height: 3.75rem;
+            padding: 1.25rem 1.25rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
     }
-  }
-  &-select {
-    color: $text-black;
-    border: 0.0625rem solid $cool-gray;
-    height: 3rem;
-    border-radius: 0.75rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    background-image: url('../images/icons/arrow-down.svg');
-    &:focus {
-      border: 0.0625rem solid $cool-gray !important;
+    &-select {
+        color: $text-black;
+        border: 0.0625rem solid $cool-gray;
+        height: 3rem;
+        border-radius: 0.75rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        background-image: url("../images/icons/arrow-down.svg");
+        &:focus {
+            border: 0.0625rem solid $cool-gray !important;
+        }
+        @include media-query(breakpoint-xl) {
+            height: 3.75rem;
+            padding: 0rem 1.25rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            background-size: 1.5rem;
+        }
     }
-    @include media-query(breakpoint-xl) {
-      height: 3.75rem;
-      padding: 0rem 1.25rem;
-      font-size: 1.25rem;
-      font-weight: 600;
-      background-size: 1.5rem;
+
+    // FORM CHECK CARD START
+    &-check{
+      &-label{
+        cursor: pointer;
+      }
+      &-input {
+        width: 1.5rem;
+        height: 1.5rem;
+        --bs-form-check-bg: #{$light-gray};
+        --bs-border-color: #{$cool-gray};
+
+        &:checked[type="radio"] {
+            --bs-form-check-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='1.5' fill='%23053C5A'/></svg>");
+        }
+        &:checked {
+            border-color: $primary;
+            background-color: #cdd8de;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
     }
-  }
+    }
+
+    &-check--card {
+        padding: 0.5rem 0.2rem;
+        padding-top: 2rem;
+        position: relative;
+        border: 1px solid;
+        margin-bottom: 0;
+        background: $light-gray;
+        border-color: $light-gray;
+        border-radius: 0.75em;
+        width: 7rem;
+
+        &.active {
+            background: $white-color;
+            border-color: $secondary;
+        }
+
+        input {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+        }
+        .form-check {
+            &-input {
+                &:checked[type="radio"] {
+                    --bs-form-check-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='1.5' fill='%23fff'/></svg>");
+                }
+                &:checked {
+                    border-color: $secondary;
+                    background-color: $secondary;
+                }
+            }
+            &-label {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 0.9rem;
+
+                img {
+                    padding: 1em;
+                }
+            }
+        }
+    }
+
+    // FORM CHECK CARD END
 }

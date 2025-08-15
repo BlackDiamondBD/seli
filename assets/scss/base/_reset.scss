@@ -64,7 +64,7 @@ textarea {
   &:focus-visible,
   &:active {
     outline: none;
-    border: none;
+    // border: none;
     box-shadow: none;
   }
 }
@@ -79,3 +79,4 @@ textarea {
   margin: 0;
   padding: 0;
 }
+

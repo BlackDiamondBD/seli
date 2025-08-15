@@ -83,7 +83,6 @@ textarea:focus,
 textarea:focus-visible,
 textarea:active {
   outline: none;
-  border: none;
   box-shadow: none;
 }
 
@@ -291,8 +290,12 @@ h6 {
   }
 }
 
-.h-sm {
-  height: 2.375rem;
+.border-gradient {
+  background: linear-gradient(to right, rgba(60, 205, 171, 0.2) 0%, rgba(5, 60, 90, 0.2));
+}
+.border-gradient > * {
+  background: #fff;
+  border-radius: inherit;
 }
 
 .header--section {
@@ -831,6 +834,61 @@ h6 {
     font-weight: 600;
     background-size: 1.5rem;
   }
+}
+.form-check-label {
+  cursor: pointer;
+}
+.form-check-input {
+  width: 1.5rem;
+  height: 1.5rem;
+  --bs-form-check-bg: #ebebeb;
+  --bs-border-color: #bebebe;
+}
+.form-check-input:checked[type=radio] {
+  --bs-form-check-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='1.5' fill='%23053C5A'/></svg>");
+}
+.form-check-input:checked {
+  border-color: #053c5a;
+  background-color: #cdd8de;
+}
+.form-check-input:focus {
+  box-shadow: none;
+}
+.form-check--card {
+  padding: 0.5rem 0.2rem;
+  padding-top: 2rem;
+  position: relative;
+  border: 1px solid;
+  margin-bottom: 0;
+  background: #ebebeb;
+  border-color: #ebebeb;
+  border-radius: 0.75em;
+  width: 7rem;
+}
+.form-check--card.active {
+  background: #fff;
+  border-color: #3ccdaa;
+}
+.form-check--card input {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+.form-check--card .form-check-input:checked[type=radio] {
+  --bs-form-check-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='1.5' fill='%23fff'/></svg>");
+}
+.form-check--card .form-check-input:checked {
+  border-color: #3ccdaa;
+  background-color: #3ccdaa;
+}
+.form-check--card .form-check-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.form-check--card .form-check-label img {
+  padding: 1em;
 }
 
 .card {
@@ -1398,20 +1456,42 @@ h6 {
 .card--profileDetail .social-link svg {
   width: 64%;
 }
-.card-sequence .card .card-body {
-  background-color: #fff;
+
+.cards__list-sequence h6 {
+  font-size: 1em;
 }
-.card-sequence .card:nth-child(1) .card-body {
+.cards__list-sequence h6 small {
+  font-size: 0.85em;
+  margin-bottom: 3px;
+}
+.cards__list-sequence .card {
+  font-size: 1rem;
+  padding: 0.25em;
+  border-radius: 1.2em;
+  width: 100%;
+}
+.cards__list-sequence .card-body {
+  --bs-card-spacer-y: 1.2em;
+  --bs-card-spacer-x: 1.6em;
+  gap: 0.8em;
+  border-radius: 1em;
+}
+.cards__list-sequence .card:nth-child(1) {
+  font-size: 0.95em;
+  width: 85%;
+}
+.cards__list-sequence .card:nth-child(1) .card-body {
   background-color: #EAF4F3;
+  --bs-card-spacer-y: .9em;
 }
-.card-sequence .card:nth-child(2) .card-body {
+.cards__list-sequence .card:nth-child(2) {
+  width: 90%;
+}
+.cards__list-sequence .card:nth-child(2) .card-body {
   background-color: #F5F9F9;
 }
-.gradient-border {
-  background-image: linear-gradient(to right, rgba(60, 205, 171, 0.2) 0%, rgba(5, 60, 90, 0.2));
-}
-.gradient-border > * {
-  border-radius: inherit;
+.cards__list-sequence .card:nth-child(3) {
+  font-size: 1.05em;
 }
 
 .navlink--menu {
@@ -1626,6 +1706,17 @@ h6 {
   padding-right: 20px;
   border-radius: 0;
   font-size: 14px;
+}
+
+.img-thumb__man {
+  width: 75%;
+}
+.img-thumb__bg {
+  background: #fff;
+  inset: 1.5rem;
+  z-index: -1;
+  border-radius: 4.5rem;
+  border: 1px solid #000;
 }
 
 .intro--section {
@@ -2820,6 +2911,35 @@ h6 {
 .asset-detail .sidebar--detail__buttons .btn {
   height: 52px;
   border-radius: 10px;
+}
+
+.card__step {
+  --bs-card-border-radius: 1.25rem;
+}
+.card__step .card-body {
+  --bs-card-spacer-y: 2.5rem;
+  --bs-card-spacer-x: 2.5rem;
+}
+
+.step__nav li {
+  font-weight: 600;
+  flex: 1;
+  text-align: center;
+}
+.step__nav li::before {
+  content: "";
+  width: 100%;
+  height: 0.375em;
+  background: #ebebeb;
+  display: block;
+  border-radius: 50rem;
+  margin-bottom: 0.2em;
+}
+.step__nav li.active::before {
+  background: #3ccdaa;
+}
+.step__buttons {
+  margin-top: 6.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */

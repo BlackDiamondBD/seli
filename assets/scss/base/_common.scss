@@ -66,9 +66,13 @@
 }
 
 
-// height 
-.h{
-  &-sm{
-    height: 2.375rem;
+// border
+.border{
+  &-gradient{
+    background: $bg-gradient;
+    > *{
+      background: $white-color;
+      border-radius: inherit;
+    }
   }
 }

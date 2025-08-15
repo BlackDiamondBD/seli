@@ -1,4 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    // ===== Form Check Active Class =====
+    // This will add an active class to the parent element of the radio input when it is checked    
+    const formCheckInputs = document.querySelectorAll('.form-check-input');
+    formCheckInputs.forEach((input) => {
+        const parent = input.closest('.form-check');
+        const grantparent = parent.parentElement;        
+        if (parent) {
+            parent.classList.toggle('active', input.checked);
+        }
+        input.addEventListener('change', function () {
+            if (parent) {
+
+                grantparent.querySelectorAll('.form-check-input[type="radio"]').forEach(element => {   
+                    element.closest('.form-check').classList.toggle('active', element.checked);
+                });
+
+                parent.classList.toggle('active', input.checked);
+            }
+        });
+    });     
+
+
+
+
     // ===== Language Switcher =====
     const langSwitcherBtn = document.getElementById('lang-switcher__btn');
     if (langSwitcherBtn) {

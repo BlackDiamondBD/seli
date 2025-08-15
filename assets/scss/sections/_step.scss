@@ -1,0 +1,35 @@
+@use '../utils/' as *;
+
+.card__step{
+    --bs-card-border-radius: 1.25rem;
+    .card-body{
+        --bs-card-spacer-y: 2.5rem;
+        --bs-card-spacer-x: 2.5rem;
+    }
+}
+.step{
+    &__nav{
+        li {
+            font-weight: 600;
+            flex: 1;
+            text-align: center;
+
+            &::before {
+                content: '';
+                width: 100%;
+                height: 0.375em;
+                background: $light-gray;
+                display: block;
+                border-radius: 50rem;
+                margin-bottom: 0.2em;
+            }
+            &.active::before {
+                background: $secondary;
+            }
+        }
+    } 
+    &__buttons{
+        margin-top: 6.25rem;
+    }
+
+}
