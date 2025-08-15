@@ -187,40 +187,7 @@
           'M 20,0  L 432,0 A 20,20 0,0,1 452,20 L 452,50 A 20,20 0,0,0 477,65 L 490,80 L 490,80  L 0,80 L 0,20 A 20,20 0,0,1 20,0 Z'
         );
       }
-      & ul {
-        display: inline-flex;
-        border-radius: 0.625rem;
-        border-bottom-left-radius: 0rem;
-        border-bottom-right-radius: 0rem;
-        gap: 0.9375rem;
-        border: none;
-        margin-bottom: 0.875rem;
-        & li {
-          & button {
-            border-radius: 0.625rem;
-            border-color: $cool-gray;
-            color: $dark-gray;
-            font-weight: 600;
-            padding: 0.6875rem 0.625rem;
-            line-height: 1;
-            height: auto;
-            min-width: inherit;
-            @include media-query(breakpoint-lg) {
-              padding: 0.8125rem 1.625rem;
-            }
-            @include media-query(breakpoint-xxl) {
-              font-size: 1.25rem;
-              font-weight: 600;
-              padding: 1rem 1.625rem;
-              min-width: 12.5rem;
-            }
-            &.active {
-              background-color: $primary;
-              color: $white-color;
-            }
-          }
-        }
-      }
+      
     }
     &-control {
       & .btn {

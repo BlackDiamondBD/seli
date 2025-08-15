@@ -1,0 +1,11 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.filter{
+    &__wrapper{}
+    &__wrap{}
+    &__widget{
+        &-btn{}
+        &-body{}
+    }
+}

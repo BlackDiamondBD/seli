@@ -128,6 +128,29 @@
             will-change: transform;
         }
     }
+
+    // Button--squir
+    &__squire{
+        flex: 0 0 auto;
+        min-width: inherit;
+        width: 2.8125rem;
+        border-radius: .625rem;
+        min-height: 2.8125rem;
+        padding: 0;
+    }
+
+    // Button--squir
+    &__outline{
+        &-coolGray{
+            border-color: $cool-gray;
+            &:focus{
+                border-color: $cool-gray;
+                outline: none;
+                box-shadow: none;
+                background-color: transparent;
+            }
+        }
+    }
 }
 
 // Arrow Animation

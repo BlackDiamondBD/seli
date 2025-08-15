@@ -17,6 +17,13 @@
     border: 0.0625rem solid $cool-gray;
     height: 3rem;
     border-radius: 0.75rem;
+    outline: none;
+    box-shadow: none;
+    &:focus{
+      box-shadow: none;
+      outline: none;
+      border:  .0625rem solid $primary;
+    }
     @include media-query(breakpoint-xl) {
       height: 3.75rem;
       padding: 1.25rem 1.25rem;
@@ -42,5 +49,32 @@
       font-weight: 600;
       background-size: 1.5rem;
     }
+  }
+  &-inputIconWrap{
+    position: relative;
+    & input:last-child{
+      padding-left: 2.5rem;
+    }
+    & input:first-child{
+      padding-right: 2.5rem;
+    }
+    & span.icon{
+      width: 1.25rem;
+      height: 1.25rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      & svg{
+        width: 100%;
+        height: auto;
+      }
+      &:first-child{
+        left: 15px;
+      }
+      &:last-child{
+        right: 15px;
+      }
+    }
+
   }
 }
