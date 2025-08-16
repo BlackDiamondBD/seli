@@ -39,6 +39,16 @@
                         right: 1.1875rem;
                     }
                 }
+
+                & .btn--wishlist {
+                    position: absolute;
+                    top: 0.625rem;
+                    right: 0.625rem;
+                    @include media-query(breakpoint-md) {
+                        top: 0.75rem;
+                        right: 1.125rem;
+                    }
+                }
                 &-img {
                     width: 100%;
                     height: 100%;

@@ -8,11 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // ===== Wishlist Button Toggle =====
-    document.querySelectorAll('.btn--wishlist').forEach(function(btn) {
-  btn.addEventListener('click', function () {
-    this.classList.toggle('active');
-  });
-});
+    const wishlistBtn = document.querySelectorAll('.btn--wishlist');
+    wishlistBtn.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            this.classList.toggle('active');
+        });
+    });
 
     // ===== Accordion Left Border =====
     const accordionItems = document.querySelectorAll('.accordion-item');
@@ -105,7 +106,8 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: 15,
         slidesPerView: 5,
         freeMode: true,
-        watchSlidesProgress: true,direction: 'vertical',
+        watchSlidesProgress: true,
+        direction: 'vertical',
     });
     // Slider for Featured Image (Detail Page)
     var featuredSwiper = new Swiper('.featured--slider', {

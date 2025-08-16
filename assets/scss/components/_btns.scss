@@ -171,9 +171,15 @@
         &:hover {
             background-color: #0000008c;
         }
-        @include media-query(breakpoint-md) {
-            top: 0.6875rem;
-            right: 1.1875rem;
+
+        &.active {
+            background: $light-gray;
+            .icon {
+                fill: #de3a3a;
+                path {
+                    stroke: transparent;
+                }
+            }
         }
     }
 }
