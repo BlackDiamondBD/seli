@@ -2,10 +2,100 @@
 @use '../base/' as *;
 
 .filter{
-    &__wrapper{}
-    &__wrap{}
+    &__wrapper{
+        position: fixed;
+        left: 0;
+        top: 3.875rem;
+        background-color: $white-color;
+        width: 100%;
+        height: calc(100vh - 3.875rem);
+        overflow-y: scroll;
+        max-width: 400px;
+        z-index: 12;
+        padding: .9375rem  1rem;
+        @include media-query(breakpoint-lg){
+            position: inherit;
+            height: inherit;
+            max-width: 100%;
+            border: 1px solid $cool-gray;
+            border-radius: .625rem;
+            overflow: inherit;
+        }
+    }
+
     &__widget{
-        &-btn{}
-        &-body{}
+        border-bottom: 1px dashed $light-gray;
+        padding: .9375rem 0px;
+        &-btn{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: $text-black;
+            width: 100%;
+            // margin-bottom: .75rem;
+            & span{
+                width: 1.5rem;
+                height: 1.5rem;
+                background-color: $light-gray;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                flex: 0 0 auto;
+            }
+        }
+        &-body{
+            padding-top: .9375rem;
+        }
+    }
+    &__checkBox{
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+        &--inner{
+            padding-top: .625rem;
+            padding-left: 1.875rem;
+            display: flex;
+            flex-direction: column;
+            gap: .625rem;
+            & .form-checkBox{
+                font-size: 14px;
+                & label{
+                    & span.indicator{
+                        width: 1.25rem;
+                        height: 1.25rem;
+                    }
+                }
+            }
+        }
+        &-wrap{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: $dark-gray;
+            font-size: 16px;
+            font-weight: 500;
+            &--borderd{
+                padding: .9375rem .8125rem;
+                border: .0375rem solid $light-gray;
+                border-radius: .3125rem;
+                background: #FFFFFF1A;
+                backdrop-filter: blur(20.53333282470703px)
+
+            }
+        }
+        &-right{
+            display: flex;
+            align-items: center;
+            gap: .625rem;
+            width: max-content;
+            flex: 0 0 auto;
+            & .resultCount{
+                font-size: 14px;
+                display: block;
+            }
+        }
     }
 }

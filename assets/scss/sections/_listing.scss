@@ -10,8 +10,12 @@
     }
     &__header{
         margin-bottom: .9375rem;
+        
         @include media-query(breakpoint-xl){
-            font-size: 2.5rem;
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         &-text{
             & h2{
@@ -57,6 +61,7 @@
             &-item{
                 width: 50%;
                 & button{
+                    min-width: inherit;
                     width: 100%;
                     background-color: transparent;
                     border: none;
@@ -65,6 +70,10 @@
             }
         }
     }
-    &__search{}
+    &__search{
+        @include media-query(breakpoint-lg){
+            flex-grow: 1;
+        }
+    }
 
 }

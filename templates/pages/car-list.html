@@ -343,11 +343,8 @@
               <li class="breadcrumb-item">
                 <a href="#" class="breadcrumb-page fw-semibold">Home</a>
               </li>
-              <li class="breadcrumb-item fw-semibold">
-                <a href="#" class="breadcrumb-page fw-semibold">Sell a Car</a>
-              </li>
               <li class="breadcrumb-item fw-semibold" aria-current="page">
-                <a href="#" class="breadcrumb-page active fw-semibold">Car Detail</a>
+                <a href="#" class="breadcrumb-page active fw-semibold">Sell a Car</a>
               </li>
             </ul>
           </nav>
@@ -371,7 +368,7 @@
             <!-- sort-dropdown -->
             <div class="dropdown dropdown__select d-none d-xl-inline-block">
               <button
-                class="btn btn-secondary dropdown-toggle"
+                class="btn btn--dropdown dropdown-toggle"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -387,7 +384,7 @@
                     />
                   </svg>
                 </span>
-                <span class="text-main">Sort by:</span>
+                <span class="text-status">Sort by:</span>
                 <span class="text-value">Newest</span>
               </button>
               <ul class="dropdown-menu">
@@ -462,7 +459,7 @@
                 <!-- sort-dropdown -->
                 <div class="dropdown dropdown__select d-none d-xl-inline-block">
                   <button
-                    class="btn btn-secondary dropdown-toggle"
+                    class="btn btn--dropdown dropdown-toggle"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -507,119 +504,1151 @@
             </div>
           </div>
           <div class="row listing__row listing__row--mainContent">
-            <div class="col-lg-4 col-xl-3">
+            <div class="col-lg-4 col-xxl-3">
               <div class="filter__wrapper">
-                <button type="button" class="btn btn--trans filter__close">
-                  <span class="icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M9 6L3 12M3 12L9 18M3 12L21 12"
-                        stroke="#212529"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  Filter
-                </button>
-                <div class="filter__wrapp">
-                  <!-- single-widget -->
-                  <div class="filter__widget">
-                    <button
-                      class="filter__widget-btn"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseName"
-                      aria-expanded="true"
-                      aria-controls="collapseName"
-                    >
-                      Car Category
-                      <span class="icon">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M13.28 10.0332L8.9333 5.68654C8.41997 5.1732 7.57997 5.1732 7.06664 5.68654L2.71997 10.0332"
-                            stroke="#292D32"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </span>
-                    </button>
-                    <div class="collapse show" id="collapseName">
-                      <div class="filter__widget-body">
-                        Some placeholder content for the collapse component. This panel is hidden by default but
-                        revealed when the user activates the relevant trigger.
+                <div class="">
+                  <button
+                    type="button"
+                    class="btn btn--trans filter__close text-black text-uppercase fw-bold d-lg-none"
+                  >
+                    <span class="icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M9 6L3 12M3 12L9 18M3 12L21 12"
+                          stroke="#212529"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    Filter
+                  </button>
+                  <div class="filter__wrapp">
+                    <!-- single-widget -->
+                    <div class="filter__widget">
+                      <button
+                        class="filter__widget-btn"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseName"
+                        aria-expanded="true"
+                        aria-controls="collapseName"
+                      >
+                        Car Category
+                        <span class="icon">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13.28 10.0332L8.9333 5.68654C8.41997 5.1732 7.57997 5.1732 7.06664 5.68654L2.71997 10.0332"
+                              stroke="#292D32"
+                              stroke-width="1.5"
+                              stroke-miterlimit="10"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="collapse show" id="collapseName">
+                        <div class="filter__widget-body">
+                          <ul class="filter__checkBox">
+                            <li>
+                              <div class="filter__checkBox-wrap">
+                                <div class="form-checkBox form-checkBox--circle">
+                                  <input type="radio" name="carCategory" id="verified" />
+                                  <label for="verified">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="text">Verified</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(421)</span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="filter__checkBox-wrap">
+                                <div class="form-checkBox form-checkBox--circle">
+                                  <input type="radio" name="carCategory" id="privetOwner" />
+                                  <label for="privetOwner">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="text">Private Owner</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(421)</span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="filter__checkBox-wrap">
+                                <div class="form-checkBox form-checkBox--circle">
+                                  <input type="radio" name="carCategory" id="dealer" />
+                                  <label for="dealer">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="text">Dealer</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(60)</span>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <!-- single-widget--end -->
-                  <!-- single-widget -->
-                  <div class="filter__widget">
-                    <button
-                      class="filter__widget-btn"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseName2"
-                      aria-expanded="true"
-                      aria-controls="collapseName2"
-                    >
-                      Car Category
-                      <span class="icon">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M13.28 10.0332L8.9333 5.68654C8.41997 5.1732 7.57997 5.1732 7.06664 5.68654L2.71997 10.0332"
-                            stroke="#292D32"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </span>
-                    </button>
-                    <div class="collapse show" id="collapseName2">
-                      <div class="filter__widget-body">
-                        Some placeholder content for the collapse component. This panel is hidden by default but
-                        revealed when the user activates the relevant trigger.
+                    <!-- single-widget--end -->
+                    <!-- single-widget -->
+                    <div class="filter__widget">
+                      <button
+                        class="filter__widget-btn"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseName2"
+                        aria-expanded="true"
+                        aria-controls="collapseName2"
+                      >
+                        Budget
+                        <span class="icon">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13.28 10.0332L8.9333 5.68654C8.41997 5.1732 7.57997 5.1732 7.06664 5.68654L2.71997 10.0332"
+                              stroke="#292D32"
+                              stroke-width="1.5"
+                              stroke-miterlimit="10"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="collapse show" id="collapseName2">
+                        <div class="filter__widget-body">
+                          <div class="range-slider">
+                            <div class="range-slider__values">
+                              <div class="d-flex align-items-center gap-1 range-slider__value">
+                                <span class="icon d-flex align-items-center justify-content-center">
+                                  <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      fill-rule="evenodd"
+                                      clip-rule="evenodd"
+                                      d="M5.64177 7.08344C6.25026 5.58178 7.293 4.29586 8.63655 3.39026C9.98009 2.48466 11.5633 2.00059 13.1836 2C14.9119 2 16.5142 2.53986 17.8319 3.45996C18.0469 3.6166 18.192 3.85129 18.236 4.11367C18.28 4.37606 18.2194 4.64524 18.0672 4.86345C17.915 5.08166 17.6833 5.23151 17.4218 5.28084C17.1604 5.33017 16.89 5.27506 16.6688 5.12733C15.9757 4.64486 15.19 4.31154 14.3614 4.14848C13.5329 3.98542 12.6795 3.99617 11.8553 4.18004C11.0311 4.36392 10.254 4.71692 9.57333 5.2167C8.89264 5.71647 8.32313 6.35214 7.90086 7.08344H13.1836C13.4532 7.08344 13.7118 7.19055 13.9025 7.38122C14.0931 7.57189 14.2003 7.83048 14.2003 8.10013C14.2003 8.36977 14.0931 8.62837 13.9025 8.81903C13.7118 9.0097 13.4532 9.11681 13.1836 9.11681H7.16782C7.05387 9.78982 7.05387 10.4772 7.16782 11.1502H13.1836C13.4532 11.1502 13.7118 11.2573 13.9025 11.448C14.0931 11.6386 14.2003 11.8972 14.2003 12.1669C14.2003 12.4365 14.0931 12.6951 13.9025 12.8858C13.7118 13.0765 13.4532 13.1836 13.1836 13.1836H7.90086C8.32313 13.9149 8.89264 14.5505 9.57333 15.0503C10.254 15.5501 11.0311 15.9031 11.8553 16.087C12.6795 16.2708 13.5329 16.2816 14.3614 16.1185C15.19 15.9555 15.9757 15.6221 16.6688 15.1397C16.89 14.9919 17.1604 14.9368 17.4218 14.9862C17.6833 15.0355 17.915 15.1853 18.0672 15.4036C18.2194 15.6218 18.28 15.8909 18.236 16.1533C18.192 16.4157 18.0469 16.6504 17.8319 16.807C16.4692 17.7597 14.8462 18.2695 13.1836 18.267C11.5633 18.2664 9.98009 17.7823 8.63655 16.8767C7.293 15.9711 6.25026 14.6852 5.64177 13.1836H3.01669C2.74705 13.1836 2.48845 13.0765 2.29778 12.8858C2.10712 12.6951 2 12.4365 2 12.1669C2 11.8972 2.10712 11.6386 2.29778 11.448C2.48845 11.2573 2.74705 11.1502 3.01669 11.1502H5.1131C5.02857 10.475 5.02857 9.79197 5.1131 9.11681H3.01669C2.74705 9.11681 2.48845 9.0097 2.29778 8.81903C2.10712 8.62837 2 8.36977 2 8.10013C2 7.83048 2.10712 7.57189 2.29778 7.38122C2.48845 7.19055 2.74705 7.08344 3.01669 7.08344H5.64177Z"
+                                      fill="#053C5A"
+                                    />
+                                  </svg>
+                                </span>
+                                <span class="range-slider__value--min">1,250,000</span>
+                              </div>
+                              <div class="d-flex align-items-center gap-1 range-slider__value">
+                                <span class="icon d-flex align-items-center justify-content-center">
+                                  <svg
+                                    width="17"
+                                    height="17"
+                                    viewBox="0 0 17 17"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      fill-rule="evenodd"
+                                      clip-rule="evenodd"
+                                      d="M3.64177 5.08344C4.25026 3.58178 5.293 2.29586 6.63655 1.39026C7.98009 0.484664 9.56331 0.000590188 11.1836 0C12.9119 0 14.5142 0.539861 15.8319 1.45996C16.0469 1.6166 16.192 1.85129 16.236 2.11367C16.28 2.37606 16.2194 2.64524 16.0672 2.86345C15.915 3.08166 15.6833 3.23151 15.4218 3.28084C15.1604 3.33017 14.89 3.27506 14.6688 3.12733C13.9757 2.64486 13.19 2.31154 12.3614 2.14848C11.5329 1.98542 10.6795 1.99617 9.85527 2.18004C9.03107 2.36392 8.25403 2.71692 7.57333 3.2167C6.89264 3.71647 6.32313 4.35214 5.90086 5.08344H11.1836C11.4532 5.08344 11.7118 5.19055 11.9025 5.38122C12.0931 5.57189 12.2003 5.83048 12.2003 6.10013C12.2003 6.36977 12.0931 6.62837 11.9025 6.81903C11.7118 7.0097 11.4532 7.11681 11.1836 7.11681H5.16782C5.05387 7.78982 5.05387 8.47719 5.16782 9.15019H11.1836C11.4532 9.15019 11.7118 9.25731 11.9025 9.44797C12.0931 9.63864 12.2003 9.89723 12.2003 10.1669C12.2003 10.4365 12.0931 10.6951 11.9025 10.8858C11.7118 11.0765 11.4532 11.1836 11.1836 11.1836H5.90086C6.32313 11.9149 6.89264 12.5505 7.57333 13.0503C8.25403 13.5501 9.03107 13.9031 9.85527 14.087C10.6795 14.2708 11.5329 14.2816 12.3614 14.1185C13.19 13.9555 13.9757 13.6221 14.6688 13.1397C14.89 12.9919 15.1604 12.9368 15.4218 12.9862C15.6833 13.0355 15.915 13.1853 16.0672 13.4036C16.2194 13.6218 16.28 13.8909 16.236 14.1533C16.192 14.4157 16.0469 14.6504 15.8319 14.807C14.4692 15.7597 12.8462 16.2695 11.1836 16.267C9.56331 16.2664 7.98009 15.7823 6.63655 14.8767C5.293 13.9711 4.25026 12.6852 3.64177 11.1836H1.01669C0.747045 11.1836 0.488447 11.0765 0.297781 10.8858C0.107115 10.6951 0 10.4365 0 10.1669C0 9.89723 0.107115 9.63864 0.297781 9.44797C0.488447 9.25731 0.747045 9.15019 1.01669 9.15019H3.1131C3.02857 8.47503 3.02857 7.79197 3.1131 7.11681H1.01669C0.747045 7.11681 0.488447 7.0097 0.297781 6.81903C0.107115 6.62837 0 6.36977 0 6.10013C0 5.83048 0.107115 5.57189 0.297781 5.38122C0.488447 5.19055 0.747045 5.08344 1.01669 5.08344H3.64177Z"
+                                      fill="#053C5A"
+                                    />
+                                  </svg>
+                                </span>
+                                <span class="range-slider__value--max">5,250,000</span>
+                              </div>
+                            </div>
+
+                            <div class="range-slider__wrapper">
+                              <input
+                                type="range"
+                                min="1000000"
+                                max="6000000"
+                                value="1250000"
+                                step="50000"
+                                class="range-slider__thumb range-slider__thumb--min"
+                              />
+                              <input
+                                type="range"
+                                min="1000000"
+                                max="6000000"
+                                value="5250000"
+                                step="50000"
+                                class="range-slider__thumb range-slider__thumb--max"
+                              />
+                              <div class="range-slider__track">
+                                <div class="range-slider__fill"></div>
+                              </div>
+                            </div>
+
+                            <div class="range-slider__labels">
+                              <span class="range-slider__label range-slider__label--min">Minimum</span>
+                              <span class="range-slider__label range-slider__label--max">Maximum</span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <!-- single-widget--end -->
-                  <!-- single-widget -->
-                  <div class="filter__widget">
-                    <button
-                      class="filter__widget-btn"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseNam3"
-                      aria-expanded="true"
-                      aria-controls="collapseNam3"
-                    >
-                      Car Category
-                      <span class="icon">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M13.28 10.0332L8.9333 5.68654C8.41997 5.1732 7.57997 5.1732 7.06664 5.68654L2.71997 10.0332"
-                            stroke="#292D32"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </span>
-                    </button>
-                    <div class="collapse show" id="collapseNam3">
-                      <div class="filter__widget-body">
-                        Some placeholder content for the collapse component. This panel is hidden by default but
-                        revealed when the user activates the relevant trigger.
+                    <!-- single-widget--end -->
+                    <!-- single-widget -->
+                    <div class="filter__widget">
+                      <button
+                        class="filter__widget-btn"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseNam3"
+                        aria-expanded="true"
+                        aria-controls="collapseNam3"
+                      >
+                        Make & Model
+                        <span class="icon">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13.28 10.0332L8.9333 5.68654C8.41997 5.1732 7.57997 5.1732 7.06664 5.68654L2.71997 10.0332"
+                              stroke="#292D32"
+                              stroke-width="1.5"
+                              stroke-miterlimit="10"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="collapse show" id="collapseNam3">
+                        <div class="filter__widget-body">
+                          <div class="filter__widget-search form-inputIconWrap mb-3 mb-xl-4">
+                            <input type="text" class="form-control" placeholder="Search Products..." />
+                            <span class="icon">
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                                  stroke="#292D32"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M22 22L20 20"
+                                  stroke="#292D32"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </span>
+                          </div>
+                          <ul class="filter__checkBox">
+                            <li>
+                              <div class="filter__checkBox-wrap">
+                                <div class="form-checkBox form-checkBox--squireCheck">
+                                  <input type="checkbox" id="tata" />
+                                  <label for="tata">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="text">Tata</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(76)</span>
+                                  <button
+                                    class="filter__widget-btn"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#tataCollaps"
+                                    aria-expanded="false"
+                                    aria-controls="tataCollaps"
+                                  >
+                                    <span class="icon">
+                                      <svg
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M13.28 10.0332L8.9333 5.68654C8.41997 5.1732 7.57997 5.1732 7.06664 5.68654L2.71997 10.0332"
+                                          stroke="#292D32"
+                                          stroke-width="1.5"
+                                          stroke-miterlimit="10"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="collapse show" id="tataCollaps">
+                                <ul class="filter__checkBox--inner">
+                                  <li>
+                                    <div class="filter__checkBox-wrap">
+                                      <div class="form-checkBox form-checkBox--squireCheck">
+                                        <input type="checkbox" id="wrangler" />
+                                        <label for="wrangler">
+                                          <span class="indicator"></span>
+                                          <span class="content">
+                                            <span class="text">WRANGLER</span>
+                                          </span>
+                                        </label>
+                                      </div>
+                                      <div class="filter__checkBox-right">
+                                        <span class="resultCount">(76)</span>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="filter__checkBox-wrap">
+                                      <div class="form-checkBox form-checkBox--squireCheck">
+                                        <input type="checkbox" id="meridian" />
+                                        <label for="meridian">
+                                          <span class="indicator"></span>
+                                          <span class="content">
+                                            <span class="text">MERIDIAN</span>
+                                          </span>
+                                        </label>
+                                      </div>
+                                      <div class="filter__checkBox-right">
+                                        <span class="resultCount">(2)</span>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="filter__checkBox-wrap">
+                                <div class="form-checkBox form-checkBox--squireCheck">
+                                  <input type="checkbox" id="hyundai" />
+                                  <label for="hyundai">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="text">Hyundai</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(56)</span>
+                                  <button
+                                    class="filter__widget-btn"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#hyundai"
+                                    aria-expanded="false"
+                                    aria-controls="hyundai"
+                                  >
+                                    <span class="icon">
+                                      <svg
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M13.28 10.0332L8.9333 5.68654C8.41997 5.1732 7.57997 5.1732 7.06664 5.68654L2.71997 10.0332"
+                                          stroke="#292D32"
+                                          stroke-width="1.5"
+                                          stroke-miterlimit="10"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="collapse" id="hyundai">
+                                <ul class="filter__checkBox--inner">
+                                  <li>
+                                    <div class="filter__checkBox-wrap">
+                                      <div class="form-checkBox form-checkBox--squireCheck">
+                                        <input type="checkbox" id="compass" />
+                                        <label for="compass">
+                                          <span class="indicator"></span>
+                                          <span class="content">
+                                            <span class="text">Compass</span>
+                                          </span>
+                                        </label>
+                                      </div>
+                                      <div class="filter__checkBox-right">
+                                        <span class="resultCount">(6)</span>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
+                    <!-- single-widget--end -->
+                    <!-- single-widget -->
+                    <div class="filter__widget">
+                      <button
+                        class="filter__widget-btn"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#modelYear"
+                        aria-expanded="true"
+                        aria-controls="modelYear"
+                      >
+                        Model Year
+                        <span class="icon">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13.28 10.0332L8.9333 5.68654C8.41997 5.1732 7.57997 5.1732 7.06664 5.68654L2.71997 10.0332"
+                              stroke="#292D32"
+                              stroke-width="1.5"
+                              stroke-miterlimit="10"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="collapse show" id="modelYear">
+                        <div class="filter__widget-body">
+                          <div class="range-slider">
+                            <div class="range-slider__values">
+                              <span class="range-slider__value range-slider__value--min">2011</span>
+                              <span class="range-slider__value range-slider__value--max">2025</span>
+                            </div>
+
+                            <div class="range-slider__wrapper">
+                              <input
+                                type="range"
+                                min="1990"
+                                max="2025"
+                                value="2000"
+                                step="1"
+                                class="range-slider__thumb range-slider__thumb--min"
+                              />
+                              <input
+                                type="range"
+                                min="1990"
+                                max="2025"
+                                value="2018"
+                                step="1"
+                                class="range-slider__thumb range-slider__thumb--max"
+                              />
+                              <div class="range-slider__track">
+                                <div class="range-slider__fill"></div>
+                              </div>
+                            </div>
+
+                            <div class="range-slider__labels">
+                              <span class="range-slider__label range-slider__label--min">Minimum</span>
+                              <span class="range-slider__label range-slider__label--max">Maximum</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- single-widget--end -->
+                    <!-- single-widget -->
+                    <div class="filter__widget">
+                      <button
+                        class="filter__widget-btn"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseNam4"
+                        aria-expanded="true"
+                        aria-controls="collapseNam4"
+                      >
+                        Fuel
+                        <span class="icon">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13.28 10.0332L8.9333 5.68654C8.41997 5.1732 7.57997 5.1732 7.06664 5.68654L2.71997 10.0332"
+                              stroke="#292D32"
+                              stroke-width="1.5"
+                              stroke-miterlimit="10"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="collapse show" id="collapseNam4">
+                        <div class="filter__widget-body">
+                          <ul class="filter__checkBox">
+                            <li>
+                              <div class="filter__checkBox-wrap filter__checkBox-wrap--borderd">
+                                <div class="form-checkBox form-checkBox--squireCheck">
+                                  <input type="checkbox" id="diesel" />
+                                  <label for="diesel">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="icon">
+                                        <img src="../../assets/images/icons-objs/diesel.svg" alt="diesel-icon" />
+                                      </span>
+                                      <span class="text">Diesel</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(02)</span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="filter__checkBox-wrap filter__checkBox-wrap--borderd">
+                                <div class="form-checkBox form-checkBox--squireCheck">
+                                  <input type="checkbox" id="hybrid" />
+                                  <label for="hybrid">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="icon">
+                                        <img src="../../assets/images/icons-objs/hybrid.svg" alt="hybrid-icon" />
+                                      </span>
+                                      <span class="text">Hybrid</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(56)</span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="filter__checkBox-wrap filter__checkBox-wrap--borderd">
+                                <div class="form-checkBox form-checkBox--squireCheck">
+                                  <input type="checkbox" id="petrol" />
+                                  <label for="petrol">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="icon">
+                                        <img src="../../assets/images/icons-objs/petrol.svg" alt="Petrol-icon" />
+                                      </span>
+                                      <span class="text">Petrol</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(03)</span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="filter__checkBox-wrap filter__checkBox-wrap--borderd">
+                                <div class="form-checkBox form-checkBox--squireCheck">
+                                  <input type="checkbox" id="electric" />
+                                  <label for="electric">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="icon">
+                                        <img src="../../assets/images/icons-objs/electric.svg" alt="electric-icon" />
+                                      </span>
+                                      <span class="text">Electric</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(02)</span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="filter__checkBox-wrap filter__checkBox-wrap--borderd">
+                                <div class="form-checkBox form-checkBox--squireCheck">
+                                  <input type="checkbox" id="CNG" />
+                                  <label for="CNG">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="icon">
+                                        <img src="../../assets/images/icons-objs/cng.svg" alt="cng-icon" />
+                                      </span>
+                                      <span class="text">CNG</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(03)</span>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- single-widget--end -->
+                    <!-- single-widget -->
+                    <div class="filter__widget">
+                      <button
+                        class="filter__widget-btn"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseNam5"
+                        aria-expanded="true"
+                        aria-controls="collapseNam5"
+                      >
+                        Body Type
+                        <span class="icon">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13.28 10.0332L8.9333 5.68654C8.41997 5.1732 7.57997 5.1732 7.06664 5.68654L2.71997 10.0332"
+                              stroke="#292D32"
+                              stroke-width="1.5"
+                              stroke-miterlimit="10"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="collapse show" id="collapseNam5">
+                        <div class="filter__widget-body">
+                          <div class="row g-2">
+                            <div class="col-4">
+                              <div class="form-checkBox form-checkBox--squireCheck form-checkBox--thumbnail">
+                                <input type="radio" name="bodyType" id="hatchback" />
+                                <label for="hatchback">
+                                  <span class="indicator"></span>
+                                  <span class="content">
+                                    <img src="../../assets/images/icons-objs/body-type.svg" alt="body-type-icon" />
+                                    <span class="text">
+                                      Hatchback
+                                      <span class="d-block">(03)</span>
+                                    </span>
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="form-checkBox form-checkBox--squireCheck form-checkBox--thumbnail">
+                                <input type="radio" name="bodyType" checked id="sedan" />
+                                <label for="sedan">
+                                  <span class="indicator"></span>
+                                  <span class="content">
+                                    <img src="../../assets/images/icons-objs/body-type.svg" alt="body-type-icon" />
+                                    <span class="text">
+                                      Sedan
+                                      <span class="d-block">(03)</span>
+                                    </span>
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="form-checkBox form-checkBox--squireCheck form-checkBox--thumbnail">
+                                <input type="radio" name="bodyType" id="suv" />
+                                <label for="suv">
+                                  <span class="indicator"></span>
+                                  <span class="content">
+                                    <img src="../../assets/images/icons-objs/body-type.svg" alt="body-type-icon" />
+                                    <span class="text">
+                                      SUV
+                                      <span class="d-block">(03)</span>
+                                    </span>
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- single-widget--end -->
+                    <!-- single-widget -->
+                    <div class="filter__widget">
+                      <button
+                        class="filter__widget-btn"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseNam6"
+                        aria-expanded="true"
+                        aria-controls="collapseNam6"
+                      >
+                        Color
+                        <span class="icon">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13.28 10.0332L8.9333 5.68654C8.41997 5.1732 7.57997 5.1732 7.06664 5.68654L2.71997 10.0332"
+                              stroke="#292D32"
+                              stroke-width="1.5"
+                              stroke-miterlimit="10"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="collapse show" id="collapseNam6">
+                        <div class="filter__widget-body">
+                          <div class="row g-2">
+                            <div class="col-4">
+                              <div class="form-checkBox form-checkBox--squireCheck form-checkBox--thumbnail">
+                                <input type="radio" name="bodyType" id="whiteCar" />
+                                <label for="whiteCar">
+                                  <span class="indicator"></span>
+                                  <span class="content">
+                                    <img src="../../assets/images/icons-objs/white-car.svg" alt="whiteCar-icon" />
+                                    <span class="text">
+                                      White
+                                      <span class="d-block">(01)</span>
+                                    </span>
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="form-checkBox form-checkBox--squireCheck form-checkBox--thumbnail">
+                                <input type="radio" name="bodyType" checked id="blueCar" />
+                                <label for="blueCar">
+                                  <span class="indicator"></span>
+                                  <span class="content">
+                                    <img src="../../assets/images/icons-objs/blue-car.svg" alt="body-type-icon" />
+                                    <span class="text">
+                                      Blue
+                                      <span class="d-block">(03)</span>
+                                    </span>
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="form-checkBox form-checkBox--squireCheck form-checkBox--thumbnail">
+                                <input type="radio" name="bodyType" id="blackCar" />
+                                <label for="blackCar">
+                                  <span class="indicator"></span>
+                                  <span class="content">
+                                    <img src="../../assets/images/icons-objs/black-car.svg" alt="black-car" />
+                                    <span class="text">
+                                      Black
+                                      <span class="d-block">(03)</span>
+                                    </span>
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="form-checkBox form-checkBox--squireCheck form-checkBox--thumbnail">
+                                <input type="radio" name="bodyType" id="redCar" />
+                                <label for="redCar">
+                                  <span class="indicator"></span>
+                                  <span class="content">
+                                    <img src="../../assets/images/icons-objs/red-car.svg" alt="red-car" />
+                                    <span class="text">
+                                      Red
+                                      <span class="d-block">(01)</span>
+                                    </span>
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="form-checkBox form-checkBox--squireCheck form-checkBox--thumbnail">
+                                <input type="radio" name="bodyType" id="orangeCar" />
+                                <label for="orangeCar">
+                                  <span class="indicator"></span>
+                                  <span class="content">
+                                    <img src="../../assets/images/icons-objs/orange-car.svg" alt="orange-car" />
+                                    <span class="text">
+                                      Orange
+                                      <span class="d-block">(10)</span>
+                                    </span>
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="form-checkBox form-checkBox--squireCheck form-checkBox--thumbnail">
+                                <input type="radio" name="bodyType" id="greenCar" />
+                                <label for="greenCar">
+                                  <span class="indicator"></span>
+                                  <span class="content">
+                                    <img src="../../assets/images/icons-objs/green-car.svg" alt="green-car" />
+                                    <span class="text">
+                                      Green
+                                      <span class="d-block">(01)</span>
+                                    </span>
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="form-checkBox form-checkBox--squireCheck form-checkBox--thumbnail">
+                                <input type="radio" name="bodyType" id="purpleCar" />
+                                <label for="purpleCar">
+                                  <span class="indicator"></span>
+                                  <span class="content">
+                                    <img src="../../assets/images/icons-objs/purple-car.svg" alt="purple-car" />
+                                    <span class="text">
+                                      Purple
+                                      <span class="d-block">(08)</span>
+                                    </span>
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="form-checkBox form-checkBox--squireCheck form-checkBox--thumbnail">
+                                <input type="radio" name="bodyType" id="brownCar" />
+                                <label for="brownCar">
+                                  <span class="indicator"></span>
+                                  <span class="content">
+                                    <img src="../../assets/images/icons-objs/brown-car.svg" alt="brown-car" />
+                                    <span class="text">
+                                      Brown
+                                      <span class="d-block">(08)</span>
+                                    </span>
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="form-checkBox form-checkBox--squireCheck form-checkBox--thumbnail">
+                                <input type="radio" name="bodyType" id="silverCar" />
+                                <label for="silverCar">
+                                  <span class="indicator"></span>
+                                  <span class="content">
+                                    <img src="../../assets/images/icons-objs/silver-car.svg" alt="color-images" />
+                                    <span class="text">
+                                      Silver
+                                      <span class="d-block">(08)</span>
+                                    </span>
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- single-widget--end -->
+                    <!-- single-widget -->
+                    <div class="filter__widget">
+                      <button
+                        class="filter__widget-btn"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseNam7"
+                        aria-expanded="true"
+                        aria-controls="collapseNam7"
+                      >
+                        Seats
+                        <span class="icon">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13.28 10.0332L8.9333 5.68654C8.41997 5.1732 7.57997 5.1732 7.06664 5.68654L2.71997 10.0332"
+                              stroke="#292D32"
+                              stroke-width="1.5"
+                              stroke-miterlimit="10"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="collapse show" id="collapseNam7">
+                        <div class="filter__widget-body">
+                          <ul class="filter__checkBox">
+                            <li>
+                              <div class="filter__checkBox-wrap filter__checkBox-wrap--borderd">
+                                <div class="form-checkBox form-checkBox--squireCheck">
+                                  <input type="checkbox" id="seats5" />
+                                  <label for="seats5">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="icon">
+                                        <img src="../../assets/images/icons-objs/car-seat.svg" alt="seat-icon" />
+                                      </span>
+                                      <span class="text">05 Seats</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(02)</span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="filter__checkBox-wrap filter__checkBox-wrap--borderd">
+                                <div class="form-checkBox form-checkBox--squireCheck">
+                                  <input type="checkbox" id="seats7" />
+                                  <label for="seats7">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="icon">
+                                        <img src="../../assets/images/icons-objs/car-seat.svg" alt="seat-icon" />
+                                      </span>
+                                      <span class="text">07 Seats</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(56)</span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="filter__checkBox-wrap filter__checkBox-wrap--borderd">
+                                <div class="form-checkBox form-checkBox--squireCheck">
+                                  <input type="checkbox" id="seats9" />
+                                  <label for="seats9">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="icon">
+                                        <img src="../../assets/images/icons-objs/car-seat.svg" alt="seat-icon" />
+                                      </span>
+                                      <span class="text">09 Seats</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(03)</span>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- single-widget--end -->
+                    <!-- single-widget -->
+                    <div class="filter__widget">
+                      <button
+                        class="filter__widget-btn"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseNam8"
+                        aria-expanded="true"
+                        aria-controls="collapseNam8"
+                      >
+                        Owners
+                        <span class="icon">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13.28 10.0332L8.9333 5.68654C8.41997 5.1732 7.57997 5.1732 7.06664 5.68654L2.71997 10.0332"
+                              stroke="#292D32"
+                              stroke-width="1.5"
+                              stroke-miterlimit="10"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="collapse show" id="collapseNam8">
+                        <div class="filter__widget-body">
+                          <ul class="filter__checkBox">
+                            <li>
+                              <div class="filter__checkBox-wrap">
+                                <div class="form-checkBox form-checkBox--squireCheck">
+                                  <input type="checkbox" id="owner1" checked />
+                                  <label for="owner1">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="text">First Owner</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(02)</span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="filter__checkBox-wrap">
+                                <div class="form-checkBox form-checkBox--squireCheck">
+                                  <input type="checkbox" id="owner2" checked />
+                                  <label for="owner2">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="text">Second Owner</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(56)</span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="filter__checkBox-wrap">
+                                <div class="form-checkBox form-checkBox--squireCheck">
+                                  <input type="checkbox" id="owner3" checked />
+                                  <label for="owner3">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="text">Third Owner</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(03)</span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="filter__checkBox-wrap">
+                                <div class="form-checkBox form-checkBox--squireCheck">
+                                  <input type="checkbox" id="owner4" checked />
+                                  <label for="owner4">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="text">Fourth Owner</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(03)</span>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- single-widget--end -->
+                    <!-- single-widget -->
+                    <div class="filter__widget">
+                      <button
+                        class="filter__widget-btn"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseNam9"
+                        aria-expanded="true"
+                        aria-controls="collapseNam9"
+                      >
+                        Condition
+                        <span class="icon">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13.28 10.0332L8.9333 5.68654C8.41997 5.1732 7.57997 5.1732 7.06664 5.68654L2.71997 10.0332"
+                              stroke="#292D32"
+                              stroke-width="1.5"
+                              stroke-miterlimit="10"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="collapse show" id="collapseNam8">
+                        <div class="filter__widget-body">
+                          <ul class="filter__checkBox">
+                            <li>
+                              <div class="filter__checkBox-wrap">
+                                <div class="form-checkBox form-checkBox--squireCheck">
+                                  <input type="checkbox" id="new" checked />
+                                  <label for="new">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="text">New</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(02)</span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="filter__checkBox-wrap">
+                                <div class="form-checkBox form-checkBox--squireCheck">
+                                  <input type="checkbox" id="used" />
+                                  <label for="used">
+                                    <span class="indicator"></span>
+                                    <span class="content">
+                                      <span class="text">Used</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="filter__checkBox-right">
+                                  <span class="resultCount">(56)</span>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- single-widget--end -->
                   </div>
-                  <!-- single-widget--end -->
                 </div>
               </div>
             </div>
