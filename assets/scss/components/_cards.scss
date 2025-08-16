@@ -422,15 +422,21 @@
         border-radius: 0.625rem;
         box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(153, 153, 153, 0.1);
         background-color: $white-color;
+        @include media-query(breakpoint-md) {
+            height: 352px;
+        }
+        @include media-query(breakpoint-xl) {
+            height: 600px;
+        }
+        @include media-query(breakpoint-xxl-2) {
+            height: 916px;
+        }
     }
     // Profile Card Start
     &--profile {
         border: 1px solid $light-gray;
         border-radius: 10px;
         background-color: $white-color;
-        @include media-query(breakpoint-lg) {
-            padding: 16px 12px;
-        }
 
         .head {
             padding: 16px;
