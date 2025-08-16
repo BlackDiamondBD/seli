@@ -1,8 +1,8 @@
 @use '../utils/' as *;
 @use '../base/' as *;
 
-.asset-info {
-    &--section {
+.page-top {
+    &__section {
         padding: 36px 0 30px;
         @include media-query(breakpoint-xl) {
             padding: 45px 0 50px;
@@ -10,6 +10,7 @@
     }
 
     .info {
+        max-width: 676px;
         gap: 15px;
         @include media-query(breakpoint-xl) {
             gap: 10px;

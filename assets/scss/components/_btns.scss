@@ -130,20 +130,20 @@
     }
 
     // Button--squir
-    &__squire {
+    &__squire{
         flex: 0 0 auto;
         min-width: inherit;
         width: 2.8125rem;
-        border-radius: 0.625rem;
+        border-radius: .625rem;
         min-height: 2.8125rem;
         padding: 0;
     }
 
     // Button--squir
-    &__outline {
-        &-coolGray {
+    &__outline{
+        &-coolGray{
             border-color: $cool-gray;
-            &:focus {
+            &:focus{
                 border-color: $cool-gray;
                 outline: none;
                 box-shadow: none;
@@ -181,36 +181,6 @@
         }
     }
 
-    // Button Wishlish
-    &--wishlist {
-        min-width: auto;
-        width: 1.875rem;
-        height: 1.875rem;
-        padding: 0;
-        background: rgba(0, 0, 0, 0.3);
-        border: none;
-        border-radius: 50%;
-        backdrop-filter: blur(0.875rem);
-        color: $white-color;
-
-        .icon {
-            width: 60%;
-        }
-
-        &:hover {
-            background-color: #0000008c;
-        }
-
-        &.active {
-            background: $light-gray;
-            .icon {
-                fill: #de3a3a;
-                path {
-                    stroke: transparent;
-                }
-            }
-        }
-    }
 }
 
 // Arrow Animation
