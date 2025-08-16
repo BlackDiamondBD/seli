@@ -10,98 +10,127 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 // Font Sizes
 .fs-1 {
-  font-size: 2.125rem !important;
-  line-height: normal;
+    font-size: 2.125rem !important;
+    line-height: normal;
 
-  @include media-query(breakpoint-sm) {
-    font-size: 2.5rem !important;
-  }
-  @include media-query(breakpoint-lg) {
-    font-size: 2.875rem !important;
-  }
-  @include media-query(breakpoint-xl) {
-    font-size: 3.25rem !important;
-  }
-  @include media-query(breakpoint-xxl-2) {
-    font-size: 3.75rem !important;
-  }
+    @include media-query(breakpoint-sm) {
+        font-size: 2.5rem !important;
+    }
+    @include media-query(breakpoint-lg) {
+        font-size: 2.875rem !important;
+    }
+    @include media-query(breakpoint-xl) {
+        font-size: 3.25rem !important;
+    }
+    @include media-query(breakpoint-xxl-2) {
+        font-size: 3.75rem !important;
+    }
 }
 
 .fs-2 {
-  font-size: 1.625rem !important;
-  line-height: 1.4;
+    font-size: 1.625rem !important;
+    line-height: 1.4;
 
-  @include media-query(breakpoint-sm) {
-    font-size: 2rem !important;
-  }
-  @include media-query(breakpoint-lg) {
-    font-size: 2.375rem !important;
-  }
-  @include media-query(breakpoint-xl) {
-    font-size: 2.625rem !important;
-  }
-  @include media-query(breakpoint-xxl-2) {
-    font-size: 3rem !important;
-  }
+    @include media-query(breakpoint-sm) {
+        font-size: 2rem !important;
+    }
+    @include media-query(breakpoint-lg) {
+        font-size: 2.375rem !important;
+    }
+    @include media-query(breakpoint-xl) {
+        font-size: 2.625rem !important;
+    }
+    @include media-query(breakpoint-xxl-2) {
+        font-size: 3rem !important;
+    }
 }
 
 .fs-3 {
-  font-size: 1.5rem !important;
-  line-height: normal;
+    font-size: 1.5rem !important;
+    line-height: normal;
 
-  @include media-query(breakpoint-sm) {
-    font-size: 1.75rem !important;
-  }
-  @include media-query(breakpoint-lg) {
-    font-size: 2rem !important;
-  }
-  @include media-query(breakpoint-xl) {
-    font-size: 2.25rem !important;
-  }
-  @include media-query(breakpoint-xxl-2) {
-    font-size: 2.5rem !important;
-  }
+    @include media-query(breakpoint-sm) {
+        font-size: 1.75rem !important;
+    }
+    @include media-query(breakpoint-lg) {
+        font-size: 2rem !important;
+    }
+    @include media-query(breakpoint-xl) {
+        font-size: 2.25rem !important;
+    }
+    @include media-query(breakpoint-xxl-2) {
+        font-size: 2.5rem !important;
+    }
 }
 
 .fs-4 {
-  font-size: 1.25rem !important;
-  line-height: normal;
+    font-size: 1.25rem !important;
+    line-height: normal;
+
+    @include media-query(breakpoint-sm) {
+        font-size: 1.5rem !important;
+    }
+    @include media-query(breakpoint-lg) {
+        font-size: 1.75rem !important;
+    }
+    @include media-query(breakpoint-xl) {
+        font-size: 2rem !important;
+    }
+    @include media-query(breakpoint-xxl-2) {
+        font-size: 2.1875rem !important;
+    }
+}
+
+.fs-5 {
+  font-size: 1rem !important;
+  line-height: normal !important;
+  @include media-query(breakpoint-lg) {
+    font-size: 1.125rem !important;
+    line-height: 1.875rem !important;
+  }
+}
+
+.fs-50 {
+  font-size: 1.6rem !important;
+  line-height: normal !important;
 
   @include media-query(breakpoint-sm) {
-    font-size: 1.5rem !important;
-  }
-  @include media-query(breakpoint-lg) {
-    font-size: 1.75rem !important;
-  }
-  @include media-query(breakpoint-xl) {
     font-size: 2rem !important;
+    line-height: normal !important;
   }
-  @include media-query(breakpoint-xxl-2) {
-    font-size: 2.1875rem !important;
+
+  @include media-query(breakpoint-md) {
+    font-size: 2.7rem !important;
+    line-height: normal !important;
+  }
+
+  @include media-query(breakpoint-lg) {
+    font-size: 3.125rem !important;
+    line-height: normal !important;
   }
 }
 
 .lead-text {
-  font-size: 1rem;
-  line-height: 1;
-  @include media-query(breakpoint-md) {
-  }
-  @include media-query(breakpoint-lg) {
-  }
-  @include media-query(breakpoint-xl) {
-    font-size: 1.25rem;
-  }
+    font-size: 1rem;
+    line-height: 1;
+    @include media-query(breakpoint-md) {
+    }
+    @include media-query(breakpoint-lg) {
+    }
+    @include media-query(breakpoint-xl) {
+        font-size: 1.25rem;
+    }
 }
 
 // Font Weight
 .fw {
-  &-extrabold {
-    font-weight: 800;
-  }
+    &-extrabold {
+        font-weight: 800;
+    }
 }
