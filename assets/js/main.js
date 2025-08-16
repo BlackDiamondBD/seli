@@ -7,6 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // ===== Wishlist Button Toggle =====
+    const wishlistBtn = document.querySelectorAll('.btn--wishlist');
+    wishlistBtn.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            this.classList.toggle('active');
+        });
+    });
+
     // ===== Accordion Left Border =====
     const accordionItems = document.querySelectorAll('.accordion-item');
     const accordionButtons = document.querySelectorAll('.accordion-button');
@@ -22,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
     updateAccordionExpandedClasses();
-
     accordionButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
             setTimeout(updateAccordionExpandedClasses, 10);
@@ -32,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // ===== Testimonial Collapse JS =====
     const testimonialWrap = document.getElementById('testimonial__wrapper');
     const collapseBtnT = document.getElementById('testimonial-collapse-btn');
-
     if (collapseBtnT && testimonialWrap) {
         collapseBtnT.addEventListener('click', () => {
             testimonialWrap.classList.toggle('active');
@@ -92,6 +98,16 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 
+    // Slider for Thumb Image (Detail Page)
+    var thumbSwiper = new Swiper('.thumb--slider', {
+        loop: true,
+        spaceBetween: 15,
+        slidesPerView: 5,
+        freeMode: true,
+        watchSlidesProgress: true,
+        direction: 'vertical',
+    });
+
     // Slider for Featured Image (Detail Page)
     var featuredSwiper = new Swiper('.featured--slider', {
         slidesPerView: 1,
@@ -99,16 +115,9 @@ document.addEventListener('DOMContentLoaded', function () {
         grabCursor: true,
         loop: true,
         speed: 800,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-        },
+        thumbs: { swiper: thumbSwiper },
         breakpoints: {
-            992: {
-                slidesPerView: 1,
-                spaceBetween: 16,
-            },
+            992: { slidesPerView: 1, spaceBetween: 16 },
         },
         pagination: {
             el: '.featured__pagination',
@@ -117,8 +126,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Recommendation Slider (Detail Page)
-    var featuredSwiper = new Swiper('.recommendation__slider', {
-        slidesPerView: 1.25,
+    var recommendationSwiper = new Swiper('.recommendation__slider', {
+        slidesPerView: 1.35,
         spaceBetween: 15,
         grabCursor: true,
         loop: true,
@@ -129,9 +138,45 @@ document.addEventListener('DOMContentLoaded', function () {
             pauseOnMouseEnter: true,
         },
         breakpoints: {
-            992: {
-                slidesPerView: 3,
-            },
+            576: { slidesPerView: 1.75 },
+            992: { slidesPerView: 1.25 },
+            1200: { slidesPerView: 2.25 },
+            1600: { slidesPerView: 2.6 },
         },
+    });
+
+    // For Horizontal Scroll
+    const ScrollingPart = document.querySelectorAll('.scrolling-part');
+
+    ScrollingPart.forEach((section) => {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        section.addEventListener('mousedown', (e) => {
+            isDown = true;
+            section.classList.add('active');
+            startX = e.pageX - section.offsetLeft;
+            scrollLeft = section.scrollLeft;
+            section.style.cursor = 'grabbing';
+        });
+
+        section.addEventListener('mouseleave', () => {
+            isDown = false;
+            section.style.cursor = 'grab';
+        });
+
+        section.addEventListener('mouseup', () => {
+            isDown = false;
+            section.style.cursor = 'grab';
+        });
+
+        section.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - section.offsetLeft;
+            const walk = (x - startX) * 1.5; // speed control
+            section.scrollLeft = scrollLeft - walk;
+        });
     });
 });

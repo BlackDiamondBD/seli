@@ -10,8 +10,19 @@
         padding-bottom: 102px;
     }
 
+    &__inner {
+        @include media-query(breakpoint-lg) {
+            gap: 22px;
+        }
+    }
+
     &__content {
+        width: 100%;
         margin-bottom: 30px;
+        @include media-query(breakpoint-lg) {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
     }
 
     // Slider Part
@@ -20,29 +31,63 @@
         @include media-query(breakpoint-xl) {
             margin-bottom: 40px;
         }
+        @include media-query(breakpoint-xxl) {
+            height: 496px;
+        }
+        @include media-query(breakpoint-xxl-2) {
+            height: 564px;
+        }
 
-        .featured {
+        // Featured Item Slider
+        & .featured {
+            &--slider {
+                width: 100%;
+
+                @include media-query(breakpoint-xxl) {
+                    margin-left: 20px;
+                }
+                @include media-query(breakpoint-xxl-2) {
+                    margin-left: 30px;
+                }
+            }
+
             &__item {
                 border-radius: 10px;
                 overflow: hidden;
                 background-color: $white-color;
+                border: 1px solid $light-gray;
                 width: 100%;
                 aspect-ratio: 1 / 0.681;
+                @include media-query(breakpoint-xxl) {
+                    border-radius: 15px;
+                }
 
                 .badge {
                     position: absolute;
                     left: 0;
                     top: 15px;
+                    @include media-query(breakpoint-xxl) {
+                        top: 20px;
+                    }
                 }
-                .wishlistBtn {
+                .btn--wishlist {
                     position: absolute;
                     right: 15px;
                     top: 15px;
+                    @include media-query(breakpoint-xxl) {
+                        width: 36px;
+                        height: 36px;
+                        top: 20px;
+                    }
                 }
             }
+
             .swiper {
                 &-pagination {
                     bottom: 10px;
+                    @include media-query(breakpoint-md) {
+                        bottom: 20px;
+                    }
                     &-bullet {
                         width: 8px;
                         height: 8px;
@@ -58,88 +103,26 @@
                 }
             }
         }
+
+        // Thumb Images Slider
+        & .thumb {
+            width: 92px;
+            flex-shrink: 0;
+
+            & .swiper {
+                &-slide {
+                    width: 100%;
+                    border-radius: 10px;
+                    overflow: hidden;
+                }
+            }
+        }
     }
 
     // Detail Information Part
     &__info {
         .details {
             &-info {
-                &__header {
-                    border-radius: 10px;
-                    border: 1px solid $light-gray;
-                    background-color: $white-color;
-                    box-shadow: 0 4px 4px 0 rgba(153, 153, 153, 0.07);
-                    overflow: hidden;
-                    margin-bottom: 30px;
-                }
-
-                &__nav {
-                    margin: 0 16px;
-                    overflow-x: auto;
-
-                    @include media-query(breakpoint-md) {
-                        padding: 22px;
-                    }
-                    @include media-query(breakpoint-xl) {
-                        padding: 28px 30px;
-                    }
-
-                    // Custom scrollbar
-                    -ms-overflow-style: none;
-                    scrollbar-width: none;
-                    &::-webkit-scrollbar {
-                        display: none;
-                    }
-                }
-
-                &__ul {
-                    gap: 20px;
-                }
-
-                &__link {
-                    padding: 18px 0;
-                    color: $dark-gray;
-                    font-weight: 500;
-                    @include transition-common;
-
-                    &::after {
-                        content: '';
-                        width: 50%;
-                        height: 2px;
-                        position: absolute;
-                        bottom: 0;
-                        left: 50%;
-                        transform: translateX(-50%) scale(0);
-                        background-color: $primary;
-                        @include transition-common;
-                        @include media-query(breakpoint-xl) {
-                            height: 3px;
-                        }
-                        @include media-query(breakpoint-xxl-2) {
-                            height: 4px;
-                        }
-                    }
-
-                    &:hover,
-                    &.active {
-                        color: $text-black;
-
-                        &::after {
-                            transform: translateX(-50%) scale(1);
-                        }
-                    }
-                    &.active {
-                        font-weight: 600;
-                    }
-
-                    @include media-query(breakpoint-xl) {
-                        font-size: 18px;
-                    }
-                    @include media-query(breakpoint-xxl-2) {
-                        font-size: 20px;
-                    }
-                }
-
                 &__blocks {
                     gap: 16px;
                     @include media-query(breakpoint-sm) {
@@ -185,17 +168,28 @@
                                 }
                             }
 
-                            &__wrapper {
-                                &__row {
-                                    &.g-4 {
-                                        @include media-query(breakpoint-md) {
-                                            --bs-gutter-x: 30px;
-                                            --bs-gutter-y: 30px;
-                                        }
-                                    }
-                                }
+                            & .btn--trans {
+                                min-width: auto;
+                                height: auto;
+                            }
 
+                            &__wrapper {
+                                gap: 24px;
+                                @include media-query(breakpoint-md) {
+                                    gap: 30px;
+                                }
+                                @include media-query(breakpoint-xxl-2) {
+                                    justify-content: space-between;
+                                }
                                 .item {
+                                    width: calc(50% - 12px);
+                                    @include media-query(breakpoint-md) {
+                                        width: calc(33.3333% - 20px);
+                                    }
+                                    @include media-query(breakpoint-xxl-2) {
+                                        width: 164px;
+                                    }
+
                                     .icon {
                                         width: 40px;
                                         height: 40px;
@@ -236,6 +230,11 @@
                                     }
                                 }
                             }
+
+                            &__slider {
+                                margin: 0 -25px;
+                                padding: 0 20px;
+                            }
                         }
                     }
                 }
@@ -245,17 +244,10 @@
 
     & .card--explore {
         box-shadow: unset;
-    }
 
-    // Siderbar Part
-    .sidebar {
-        &--detail {
-            &__buttons {
-                .btn {
-                    height: 52px;
-                    border-radius: 10px;
-                }
-            }
+        & .btn--wishlist {
+            top: 12px;
+            right: 12px;
         }
     }
 }
