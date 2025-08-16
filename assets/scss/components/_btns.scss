@@ -151,6 +151,36 @@
             }
         }
     }
+
+    // Dropdown-btn
+    &--dropdown{
+        background: $white-color;
+        padding: .8125rem .9375rem;
+        border-radius: .5rem;
+        border: .0625rem solid $light-gray;
+        min-width: inherit;
+        min-height: inherit;
+        height: inherit;
+        gap: .3125rem;
+        color: $text-black;
+        &:hover{
+            background-color: $white-color;
+            border-color: $cool-gray;
+            color: $text-black;
+        }
+        & span.icon{
+            flex: 0 0 auto;
+            width: 1.5rem;
+            height: 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        & span.text-status{
+            color: $cool-gray;
+        }
+    }
+
 }
 
 // Arrow Animation

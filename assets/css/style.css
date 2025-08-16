@@ -742,6 +742,33 @@ h6 {
   box-shadow: none;
   background-color: transparent;
 }
+.btn--dropdown {
+  background: #fff;
+  padding: 0.8125rem 0.9375rem;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #ebebeb;
+  min-width: inherit;
+  min-height: inherit;
+  height: inherit;
+  gap: 0.3125rem;
+  color: #212529;
+}
+.btn--dropdown:hover {
+  background-color: #fff;
+  border-color: #bebebe;
+  color: #212529;
+}
+.btn--dropdown span.icon {
+  flex: 0 0 auto;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn--dropdown span.text-status {
+  color: #bebebe;
+}
 
 @keyframes arrow-slide {
   0% {
@@ -813,7 +840,7 @@ h6 {
 .form-control {
   color: #212529;
   border: 0.0625rem solid #bebebe;
-  height: 3rem;
+  height: 2.8125rem;
   border-radius: 0.75rem;
   outline: none;
   box-shadow: none;
@@ -867,6 +894,9 @@ h6 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .form-inputIconWrap span.icon svg {
   width: 100%;
@@ -877,6 +907,112 @@ h6 {
 }
 .form-inputIconWrap span.icon:last-child {
   right: 15px;
+}
+.form-checkBox input {
+  display: none;
+}
+.form-checkBox input:checked ~ label span.indicator {
+  border-color: transparent;
+  background: linear-gradient(90deg, rgba(60, 205, 170, 0.2) 0%, rgba(5, 60, 90, 0.2) 97.99%);
+}
+.form-checkBox label {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.form-checkBox label span.indicator {
+  width: 1.375rem;
+  height: 1.375rem;
+  border: 1px solid #ebebeb;
+  position: relative;
+  border-radius: 0.125rem;
+}
+@media (min-width: 75rem) {
+  .form-checkBox label span.indicator {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+.form-checkBox label span.content {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.form-checkBox--circle label span.indicator {
+  border-radius: 50% !important;
+  border-color: #bebebe;
+  background: #ebebeb;
+}
+.form-checkBox--circle label span.indicator::after {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #053c5a;
+  content: "";
+  left: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  opacity: 0;
+}
+.form-checkBox--circle input:checked ~ label {
+  color: #212529;
+}
+.form-checkBox--circle input:checked ~ label span.indicator {
+  background: rgba(5, 60, 90, 0.2) !important;
+  border-color: #053c5a !important;
+}
+.form-checkBox--circle input:checked ~ label span.indicator::after {
+  opacity: 1;
+}
+.form-checkBox--squireCheck input:checked ~ label span.indicator::after {
+  opacity: 1;
+}
+.form-checkBox--squireCheck label span.indicator {
+  position: relative;
+}
+.form-checkBox--squireCheck label span.indicator::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  left: 0;
+  border-radius: 0.125rem;
+  top: 0;
+  background-image: url("../images/icons/checkMark.svg");
+  background-size: 0.6875rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+}
+.form-checkBox--thumbnail label {
+  position: relative;
+  border-radius: 0.125rem;
+  border: 0.0625rem solid #ebebeb;
+  height: 124px;
+  width: 100%;
+  padding-top: 0.625rem;
+  align-items: center;
+  justify-content: center;
+}
+.form-checkBox--thumbnail label span.indicator {
+  position: absolute;
+  top: 0.3125rem;
+  right: 0.3125rem;
+}
+.form-checkBox--thumbnail label span.content {
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.form-checkBox--thumbnail label span.content span.text {
+  line-height: 1.4;
 }
 
 .card {
@@ -1694,6 +1830,181 @@ h6 {
 .nav-tabs li button.active {
   background-color: #053c5a;
   color: #fff;
+}
+
+.filter__wrapper {
+  position: fixed;
+  left: 0;
+  top: 3.875rem;
+  background-color: #fff;
+  width: 100%;
+  height: calc(100vh - 3.875rem);
+  overflow-y: scroll;
+  max-width: 400px;
+  z-index: 12;
+  padding: 0.9375rem 1rem;
+}
+@media (min-width: 62rem) {
+  .filter__wrapper {
+    position: inherit;
+    height: inherit;
+    max-width: 100%;
+    border: 1px solid #bebebe;
+    border-radius: 0.625rem;
+    overflow: inherit;
+  }
+}
+.filter__widget {
+  border-bottom: 1px dashed #ebebeb;
+  padding: 0.9375rem 0px;
+}
+.filter__widget-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #212529;
+  width: 100%;
+}
+.filter__widget-btn span {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #ebebeb;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+.filter__widget-body {
+  padding-top: 0.9375rem;
+}
+.filter__checkBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.filter__checkBox--inner {
+  padding-top: 0.625rem;
+  padding-left: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.filter__checkBox--inner .form-checkBox {
+  font-size: 14px;
+}
+.filter__checkBox--inner .form-checkBox label span.indicator {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.filter__checkBox-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #6a6d6f;
+  font-size: 16px;
+  font-weight: 500;
+}
+.filter__checkBox-wrap--borderd {
+  padding: 0.9375rem 0.8125rem;
+  border: 0.0375rem solid #ebebeb;
+  border-radius: 0.3125rem;
+  background: rgba(255, 255, 255, 0.1019607843);
+  backdrop-filter: blur(20.5333328247px);
+}
+.filter__checkBox-right {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  width: max-content;
+  flex: 0 0 auto;
+}
+.filter__checkBox-right .resultCount {
+  font-size: 14px;
+  display: block;
+}
+
+.range-slider {
+  width: 100%;
+  max-width: 100%;
+}
+.range-slider__values {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.range-slider__values .range-slider__value {
+  color: #053c5a;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.range-slider__wrapper {
+  position: relative;
+  height: 1.25rem;
+}
+.range-slider__track {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 0.25rem;
+  width: 100%;
+  background-color: rgba(5, 60, 90, 0.4);
+  border-radius: 0.625rem;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.range-slider__thumb {
+  position: absolute;
+  pointer-events: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0.25rem;
+  background: none;
+  outline: none;
+  z-index: 2;
+  top: 0.5rem;
+}
+.range-slider__thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: all;
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 50%;
+  background: #fff;
+  border: 0.0625rem solid #EBEBEB;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  box-shadow: 0rem 0.25rem 0.6875rem 0rem rgba(0, 0, 0, 0.1490196078);
+}
+.range-slider__thumb::-moz-range-thumb {
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 50%;
+  background: #fff;
+  border: 0.0625rem solid #EBEBEB;
+  cursor: pointer;
+  box-shadow: 0rem 0.25rem 0.6875rem 0rem rgba(0, 0, 0, 0.1490196078);
+}
+.range-slider__labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.3125rem;
+}
+.range-slider__labels .range-slider__label {
+  font-size: 0.875rem;
+  color: #bebebe;
+}
+.range-slider__fill {
+  position: absolute;
+  top: 50%;
+  height: 0.25rem;
+  background-color: #053c5a;
+  border-radius: 0.625rem;
+  transform: translateY(-50%);
+  z-index: 2;
 }
 
 .intro--section {
@@ -2867,7 +3178,10 @@ h6 {
 }
 @media (min-width: 75rem) {
   .listing__header {
-    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 .listing__header-text h2 {
@@ -2917,10 +3231,16 @@ h6 {
   width: 50%;
 }
 .listing__nav .nav-item button {
+  min-width: inherit;
   width: 100%;
   background-color: transparent;
   border: none;
   border-radius: 0.625rem;
+}
+@media (min-width: 62rem) {
+  .listing__search {
+    flex-grow: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
