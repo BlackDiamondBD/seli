@@ -556,20 +556,28 @@
 
         &-thumb {
             width: 100%;
+            height: 200px;
             overflow: hidden;
-            aspect-ratio: 1.3274333;
             border-radius: 10px;
             -webkit-border-radius: 10px;
             -moz-border-radius: 10px;
             -ms-border-radius: 10px;
             -o-border-radius: 10px;
-
+            @include media-query(breakpoint-sm) {
+                height: 256px;
+            }
             @include media-query(breakpoint-md) {
                 border-radius: 15px;
                 -webkit-border-radius: 15px;
                 -moz-border-radius: 15px;
                 -ms-border-radius: 15px;
                 -o-border-radius: 15px;
+            }
+            @include media-query(breakpoint-xl) {
+                height: 288px;
+            }
+            @include media-query(breakpoint-xxl) {
+                height: 322px;
             }
 
             img {

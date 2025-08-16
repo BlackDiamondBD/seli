@@ -46,12 +46,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // ===== Dubble Range Slider Custom Scripts =====
-    document.querySelectorAll(".range-slider").forEach((slider) => {
-        const minRange = slider.querySelector(".range-slider__thumb--min");
-        const maxRange = slider.querySelector(".range-slider__thumb--max");
-        const minValue = slider.querySelector(".range-slider__value--min");
-        const maxValue = slider.querySelector(".range-slider__value--max");
-        const fill = slider.querySelector(".range-slider__fill");
+    document.querySelectorAll('.range-slider').forEach((slider) => {
+        const minRange = slider.querySelector('.range-slider__thumb--min');
+        const maxRange = slider.querySelector('.range-slider__thumb--max');
+        const minValue = slider.querySelector('.range-slider__value--min');
+        const maxValue = slider.querySelector('.range-slider__value--max');
+        const fill = slider.querySelector('.range-slider__fill');
 
         function updateValues() {
             let minVal = parseInt(minRange.value);
@@ -62,17 +62,75 @@ document.addEventListener('DOMContentLoaded', function () {
             minValue.textContent = minVal.toLocaleString();
             maxValue.textContent = maxVal.toLocaleString();
 
-            const minPercent = ((minVal - minRange.min) / (minRange.max - minRange.min)) * 100;
-            const maxPercent = ((maxVal - maxRange.min) / (maxRange.max - minRange.min)) * 100;
+            const minPercent =
+                ((minVal - minRange.min) / (minRange.max - minRange.min)) * 100;
+            const maxPercent =
+                ((maxVal - maxRange.min) / (maxRange.max - minRange.min)) * 100;
 
-            fill.style.left = minPercent + "%";
-            fill.style.width = maxPercent - minPercent + "%";
+            fill.style.left = minPercent + '%';
+            fill.style.width = maxPercent - minPercent + '%';
         }
 
-        minRange.addEventListener("input", updateValues);
-        maxRange.addEventListener("input", updateValues);
+        minRange.addEventListener('input', updateValues);
+        maxRange.addEventListener('input', updateValues);
 
         updateValues();
+    });
+
+
+    // ===== =====
+    const scrollLinks = document.querySelectorAll('.scroll-link');
+
+    // Click & Scroll Smooth + Active Class
+    scrollLinks.forEach((link) => {
+        link.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+
+                    // Sticky header height
+                    const headerHeight =
+                        document.querySelector('.header--sticky')
+                            ?.offsetHeight || 0;
+
+                    // Scroll to position
+                    const targetPosition = target.offsetTop - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth',
+                    });
+
+                    // Remove active from all links
+                    scrollLinks.forEach((l) => l.classList.remove('active'));
+                    // Add active to clicked link
+                    this.classList.add('active');
+                }
+            }
+        });
+    });
+    // Scroll Event to Update Active Link on Page Scroll
+    window.addEventListener('scroll', () => {
+        const headerHeight =
+            document.querySelector('.header--sticky')?.offsetHeight || 0;
+        let scrollPosition = window.scrollY + headerHeight + 1; // +1 for slight offset
+
+        scrollLinks.forEach((link) => {
+            const target = document.querySelector(link.getAttribute('href'));
+            if (target) {
+                const sectionTop = target.offsetTop;
+                const sectionBottom = sectionTop + target.offsetHeight;
+
+                if (
+                    scrollPosition >= sectionTop &&
+                    scrollPosition < sectionBottom
+                ) {
+                    scrollLinks.forEach((l) => l.classList.remove('active'));
+                    link.classList.add('active');
+                }
+            }
+        });
     });
 
     // ===== Slider Activation ===== //
@@ -209,5 +267,4 @@ document.addEventListener('DOMContentLoaded', function () {
             section.scrollLeft = scrollLeft - walk;
         });
     });
-
 });

@@ -1391,6 +1391,17 @@ h6 {
     max-height: 1.125rem;
   }
 }
+.card--explore .btn--wishlist {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+}
+@media (min-width: 48rem) {
+  .card--explore .btn--wishlist {
+    top: 0.75rem;
+    right: 1.125rem;
+  }
+}
 .card--service {
   background-color: #fff;
   padding: 0.4375rem 0rem;
@@ -1750,13 +1761,18 @@ h6 {
 }
 .card--blog-thumb {
   width: 100%;
+  height: 200px;
   overflow: hidden;
-  aspect-ratio: 1.3274333;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+@media (min-width: 36rem) {
+  .card--blog-thumb {
+    height: 256px;
+  }
 }
 @media (min-width: 48rem) {
   .card--blog-thumb {
@@ -1765,6 +1781,16 @@ h6 {
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+  }
+}
+@media (min-width: 75rem) {
+  .card--blog-thumb {
+    height: 288px;
+  }
+}
+@media (min-width: 87.5rem) {
+  .card--blog-thumb {
+    height: 322px;
   }
 }
 .card--blog-thumb img {
