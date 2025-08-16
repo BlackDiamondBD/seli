@@ -136,36 +136,38 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Code By Dev-4
-  const section = document.querySelector(".category-list");
+  const ScrollingPart = document.querySelectorAll(".scrolling-part");
 
-  let isDown = false;
-  let startX;
-  let scrollLeft;
+  ScrollingPart.forEach((section) => {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-  section.addEventListener("mousedown", (e) => {
-    isDown = true;
-    section.classList.add("active");
-    startX = e.pageX - section.offsetLeft;
-    scrollLeft = section.scrollLeft;
-    section.style.cursor = "grabbing";
-  });
+    section.addEventListener("mousedown", (e) => {
+      isDown = true;
+      section.classList.add("active");
+      startX = e.pageX - section.offsetLeft;
+      scrollLeft = section.scrollLeft;
+      section.style.cursor = "grabbing";
+    });
 
-  section.addEventListener("mouseleave", () => {
-    isDown = false;
-    section.style.cursor = "grab";
-  });
+    section.addEventListener("mouseleave", () => {
+      isDown = false;
+      section.style.cursor = "grab";
+    });
 
-  section.addEventListener("mouseup", () => {
-    isDown = false;
-    section.style.cursor = "grab";
-  });
+    section.addEventListener("mouseup", () => {
+      isDown = false;
+      section.style.cursor = "grab";
+    });
 
-  section.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - section.offsetLeft;
-    const walk = (x - startX) * 1.5; // speed control
-    section.scrollLeft = scrollLeft - walk;
+    section.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - section.offsetLeft;
+      const walk = (x - startX) * 1.5; // speed control
+      section.scrollLeft = scrollLeft - walk;
+    });
   });
 });
 
