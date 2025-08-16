@@ -825,6 +825,7 @@ h6 {
 }
 .form-select:focus {
   border: 0.0625rem solid #bebebe !important;
+  border-color: #3ccdaa !important;
 }
 @media (min-width: 75rem) {
   .form-select {
@@ -889,6 +890,11 @@ h6 {
 }
 .form-check--card .form-check-label img {
   padding: 1em;
+}
+.form-check--pill.active label {
+  background: #3ccdaa;
+  border-color: #3ccdaa;
+  color: #fff;
 }
 
 .card {
@@ -2934,9 +2940,34 @@ h6 {
   display: block;
   border-radius: 50rem;
   margin-bottom: 0.2em;
+  transition: 0.3s ease;
 }
 .step__nav li.active::before {
   background: #3ccdaa;
+}
+.step__transmission > div:nth-child(3n-2) {
+  flex: 22%;
+}
+.step__transmission > div:nth-child(3n-1) {
+  flex: 35%;
+}
+.step__transmission > div:nth-child(3n) {
+  flex: 35%;
+}
+.step__tab {
+  display: none;
+  animation: fadeEffect 1s ease;
+}
+.step__tab.active {
+  display: block;
+}
+@keyframes fadeEffect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .step__buttons {
   margin-top: 6.25rem;

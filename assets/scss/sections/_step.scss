@@ -22,12 +22,40 @@
                 display: block;
                 border-radius: 50rem;
                 margin-bottom: 0.2em;
+                transition: .3s ease;
             }
             &.active::before {
                 background: $secondary;
             }
         }
-    } 
+    }
+
+    
+    &__transmission{
+        > div:nth-child(3n-2){
+            flex: 22%;
+        }
+        > div:nth-child(3n-1){
+            flex: 35%;
+        }
+        > div:nth-child(3n){
+            flex: 35%;
+        }
+    }
+
+    &__tab{
+        display: none;
+        animation: fadeEffect 1s ease;
+        &.active{
+            display: block;
+        }
+    }
+    @keyframes fadeEffect{
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+
+
     &__buttons{
         margin-top: 6.25rem;
     }

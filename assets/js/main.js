@@ -1,18 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     // ===== Form Check Active Class =====
-    // This will add an active class to the parent element of the radio input when it is checked    
+    // This will add an active class to the parent element of the radio input when it is checked
     const formCheckInputs = document.querySelectorAll('.form-check-input');
     formCheckInputs.forEach((input) => {
         const parent = input.closest('.form-check');
-        const grantparent = parent.parentElement;        
+        const grantparent = parent.parentElement;
         if (parent) {
             parent.classList.toggle('active', input.checked);
         }
         input.addEventListener('change', function () {
             if (parent) {
 
-                grantparent.querySelectorAll('.form-check-input[type="radio"]').forEach(element => {   
+                let allInput = grantparent.querySelectorAll('.form-check-input[type="radio"]');                
+                allInput.forEach(element => {   
                     element.closest('.form-check').classList.toggle('active', element.checked);
                 });
 
@@ -20,6 +21,76 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });     
+
+
+    // step change function
+    const stepBox = document.querySelectorAll('.step-box')
+    stepBox.forEach(wrap => {
+        const navs = wrap.querySelectorAll('.step__nav li')
+        const tabs = wrap.querySelectorAll('.step__tab')
+        const next = wrap.querySelectorAll('.step__next')
+        const back = wrap.querySelectorAll('.step__back')
+        let counter = 0;
+        let size = navs.length;
+
+        updateStep();
+
+        
+        next.forEach(btn => {
+            btn.addEventListener('click', ()=>{                
+                if (counter < size - 1) {
+                    counter++;
+                    updateStep();
+                }
+            })
+        });
+        back.forEach(btn => {
+            btn.addEventListener('click', ()=>{
+                if (counter > 0) {
+                    counter--;
+                    updateStep();
+                }
+            })
+        });
+
+
+        function updateStep() {
+            tabs.forEach(tab => {
+                tab.classList.remove('active')             
+            });
+            for (let i = 0; i < size; i++) {
+                if (i > counter) {                    
+                    navs[i].classList.remove('active')                
+                }else{                    
+                    navs[i].classList.add('active')      
+                }
+            }
+            navs[counter].classList.add('active')
+            tabs[counter].classList.add('active')
+        }
+
+
+
+
+
+    });
+
+
+    // custom tab
+	// tabFunc(document.querySelectorAll('.offer-link'), document.querySelectorAll('.step__tab'))
+
+	// function tabFunc(tabLinks, tabs) {
+	// 	tabLinks.forEach((link, index) => {
+	// 		link.addEventListener('click', ()=>{
+	// 			for (let i = 0; i < tabLinks.length; i++) {
+	// 				tabLinks[i].classList.remove('active')
+	// 				tabs[i].classList.remove('active')
+	// 			}
+	// 			link.classList.add('active')
+	// 			tabs[index].classList.add('active')
+	// 		})
+	// 	});
+	// }
 
 
 
