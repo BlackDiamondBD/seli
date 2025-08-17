@@ -30,6 +30,12 @@
         }
     }
 
+    &__title{
+        &.mb-5{
+            margin-bottom: 2.5rem !important;
+        }
+    }
+
     
     &__transmission{
         > div:nth-child(3n-2){

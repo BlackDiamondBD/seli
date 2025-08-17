@@ -43,6 +43,7 @@
     <!-- === CSS CDNs & StyleSheets === -->
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.2/build/css/intlTelInput.css">
     <link rel="stylesheet" href="../../assets/css/style.css" />
 </head>
 
@@ -348,8 +349,9 @@
                                             <form action="#" method="post">
                                                 <div class="step__tabs">
                                                     <div class="step__tab">
-                                                        <div class="step__title mb-4">
-                                                            <h2 class="fw-bold">
+                                                        <!-- step title -->
+                                                        <div class="step__title mb-5">
+                                                            <h2 class="fw-bold mb-3">
                                                                 Add Your Listing
                                                                 Details
                                                             </h2>
@@ -359,9 +361,10 @@
                                                             </h5>
                                                         </div>
 
+                                                        <!-- form controls -->
                                                         <div class="row">
-                                                            <div class="col-md-6 mb-3">
-                                                                <label class="form-label text-black" for="brand">Brand</label>
+                                                            <div class="col-md-6 mb-4">
+                                                                <h6 class="form-label text-black">Brand</h6>
                                                                 <select class="form-select" id="brand" name="brand">
                                                                     <option value="" disabled selected>
                                                                         Select
@@ -387,8 +390,8 @@
                                                                 </select>
                                                             </div>
 
-                                                            <div class="col-md-6 mb-3">
-                                                                <label class="form-label text-black" for="model">Price</label>
+                                                            <div class="col-md-6 mb-4">
+                                                                <h6 class="form-label text-black">Price</h6>
                                                                 <select class="form-select" name="price" id="price">
                                                                     <option value="" disabled selected>
                                                                         0 €
@@ -412,8 +415,8 @@
                                                                 </select>
                                                             </div>
 
-                                                            <div class="col-md-6 mb-3">
-                                                                <label class="form-label text-black" for="model">Model</label>
+                                                            <div class="col-md-6 mb-4">
+                                                                <h6 class="form-label text-black">Model</h6>
                                                                 <select class="form-select" name="model" id="model">
                                                                     <option value="" disabled selected>
                                                                         select
@@ -442,9 +445,8 @@
                                                                 </select>
                                                             </div>
 
-                                                            <div class="col-md-6 mb-3">
-                                                                <label class="form-label text-black" for="year">Year Of
-                                                                    Manufacture</label>
+                                                            <div class="col-md-6 mb-4">
+                                                                <h6 class="form-label text-black">Year Of Manufacture</h6>
                                                                 <select class="form-select" name="year" id="year">
                                                                     <option value="" disabled selected>
                                                                         2018
@@ -461,7 +463,7 @@
                                                                 </select>
                                                             </div>
 
-                                                            <div class="col-md-6 mb-3">
+                                                            <div class="col-md-6 mb-4">
                                                                 <h6 class="form-label text-black">Bodywork</h6>
 
                                                                 <div class="d-flex gap-2">
@@ -502,7 +504,7 @@
                                                             <div class="col-md-6">
                                                                 <h6 class="form-label text-black">Fuel</h6>
 
-                                                                <div class="d-flex gap-2 flex-wrap">
+                                                                <div class="d-flex row-gap-3 column-gap-2 flex-wrap">
                                                                     <div class="form-check form-check--pill ps-0">
                                                                         <input type="radio" id="fl1" name="fuel"
                                                                             class="form-check-input d-none">
@@ -554,9 +556,9 @@
                                                         </div>
                                                     </div>
                                                     <div class="step__tab">
-                                                        
-                                                        <div class="step__title mb-4">
-                                                            <h2 class="fw-bold">
+                                                        <!-- step title -->
+                                                        <div class="step__title mb-5">
+                                                            <h2 class="fw-bold mb-3">
                                                                 Add Your Listing
                                                                 Details
                                                             </h2>
@@ -564,11 +566,11 @@
                                                                 Enter key details to attract buyers.
                                                             </h5>
                                                         </div>
-
                                                         
+                                                        <!-- form controls -->
                                                         <h6 class="form-label text-black">Transmission</h6>
 
-                                                        <div class="step__transmission d-flex flex-wrap row-gap-2 column-gap-4 mb-3">
+                                                        <div class="step__transmission d-flex flex-wrap gap-2 mb-4">
                                                             <div class="form-check d-flex align-items-center">
                                                                 <input name="transmission" type="radio" class="form-check-input" id="tns1">
                                                                 <label for="tns1" class="form-check-label ms-2">Manual (MT)</label>
@@ -595,16 +597,214 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="mb-3">
-                                                            <label class="form-label text-black" for="brand">Color</label>
-                                                            <select class="form-select" id="Color" name="Color">
-                                                                
-                                                            </select>
+
+                                                        <div class="row gx-3">
+                                                            <div class="col-md-12">
+                                                                <div class="mb-4">
+                                                                    <h6 class="form-label text-black">Color</h6>
+                                                                    <select class="form-select" id="Color" name="Color">
+                                                                        <option value="" disabled selected>
+                                                                            Select
+                                                                        </option>
+                                                                        <option value="black">
+                                                                            Black
+                                                                        </option>
+                                                                        <option value="white">
+                                                                            White
+                                                                        </option>
+                                                                        <option value="red">
+                                                                            Red
+                                                                        </option>
+                                                                        <option value="blue">
+                                                                            Blue
+                                                                        </option>
+                                                                        <option value="silver">
+                                                                            Silver
+                                                                        </option>                                                                
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <h6 class="form-label text-black">Horse power</h6>
+                                                                <select class="form-select" id="horsepower" name="horsepower">
+                                                                    <option value="" disabled selected>
+                                                                        Select
+                                                                    </option>
+                                                                    <option value="100">
+                                                                        100
+                                                                    </option>
+                                                                    <option value="150">
+                                                                        150
+                                                                    </option>
+                                                                    <option value="200">
+                                                                        200
+                                                                    </option>
+                                                                    <option value="250">
+                                                                        250
+                                                                    </option>
+                                                                    <option value="300">
+                                                                        300
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <h6 class="form-label text-black">Capacity</h6>
+                                                                <select class="form-select" id="capacity" name="capacity">
+                                                                    <option value="" disabled selected>
+                                                                        00
+                                                                    </option>
+                                                                    <option value="1.0">
+                                                                        1.0 L
+                                                                    </option>
+                                                                    <option value="1.5">
+                                                                        1.5 L
+                                                                    </option>
+                                                                    <option value="2.0">
+                                                                        2.0 L
+                                                                    </option>
+                                                                    <option value="2.5">
+                                                                        2.5 L
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <h6 class="form-label text-black">Km run</h6>
+                                                                <select class="form-select" id="kmrun" name="kmrun">
+                                                                    <option value="" disabled selected>
+                                                                        0km
+                                                                    </option>
+                                                                    <option value="1000">
+                                                                        1,000km
+                                                                    </option>
+                                                                    <option value="5000">
+                                                                        5,000km
+                                                                    </option>
+                                                                    <option value="10000">
+                                                                        10,000km
+                                                                    </option>
+                                                                    <option value="20000">
+                                                                        20,000km
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <h6 class="form-label text-black">No. places</h6>
+                                                                <select class="form-select" id="places" name="places">
+                                                                    <option value="" disabled selected>
+                                                                        00
+                                                                    </option>
+                                                                    <option value="2">
+                                                                        2
+                                                                    </option>
+                                                                    <option value="4">
+                                                                        4
+                                                                    </option>
+                                                                    <option value="5">
+                                                                        5
+                                                                    </option>
+                                                                    <option value="7">
+                                                                        7
+                                                                    </option>
+                                                                    <option value="8">
+                                                                        8
+                                                                    </option>
+                                                                </select>
+                                                            </div>
                                                         </div>
 
                                                     </div>
-                                                    <div class="step__tab"></div>
-                                                    <div class="step__tab"></div>
+                                                    <div class="step__tab">
+                                                        <!-- step title -->
+                                                        <div class="step__title mb-5">
+                                                            <h2 class="fw-bold mb-3">
+                                                                Add Photos
+                                                            </h2>
+                                                            <h5 class="text-dark-gray">
+                                                                Upload clear images to make your listing stand out.
+                                                            </h5>
+                                                        </div>
+
+                                                        <!-- form controls -->
+                                                        <div class="mb-4">
+                                                            <h6 class="form-label text-black">Description</h6>
+                                                            <textarea class="form-control" id="description" name="description"
+                                                                rows="2" placeholder="Type here..."></textarea>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <h6 class="form-label text-black">Attachments</h6>
+                                                            
+                                                            <label for="photo-upload" class="form-label form-upload text-center d-block">
+                                                                <img src="./../../assets/images/icons/plus-circle.svg" alt="plus circle icon">
+                                                                <h6 class="text-black fw-semibold mt-2">Upload Photo</h6>
+                                                            </label>
+
+                                                            <input type="file" id="photo-upload" name="photos[]" multiple accept="image/*" class="form-control" style="display:none;">
+                                                        </div>
+                                                        
+                                                        <div class="d-flex gap-3">
+                                                            <div class="form-upload__preview">
+                                                                <img src="./../../assets/images//thumbs/detail-slider/car/car-img-01.png" alt="car placeholder">
+                                                            </div>
+                                                            <div class="form-upload__preview">
+                                                                <img src="./../../assets/images//thumbs/detail-slider/car/car-img-05.png" alt="car placeholder">
+                                                            </div>
+                                                            <div class="form-upload__preview">
+                                                                <img src="./../../assets/images//thumbs/detail-slider/car/car-img-03.png" alt="car placeholder">
+                                                            </div>
+                                                            <div class="form-upload__preview">
+                                                                <img src="./../../assets/images//thumbs/detail-slider/car/car-img-04.png" alt="car placeholder">
+                                                            </div>
+                                                            <div class="form-upload__preview">
+                                                                <img src="./../../assets/images//thumbs/detail-slider/car/car-img-05.png" alt="car placeholder">
+                                                            </div>
+                                                            <div class="form-upload__preview">
+                                                                <img src="./../../assets/images//thumbs/detail-slider/car/car-img-02.png" alt="car placeholder" class="border border-black">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="step__tab">
+                                                        <!-- step title -->
+                                                        <div class="step__title mb-5">
+                                                            <h2 class="fw-bold mb-3">
+                                                                Enter Personal Data
+                                                            </h2>
+                                                            <h5 class="text-dark-gray">
+                                                                Enter Personal Details To Attract Buyers.
+                                                            </h5>
+                                                        </div>
+
+                                                        <!-- form controls -->
+                                                        <div class="mb-4">
+                                                            <h6 class="form-label text-black">Name and surname</h6>
+                                                            <input type="text" class="form-control" id="name" name="name"
+                                                                placeholder="Demian Dumitru" />
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <h6 class="form-label text-black">Phone number</h6>
+                                                                <input type="tel" class="form-control" id="phone" name="phone"
+                                                                    placeholder="(123) 456-7890" />
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <h6 class="form-label text-black">Email</h6>
+                                                            <input type="email" class="form-control" id="email" name="email"
+                                                                placeholder="Enter Email">
+                                                        </div>
+                                                        <!-- I Accept Terms And Conditions. -->
+                                                        <div class="form-check mb-4 d-flex align-items-center">
+                                                            <input type="checkbox" class="form-check-input" id="terms" name="terms">
+                                                            <label for="terms" class="form-check-label text-dark-gray ms-2">
+                                                                I Accept the <a href="#" class="text-secondary">Terms and Conditions</a>
+                                                            </label>
+                                                        </div>
+                                                        <!-- Receive Commercial information about Offers Marketing  -->
+                                                        <div class="form-check mb-4 d-flex align-items-center">
+                                                            <input type="checkbox" class="form-check-input" id="commercial-info" name="commercial-info">
+                                                            <label for="commercial-info" class="form-check-label text-dark-gray ms-2">
+                                                                Receive Commercial Information about Offers, Marketing and Promotions
+                                                            </label>
+                                                        </div>
+
+                                                    </div>
                                                     <div class="step__tab"></div>
                                                     <div class="step__tab"></div>
                                                     <div class="step__tab"></div>
@@ -774,6 +974,9 @@
     <!-- === jQuery CDNs & Scripts === -->
     <script src="../../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets/js/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.2/build/js/intlTelInput.min.js"></script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="

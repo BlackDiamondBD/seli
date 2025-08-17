@@ -1,6 +1,13 @@
 // Customize Bootstrap class and Add.
 @use "../utils/" as *;
 @use "../base/" as *;
+
+label.form-label{
+    cursor: pointer;
+}
+
+// Form styles
+// --------------------
 .form {
     &-label {
         font-size: 0.875rem;
@@ -15,13 +22,21 @@
     &-control {
         color: $text-black;
         border: 0.0625rem solid $cool-gray;
-        height: 3rem;
-        border-radius: 0.75rem;
+        border-radius: 0.75rem;        
         @include media-query(breakpoint-xl) {
-            height: 3.75rem;
             padding: 1.25rem 1.25rem;
             font-size: 1.25rem;
             font-weight: 600;
+        }        
+        &:focus {
+            border-color: $secondary;
+            box-shadow: none;
+        }
+    }
+    &-control:not(textarea) {
+        height: 3rem;
+        @include media-query(breakpoint-xl) {
+            height: 3.75rem;
         }
     }
     &-select {
@@ -123,7 +138,18 @@
             }
         }
     }
-
-
     // FORM CHECK CARD END
+    &-upload {
+        background: linear-gradient(90deg, rgba($secondary, .04), rgba($primary, .04));
+        padding: 1.75rem;
+        border-radius: 1.25rem;
+        border: 2px dashed $cool-gray;
+        &__preview img {
+            width: 4.2rem;
+            height: 4.5rem;
+            object-fit: cover;
+            border-radius: .75rem;
+        }
+
+    }
 }

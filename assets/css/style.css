@@ -788,6 +788,10 @@ h6 {
   }
 }
 
+label.form-label {
+  cursor: pointer;
+}
+
 .form-label {
   font-size: 0.875rem;
   font-weight: 600;
@@ -803,15 +807,25 @@ h6 {
 .form-control {
   color: #212529;
   border: 0.0625rem solid #bebebe;
-  height: 3rem;
   border-radius: 0.75rem;
 }
 @media (min-width: 75rem) {
   .form-control {
-    height: 3.75rem;
     padding: 1.25rem 1.25rem;
     font-size: 1.25rem;
     font-weight: 600;
+  }
+}
+.form-control:focus {
+  border-color: #3ccdaa;
+  box-shadow: none;
+}
+.form-control:not(textarea) {
+  height: 3rem;
+}
+@media (min-width: 75rem) {
+  .form-control:not(textarea) {
+    height: 3.75rem;
   }
 }
 .form-select {
@@ -895,6 +909,18 @@ h6 {
   background: #3ccdaa;
   border-color: #3ccdaa;
   color: #fff;
+}
+.form-upload {
+  background: linear-gradient(90deg, rgba(60, 205, 170, 0.04), rgba(5, 60, 90, 0.04));
+  padding: 1.75rem;
+  border-radius: 1.25rem;
+  border: 2px dashed #bebebe;
+}
+.form-upload__preview img {
+  width: 4.2rem;
+  height: 4.5rem;
+  object-fit: cover;
+  border-radius: 0.75rem;
 }
 
 .card {
@@ -1723,6 +1749,25 @@ h6 {
   z-index: -1;
   border-radius: 4.5rem;
   border: 1px solid #000;
+}
+
+.iti {
+  --iti-arrow-padding: .75rem;
+  width: 100%;
+}
+.iti__selected-country-primary {
+  background: #F2F5F7;
+  border-radius: 0.75rem 0 0 0.75rem;
+  padding: 0 0.75rem;
+}
+.iti__arrow {
+  height: 0.7rem;
+  width: 0.7rem;
+  border: 0;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #282930;
+  transform: translateY(-35%) rotate(-45deg);
 }
 
 .intro--section {
@@ -2944,6 +2989,9 @@ h6 {
 }
 .step__nav li.active::before {
   background: #3ccdaa;
+}
+.step__title.mb-5 {
+  margin-bottom: 2.5rem !important;
 }
 .step__transmission > div:nth-child(3n-2) {
   flex: 22%;

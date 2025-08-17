@@ -1,0 +1,18 @@
+.iti{
+    --iti-arrow-padding: .75rem;
+    width: 100%;
+    &__selected-country-primary{
+        background: #F2F5F7;
+        border-radius: 0.75rem 0 0 0.75rem;
+        padding: 0 0.75rem;
+    }
+    &__arrow{
+        height: 0.7rem;
+        width: 0.7rem;
+        border: 0;
+        border-left: 1px solid;
+        border-bottom: 1px solid;
+        border-color: #282930;
+        transform: translateY(-35%) rotate(-45deg);
+    }
+}

@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         input.addEventListener('change', function () {
             if (parent) {
-
+                // Reset the active class on the parent element for inputs
                 let allInput = grantparent.querySelectorAll('.form-check-input[type="radio"]');                
                 allInput.forEach(element => {   
                     element.closest('.form-check').classList.toggle('active', element.checked);
                 });
-
+                // Toggle the active class on the parent element
                 parent.classList.toggle('active', input.checked);
             }
         });
@@ -30,68 +30,59 @@ document.addEventListener('DOMContentLoaded', function () {
         const tabs = wrap.querySelectorAll('.step__tab')
         const next = wrap.querySelectorAll('.step__next')
         const back = wrap.querySelectorAll('.step__back')
-        let counter = 0;
+        let currentStep = 3; // default step
+
+        // Set the initial active step
         let size = navs.length;
 
+        // update active class from all tabs and navs
         updateStep();
-
         
+        // Set the initial active step
         next.forEach(btn => {
             btn.addEventListener('click', ()=>{                
-                if (counter < size - 1) {
-                    counter++;
+                if (currentStep < size - 1) {
+                    currentStep++;
+                    // update active class from all tabs and navs
                     updateStep();
                 }
             })
         });
+        // Back button functionality
         back.forEach(btn => {
             btn.addEventListener('click', ()=>{
-                if (counter > 0) {
-                    counter--;
+                if (currentStep > 0) {
+                    currentStep--;
+                    // update active class from all tabs and navs
                     updateStep();
                 }
             })
         });
 
-
+        // Navigation click functionality
         function updateStep() {
             tabs.forEach(tab => {
                 tab.classList.remove('active')             
             });
             for (let i = 0; i < size; i++) {
-                if (i > counter) {                    
+                if (i > currentStep) {                    
                     navs[i].classList.remove('active')                
                 }else{                    
                     navs[i].classList.add('active')      
                 }
             }
-            navs[counter].classList.add('active')
-            tabs[counter].classList.add('active')
+            navs[currentStep].classList.add('active')
+            tabs[currentStep].classList.add('active')
         }
-
-
-
-
-
     });
 
 
-    // custom tab
-	// tabFunc(document.querySelectorAll('.offer-link'), document.querySelectorAll('.step__tab'))
-
-	// function tabFunc(tabLinks, tabs) {
-	// 	tabLinks.forEach((link, index) => {
-	// 		link.addEventListener('click', ()=>{
-	// 			for (let i = 0; i < tabLinks.length; i++) {
-	// 				tabLinks[i].classList.remove('active')
-	// 				tabs[i].classList.remove('active')
-	// 			}
-	// 			link.classList.add('active')
-	// 			tabs[index].classList.add('active')
-	// 		})
-	// 	});
-	// }
-
+    
+    // ===== Phone Input Internationalization =====
+    const input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+        loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.2/build/js/utils.js"),
+    });
 
 
 
