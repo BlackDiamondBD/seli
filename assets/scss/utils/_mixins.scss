@@ -1,9 +1,19 @@
 @use 'variables' as *;
 
+// === Animation === //
+// Transition
 @mixin transition-common {
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+}
+
+// Hover Shadow
+@mixin hover-shadow {
+    background-color: $white-color;
+    -webkit-box-shadow: 0rem 0.25rem 0.875rem 0rem rgba(153, 153, 153, 0.08);
+    box-shadow: 0rem 0.25rem 0.875rem 0rem rgba(153, 153, 153, 0.08);
+    border-color: transparent;
 }
 
 // Media Query Mixins (Mobile First Approach)

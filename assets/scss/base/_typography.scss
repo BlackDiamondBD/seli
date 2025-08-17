@@ -1,7 +1,7 @@
 @use '../utils/' as *;
 
 // Web Font
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 p,
 h1,
@@ -88,32 +88,29 @@ h6 {
 }
 
 .fs-5 {
-  font-size: 1rem !important;
-  line-height: normal !important;
-  @include media-query(breakpoint-lg) {
-    font-size: 1.125rem !important;
-    line-height: 1.875rem !important;
-  }
+    font-size: 1rem !important;
+    line-height: normal !important;
+    @include media-query(breakpoint-lg) {
+        font-size: 1.125rem !important;
+        line-height: 1.875rem !important;
+    }
 }
 
 .fs-50 {
-  font-size: 1.6rem !important;
-  line-height: normal !important;
+    font-size: 1.6rem !important;
+    line-height: normal;
 
-  @include media-query(breakpoint-sm) {
-    font-size: 2rem !important;
-    line-height: normal !important;
-  }
+    @include media-query(breakpoint-sm) {
+        font-size: 2rem !important;
+    }
 
-  @include media-query(breakpoint-md) {
-    font-size: 2.7rem !important;
-    line-height: normal !important;
-  }
+    @include media-query(breakpoint-md) {
+        font-size: 2.7rem !important;
+    }
 
-  @include media-query(breakpoint-lg) {
-    font-size: 3.125rem !important;
-    line-height: normal !important;
-  }
+    @include media-query(breakpoint-lg) {
+        font-size: 3.125rem !important;
+    }
 }
 
 .lead-text {

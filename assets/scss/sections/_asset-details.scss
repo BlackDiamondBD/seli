@@ -245,9 +245,19 @@
     & .card--explore {
         box-shadow: unset;
 
-        & .btn--wishlist {
-            top: 12px;
-            right: 12px;
+        & .btn {
+            &--wishlist {
+                top: 12px;
+                right: 12px;
+            }
+            &--recommended__card {
+                @include media-query(breakpoint-xl){
+                    min-width: 64px;
+                }
+                @include media-query(breakpoint-xxl-2){
+                    min-width: 75px;
+                }
+            }
         }
     }
 }

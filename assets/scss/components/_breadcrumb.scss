@@ -2,38 +2,53 @@
 @use '../base/' as *;
 
 .breadcrumb {
-	&__wrap {
-		padding: .625rem 0;
-		@include media-query(breakpoint-lg) {
-			padding: .875rem 0;
-		}
-	}
-	&-item {
-		& + .breadcrumb-item {
-			padding-left: .3125rem;
+    &__wrap {
+        padding: 0.625rem 0;
+        @include media-query(breakpoint-lg) {
+            padding: 0.875rem 0;
+        }
+    }
+    &-item {
+        & + .breadcrumb-item {
+            padding-left: 0.3125rem;
 
-			&::before {
-				padding-right: .3125rem;
-			}
-		}
-	}
-	&-page {
-		color: $text-black;
-		font-size: .875rem;
-		@include transition-common;
-		@include media-query(lg) {
-			font-size: 1rem;
-		}
-		@include media-query(breakpoint-xxl) {
-			font-size: 1.125rem;
-		}
+            &::before {
+                padding-right: 0.3125rem;
+            }
+        }
+    }
+    &-page {
+        color: $text-black;
+        font-size: 0.875rem;
+        @include transition-common;
+        @include media-query(lg) {
+            font-size: 1rem;
+        }
+        @include media-query(breakpoint-xxl) {
+            font-size: 1.125rem;
+        }
 
-		&.active {
-			pointer-events: none;
-			color: $dark-gray;
-		}
-		&:hover {
-			color: $secondary;
-		}
-	}
+        &.active {
+            pointer-events: none;
+            color: $dark-gray;
+        }
+        &:hover {
+            color: $secondary;
+        }
+    }
+
+    // Centered Breadcrumb
+    &__wrap {
+        &--centered {
+            padding: .75rem 0;
+            .breadcrumb {
+                &-page {
+                    color: $dark-gray;
+                    &.active {
+                        color: $text-black;
+                    }
+                }
+            }
+        }
+    }
 }

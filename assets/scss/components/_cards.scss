@@ -356,9 +356,7 @@
         }
 
         &:hover {
-            background-color: $white-color;
-            box-shadow: 0rem 0.25rem 0.875rem 0rem rgba(153, 153, 153, 0.08);
-            border-color: transparent;
+            @include hover-shadow;
         }
 
         & .card {
@@ -702,4 +700,65 @@
         }
     }
     // Blog Card End
+
+    // MiniBlog Card Start
+    &--miniBlog {
+        padding: 10px;
+        border: 1px solid $cool-gray;
+        border-radius: 10px;
+        background-color: $white-color;
+        @include media-query(breakpoint-xl) {
+            padding: 15px;
+        }
+        &:hover {
+            @include hover-shadow;
+        }
+
+        & .thumb {
+            width: 88px;
+            height: 88px;
+            border-radius: 5px;
+            @include media-query(breakpoint-xl) {
+                width: 100px;
+                height: 100px;
+            }
+            @include media-query(breakpoint-xxl-2) {
+                width: 126px;
+                height: 126px;
+            }
+        }
+
+        & .content {
+            & .title {
+                font-size: 16px;
+                line-height: 1.36;
+                font-weight: 600;
+                font-family: $secondary-font;
+                @include media-query(breakpoint-xl) {
+                    font-size: 18px;
+                }
+                @include media-query(breakpoint-xxl) {
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+                @include media-query(breakpoint-xxl-2) {
+                    font-size: 22px;
+                }
+            }
+
+            & .date {
+                font-size: 13px;
+                color: #939191;
+                line-height: 1.39;
+                font-family: $secondary-font;
+                @include media-query(breakpoint-md) {
+                    font-size: 16px;
+                }
+                @include media-query(breakpoint-xxl) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    // MiniBlog Card End
 }

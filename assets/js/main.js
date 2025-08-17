@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
     // Scroll Event to Update Active Link on Page Scroll
-    window.addEventListener('scroll', () => {
+    window.addEventListener('wheel', () => {
         const headerHeight =
             document.querySelector('.header--sticky')?.offsetHeight || 0;
         let scrollPosition = window.scrollY + headerHeight + 1; // +1 for slight offset

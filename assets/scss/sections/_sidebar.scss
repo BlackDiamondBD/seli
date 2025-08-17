@@ -10,11 +10,17 @@
     @include media-query(breakpoint-xxl) {
         width: 460px;
     }
-    &--detail {
-		.thumb {
-			width: 60px;
-			height: 60px;
-		}
+    &--item {
+        & .card {
+            &--profile {
+                & .thumb {
+                    @include media-query(breakpoint-xl) {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+        }
         &__buttons {
             .btn {
                 height: 52px;

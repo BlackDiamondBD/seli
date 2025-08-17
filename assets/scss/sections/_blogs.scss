@@ -1,85 +1,263 @@
-@use "../utils/" as *;
-@use "../base/" as *;
+@use '../utils/' as *;
+@use '../base/' as *;
 
+// ===== Styling for blogs page ===== //
 .blogs-cards {
-  --bs-gutter-x: 16px;
-  @include media-query(breakpoint-xxl) {
-    --bs-gutter-x: 30px;
-  }
+    --bs-gutter-x: 16px;
+    @include media-query(breakpoint-xxl) {
+        --bs-gutter-x: 30px;
+    }
 }
 
 .blogs {
-  &--title {
-    font-size: 1.5rem;
+    &--title {
+        font-size: 1.5rem;
 
-    @include media-query(breakpoint-md) {
-      font-size: 2rem !important;
-      line-height: 1.5;
-    }
+        @include media-query(breakpoint-md) {
+            font-size: 2rem !important;
+            line-height: 1.5;
+        }
 
-    @include media-query(breakpoint-lg) {
-      font-size: 2.5rem !important;
-      line-height: 1.5;
-    }
+        @include media-query(breakpoint-lg) {
+            font-size: 2.5rem !important;
+            line-height: 1.5;
+        }
 
-    @include media-query(breakpoint-xl) {
-      font-size: 3rem !important;
-      line-height: 1.5;
+        @include media-query(breakpoint-xl) {
+            font-size: 3rem !important;
+            line-height: 1.5;
+        }
     }
-  }
 }
 
 .see-all-btn {
-  margin-top: 3.75rem;
-  display: flex;
-  //min-width: 200px;
-  border-radius: 1.875rem;
-  border: 1.5px solid var(--Primary---blue, #053c5a);
-  //height: 60px;
-  padding: 8px 1.25rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.625rem;
-  flex-shrink: 0;
-  color: var(--Primary---blue, #053c5a);
-  font-family: Montserrat;
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+    margin-top: 3.75rem;
+    display: flex;
+    //min-width: 200px;
+    border-radius: 1.875rem;
+    border: 1.5px solid var(--Primary---blue, #053c5a);
+    //height: 60px;
+    padding: 8px 1.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    flex-shrink: 0;
+    color: var(--Primary---blue, #053c5a);
+    font-family: Montserrat;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 
-  @include media-query(breakpoint-md) {
-    min-height: 3.75rem;
-    min-width: 12.5rem;
-  }
+    @include media-query(breakpoint-md) {
+        min-height: 3.75rem;
+        min-width: 12.5rem;
+    }
 }
 
 // Blogs Part
 .blogs {
-  padding-block: 70px;
-  &--title {
-    font-weight: 700;
-    line-height: normal;
-  }
-
-  @include media-query(breakpoint-lg) {
-    padding-block: 70px 90px;
-  }
-
-  .shortBy {
-    svg {
-      width: 24px;
-      height: 24px;
-      flex-shrink: 0;
+    padding-block: 70px;
+    &--title {
+        font-weight: 700;
+        line-height: normal;
     }
-    border-radius: 8px;
-    border: 1px solid var(--Light-greay, #ebebeb);
-    background: #fff;
-    padding-block: 13px 10px;
-    padding-inline: 15px;
 
-    select {
-      font-weight: 600;
+    @include media-query(breakpoint-lg) {
+        padding-block: 70px 90px;
     }
-  }
+
+    .shortBy {
+        svg {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+        border-radius: 8px;
+        border: 1px solid var(--Light-greay, #ebebeb);
+        background: #fff;
+        padding-block: 13px 10px;
+        padding-inline: 15px;
+
+        select {
+            font-weight: 600;
+        }
+    }
+}
+
+// ===== Styling for blog etail page ===== //
+.blog {
+    &__head {
+        padding: 40px 0 24px;
+        @include media-query(breakpoint-sm) {
+            padding: 48px 0 36px;
+        }
+        @include media-query(breakpoint-lg) {
+            padding: 62px 0 50px;
+        }
+        &__text {
+            max-width: 1284px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 16px;
+        @include media-query(md) {
+            margin-bottom: 24px;
+        }
+        @include media-query(xl) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__desc {
+        line-height: 1.66;
+        @include media-query(breakpoint-xl) {
+            font-size: 18px;
+        }
+    }
+
+    &__date {
+        font-size: 12px;
+        font-family: $secondary-font;
+        margin-bottom: 10px;
+        @include media-query(breakpoint-xl) {
+            font-size: 14px;
+        }
+        @include media-query(breakpoint-xxl-2) {
+            font-size: 16px;
+        }
+    }
+
+    &__article {
+        &__thumb {
+            width: 100%;
+            aspect-ratio: 1 / 0.36;
+            border-radius: 10px;
+            @include media-query(breakpoint-xl) {
+                border-radius: 15px;
+            }
+        }
+    }
+
+    &__wrapper {
+        padding-bottom: 50px;
+        @include media-query(breakpoint-lg) {
+            padding-bottom: 80px;
+        }
+        @include media-query(breakpoint-xxl) {
+            padding-bottom: 110px;
+        }
+        @include media-query(breakpoint-xxl-2) {
+            padding-bottom: 130px;
+        }
+    }
+
+    & .article {
+        &__inner {
+            &__title {
+                font-size: 20px;
+                margin-bottom: 16px;
+                @include media-query(md) {
+                    font-size: 24px;
+                    margin-bottom: 24px;
+                }
+                @include media-query(xl) {
+                    font-size: 28px;
+                    margin-bottom: 30px;
+                }
+                @include media-query(breakpoint-xxl-2) {
+                    font-size: 32px;
+                }
+            }
+
+            &__thumb {
+                width: 100%;
+                aspect-ratio: 1 / 0.67;
+                border-radius: 10px;
+                margin-bottom: 32px;
+                @include media-query(breakpoint-lg) {
+                    margin-bottom: 56px;
+                }
+                @include media-query(breakpoint-xl) {
+                    border-radius: 15px;
+                }
+                @include media-query(breakpoint-xxl-2) {
+                    margin-bottom: 80px;
+                }
+            }
+        }
+
+        &__para {
+            font-size: 15px;
+            line-height: 1.875;
+            margin-bottom: 20px;
+
+            @include media-query(breakpoint-lg) {
+                margin-bottom: 40px;
+            }
+            @include media-query(breakpoint-xl) {
+                font-size: 16px;
+            }
+            @include media-query(breakpoint-xxl-2) {
+                margin-bottom: 60px;
+            }
+        }
+
+        &__quote {
+            position: relative;
+            padding: 4px 16px;
+            font-size: 15px;
+            line-height: 1.75;
+            @include media-query(breakpoint-xl) {
+                font-size: 16px;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 2px;
+                height: 100%;
+                background-color: #1e1b1b;
+            }
+        }
+    }
+
+    &__recent {
+        &__title {
+            font-size: 20px;
+            @include media-query(breakpoint-md) {
+                font-size: 24px;
+            }
+            @include media-query(breakpoint-xl) {
+                font-size: 28px;
+            }
+            @include media-query(breakpoint-xxl-2) {
+                font-size: 32px;
+            }
+        }
+        &__wrapper {
+            &__row.g-3 {
+                @include media-query(breakpoint-xl) {
+                    --bs-gutter-x: 20px;
+                    --bs-gutter-y: 20px;
+                }
+            }
+        }
+    }
+
+    & .card {
+        &--ads {
+            @include media-query(breakpoint-xl) {
+                height: 456px;
+            }
+        }
+    }
+
+    .sidebar {
+        @include media-query(breakpoint-xxl-2) {
+            width: 490px;
+        }
+    }
 }

@@ -457,650 +457,346 @@
 
         <!-- ===== Main Area Start ===== -->
         <main class="main">
-            <section class="section select-category position-relative">
-                <img
-                    src="../../assets/images/icons-objs/category-obj.png"
-                    alt="obj"
-                    class="position-absolute select-category-obj select-category-obj--1"
-                />
-                <img
-                    src="../../assets/images/icons-objs/category-obj.png"
-                    alt="obj"
-                    class="position-absolute select-category-obj select-category-obj--2"
-                />
+            <!-- Breadcrumb Start -->
+            <div
+                aria-label="breadcrumb"
+                class="breadcrumb__wrap breadcrumb__wrap--centered bg-white"
+            >
                 <div class="container">
-                    <div class="text-center">
-                        <h1 class="text-primary fw-bold fs-50 text-uppercase">
-                            IDEAS THAT INSPire
-                        </h1>
-                        <p
-                            class="fs-5 fw-medium mt-1 mt-md-3 pt-1 pt-md-2 select-category--short-desc text-black"
-                        >
-                            Explore expert tips, real stories, and market trends
-                            to help you buy or sell your car or home with
-                            confidence. Stay informed, stay ahead.
+                    <nav class="breadcrumb__nav">
+                        <ul class="breadcrumb justify-content-center mb-0">
+                            <li class="breadcrumb-item fw-semibold">
+                                <a href="#" class="breadcrumb-page fw-semibold"
+                                    >Blog</a
+                                >
+                            </li>
+                            <li
+                                class="breadcrumb-item fw-semibold"
+                                aria-current="page"
+                            >
+                                <a
+                                    href="#"
+                                    class="breadcrumb-page active fw-semibold"
+                                    >Blog Detail</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- Breadcrumb End -->
+
+            <!-- Blog Details Content Start -->
+            <section class="blog blog--section">
+                <div class="container">
+                    <!-- Blog Head Start -->
+                    <div class="blog__head text-center">
+                        <div class="blog__head__text mx-auto">
+                            <h1 class="blog__title fs-50 text-primary fw-bold">
+                                Proven Tips to Sell Your Car Faster Online
+                            </h1>
+
+                            <p
+                                class="blog__desc text-black fw-medium mb-4 pb-md-2 pb-xl-4"
+                            >
+                                Selling your car online can be a smooth,
+                                profitable experience — if you know how to do it
+                                right. At Seli, we’ve helped thousands of users
+                                connect with serious buyers, and here are the
+                                top tips we’ve seen work again and again.
+                            </p>
+                        </div>
+
+                        <p class="blog__date text-end">
+                            Posted on October 6th 2024
                         </p>
 
-                        <div class="category mt-5 bg-white">
-                            <h3
-                                class="category--title text-primary text-center"
-                            >
-                                Select Category
-                            </h3>
-                            <div class="category-list scrolling-part">
-                                <button
-                                    class="category-list--item text-capitalize"
-                                >
-                                    Car Buying Tips
-                                </button>
-
-                                <button
-                                    class="category-list--item text-capitalize"
-                                >
-                                    Home Selling Guides
-                                </button>
-
-                                <button
-                                    class="category-list--item text-capitalize"
-                                >
-                                    Market Trends & Insights
-                                </button>
-
-                                <button
-                                    class="category-list--item text-capitalize"
-                                >
-                                    Finance & Loan Advice
-                                </button>
-
-                                <button
-                                    class="category-list--item text-capitalize"
-                                >
-                                    Finance & Loan Advice
-                                </button>
-
-                                <button
-                                    class="category-list--item text-capitalize"
-                                >
-                                    Real Estate Investment
-                                </button>
-
-                                <button
-                                    class="category-list--item text-capitalize"
-                                >
-                                    Car Buying Tips
-                                </button>
-                            </div>
+                        <!-- Blog Thumb -->
+                        <div class="blog__article__thumb overflow-hidden">
+                            <img
+                                src="../../assets/images/thumbs/blog/blog-article-thumb-01.png"
+                                alt="Proven Tips to Sell Your Car Faster Online"
+                                class="w-100 h-100"
+                            />
                         </div>
                     </div>
-                </div>
-            </section>
+                    <!-- Blog Head End -->
 
-            <section class="blogs section">
-                <div class="container">
+                    <!-- Blog Wrapper Start -->
                     <div
-                        class="d-md-flex justify-content-between align-items-center"
+                        class="blog__wrapper d-flex flex-column flex-lg-row gap-4 gap-xl-5"
                     >
-                        <h2
-                            class="blogs--title text-black mb-2 mb-md-0 text-uppercase"
-                        >
-                            explore blog on seli
-                        </h2>
+                        <!-- Blog Aricle Start -->
+                        <article class="article article--blog pb-4 pb-md-5 pb-lg-0">
+                            <h2
+                                class="article__inner__title text-black fw-bold"
+                            >
+                                Make Your Car Irresistible to Buyers
+                            </h2>
 
-                        <div
-                            class="shortBy d-flex justify-content-between gap-1 flex-shrink-0"
-                        >
-                            <div>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="25"
-                                    viewBox="0 0 24 25"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M3.38394 6.16687C2.6276 5.32155 2.24943 4.89889 2.23516 4.53968C2.22277 4.22764 2.35687 3.92772 2.59768 3.72889C2.87489 3.5 3.44203 3.5 4.57633 3.5H19.4193C20.5536 3.5 21.1207 3.5 21.3979 3.72889C21.6387 3.92772 21.7728 4.22764 21.7604 4.53968C21.7462 4.89889 21.368 5.32155 20.6116 6.16687L14.9054 12.5444C14.7546 12.7129 14.6793 12.7972 14.6255 12.8931C14.5778 12.9781 14.5428 13.0697 14.5217 13.1648C14.4978 13.2721 14.4978 13.3852 14.4978 13.6113V18.9584C14.4978 19.1539 14.4978 19.2517 14.4663 19.3363C14.4384 19.411 14.3931 19.4779 14.334 19.5315C14.2673 19.5922 14.1765 19.6285 13.9949 19.7012L10.5949 21.0612C10.2274 21.2082 10.0436 21.2817 9.89607 21.251C9.76706 21.2242 9.65385 21.1476 9.58104 21.0377C9.49779 20.9122 9.49779 20.7142 9.49779 20.3184V13.6113C9.49779 13.3852 9.49779 13.2721 9.47391 13.1648C9.45274 13.0697 9.41776 12.9781 9.37008 12.8931C9.31633 12.7972 9.24095 12.7129 9.09018 12.5444L3.38394 6.16687Z"
-                                        stroke="#6A6D6F"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
-                                </svg>
+                            <p class="article__para">
+                                When it comes to selling your car online,
+                                presentation is everything. Start by thoroughly
+                                cleaning and detailing your vehicle—inside and
+                                out. A spotless dashboard, clean seats, and
+                                shiny tires go a long way in building first
+                                impressions. Then, take high-quality photos in
+                                natural light, covering all angles: front, back,
+                                sides, interiors, and close-ups of special
+                                features. Buyers are more likely to click on
+                                listings that look professional and trustworthy.
+                            </p>
+                            <p class="article__para">
+                                But a clean car and great photos are just the
+                                beginning. Your description should be clear,
+                                honest, and informative. Highlight key selling
+                                points like low mileage, fuel efficiency,
+                                service history, or new upgrades. If there are
+                                any dents, scratches, or issues, it’s better to
+                                be upfront. Transparency builds buyer trust and
+                                saves you time on unnecessary negotiations.
+                                Finally, don’t forget the pricing. Look at
+                                similar models in your area and price yours
+                                competitively—not too high to scare buyers, and
+                                not too low to undersell your car's value. Use
+                                tools like Seli’s pricing assistant to strike
+                                the perfect balance.
+                            </p>
 
-                                <span>Sort by:</span>
+                            <div class="article__inner__thumb overflow-hidden">
+                                <img
+                                    src="../../assets/images/thumbs/blog/blog-article-inner-thumb-01.png"
+                                    alt="List Smart: Use the Right Platform and Close the Deal Faster"
+                                    class="w-100 h-100"
+                                />
                             </div>
 
-                            <select name="sortby" id="">
-                                <option value="newest">Newest</option>
-                                <option value="newest">Popular</option>
-                                <option value="newest">Oldest</option>
-                            </select>
-                        </div>
+                            <h2
+                                class="article__inner__title text-black fw-bold pb-xxl-2"
+                            >
+                                List Smart: Use the Right Platform and Close the
+                                Deal Faster
+                            </h2>
+
+                            <div class="article__quote d-flex fw-semibold">
+                                But a clean car and great photos are just the
+                                beginning. Your description should be clear,
+                                honest, and informative. Highlight key selling
+                                points like low mileage, fuel efficiency,
+                                service history, or new upgrades. If there are
+                                any dents, scratches, or issues, it’s better to
+                                be upfront.
+                            </div>
+                        </article>
+                        <!-- Blog Aricle End -->
+
+                        <!-- Blog Sidebar Start -->
+                        <aside class="sidebar sidebar--item">
+                            <div
+                                class="sidebar__inner w-100 d-inline-flex flex-column align-items-center flex-lg-column-reverse gap-4 gap-xl-5"
+                            >
+                                <!-- Ads Space -->
+                                <div class="card card--ads">
+                                    <div
+                                        class="d-flex justify-content-center align-items-center w-100 h-100 fw-medium h5"
+                                    >
+                                        Ads
+                                    </div>
+                                </div>
+
+                                <!-- Recent Blogs -->
+                                <div class="blog__recent w-100">
+                                    <h3
+                                        class="blog__recent__title text-black fw-bold mb-3 mb-md-4 pb-xl-2 pb-xxl-4"
+                                    >
+                                        Recent Blogs:
+                                    </h3>
+
+                                    <div class="blog__recent__wrapper">
+                                        <div
+                                            class="row blog__recent__wrapper__row g-3"
+                                        >
+                                            <div class="col-md-9 col-lg-12">
+                                                <!-- Recent Blog Item -->
+                                                <a
+                                                    href="#"
+                                                    class="card card--miniBlog d-flex flex-row align-items-center gap-3"
+                                                >
+                                                    <div
+                                                        class="thumb flex-shrink-0 overflow-hidden"
+                                                    >
+                                                        <img
+                                                            src="../../assets/images/thumbs/blog/blog-mini-thumb-01.png"
+                                                            alt="Get an Awesome Number Plate for Your New Car"
+                                                            class="w-100 h-100"
+                                                        />
+                                                    </div>
+
+                                                    <div
+                                                        class="content d-inline-flex flex-column gap-1 gap-lg-2 gap-xxl-3"
+                                                    >
+                                                        <h3
+                                                            class="title text-black"
+                                                        >
+                                                            Get an Awesome
+                                                            Number Plate for
+                                                            Your New Car
+                                                        </h3>
+
+                                                        <p class="date">
+                                                            Posted on October
+                                                            6th 2021
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-9 col-lg-12">
+                                                <!-- Recent Blog Item -->
+                                                <a
+                                                    href="#"
+                                                    class="card card--miniBlog d-flex flex-row align-items-center gap-3"
+                                                >
+                                                    <div
+                                                        class="thumb flex-shrink-0 overflow-hidden"
+                                                    >
+                                                        <img
+                                                            src="../../assets/images/thumbs/blog/blog-mini-thumb-02.png"
+                                                            alt="Would you Let a Robot Drive your Car? Our AI Future"
+                                                            class="w-100 h-100"
+                                                        />
+                                                    </div>
+
+                                                    <div
+                                                        class="content d-inline-flex flex-column gap-1 gap-lg-2 gap-xxl-3"
+                                                    >
+                                                        <h3
+                                                            class="title text-black"
+                                                        >
+                                                            Would you Let a
+                                                            Robot Drive your
+                                                            Car? Our AI Future
+                                                        </h3>
+
+                                                        <p class="date">
+                                                            Posted on October
+                                                            6th 2021
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-9 col-lg-12">
+                                                <!-- Recent Blog Item -->
+                                                <a
+                                                    href="#"
+                                                    class="card card--miniBlog d-flex flex-row align-items-center gap-3"
+                                                >
+                                                    <div
+                                                        class="thumb flex-shrink-0 overflow-hidden"
+                                                    >
+                                                        <img
+                                                            src="../../assets/images/thumbs/blog/blog-mini-thumb-03.png"
+                                                            alt="Will Electric Technology Soon Rule The Road?"
+                                                            class="w-100 h-100"
+                                                        />
+                                                    </div>
+
+                                                    <div
+                                                        class="content d-inline-flex flex-column gap-1 gap-lg-2 gap-xxl-3"
+                                                    >
+                                                        <h3
+                                                            class="title text-black"
+                                                        >
+                                                            Will Electric
+                                                            Technology Soon Rule
+                                                            The Road?
+                                                        </h3>
+
+                                                        <p class="date">
+                                                            Posted on October
+                                                            6th 2021
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-9 col-lg-12">
+                                                <!-- Recent Blog Item -->
+                                                <a
+                                                    href="#"
+                                                    class="card card--miniBlog d-flex flex-row align-items-center gap-3"
+                                                >
+                                                    <div
+                                                        class="thumb flex-shrink-0 overflow-hidden"
+                                                    >
+                                                        <img
+                                                            src="../../assets/images/thumbs/blog/blog-mini-thumb-01.png"
+                                                            alt="Get an Awesome Number Plate for Your New Car"
+                                                            class="w-100 h-100"
+                                                        />
+                                                    </div>
+
+                                                    <div
+                                                        class="content d-inline-flex flex-column gap-1 gap-lg-2 gap-xxl-3"
+                                                    >
+                                                        <h3
+                                                            class="title text-black"
+                                                        >
+                                                            Get an Awesome
+                                                            Number Plate for
+                                                            Your New Car
+                                                        </h3>
+
+                                                        <p class="date">
+                                                            Posted on October
+                                                            6th 2021
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                        <!-- Blog Sidebar End -->
                     </div>
+                    <!-- Blog Wrapper End -->
+                </div>
+            </section>
+            <!-- Blog Details Content End -->
 
-                    <div class="mt-4 pt-2 pt-md-0 mt-md-5">
-                        <div
-                            class="row blogs-cards gy-4 gy-md-4 gy-lg-4 gy-xxl-5 gx-2"
-                        >
-                            <div class="col-md-6 col-lg-4">
-                                <a href="#" class="card--blog d-inline-block">
-                                    <div class="card--blog-thumb">
-                                        <img
-                                            src="../../assets/images/thumbs/blog/blog-1.png"
-                                            alt=""
-                                        />
-                                    </div>
-
-                                    <div class="content">
-                                        <h4 class="blog-title">
-                                            Why Electric Cars Are the Future of
-                                            Car Industries
-                                        </h4>
-                                        <span class="date">March 9, 2024</span>
-                                        <p class="short-desc">
-                                            With rapidly advancing technology,
-                                            increasing charging infrastructure,
-                                            and growing environmental and
-                                            growing environmental
-                                        </p>
-                                    </div>
-
-                                    <div
-                                        class="mt-2 pt-1 pt-lg-0 mt-lg-3 pt-xxl-2 mt-xl-3 mt-xxl-4 d-flex justify-content-between align-items-center"
-                                    >
-                                        <div class="seen d-flex gap-0">
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3857.png"
-                                                alt=""
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3858.png"
-                                                alt=""
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3859.png"
-                                                alt=""
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3860.png"
-                                                alt=""
-                                            />
-                                        </div>
-
-                                        <span
-                                            ><svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="32"
-                                                height="39"
-                                                viewBox="0 0 32 39"
-                                                fill="none"
-                                            >
-                                                <path
-                                                    d="M19.2383 10.0076L27.3316 19.575L19.2383 29.1425"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                />
-                                                <path
-                                                    d="M4.66797 19.575H27.108"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                /></svg
-                                        ></span>
-                                    </div>
-
-                                    <span class="d-block responses">
-                                        144 Responses
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div class="col-md-6 col-lg-4">
-                                <a href="#" class="card--blog d-inline-block">
-                                    <div class="card--blog-thumb">
-                                        <img
-                                            src="../../assets/images/thumbs/blog/blog-2.png"
-                                            alt=""
-                                        />
-                                    </div>
-
-                                    <div class="content">
-                                        <h4 class="blog-title">
-                                            Why SUVs Are Taking Over the Roads —
-                                            and Hearts
-                                        </h4>
-                                        <span class="date">Apr 10, 2025</span>
-                                        <p class="short-desc">
-                                            Whether you're navigating city
-                                            streets or exploring rugged
-                                            terrains, modern SUVs offer the
-                                            perfect mix of space, safety, and
-                                            style. Discover how this versatile
-                                            vehicle category became the top pick
-                                            for families, adventurers, and even
-                                            luxury lovers alike.
-                                        </p>
-                                    </div>
-
-                                    <div
-                                        class="mt-2 pt-1 pt-lg-0 mt-lg-3 pt-xxl-2 mt-xl-3 mt-xxl-4 d-flex justify-content-between align-items-center"
-                                    >
-                                        <div class="seen d-flex gap-0">
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3857.png"
-                                                alt=""
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3858.png"
-                                                alt=""
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3859.png"
-                                                alt=""
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3860.png"
-                                                alt=""
-                                            />
-                                        </div>
-
-                                        <span
-                                            ><svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="32"
-                                                height="39"
-                                                viewBox="0 0 32 39"
-                                                fill="none"
-                                            >
-                                                <path
-                                                    d="M19.2383 10.0076L27.3316 19.575L19.2383 29.1425"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                />
-                                                <path
-                                                    d="M4.66797 19.575H27.108"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                /></svg
-                                        ></span>
-                                    </div>
-
-                                    <span class="d-block responses">
-                                        89 Responses
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div class="col-md-6 col-lg-4">
-                                <a href="#" class="card--blog d-inline-block">
-                                    <div class="card--blog-thumb">
-                                        <img
-                                            src="../../assets/images/thumbs/blog/blog-3.png"
-                                            alt=""
-                                        />
-                                    </div>
-
-                                    <div class="content">
-                                        <h4 class="blog-title">
-                                            Why the Sports Sedan Is the Perfect
-                                            Blend of Power and Comfort
-                                        </h4>
-                                        <span class="date">Jun 12, 2023</span>
-                                        <p class="short-desc">
-                                            Tired of choosing between
-                                            performance and practicality? Sports
-                                            sedans offer thrilling acceleration,
-                                            sleek design, and daily driving
-                                            comfort all in one package. Learn
-                                            why this often-overlooked segment is
-                                            making a powerful comeback.
-                                        </p>
-                                    </div>
-
-                                    <div
-                                        class="mt-2 pt-1 pt-lg-0 mt-lg-3 pt-xxl-2 mt-xl-3 mt-xxl-4 d-flex justify-content-between align-items-center"
-                                    >
-                                        <div class="seen d-flex gap-0">
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3857.png"
-                                                alt=""
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3858.png"
-                                                alt=""
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3859.png"
-                                                alt=""
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3860.png"
-                                                alt=""
-                                            />
-                                        </div>
-
-                                        <span
-                                            ><svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="32"
-                                                height="39"
-                                                viewBox="0 0 32 39"
-                                                fill="none"
-                                            >
-                                                <path
-                                                    d="M19.2383 10.0076L27.3316 19.575L19.2383 29.1425"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                />
-                                                <path
-                                                    d="M4.66797 19.575H27.108"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                /></svg
-                                        ></span>
-                                    </div>
-
-                                    <span class="d-block responses">
-                                        212 Responses
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div class="col-md-6 col-lg-4">
-                                <a href="#" class="card--blog d-inline-block">
-                                    <div class="card--blog-thumb">
-                                        <img
-                                            src="../../assets/images/thumbs/blog/blog-4.png"
-                                            alt=""
-                                        />
-                                    </div>
-
-                                    <div class="content">
-                                        <h4 class="blog-title">
-                                            Why Electric Cars Are the Future of
-                                            Car Industries
-                                        </h4>
-                                        <span class="date">March 9, 2024</span>
-                                        <p class="short-desc">
-                                            With rapidly advancing technology,
-                                            increasing charging infrastructure,
-                                            and growing environmental and
-                                            growing environmental
-                                        </p>
-                                    </div>
-
-                                    <div
-                                        class="mt-2 pt-1 pt-lg-0 mt-lg-3 pt-xxl-2 mt-xl-3 mt-xxl-4 d-flex justify-content-between align-items-center"
-                                    >
-                                        <div class="seen d-flex gap-0">
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3857.png"
-                                                alt=""
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3858.png"
-                                                alt=""
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3859.png"
-                                                alt=""
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3860.png"
-                                                alt=""
-                                            />
-                                        </div>
-
-                                        <span
-                                            ><svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="32"
-                                                height="39"
-                                                viewBox="0 0 32 39"
-                                                fill="none"
-                                            >
-                                                <path
-                                                    d="M19.2383 10.0076L27.3316 19.575L19.2383 29.1425"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                />
-                                                <path
-                                                    d="M4.66797 19.575H27.108"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                /></svg
-                                        ></span>
-                                    </div>
-
-                                    <span class="d-block responses">
-                                        144 Responses
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div class="col-md-6 col-lg-4">
-                                <a href="#" class="card--blog d-inline-block">
-                                    <div class="card--blog-thumb">
-                                        <img
-                                            src="../../assets/images/thumbs/blog/blog-5.png"
-                                            alt=""
-                                        />
-                                    </div>
-
-                                    <div class="content">
-                                        <h4 class="blog-title">
-                                            Why SUVs Are Taking Over the Roads —
-                                            and Hearts
-                                        </h4>
-                                        <span class="date">Apr 10, 2025</span>
-                                        <p class="short-desc">
-                                            Whether you're navigating city
-                                            streets or exploring rugged
-                                            terrains, modern SUVs offer the
-                                            perfect mix of space, safety, and
-                                            style. Discover how this versatile
-                                            vehicle category became the top pick
-                                            for families, adventurers, and even
-                                            luxury lovers alike.
-                                        </p>
-                                    </div>
-
-                                    <div
-                                        class="mt-2 pt-1 pt-lg-0 mt-lg-3 pt-xxl-2 mt-xl-3 mt-xxl-4 d-flex justify-content-between align-items-center"
-                                    >
-                                        <div class="seen d-flex gap-0">
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3857.png"
-                                                alt=""
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3858.png"
-                                                alt=""
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3859.png"
-                                                alt=""
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3860.png"
-                                                alt=""
-                                            />
-                                        </div>
-
-                                        <span
-                                            ><svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="32"
-                                                height="39"
-                                                viewBox="0 0 32 39"
-                                                fill="none"
-                                            >
-                                                <path
-                                                    d="M19.2383 10.0076L27.3316 19.575L19.2383 29.1425"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                />
-                                                <path
-                                                    d="M4.66797 19.575H27.108"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                /></svg
-                                        ></span>
-                                    </div>
-
-                                    <span class="d-block responses">
-                                        89 Responses
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div class="col-md-6 col-lg-4">
-                                <a href="#" class="card--blog d-inline-block">
-                                    <div class="card--blog-thumb">
-                                        <img
-                                            src="../../assets/images/thumbs/blog/blog-6.png"
-                                            alt=""
-                                        />
-                                    </div>
-
-                                    <div class="content">
-                                        <h4 class="blog-title">
-                                            Why the Sports Sedan Is the Perfect
-                                            Blend of Power and Comfort
-                                        </h4>
-                                        <span class="date">Jun 12, 2023</span>
-                                        <p class="short-desc">
-                                            Tired of choosing between
-                                            performance and practicality? Sports
-                                            sedans offer thrilling acceleration,
-                                            sleek design, and daily driving
-                                            comfort all in one package. Learn
-                                            why this often-overlooked segment is
-                                            making a powerful comeback.
-                                        </p>
-                                    </div>
-
-                                    <div
-                                        class="mt-2 pt-1 pt-lg-0 mt-lg-3 pt-xxl-2 mt-xl-3 mt-xxl-4 d-flex justify-content-between align-items-center"
-                                    >
-                                        <div class="seen d-flex gap-0">
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3857.png"
-                                                alt=""
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3858.png"
-                                                alt=""
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3859.png"
-                                                alt=""
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/Ellipse 3860.png"
-                                                alt=""
-                                            />
-                                        </div>
-
-                                        <span
-                                            ><svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="32"
-                                                height="39"
-                                                viewBox="0 0 32 39"
-                                                fill="none"
-                                            >
-                                                <path
-                                                    d="M19.2383 10.0076L27.3316 19.575L19.2383 29.1425"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                />
-                                                <path
-                                                    d="M4.66797 19.575H27.108"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                /></svg
-                                        ></span>
-                                    </div>
-
-                                    <span class="d-block responses">
-                                        212 Responses
-                                    </span>
-                                </a>
-                            </div>
+            <!-- CTA Section Start -->
+            <section
+                class="cta cta--section mb-lg-4"
+                style="
+                    background: url('../../assets/images/thumbs/cta-banner.webp')
+                        no-repeat center / cover;
+                "
+            >
+                <div class="container">
+                    <div class="cta__wrapper position-relative z-1">
+                        <div class="cta__wrapper__content">
+                            <h2
+                                class="cta__title fs-3 text-white fw-bold text-uppercase mb-4 pb-lg-2 pb-xxl-4"
+                            >
+                                Get in touch with us for your service related
+                                query
+                            </h2>
+                            <p>
+                                <a href="#" class="btn btn--white"
+                                    >Contact Us</a
+                                >
+                            </p>
                         </div>
 
-                        <div
-                            class="d-flex justify-content-center pt-4 mt-2 mt-lg-2 pt-lg-5"
-                        >
-                            <a href="#" class="btn mt-1">
-                                Load More
-                                <span class="btn__icon">
-                                    <svg
-                                        width="26"
-                                        height="26"
-                                        viewBox="0 0 26 26"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="btn__icon__symbol"
-                                    >
-                                        <path
-                                            d="M15.6325 6.42419L22.2083 13L15.6325 19.5759"
-                                            stroke="currentColor"
-                                            stroke-width="1.5"
-                                            stroke-miterlimit="10"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                        <path
-                                            d="M3.79166 13H22.0242"
-                                            stroke="currentColor"
-                                            stroke-width="1.5"
-                                            stroke-miterlimit="10"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
+                        <img
+                            src="../../assets/images/icons-objs/cta-obj.svg"
+                            alt="seli"
+                            class="position-absolute top-0 end-0 h-100 w-auto z-1"
+                        />
                     </div>
                 </div>
             </section>
+            <!-- CTA Section End -->
         </main>
         <!-- ===== Main Area End ===== -->
 

@@ -1,0 +1,38 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.cta {
+    &__wrapper {
+        background-color: $primary;
+        padding: 48px 16px;
+        @include media-query(breakpoint-md) {
+            padding: 64px 26px;
+        }
+        @include media-query(breakpoint-lg) {
+            max-width: 730px;
+            margin-left: 25px;
+        }
+        @include media-query(breakpoint-xl) {
+            padding: 96px 36px;
+            margin-left: 50px;
+        }
+        @include media-query(breakpoint-xxl-2) {
+            padding: 128px 45px;
+            margin-left: 75px;
+        }
+
+		&__content {
+			max-width: 570px;
+		}
+    }
+
+    & .btn {
+        &--white {
+            border-radius: 12px;
+            &:hover {
+                border-color: $secondary;
+                background-color: $secondary;
+            }
+        }
+    }
+}

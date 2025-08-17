@@ -1,31 +1,33 @@
 // Fonts
 $primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Manrope', sans-serif;
 
 // Colors (from Design System)
 $primary: #053c5a; // "Primary Blue in Figma"
 $secondary: #3ccdaa; // Primary2 Turquoise in Figma
 $black: #232536;
-$green: #1DC053;
+$green: #1dc053;
 $text-black: #212529;
 $text-white: #ffffff;
 $cool-gray: #bebebe;
 $light-gray: #ebebeb;
 $dark-gray: #6a6d6f;
 $bg-gradient: linear-gradient(
-  to right,
-  rgba(60, 205, 171, 0.2) 0%,
-  rgba(5, 60, 90, 0.2)
+    to right,
+    rgba(60, 205, 171, 0.2) 0%,
+    rgba(5, 60, 90, 0.2)
 );
 $bg-gradient-light: linear-gradient(
-  to right,
-  rgba(60, 205, 171, 0.06) 0%,
-  rgba(5, 60, 90, 0.06)
+    to right,
+    rgba(60, 205, 171, 0.06) 0%,
+    rgba(5, 60, 90, 0.06)
 );
 
 // Custom Colors
 $white-color: #fff;
 $black-color: #000;
 $body-color: #f3f3f3;
+$body-color-light-deep: #eeeeee;
 
 // Responsive Breakpoints (Mobile First Approach)
 $breakpoint-xsm: 100%;
