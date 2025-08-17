@@ -1,0 +1,49 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.swiper{
+    &-navs{
+        & button{
+            width: 4.125rem;
+            height: 4.125rem;
+            border-radius: 50%;
+            border: .0938rem solid #FFFFFF;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.46) 0%, rgba(153, 153, 153, 0.46) 100%);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 11;
+            
+            & svg{
+
+            }
+        }
+        &--sm{
+            & button{
+                width: 1.5625rem;
+                height: 1.5625rem;
+                & svg{
+                    max-width: .3125rem;
+                    max-height: .5625rem;
+                }
+            }
+        }
+    }
+    &-pagination{
+        &-bullet{
+            width: .625rem;
+            height: .625rem;
+            border-radius: 50%;
+            background-color: $cool-gray;
+            opacity: 1;
+            &-active{
+                background-color: #FFFFFF;
+            }
+        }
+    }
+    &-button{
+        &-disabled{
+            opacity: 0;
+        }
+    }
+}

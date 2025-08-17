@@ -2,8 +2,84 @@
 @use '../base/' as *;
 
 .card {
-    // Explore-houses-cars- Card-start
+    // card Gloabl css 
     border: none;
+    &__content{
+        &-meta {
+            & ul {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                gap: 0.375rem 0rem;
+                flex-wrap: wrap;
+                & li {
+                    font-size: 0.75rem;
+                    font-weight: 500;
+                    color: $dark-gray;
+                    line-height: 1;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    position: relative;
+                    padding: 0rem 0.5rem;
+                    padding-right: 0.5rem;
+                    &:first-child {
+                        padding-left: 0 !important;
+                    }
+                    &:last-child {
+                        padding-right: 0;
+                        margin-right: 0;
+                        
+                    }
+                    &:not(:last-child) {
+                        &::after {
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            content: '';
+                            width: 0.0625rem;
+                            height: 0.875rem;
+                            background-color: $dark-gray;
+                        }
+                    }
+                    @include media-query(breakpoint-md) {
+                        font-size: 0.875rem;
+                        padding: 0rem 0.625rem;
+                    }
+                    @include media-query(breakpoint-lg) {
+                        gap: 0.375rem;
+                        padding: 0rem 0.625rem;
+                    }
+                    @include media-query(breakpoint-xl) {
+                        font-size: 0.875rem;
+                        padding: 0rem 0.75rem;
+                    }
+                    & span.icon {
+                        & img {
+                            max-width: 0.875rem;
+                            max-height: 0.875rem;
+                            @include media-query(breakpoint-md) {
+                                max-width: 1.125rem;
+                                max-height: 1.125rem;
+                            }
+                        }
+                        & svg {
+                            max-width: 0.875rem;
+                            max-height: 0.875rem;
+                            @include media-query(breakpoint-md) {
+                                max-width: 1.125rem;
+                                max-height: 1.125rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // Explore-houses-cars- Card-start
     &--explore {
         border-radius: 0.625rem;
         background-color: #fff;
@@ -132,74 +208,14 @@
                         }
                     }
                 }
-                &-meta {
+                &-meta{
                     padding-top: 0.625rem;
                     border-top: 0.0625rem solid $cool-gray;
                     @include media-query(breakpoint-md) {
                         padding-top: 1.25rem;
                     }
-                    & ul {
-                        margin: 0;
-                        padding: 0;
-                        display: flex;
-                        align-items: center;
-                        gap: 0.375rem 0rem;
-                        flex-wrap: wrap;
-                        & li {
-                            font-size: 0.75rem;
-                            font-weight: 500;
-                            color: $dark-gray;
-                            line-height: 1;
-                            display: inline-flex;
-                            align-items: center;
-                            gap: 0.5rem;
-                            position: relative;
-                            padding-right: 0.5rem;
-                            margin-right: 0.5rem;
-                            &:last-child {
-                                padding-right: 0;
-                                margin-right: 0;
-                            }
-                            &:not(:last-child) {
-                                &::after {
-                                    position: absolute;
-                                    right: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    content: '';
-                                    width: 0.0625rem;
-                                    height: 0.875rem;
-                                    background-color: $dark-gray;
-                                }
-                                @include media-query(breakpoint-md) {
-                                    padding: 0rem 0.625rem;
-                                }
-                                @include media-query(breakpoint-xxl) {
-                                    padding: 0rem 0.75rem;
-                                }
-                            }
-                            @include media-query(breakpoint-md) {
-                                font-size: 0.875rem;
-                            }
-                            @include media-query(breakpoint-lg) {
-                                gap: 0.375rem;
-                            }
-                            @include media-query(breakpoint-xxl) {
-                                font-size: 0.875rem;
-                            }
-                            & span.icon {
-                                & img {
-                                    max-width: 0.875rem;
-                                    max-height: 0.875rem;
-                                    @include media-query(breakpoint-md) {
-                                        max-width: 1.125rem;
-                                        max-height: 1.125rem;
-                                    }
-                                }
-                            }
-                        }
-                    }
                 }
+                
             }
         }
 
@@ -702,4 +718,233 @@
         }
     }
     // Blog Card End
+
+    // Card-Lisging-produtct
+    &--listing{
+        box-shadow: 0px 4px 4px 0px #9999991A;
+        @include media-query(breakpoint-xl){
+            display: flex;
+            align-items: stretch;  
+            flex-direction: row;
+            padding: 1.3125rem 1.0625rem;
+            border-radius: .625rem;
+
+        }
+        @include media-query(breakpoint-xxl){
+            align-items: center;  
+        }
+        & .card{
+            &__thubnail{
+                width: 100%;
+                flex: 0 0 auto;
+                @include media-query(breakpoint-lg){
+                    width: 100%;     
+                }
+                @include media-query(breakpoint-xl){
+                    width: 20rem;      
+                }
+                @include media-query(breakpoint-xxl){
+                    width: 24.8125rem;    
+                }
+                &-slider{
+                    height: 100%;
+                }
+                &-img{
+                    height: 15.375rem;
+                    border-radius: .625rem;
+                    overflow: hidden;
+                    @include media-query(breakpoint-xl){
+                        width: 100%;    
+                        height: 100%;    
+                    }
+                    & img{
+                       width: 100%;
+                       height: 100%;
+                       object-fit: cover;
+                       object-position: center; 
+                    }
+                }
+                & .badge{
+                    position: absolute;
+                    left: 0;
+                    top: .9375rem;
+                    z-index: 11;
+                }
+                & .btn--wishlist{
+                    position: absolute;
+                    top: .9375rem;
+                    right: .9375rem;
+                    z-index: 12;
+                }
+                & .swiper-navs{
+                    & button{
+                        position: absolute;
+                        left: .9375rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        &:first-child{
+                            & svg{
+                                transform: rotate(180deg);
+                            }
+                        }
+                        &:last-child{
+                            left: auto;
+                            right: 1rem;
+                        }
+                    }
+                }
+            }
+            &__content{
+                flex: 1;
+                padding: .9375rem .9375rem .9375rem .9375rem;
+                @include media-query(breakpoint-lg){
+                   padding: 0;
+                   padding-left: .9375rem;
+                }
+                & .priceTag{
+                    font-size: 1.125rem;
+                    font-weight: bold;
+                    color: $text-black;
+                    @include media-query(breakpoint-lg){
+                        font-size: 22px;
+                    }
+                }
+                &-title{
+                    margin-bottom: .625rem;
+                    @include media-query(breakpoint-lg){
+                        margin-bottom: .75rem;
+                    }
+                    & h3{
+                        font-size: 1.125rem;
+                        font-weight: bold;
+                        color: $text-black;
+                        @include media-query(breakpoint-lg){
+                            font-size: 1.375rem;
+                        }
+                    }
+
+                }
+                &-meta{
+                    margin-bottom: .9375rem;
+                    
+                    & ul{
+                        & li{
+                            font-size: .875rem;
+                            font-weight: 600;
+                            color: $dark-gray;
+                            @include media-query(breakpoint-xl) {
+                                font-size: 1rem;
+                            }
+                            & span.icon{
+                               & svg {
+                                    max-width: 1.25rem;
+                                    max-height: 1.25rem;
+                                    @include media-query(breakpoint-xl) {
+                                        max-width: 1.5rem;
+                                        max-height: 1.5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &-features{
+                    margin-bottom: .9375rem;
+                    @include media-query(breakpoint-xl) {
+                            margin-bottom: 1.25rem;
+                            max-width: 28.5rem;
+                        }
+                    & .tag{
+                        font-weight: 600;
+                        & span.icon{
+                            @include media-query(breakpoint-xl) {
+                                max-width: 1.125rem;
+                                max-height: 1.125rem;
+                            }
+                        }
+                        @include media-query(breakpoint-xl) {
+                            font-size: .875rem;
+                        }
+                    }
+                }
+                &-brands{
+                    margin-bottom: .9375rem;
+                     @include media-query(breakpoint-xl) {
+                            margin-bottom: 1.25rem;
+                    }
+                    & .brand-name{
+                        width: 1.5625rem;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;    
+                        border-radius: 50%;
+                        height: 1.5625rem;
+                        border: .0444rem solid #053C5A1A;
+                        box-shadow: 0px 2.86px 2.86px 0px #9C9C9C1A;
+                        background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.1) 70.67%, rgba(5, 60, 90, 0.1) 100%);
+                        @include media-query(breakpoint-xl) {
+                            width: 2.1875rem;
+                            height: 2.1875rem;
+                        }
+                        
+                        & img{
+                            max-width: .9375rem;
+                             @include media-query(breakpoint-xl) {
+                                max-width: 1.375rem;
+                                max-height:  1.375rem;
+                            }
+                        }
+                    }
+                }
+                &-owner{
+                    padding: .9375rem .6875rem;
+                    border-radius: .625rem;
+                    border: .0625rem solid #EBEBEB;
+                    & .info{
+                        & .thumb{
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            @include media-query(breakpoint-lg){
+                                width: 3.125rem;
+                                height: 3.125rem;
+                            }
+                        }
+                        & .name{
+                            @include media-query(breakpoint-lg){
+                                font-size: 1.25rem;
+                                line-height: 1;
+                                font-weight: 600;
+                            }
+                        }
+                        & .designation{
+                            font-size: .875rem;
+                            font-weight: 500;
+                            color: $dark-gray;
+                            @include media-query(breakpoint-lg){
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                    & .action-buttons{
+                        & .btn{
+                            font-size: 12px;
+                            font-weight: 600;
+                            padding: .5rem .75rem;
+                            min-height: inherit;
+                            min-width: inherit;
+                            height: inherit ;
+                            @include media-query(breakpoint-lg){
+                                padding: .625rem 2.5rem;
+                                font-size: .75rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Card-Lisging-produtct
+
 }
+
+
