@@ -13,6 +13,11 @@
         max-width: 400px;
         z-index: 12;
         padding: .9375rem  1rem;
+        transform: translateX(-100%);
+        transition: all .3s ease-in;
+        &.show{
+            transform: translateX(0%);
+        }
         @include media-query(breakpoint-lg){
             position: inherit;
             height: inherit;
@@ -20,6 +25,7 @@
             border: 1px solid $cool-gray;
             border-radius: .625rem;
             overflow: inherit;
+            transform: translateX(0%);
         }
     }
 

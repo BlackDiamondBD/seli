@@ -11,7 +11,7 @@
     &__header{
         margin-bottom: .9375rem;
         
-        @include media-query(breakpoint-xl){
+        @include media-query(breakpoint-lg){
             margin-bottom: 2.5rem;
             display: flex;
             align-items: center;
@@ -43,12 +43,17 @@
         }
     }
     &__row{
-        &--topSearchbar{}
+        &--topSearchbar{
+            margin-bottom: .9375rem; 
+            @include media-query(breakpoint-lg){
+                margin-bottom: 1.5625rem;
+            }
+        }
         &--mainContent{}
     }
     &__nav{
         margin-bottom: .9375rem;
-        @include media-query(breakpoint-xl){
+        @include media-query(breakpoint-lg){
            margin-bottom: 0rem;
         }
         & .nav{
@@ -66,13 +71,37 @@
                     background-color: transparent;
                     border: none;
                     border-radius: .625rem;
+                    padding: 1rem 1.5rem;
                 }
             }
         }
     }
     &__search{
+        flex: 1;
+        & .form-control{
+            height: 3.125rem;
+        }
+    }
+    &-search{
+        &__tags{
+            margin-bottom: .9375rem;
+            @include media-query(breakpoint-lg){
+                margin-bottom: 1.25rem;
+            }
+            & button.clear__tags{
+                font-size: .875rem;
+                font-weight: 500;
+                color: #C82A2A;
+                @include media-query(breakpoint-lg){
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    &__results{
+        --bs-gutter-y: .9375rem;
         @include media-query(breakpoint-lg){
-            flex-grow: 1;
+            --bs-gutter-y: 1.25rem;
         }
     }
 

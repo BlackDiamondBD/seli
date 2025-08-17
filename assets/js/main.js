@@ -77,8 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
         updateValues();
     });
 
-
-    // ===== =====
+    // ===== Scroll Links =====
     const scrollLinks = document.querySelectorAll('.scroll-link');
 
     // Click & Scroll Smooth + Active Class
@@ -90,31 +89,28 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (target) {
                     e.preventDefault();
 
-                    // Sticky header height
                     const headerHeight =
                         document.querySelector('.header--sticky')
                             ?.offsetHeight || 0;
 
-                    // Scroll to position
                     const targetPosition = target.offsetTop - headerHeight;
                     window.scrollTo({
                         top: targetPosition,
                         behavior: 'smooth',
                     });
 
-                    // Remove active from all links
                     scrollLinks.forEach((l) => l.classList.remove('active'));
-                    // Add active to clicked link
                     this.classList.add('active');
                 }
             }
         });
     });
+
     // Scroll Event to Update Active Link on Page Scroll
-    window.addEventListener('wheel', () => {
+    window.addEventListener('scroll', () => {
         const headerHeight =
             document.querySelector('.header--sticky')?.offsetHeight || 0;
-        let scrollPosition = window.scrollY + headerHeight + 1; // +1 for slight offset
+        let scrollPosition = window.scrollY + headerHeight + 1;
 
         scrollLinks.forEach((link) => {
             const target = document.querySelector(link.getAttribute('href'));
@@ -131,6 +127,45 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
         });
+    });
+
+    // Wheel Event (optional if you need it)
+    window.addEventListener('wheel', () => {
+        const headerHeight =
+            document.querySelector('.header--sticky')?.offsetHeight || 0;
+        let scrollPosition = window.scrollY + headerHeight + 1;
+
+        scrollLinks.forEach((link) => {
+            const target = document.querySelector(link.getAttribute('href'));
+            if (target) {
+                const sectionTop = target.offsetTop;
+                const sectionBottom = sectionTop + target.offsetHeight;
+
+                if (
+                    scrollPosition >= sectionTop &&
+                    scrollPosition < sectionBottom
+                ) {
+                    scrollLinks.forEach((l) => l.classList.remove('active'));
+                    link.classList.add('active');
+                }
+            }
+        });
+    });
+
+    // CARD-LISTING-PRODUCT-SLIDER
+    const swiperCardListing = new Swiper('.swiper', {
+        slidesPerView: 1,
+        loop: false,
+        speed: 600,
+        spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.l-next',
+            prevEl: '.l-prev',
+        },
     });
 
     // ===== Slider Activation ===== //
@@ -235,7 +270,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // For Horizontal Scroll
     const ScrollingPart = document.querySelectorAll('.scrolling-part');
-
     ScrollingPart.forEach((section) => {
         let isDown = false;
         let startX;
@@ -263,8 +297,34 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!isDown) return;
             e.preventDefault();
             const x = e.pageX - section.offsetLeft;
-            const walk = (x - startX) * 1.5; // speed control
+            const walk = (x - startX) * 1.5;
             section.scrollLeft = scrollLeft - walk;
         });
+    });
+
+    // filter-Options-Open and Close
+    const filterToggle = document.getElementById('filterToggle');
+    const filterWrapper = document.querySelector('.filter__wrapper');
+    const filterClose = document.querySelector('.filter__close');
+
+    filterToggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        filterWrapper.classList.toggle('show');
+    });
+
+    if (filterClose) {
+        filterClose.addEventListener('click', function () {
+            filterWrapper.classList.remove('show');
+        });
+    }
+
+    document.addEventListener('click', function (e) {
+        if (
+            filterWrapper.classList.contains('show') &&
+            !filterWrapper.contains(e.target) &&
+            e.target !== filterToggle
+        ) {
+            filterWrapper.classList.remove('show');
+        }
     });
 });

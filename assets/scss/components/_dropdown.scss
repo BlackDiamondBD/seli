@@ -2,7 +2,19 @@
 @use '../base/' as *;
 
 .dropdown{
+    width: max-content;
     &__select{
-        
+        & .btn{
+            @include media-query(breakpoint-lg){
+             font-size: 16px;
+             height: 100%;
+             padding: .75rem .9375rem;
+            } 
+            @include media-query(breakpoint-xl){
+             font-size: 18px;
+             height: 100%;
+             padding: .75rem .9375rem;
+            } 
+        }
     }
 }
