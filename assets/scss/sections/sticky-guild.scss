@@ -1,0 +1,40 @@
+@use "../utils/" as *;   
+    
+    .sticky-guild{
+        &__cards{
+            .card{
+                background-color: #E7EDED;
+                &-body{
+                    background-color: #C3E3DD;
+                }
+            }
+        }
+
+        
+        &__nav {
+            li{
+                color: #6A6D6F;
+                font-size: 2rem;
+                font-weight: 500;
+                padding: 1.2rem;
+                &.active{
+                    color: $text-black;
+                }
+                &:before {
+                    height: 100%;
+                    width: 1.125rem;
+                    content: "";
+                    background: #BCE9DB;
+                }
+
+                span {
+                    font-weight: 600;
+                    font-size: 3.5rem;
+                    display: inline-block;
+                    width: 5.25rem;
+                }
+            }
+        }
+
+
+    }

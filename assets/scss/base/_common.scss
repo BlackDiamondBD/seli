@@ -51,6 +51,19 @@
   }
 }
 
+// bg
+.bg{
+  &-primary{
+    background-color: $primary !important;
+  }
+  &-secondary{
+    background-color: $secondary !important;
+  }
+  &-light{
+    background-color: #E1F7F2 !important;
+  }
+}
+
 // section-css
 .section {
   &__title {
@@ -73,6 +86,16 @@
     > *{
       background: $white-color;
       border-radius: inherit;
+    }
+  }
+}
+
+.w{
+  &-lg{
+    &-auto{
+      @include media-query(breakpoint-lg) {
+        width: auto !important;
+      }
     }
   }
 }

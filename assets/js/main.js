@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // ===== Form Check Active Class =====
     // This will add an active class to the parent element of the radio input when it is checked
     const formCheckInputs = document.querySelectorAll('.form-check-input');
+    const stepReset = document.querySelectorAll('.step__reset')
     formCheckInputs.forEach((input) => {
         const parent = input.closest('.form-check');
         const grantparent = parent.parentElement;
@@ -24,13 +25,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // step change function
-    const stepBox = document.querySelectorAll('.step-box')
+    const stepBox = document.querySelectorAll('.step__container')
     stepBox.forEach(wrap => {
         const navs = wrap.querySelectorAll('.step__nav li')
         const tabs = wrap.querySelectorAll('.step__tab')
         const next = wrap.querySelectorAll('.step__next')
         const back = wrap.querySelectorAll('.step__back')
-        let currentStep = 3; // default step
+
+        const content = wrap.querySelectorAll('.step__content');
+        const publish = wrap.querySelectorAll('.step__publish');
+
+
+        let currentStep = 0; // default step
 
         // Set the initial active step
         let size = navs.length;
@@ -41,10 +47,17 @@ document.addEventListener('DOMContentLoaded', function () {
         // Set the initial active step
         next.forEach(btn => {
             btn.addEventListener('click', ()=>{                
-                if (currentStep < size - 1) {
+                if (currentStep < size - 2) {
                     currentStep++;
                     // update active class from all tabs and navs
                     updateStep();
+                }else{
+                    content.forEach(element => {
+                        element.classList.add('d-none')
+                    });
+                    publish.forEach(element => {
+                        element.classList.add('active')
+                    });
                 }
             })
         });
@@ -58,6 +71,52 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             })
         });
+
+        // reset step box ========
+
+        content.forEach(ct => {
+            const form = ct.querySelector('form');
+
+            // Show reset button when any input has value
+            form.addEventListener("input", function () {
+                const hasValue = [...form.elements].some(
+                    el => el.tagName === "INPUT" && el.value.trim() !== ""
+                );
+                if (hasValue) {
+                    stepReset.forEach(btn => {
+                        btn.classList.remove('d-none')
+                    });
+                    
+                }else{
+                    stepReset.forEach(btn => {
+                        btn.classList.add('d-none')
+                    });
+                }
+            });
+        });
+        
+
+        stepReset.forEach(btn => {
+            btn.addEventListener('click', ()=>{
+                currentStep = 0;
+                // update active class from all tabs and navs
+                updateStep();
+
+                formCheckInputs.forEach((input) => {
+                    const parent = input.closest('.form-check');
+                    if (parent) {
+                        parent.classList.remove('active');
+                    }
+                });  
+
+                
+                setTimeout(() => (btn.classList.add('d-none')), 0);
+            })
+        });
+
+
+
+
 
         // Navigation click functionality
         function updateStep() {

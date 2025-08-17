@@ -17,26 +17,44 @@ label.form-label{
         line-height: 1;
         @include media-query(breakpoint-xl) {
             margin-bottom: 0.625rem;
-        }
-    }
-    &-control {
-        color: $text-black;
-        border: 0.0625rem solid $cool-gray;
-        border-radius: 0.75rem;        
-        @include media-query(breakpoint-xl) {
-            padding: 1.25rem 1.25rem;
-            font-size: 1.25rem;
-            font-weight: 600;
-        }        
-        &:focus {
-            border-color: $secondary;
-            box-shadow: none;
+            font-size: 1rem;
         }
     }
     &-control:not(textarea) {
         height: 3rem;
         @include media-query(breakpoint-xl) {
             height: 3.75rem;
+        }
+    }
+    &-control {
+        color: $text-black;
+        border: 0.0625rem solid $cool-gray;
+        border-radius: 0.75rem;
+        font-size: 0.875rem;
+        @include media-query(breakpoint-xl) {
+            padding: 1.25rem 1.25rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }       
+        @include media-query(breakpoint-lg) {
+            font-size: 1rem;
+        }        
+        &:focus {
+            border-color: $secondary;
+            box-shadow: none;
+        }
+        &--otp {
+            width: 100%;
+            height: 4rem !important;
+            &:focus{
+                background: linear-gradient(90deg, rgba($primary, .2), rgba($secondary, .2));
+                border-color: $cool-gray;
+            }
+            @include media-query(breakpoint-md) {
+                width: 3.75rem;
+                height: 6.25rem !important;
+            }
         }
     }
     &-select {
@@ -63,16 +81,37 @@ label.form-label{
     // FORM CHECK CARD START
     &-check{
         &-label{
-            cursor: pointer;
+            cursor: pointer;        
+            font-size: 0.8rem;
         }
+        @include media-query(breakpoint-lg) {            
+            font-size: 1rem;
+        }
+
+
         &-input {
-            width: 1.5rem;
-            height: 1.5rem;
+            margin-top: 0;
+            width: 1.125rem;
+            height: 1.125rem;
+            @include media-query(breakpoint-lg) {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
             --bs-form-check-bg: #{$light-gray};
             --bs-border-color: #{$cool-gray};
 
             &:checked[type="radio"] {
                 --bs-form-check-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='1.5' fill='%23053C5A'/></svg>");
+            }
+            &[type=checkbox] {
+                background-color: transparent;
+                border-color: $dark-gray;
+                
+            }
+            &:checked[type=checkbox] {
+                background-color: transparent;
+                --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%236a6d6f' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
             }
             &:checked {
                 border-color: $primary;
@@ -138,6 +177,10 @@ label.form-label{
             }
         }
     }
+
+    
+
+
     // FORM CHECK CARD END
     &-upload {
         background: linear-gradient(90deg, rgba($secondary, .04), rgba($primary, .04));
@@ -145,10 +188,15 @@ label.form-label{
         border-radius: 1.25rem;
         border: 2px dashed $cool-gray;
         &__preview img {
-            width: 4.2rem;
-            height: 4.5rem;
+            width: 3.5rem;
+            height: 4.2rem;
             object-fit: cover;
             border-radius: .75rem;
+
+            @include media-query(breakpoint-lg) {
+                width: 4.2rem;
+                height: 4.5rem;
+            }
         }
 
     }

@@ -1,18 +1,47 @@
+
+@use '../utils/' as *;
+
 .iti{
-    --iti-arrow-padding: .75rem;
+    --iti-arrow-padding: .5rem;
+    @include media-query(breakpoint-lg) {
+        --iti-arrow-padding: 1rem;
+    }
     width: 100%;
     &__selected-country-primary{
         background: #F2F5F7;
-        border-radius: 0.75rem 0 0 0.75rem;
-        padding: 0 0.75rem;
+        border-radius: 0.75rem 0 0 0.5rem;
+        padding-left: .75rem;
+        padding-right: .75rem;
+        
+        @include media-query(breakpoint-lg) {
+            border-radius: 0.75rem 0 0 0.75rem;
+            padding-left: 1rem;
+        }
+        .iti__flag {
+            @include media-query(breakpoint-lg) {
+                transform: scale(1.8);
+            }
+        }
     }
     &__arrow{
-        height: 0.7rem;
-        width: 0.7rem;
+        height: 0.5rem;
+        width: 0.5rem;
         border: 0;
         border-left: 1px solid;
         border-bottom: 1px solid;
         border-color: #282930;
         transform: translateY(-35%) rotate(-45deg);
+
+        
+        @include media-query(breakpoint-lg) {
+            height: 0.7rem;
+            width: 0.7rem;
+        }
+    }
+    &__search-input {
+        width: 100%;
+        border-width: 0;
+        border-radius: 3px;
+        margin: 0.5em;
     }
 }
