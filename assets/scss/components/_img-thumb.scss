@@ -1,0 +1,17 @@
+@use "../utils/" as *;
+
+.img-thumb{
+    &__man {
+        width: 75%;
+    }
+    &__bg {
+        background: $white-color;
+        inset: 1.5rem;
+        z-index: -1;
+        border-radius: 4.5rem;
+        border: 1px solid $black-color;
+    }
+    &__obj{
+        width: 40%;
+    }
+}

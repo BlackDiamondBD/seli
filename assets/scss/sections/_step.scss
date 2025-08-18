@@ -1,0 +1,173 @@
+@use '../utils/' as *;
+
+.card__step{
+    --bs-card-border-radius: 1.25rem;
+    > .card-body{
+        --bs-card-spacer-y: 1rem;
+        --bs-card-spacer-x: 1rem;
+        @include media-query(breakpoint-lg){
+            --bs-card-spacer-y: 2rem;
+            --bs-card-spacer-x: 2rem;
+        }
+        @include media-query(breakpoint-xl){
+            --bs-card-spacer-y: 2.5rem;
+            --bs-card-spacer-x: 2.5rem;
+        }
+    }
+}
+.step{
+    &__nav{
+        li {
+            font-weight: 600;
+            flex: 1;
+            text-align: center;            
+
+            &::before {
+                content: '';
+                width: 100%;
+                display: block;
+                height: 0.275em;
+                margin-bottom: 0.2em;
+                transition: .3s ease;
+                border-radius: 50rem;
+                background: $light-gray;
+                
+                @include media-query(breakpoint-lg){
+                    height: 0.375em;
+                }
+            }
+            &.active::before {
+                background: $secondary;
+            }
+
+            span {
+                display: none;
+                @include media-query(breakpoint-md){
+                    display: inline-block;
+                    font-size: 0.75rem;
+                }
+                @include media-query(breakpoint-lg){
+                    font-size: 1rem;
+                }
+            }    
+        }
+    }
+
+    &__title{
+        padding-right: 2em;
+        @include media-query(breakpoint-lg) {
+            padding-right: 3rem;
+        }
+        &.mb-5{
+            margin-bottom: 2.5rem !important;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            @include media-query(breakpoint-lg) {
+                font-size: 1.5rem;
+            }
+            @include media-query(breakpoint-xl) {
+                font-size: 2rem;
+            } 
+        }
+        h5 {
+            font-size: 0.8rem;
+            @include media-query(breakpoint-lg) {
+                font-size: 1rem;
+            }
+            @include media-query(breakpoint-xl) {
+                font-size: 1.125rem;
+            }
+        }
+    }
+
+    
+    &__transmission{
+        > div{
+                flex: 100%;
+        }        
+        @include media-query(breakpoint-lg){
+            > div:nth-child(3n-2){
+                flex: 22%;
+            }
+            > div:nth-child(3n-1){
+                flex: 35%;
+            }
+            > div:nth-child(3n){
+                flex: 35%;
+            }
+        }
+        
+    }
+
+    &__publish,
+    &__tab{
+        display: none;
+        animation: fadeEffect 1s ease;
+        &.active{
+            display: block;
+        }
+    }
+    @keyframes fadeEffect{
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+
+    &__tabs {
+        min-height: 35rem;
+    }
+
+    &-box{
+        .form-label{
+            margin-bottom: .75rem;
+            @include media-query(breakpoint-lg) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    &__publish {
+        position: relative;
+        &__title-img{
+            width: 50%;
+            @include media-query(breakpoint-lg) {
+                width: 30%;
+            }
+        }
+        .card {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 6rem;
+            z-index: -1;
+            position: absolute;
+            background: transparent;
+            &::after {
+                content: '';
+                top: 3%;
+                left: 4%;
+                right: 4%;
+                z-index: -1;
+                height: 100%;
+                position: absolute;
+                border-radius: 1.25rem;
+                background: linear-gradient(-90deg, $primary, $secondary);
+            }
+            &-body {
+                background: #fff;
+                border-radius: 1.25rem;
+            }
+        }
+    }
+
+    &__reset {
+        img{
+            width: 2rem;
+            @include media-query(breakpoint-lg) {
+                width: 2.8rem;
+            }
+        }
+    }
+
+}
