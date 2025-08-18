@@ -1,111 +1,103 @@
-@use "../utils/" as *;
-@use "../base/" as *;
+@use '../utils/' as *;
+@use '../base/' as *;
 
 .select-category {
-  overflow: hidden;
-  background: var(
-    --Background-gradient,
-    linear-gradient(
-      90deg,
-      rgba(60, 205, 170, 0.2) 0%,
-      rgba(5, 60, 90, 0.2) 97.99%
-    )
-  );
-  padding-block: 59px 44px;
+    overflow: hidden;
+    background: var(
+        --Background-gradient,
+        linear-gradient(
+            90deg,
+            rgba(60, 205, 170, 0.2) 0%,
+            rgba(5, 60, 90, 0.2) 97.99%
+        )
+    );
+    padding-block: 59px 44px;
 
-  &--short-desc {
-    max-width: 930px;
-    margin-inline: auto;
-  }
-
-  &-obj {
-    width: 280px;
-    height: 280px;
-    flex-shrink: 0;
-    z-index: -1;
-
-    &--1 {
-      top: -100px;
-      left: 70px;
-    }
-    &--2 {
-      bottom: -20px;
-      right: 20px;
-      transform: rotate(180deg);
-      -webkit-transform: rotate(180deg);
-      -moz-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-      -o-transform: rotate(180deg);
-    }
-  }
-
-  .category {
-    padding: 20px 16px;
-    max-width: 1438px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    @include media-query(breakpoint-md) {
-      padding: 24px 32px;
-      border-radius: 20px;
-      -webkit-border-radius: 20px;
-      -moz-border-radius: 20px;
-      -ms-border-radius: 20px;
-      -o-border-radius: 20px;
+    &--short-desc {
+        max-width: 930px;
+        margin-inline: auto;
     }
 
-    &--title {
-      font-size: 18px;
-      line-height: normal;
-      font-weight: 700;
-
-      @include media-query(breakpoint-sm) {
-        font-size: 22px !important;
-        line-height: normal !important;
-      }
-    }
-
-    &-list {
-      position: relative;
-      z-index: 11;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      align-self: stretch;
-      overflow-x: scroll;
-      margin-top: 15px;
-      scrollbar-width: none; /* Firefox er jonno */
-      -ms-overflow-style: none; /* IE/Edge old er jonno */
-      white-space: nowrap;
-      cursor: grab;
-
-      &::-webkit-scrollbar {
-        display: none; /* Chrome, Safari er jonno */
-      }
-
-      &--item {
-        display: inline-flex;
-
-        padding: 6px 10px;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
+    &-obj {
+        width: 280px;
+        height: 280px;
         flex-shrink: 0;
-        border-radius: 5px;
-        border: 0.6px solid rgba(5, 60, 90, 0.1);
-        background: rgba(5, 60, 90, 0.1);
-        backdrop-filter: blur(10.266666412353516px);
-        font-size: 14px !important;
+        z-index: -1;
 
-        @include media-query(breakpoint-sm) {
-          font-size: 16px !important;
-          line-height: normal !important;
-          padding: 6px 20px;
-          height: 40px;
+        &--1 {
+            top: -100px;
+            left: 70px;
         }
-      }
+        &--2 {
+            bottom: -20px;
+            right: 20px;
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+        }
     }
-  }
+
+    .category {
+        padding: 20px 16px;
+        max-width: 1438px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        @include media-query(breakpoint-md) {
+            padding: 24px 32px;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+        }
+
+        &--title {
+            font-size: 18px;
+            line-height: normal;
+            font-weight: 700;
+
+            @include media-query(breakpoint-sm) {
+                font-size: 22px !important;
+                line-height: normal !important;
+            }
+        }
+
+        &-list {
+            position: relative;
+            z-index: 11;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            align-self: stretch;
+            overflow-x: auto;
+            margin-top: 15px;
+
+            &--item {
+                display: inline-flex;
+                padding: 6px 10px;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                flex-shrink: 0;
+                border-radius: 5px;
+                border: 0.6px solid rgba(5, 60, 90, 0.1);
+                background: rgba(5, 60, 90, 0.1);
+                backdrop-filter: blur(10.266666412353516px);
+                font-size: 14px;
+                line-height: normal;
+                color: $text-black;
+
+                @include media-query(breakpoint-sm) {
+                    font-size: 16px;
+                    padding: 6px 20px;
+                    height: 40px;
+                }
+            }
+        }
+    }
 }

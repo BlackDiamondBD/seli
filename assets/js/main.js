@@ -1,3 +1,4 @@
+// ===== ===== DOM Content Load ===== ===== //
 document.addEventListener('DOMContentLoaded', function () {
     // ===== Language Switcher =====
     const langSwitcherBtn = document.getElementById('lang-switcher__btn');
@@ -77,7 +78,33 @@ document.addEventListener('DOMContentLoaded', function () {
         updateValues();
     });
 
-    // ===== Scroll Links =====
+    // ===== filter-Options-Open and Close =====
+    const filterToggle = document.getElementById('filterToggle');
+    const filterWrapper = document.querySelector('.filter__wrapper');
+    const filterClose = document.querySelector('.filter__close');
+
+    filterToggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        filterWrapper.classList.toggle('show');
+    });
+
+    if (filterClose) {
+        filterClose.addEventListener('click', function () {
+            filterWrapper.classList.remove('show');
+        });
+    }
+
+    document.addEventListener('click', function (e) {
+        if (
+            filterWrapper.classList.contains('show') &&
+            !filterWrapper.contains(e.target) &&
+            e.target !== filterToggle
+        ) {
+            filterWrapper.classList.remove('show');
+        }
+    });
+
+    // ===== Sticky Header & Link Active on Scroll =====
     const scrollLinks = document.querySelectorAll('.scroll-link');
 
     // Click & Scroll Smooth + Active Class
@@ -152,22 +179,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // CARD-LISTING-PRODUCT-SLIDER
-    const swiperCardListing = new Swiper('.swiper', {
-        slidesPerView: 1,
-        loop: false,
-        speed: 600,
-        spaceBetween: 20,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.l-next',
-            prevEl: '.l-prev',
-        },
-    });
-
     // ===== Slider Activation ===== //
 
     // Slider For Service cards
@@ -221,6 +232,32 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 
+    // CARD-LISTING-PRODUCT-SLIDER
+    document
+        .querySelectorAll('.card__thubnail-slider')
+        .forEach(function (slider) {
+            new Swiper(slider, {
+                slidesPerView: 1,
+                loop: false,
+                speed: 600,
+                spaceBetween: 20,
+                pagination: {
+                    el: slider
+                        .closest('.card__thubnail')
+                        .querySelector('.swiper-pagination'),
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: slider
+                        .closest('.card__thubnail')
+                        .querySelector('.l-next'),
+                    prevEl: slider
+                        .closest('.card__thubnail')
+                        .querySelector('.l-prev'),
+                },
+            });
+        });
+
     // Slider for Thumb Image (Detail Page)
     var thumbSwiper = new Swiper('.thumb--slider', {
         loop: true,
@@ -267,64 +304,59 @@ document.addEventListener('DOMContentLoaded', function () {
             1600: { slidesPerView: 2.6 },
         },
     });
+});
 
-    // For Horizontal Scroll
-    const ScrollingPart = document.querySelectorAll('.scrolling-part');
-    ScrollingPart.forEach((section) => {
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+// ===== For Horizontal Scroll =====
+(function () {
+    const scrollSections = document.querySelectorAll('.scrolling-part');
 
+    let activeSection = null;
+    let startX = 0;
+    let scrollStartLeft = 0;
+
+    // Scroll strta when mouse dow
+    scrollSections.forEach((section) => {
         section.addEventListener('mousedown', (e) => {
-            isDown = true;
-            section.classList.add('active');
+            activeSection = section;
             startX = e.pageX - section.offsetLeft;
-            scrollLeft = section.scrollLeft;
-            section.style.cursor = 'grabbing';
-        });
+            scrollStartLeft = section.scrollLeft;
+            section.classList.add('active');
 
-        section.addEventListener('mouseleave', () => {
-            isDown = false;
-            section.style.cursor = 'grab';
-        });
+            // Global grab cursor
+            document.body.style.cursor = 'grabbing';
 
-        section.addEventListener('mouseup', () => {
-            isDown = false;
-            section.style.cursor = 'grab';
-        });
-
-        section.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
             e.preventDefault();
-            const x = e.pageX - section.offsetLeft;
-            const walk = (x - startX) * 1.5;
-            section.scrollLeft = scrollLeft - walk;
         });
     });
 
-    // filter-Options-Open and Close
-    const filterToggle = document.getElementById('filterToggle');
-    const filterWrapper = document.querySelector('.filter__wrapper');
-    const filterClose = document.querySelector('.filter__close');
+    // Window-level mouse move → scroll while dragging
+    window.addEventListener('mousemove', (e) => {
+        if (!activeSection) return;
 
-    filterToggle.addEventListener('click', function (e) {
-        e.stopPropagation();
-        filterWrapper.classList.toggle('show');
+        const x = e.pageX - activeSection.offsetLeft;
+        const walk = (x - startX) * 1.5; // scroll speed factor
+        activeSection.scrollLeft = scrollStartLeft - walk;
+
+        // Ensure grab cursor even outside the section
+        document.body.style.cursor = 'grabbing';
     });
 
-    if (filterClose) {
-        filterClose.addEventListener('click', function () {
-            filterWrapper.classList.remove('show');
-        });
-    }
+    // Window-level mouse up → scroll stop
+    window.addEventListener('mouseup', () => {
+        if (!activeSection) return;
 
-    document.addEventListener('click', function (e) {
-        if (
-            filterWrapper.classList.contains('show') &&
-            !filterWrapper.contains(e.target) &&
-            e.target !== filterToggle
-        ) {
-            filterWrapper.classList.remove('show');
+        activeSection.classList.remove('active');
+
+        // Revert cursor to default
+        document.body.style.cursor = 'auto';
+
+        activeSection = null;
+    });
+
+    // Optional: mouse leaves window while dragging
+    window.addEventListener('mouseleave', () => {
+        if (activeSection) {
+            document.body.style.cursor = 'grabbing';
         }
     });
-});
+})();

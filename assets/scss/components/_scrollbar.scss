@@ -1,0 +1,16 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.scrolling {
+    &-part {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        white-space: nowrap;
+        cursor: grab;
+		user-select: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
