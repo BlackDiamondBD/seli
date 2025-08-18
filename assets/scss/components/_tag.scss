@@ -20,6 +20,10 @@
         font-size: .875rem;
     }
 
+    & .icon {
+        cursor: pointer;
+    }
+
     &--secondary{
         background-color: #3CCDAA1A;
         border: .0625rem solid #3CCDAA1A;

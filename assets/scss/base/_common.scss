@@ -51,6 +51,19 @@
   }
 }
 
+// bg
+.bg{
+  &-primary{
+    background-color: $primary !important;
+  }
+  &-secondary{
+    background-color: $secondary !important;
+  }
+  &-light{
+    background-color: #E1F7F2 !important;
+  }
+}
+
 // section-css
 .section {
   &__title {
@@ -65,8 +78,31 @@
   }
 }
 
-
 // BG Color Classes
 .body-color-light-deep {
   background-color: $body-color-light-deep;
+}
+
+// border
+.border{
+  &-gradient{
+    background: $bg-gradient;
+    > *{
+      background: $white-color;
+      border-radius: inherit;
+    }
+  }
+}
+
+.w{
+  &-70{
+    width: 70% !important;
+  }
+  &-lg{
+    &-auto{
+      @include media-query(breakpoint-lg) {
+        width: auto !important;
+      }
+    }
+  }
 }

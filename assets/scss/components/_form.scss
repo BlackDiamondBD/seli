@@ -1,215 +1,397 @@
+// Customize Bootstrap class and Add.
 @use '../utils/' as *;
 @use '../base/' as *;
+
+label.form-label {
+    cursor: pointer;
+}
+
+// Form styles
 .form {
-  &-label {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: $cool-gray;
-    margin-bottom: 0.375rem;
-    line-height: 1;
-    @include media-query(breakpoint-xl) {
-      margin-bottom: 0.625rem;
-    }
-  }
-  &-control {
-    color: $text-black;
-    border: 0.0625rem solid $cool-gray;
-    height: 2.8125rem;
-    border-radius: 0.75rem;
-    outline: none;
-    box-shadow: none;
-    &:focus{
-      box-shadow: none;
-      outline: none;
-      border:  .0625rem solid $primary;
-    }
-    @include media-query(breakpoint-xl) {
-      height: 3.75rem;
-      padding: 1.25rem 1.25rem;
-      font-size: 1.25rem;
-      font-weight: 600;
-    }
-  }
-  &-select {
-    color: $text-black;
-    border: 0.0625rem solid $cool-gray;
-    height: 3rem;
-    border-radius: 0.75rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    background-image: url('../images/icons/arrow-down.svg');
-    &:focus {
-      border: 0.0625rem solid $cool-gray !important;
-    }
-    @include media-query(breakpoint-xl) {
-      height: 3.75rem;
-      padding: 0rem 1.25rem;
-      font-size: 1.25rem;
-      font-weight: 600;
-      background-size: 1.5rem;
-    }
-  }
-  // input and icon wrapper div
-  &-inputIconWrap{
-    position: relative;
-    & input:last-child{
-      padding-left: 2.5rem;
-    }
-    & input:first-child{
-      padding-right: 2.5rem;
-    }
-    & span.icon{
-      width: 1.25rem;
-      height: 1.25rem;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      & svg{
-        width: 100%;
-        height: auto;
-      }
-      &:first-child{
-        left: 15px;
-      }
-      &:last-child{
-        right: 15px;
-      }
-    }
-
-  }
-
-  // form-checkbox
-  &-checkBox{
-   
-    & input{
-      display: none;
-      &:checked ~ label{
-        & span.indicator{
-          border-color: transparent;
-          background: linear-gradient(90deg, rgba(60, 205, 170, 0.2) 0%, rgba(5, 60, 90, 0.2) 97.99%);
+    &-label {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: $cool-gray;
+        margin-bottom: 0.375rem;
+        line-height: 1;
+        @include media-query(breakpoint-xl) {
+            margin-bottom: 0.625rem;
+            font-size: 1rem;
         }
-      }
     }
-    & label{
-      display: flex;
-      align-items: center;
-      gap: .625rem;
-      & span.indicator{
-        width: 1.375rem;
-        height: 1.375rem;
-        border: 1px solid $light-gray;
+    &-control:not(textarea) {
+        height: 3rem;
+        @include media-query(breakpoint-xl) {
+            height: 3.75rem;
+        }
+    }
+    &-control {
+        color: $text-black;
+        border: 0.0625rem solid $cool-gray;
+        height: 2.8125rem;
+        border-radius: 0.75rem;
+        outline: none;
+        box-shadow: none;
+        &:focus {
+            box-shadow: none;
+            outline: none;
+            border: 0.0625rem solid $primary;
+        }
+        @include media-query(breakpoint-xl) {
+            height: 3.75rem;
+            padding: 1.25rem 1.25rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            font-size: 0.875rem;
+        }
+        @include media-query(breakpoint-xl) {
+            padding: 1.25rem 1.25rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+        @include media-query(breakpoint-lg) {
+            font-size: 1rem;
+        }
+        &:focus {
+            border-color: $secondary;
+            box-shadow: none;
+        }
+        &--otp {
+            width: 100%;
+            height: 4rem !important;
+            font-size: 1.25rem;
+            &:focus {
+                background: linear-gradient(
+                    90deg,
+                    rgba($primary, 0.2),
+                    rgba($secondary, 0.2)
+                );
+                border-color: $cool-gray;
+            }
+            @include media-query(breakpoint-md) {
+                width: 3.75rem;
+                height: 6.25rem !important;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    &-select {
+        color: $text-black;
+        border: 0.0625rem solid $cool-gray;
+        height: 3rem;
+        border-radius: 0.75rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        background-image: url('../images/icons/arrow-down.svg');
+        &:focus {
+            border: 0.0625rem solid $cool-gray !important;
+            background-image: url('../images/icons/arrow-down.svg');
+        }
+        &:focus {
+            border: 0.0625rem solid $cool-gray !important;
+            border-color: $secondary !important;
+        }
+        @include media-query(breakpoint-xl) {
+            height: 3.75rem;
+            padding: 0rem 1.25rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            background-size: 1.5rem;
+        }
+    }
+    // input and icon wrapper div
+    &-inputIconWrap {
         position: relative;
-        border-radius: .125rem;
-
-        @include media-query(breakpoint-xl){
-          width: 1.5rem;
-          height: 1.5rem;
+        & .form {
+            &-control {
+                height: 50px;
+                padding: 15px;
+                font-size: 14px;
+                font-weight: 400;
+            }
         }
-      }
-      & span.content{
-        display: flex;
-        align-items: center;
-        gap: .625rem;
-      }
-    }
-     &--circle{
-      & label{
-        & span.indicator{
-          border-radius: 50% !important;
-          border-color: $cool-gray;
-          background: $light-gray;
-          &::after{
+        & input:last-child {
+            padding-left: 2.5rem;
+        }
+        & input:first-child {
+            padding-right: 2.5rem;
+        }
+        & span.icon {
+            width: 1.25rem;
+            height: 1.25rem;
             position: absolute;
-            left: 0;
             top: 50%;
-            transform: translate(-50%, -50%);
-            background-color: $primary;
-            content: "";
-            left: 50%;
-            width: .5rem;
-            height: .5rem;
-            border-radius: 50%;
-            opacity: 0;
-          }
-        }
-      }
-      & input{
-        &:checked ~ label{
-          color: $text-black;
-          & span.indicator{
-            background: #053C5A33 !important;
-            border-color: $primary !important;
-            &::after{
-              opacity: 1;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & svg {
+                width: 100%;
+                height: auto;
             }
-          }
+            &:first-child {
+                left: 15px;
+            }
+            &:last-child {
+                right: 15px;
+            }
         }
-      }
     }
-    &--squireCheck{
-      & input{
-        &:checked ~ label{
-          & span.indicator{
-            &::after{
-              opacity: 1;
+
+    // form-checkbox
+    &-checkBox {
+        & input {
+            display: none;
+            &:checked ~ label {
+                & span.indicator {
+                    border-color: transparent;
+                    background: linear-gradient(
+                        90deg,
+                        rgba(60, 205, 170, 0.2) 0%,
+                        rgba(5, 60, 90, 0.2) 97.99%
+                    );
+                }
             }
-          }
         }
-      }
-      & label{
-          & span.indicator{
+        & label {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            & span.indicator {
+                width: 1.375rem;
+                height: 1.375rem;
+                border: 1px solid $light-gray;
+                position: relative;
+                border-radius: 0.125rem;
+
+                @include media-query(breakpoint-xl) {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+            }
+            & span.content {
+                display: flex;
+                align-items: center;
+                gap: 0.625rem;
+            }
+        }
+        &--circle {
+            & label {
+                & span.indicator {
+                    border-radius: 50% !important;
+                    border-color: $cool-gray;
+                    background: $light-gray;
+                    &::after {
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        background-color: $primary;
+                        content: '';
+                        left: 50%;
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        border-radius: 50%;
+                        opacity: 0;
+                    }
+                }
+            }
+            & input {
+                &:checked ~ label {
+                    color: $text-black;
+                    & span.indicator {
+                        background: #053c5a33 !important;
+                        border-color: $primary !important;
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        &--squireCheck {
+            & input {
+                &:checked ~ label {
+                    & span.indicator {
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            & label {
+                & span.indicator {
+                    position: relative;
+                    &::after {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        content: '';
+                        left: 0;
+                        border-radius: 0.125rem;
+                        top: 0;
+                        background-image: url('../images/icons/checkMark.svg');
+                        background-size: 0.6875rem;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        &--thumbnail {
+            & label {
+                position: relative;
+                border-radius: 0.125rem;
+                border: 0.0625rem solid $light-gray;
+                height: 124px;
+                width: 100%;
+                padding-top: 0.625rem;
+                align-items: center;
+                justify-content: center;
+                & span.indicator {
+                    position: absolute;
+                    top: 0.3125rem;
+                    right: 0.3125rem;
+                }
+                & span.content {
+                    flex-direction: column;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    gap: 0.75rem;
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                    & span.text {
+                        line-height: 1.4;
+                    }
+                }
+            }
+        }
+    }
+
+    // FORM CHECK CARD START
+    &-check {
+        &-label {
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        @include media-query(breakpoint-lg) {
+            font-size: 1rem;
+        }
+
+        &-input {
+            margin-top: 0;
+            width: 1.125rem;
+            height: 1.125rem;
+            @include media-query(breakpoint-lg) {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
+            --bs-form-check-bg: #{$light-gray};
+            --bs-border-color: #{$cool-gray};
+
+            &:checked[type='radio'] {
+                --bs-form-check-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='1.5' fill='%23053C5A'/></svg>");
+            }
+            &[type='checkbox'] {
+                background-color: transparent;
+                border-color: $dark-gray;
+            }
+            &:checked[type='checkbox'] {
+                background-color: transparent;
+                --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%236a6d6f' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+            }
+            &:checked {
+                border-color: $primary;
+                background-color: #cdd8de;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        &--card {
+            padding: 0.5rem 0.2rem;
+            padding-top: 2rem;
             position: relative;
-            &::after{
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              content: "";
-              left: 0;
-              border-radius: .125rem;
-              top: 0;
-              background-image: url('../images/icons/checkMark.svg');
-              background-size: .6875rem;
-              background-repeat: no-repeat;
-              background-position: center;
-              opacity: 0;
+            border: 1px solid;
+            margin-bottom: 0;
+            background: $light-gray;
+            border-color: $light-gray;
+            border-radius: 0.75em;
+            width: 7rem;
+
+            &.active {
+                background: $white-color;
+                border-color: $secondary;
             }
-          }
+
+            input {
+                position: absolute;
+                top: 0.5rem;
+                right: 0.5rem;
+            }
+            .form-check {
+                &-input {
+                    &:checked[type='radio'] {
+                        --bs-form-check-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='1.5' fill='%23fff'/></svg>");
+                    }
+                    &:checked {
+                        border-color: $secondary;
+                        background-color: $secondary;
+                    }
+                }
+                &-label {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font-size: 0.9rem;
+
+                    img {
+                        padding: 1em;
+                    }
+                }
+            }
+        }
+
+        &--pill {
+            &.active {
+                label {
+                    background: $secondary;
+                    border-color: $secondary;
+                    color: $white-color;
+                }
+            }
         }
     }
 
-    &--thumbnail{
-      & label{
-        position: relative;
-        border-radius: .125rem;
-        border: .0625rem solid $light-gray;
-        height: 124px;
-        width: 100%;
-        padding-top: .625rem;
-        align-items: center;
-        justify-content: center;
-        & span.indicator{
-          position: absolute;
-          top: .3125rem;
-          right: .3125rem;
-        }
-        & span.content{
-          flex-direction: column;
-          text-align: center;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          gap: .75rem;
-          font-size: .875rem;
-          font-weight: 500;
-          & span.text{
-            line-height: 1.4;
-          }
-        }
-      }
-    }
-  }
+    // FORM CHECK CARD END
+    &-upload {
+        background: linear-gradient(
+            90deg,
+            rgba($secondary, 0.04),
+            rgba($primary, 0.04)
+        );
+        padding: 1.75rem;
+        border-radius: 1.25rem;
+        border: 2px dashed $cool-gray;
+        &__preview img {
+            width: 3.5rem;
+            height: 4.2rem;
+            object-fit: cover;
+            border-radius: 0.75rem;
 
+            @include media-query(breakpoint-lg) {
+                width: 4.2rem;
+                height: 4.5rem;
+            }
+        }
+    }
 }

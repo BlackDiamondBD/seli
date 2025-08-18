@@ -1,0 +1,72 @@
+@use './../utils/' as *;
+
+.best-package{
+    background-color: #9DE6D4;
+}
+.package-cards{
+    h5{
+        font-size: .875rem;
+        @include media-query(breakpoint-lg) {
+            font-size: 1.25rem;
+        }        
+    }
+    h2{
+        font-size: 1.5rem;
+        @include media-query(breakpoint-lg) {
+            font-size: calc(1.325rem + .9vw);
+        }        
+    }
+    .rounded-pill{
+        font-size: .875rem;
+        >img{
+            width: 1em;
+            @include media-query(breakpoint-lg) {
+                font-size: 1.125em;
+            }
+        }
+        @include media-query(breakpoint-lg) {
+            font-size: 1rem;
+        }
+    }
+    
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        h2{
+            small{
+                font-size: .57em;
+                font-weight: normal;
+            }
+        }
+        .feature-list{
+            flex: 1;
+        }
+    }
+}
+
+.feature{
+    &-list{
+        li{
+            position: relative;
+            padding-left: 1.7rem;
+            font-weight: 600;
+            color: $text-black;            
+            font-size: .875rem;
+
+            @include media-query(breakpoint-lg) {
+                padding-left: 2.5rem;         
+                font-size: 1rem;
+            }
+
+            > img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 1.25rem;    
+                @include media-query(breakpoint-lg) {
+                    width: 1.5rem;                                
+                }
+            }
+        }
+    }
+}
