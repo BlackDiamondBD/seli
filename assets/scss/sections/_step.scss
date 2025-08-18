@@ -6,6 +6,10 @@
         --bs-card-spacer-y: 1rem;
         --bs-card-spacer-x: 1rem;
         @include media-query(breakpoint-lg){
+            --bs-card-spacer-y: 2rem;
+            --bs-card-spacer-x: 2rem;
+        }
+        @include media-query(breakpoint-xl){
             --bs-card-spacer-y: 2.5rem;
             --bs-card-spacer-x: 2.5rem;
         }
@@ -62,12 +66,18 @@
             font-size: 1.25rem;
             @include media-query(breakpoint-lg) {
                 font-size: 1.5rem;
+            }
+            @include media-query(breakpoint-xl) {
+                font-size: 2rem;
             } 
         }
         h5 {
             font-size: 0.8rem;
             @include media-query(breakpoint-lg) {
                 font-size: 1rem;
+            }
+            @include media-query(breakpoint-xl) {
+                font-size: 1.125rem;
             }
         }
     }

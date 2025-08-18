@@ -308,6 +308,9 @@ h6 {
   border-radius: inherit;
 }
 
+.w-70 {
+  width: 70% !important;
+}
 @media (min-width: 62rem) {
   .w-lg-auto {
     width: auto !important;
@@ -865,6 +868,7 @@ label.form-label {
 .form-control--otp {
   width: 100%;
   height: 4rem !important;
+  font-size: 1.25rem;
 }
 .form-control--otp:focus {
   background: linear-gradient(90deg, rgba(5, 60, 90, 0.2), rgba(60, 205, 170, 0.2));
@@ -874,6 +878,7 @@ label.form-label {
   .form-control--otp {
     width: 3.75rem;
     height: 6.25rem !important;
+    font-size: 1.5rem;
   }
 }
 .form-select {
@@ -1825,6 +1830,9 @@ label.form-label {
   border-radius: 4.5rem;
   border: 1px solid #000;
 }
+.img-thumb__obj {
+  width: 40%;
+}
 
 .iti {
   --iti-arrow-padding: .5rem;
@@ -1913,6 +1921,10 @@ label.form-label {
 .package-cards .card-body {
   display: flex;
   flex-direction: column;
+}
+.package-cards .card-body h2 small {
+  font-size: 0.57em;
+  font-weight: normal;
 }
 .package-cards .card-body .feature-list {
   flex: 1;
@@ -3146,6 +3158,12 @@ label.form-label {
 }
 @media (min-width: 62rem) {
   .card__step > .card-body {
+    --bs-card-spacer-y: 2rem;
+    --bs-card-spacer-x: 2rem;
+  }
+}
+@media (min-width: 75rem) {
+  .card__step > .card-body {
     --bs-card-spacer-y: 2.5rem;
     --bs-card-spacer-x: 2.5rem;
   }
@@ -3207,12 +3225,22 @@ label.form-label {
     font-size: 1.5rem;
   }
 }
+@media (min-width: 75rem) {
+  .step__title h2 {
+    font-size: 2rem;
+  }
+}
 .step__title h5 {
   font-size: 0.8rem;
 }
 @media (min-width: 62rem) {
   .step__title h5 {
     font-size: 1rem;
+  }
+}
+@media (min-width: 75rem) {
+  .step__title h5 {
+    font-size: 1.125rem;
   }
 }
 .step__transmission > div {
@@ -3328,7 +3356,7 @@ label.form-label {
     font-size: 1.2rem;
   }
 }
-@media (min-width: 75rem) {
+@media (min-width: 87.5rem) {
   .sticky-guild__nav ul li {
     font-size: 2rem;
   }
@@ -3376,7 +3404,7 @@ label.form-label {
     width: 4rem;
   }
 }
-@media (min-width: 75rem) {
+@media (min-width: 87.5rem) {
   .sticky-guild__nav ul li span {
     font-size: 3.5rem;
     width: 5.25rem;
@@ -3390,7 +3418,7 @@ label.form-label {
     font-size: 1.2rem;
   }
 }
-@media (min-width: 75rem) {
+@media (min-width: 87.5rem) {
   .sticky-guild .card-title {
     font-size: calc(1.275rem + 0.3vw);
   }

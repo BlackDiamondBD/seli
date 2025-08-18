@@ -323,8 +323,8 @@
                                     <div class="img-thumb__bg position-absolute"></div>
                                     <img class="img-thumb__man" src="./../../assets/images/icons-objs/man-walet.svg"
                                         alt="" />
-                                    <img class="position-absolute start-0 bottom-0 w-100"
-                                        src="./../../assets/images/icons-objs/car-vector.svg" alt="" />
+                                    <img class="position-absolute start-0 bottom-0 w-70"
+                                        src="./../../assets/images/icons-objs/home-vector.svg" alt="" />
                                 </div>
                             </div>
 
@@ -370,33 +370,101 @@
 
                                                             <!-- form controls -->
                                                             <div class="row">
-                                                                <div class="col-md-6 mb-3 mb-lg-4">
-                                                                    <h6 class="form-label text-black">Brand</h6>
-                                                                    <select class="form-select" id="brand" name="brand">
+
+
+
+                                                                <div class="col-md-12 mb-3 mb-lg-4">
+                                                                    <h6 class="form-label text-black">Region</h6>
+                                                                    <select class="form-select" name="region"
+                                                                        id="region">
                                                                         <option value="" disabled selected>
-                                                                            Select
+                                                                            select
                                                                         </option>
-                                                                        <option value="audi">
-                                                                            Audi
+                                                                        <option value="europe">
+                                                                            Europe
                                                                         </option>
-                                                                        <option value="bmw">
-                                                                            BMW
+                                                                        <option value="asia">
+                                                                            Asia
                                                                         </option>
-                                                                        <option value="mercedes">
-                                                                            Mercedes
+                                                                        <option value="america">
+                                                                            America
                                                                         </option>
-                                                                        <option value="toyota">
-                                                                            Toyota
-                                                                        </option>
-                                                                        <option value="ford">
-                                                                            Ford
-                                                                        </option>
-                                                                        <option value="honda">
-                                                                            Honda
+                                                                        <option value="africa">
+                                                                            Africa
                                                                         </option>
                                                                     </select>
                                                                 </div>
 
+                                                                <div class="col-md-12 mb-3 mb-lg-4">
+                                                                    <h6 class="form-label text-black">The City</h6>
+                                                                    <select class="form-select" name="city" id="city">
+                                                                        <option value="" disabled selected>
+                                                                            select
+                                                                        </option>
+                                                                        <option value="berlin">
+                                                                            Berlin
+                                                                        </option>
+                                                                        <option value="paris">
+                                                                            Paris
+                                                                        </option>
+                                                                        <option value="new-york">
+                                                                            New York
+                                                                        </option>
+                                                                        <option value="tokyo">
+                                                                            Tokyo
+                                                                        </option>
+                                                                        <option value="london">
+                                                                            London
+                                                                        </option>
+                                                                        <option value="mumbai">
+                                                                            Mumbai
+                                                                        </option>
+                                                                        <option value="sydney">
+                                                                            Sydney
+                                                                        </option>
+                                                                        <option value="cairo">
+                                                                            Cairo
+                                                                        </option>
+                                                                        <option value="cape-town">
+                                                                            Cape Town
+                                                                        </option>
+                                                                        <option value="moscow">
+                                                                            Moscow
+                                                                        </option>
+                                                                        <option value="beijing">
+                                                                            Beijing
+                                                                        </option>
+                                                                    </select>
+
+                                                                </div>
+
+                                                                <div class="col-md-12 mb-3 mb-lg-4">
+                                                                    <h6 class="form-label text-black">Address</h6>
+                                                                    <textarea class="form-control" name="address"
+                                                                        id="address" rows="3"
+                                                                        placeholder="Type here..."></textarea>
+
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <!-- details -->
+                                                        <div class="step__tab">
+                                                            <!-- step title -->
+                                                            <div class="step__title mb-3 mb-md-4 mb-xl-5">
+                                                                <h2 class="fw-bold mb-2 mb-lg-3">
+                                                                    Add Your Listing
+                                                                    Details
+                                                                </h2>
+                                                                <h5 class="text-dark-gray">
+                                                                    Enter key details to attract buyers.
+                                                                </h5>
+                                                            </div>
+
+                                                            <!-- form controls -->
+
+                                                            <div class="row gx-3">
                                                                 <div class="col-md-6 mb-3 mb-lg-4">
                                                                     <h6 class="form-label text-black">Price</h6>
                                                                     <select class="form-select" name="price" id="price">
@@ -423,337 +491,148 @@
                                                                 </div>
 
                                                                 <div class="col-md-6 mb-3 mb-lg-4">
-                                                                    <h6 class="form-label text-black">Model</h6>
-                                                                    <select class="form-select" name="model" id="model">
+                                                                    <h6 class="form-label text-black">Total area</h6>
+                                                                    <select class="form-select" name="area" id="area">
                                                                         <option value="" disabled selected>
-                                                                            select
+                                                                            0 m²
                                                                         </option>
-                                                                        <option value="audi-a4">
-                                                                            Audi
-                                                                            A4
+                                                                        <option value="50">
+                                                                            50 m²
                                                                         </option>
-                                                                        <option value="bmw-3-series">
-                                                                            BMW
+                                                                        <option value="100">
+                                                                            100 m²
+                                                                        </option>
+                                                                        <option value="150">
+                                                                            150 m²
+                                                                        </option>
+                                                                        <option value="200">
+                                                                            200 m²
+                                                                        </option>
+                                                                    </select>
+                                                                </div>
+
+                                                                <div class="col-md-6 mb-3 mb-lg-4">
+                                                                    <h6 class="form-label text-black">Number Of Rooms
+                                                                    </h6>
+
+                                                                    <select class="form-select" name="rooms" id="rooms">
+                                                                        <option value="" disabled selected>
+                                                                            Custom
+                                                                        </option>
+                                                                        <option value="2">
+                                                                            2
+                                                                        </option>
+                                                                        <option value="3">
                                                                             3
-                                                                            Series
                                                                         </option>
-                                                                        <option value="mercedes-c-class">
-                                                                            Mercedes
-                                                                            C-Class
+                                                                        <option value="4">
+                                                                            4
                                                                         </option>
-                                                                        <option value="toyota-corolla">
-                                                                            Toyota
-                                                                            Corolla
+                                                                        <option value="5">
+                                                                            5
                                                                         </option>
-                                                                        <option value="ford-focus">
-                                                                            Ford
-                                                                            Focus
+                                                                        <option value="6">
+                                                                            6
                                                                         </option>
                                                                     </select>
+
+
+                                                                    <div class="mt-2">
+                                                                        <input type="text" class="form-control"
+                                                                            placeholder="Type Here For Custom Rooms...">
+                                                                    </div>
+
                                                                 </div>
 
                                                                 <div class="col-md-6 mb-3 mb-lg-4">
-                                                                    <h6 class="form-label text-black">Year Of
-                                                                        Manufacture</h6>
-                                                                    <select class="form-select" name="year" id="year">
+                                                                    <h6 class="form-label text-black">Number Of Balcony
+                                                                    </h6>
+                                                                    <select class="form-select" name="balcony"
+                                                                        id="balcony">
                                                                         <option value="" disabled selected>
-                                                                            2018
+                                                                            Number Of Balcony
                                                                         </option>
-                                                                        <option value="2019">
-                                                                            2019
+                                                                        <option value="1">
+                                                                            1
                                                                         </option>
-                                                                        <option value="2020">
-                                                                            2020
+                                                                        <option value="2">
+                                                                            2
                                                                         </option>
-                                                                        <option value="2021">
-                                                                            2021
+                                                                        <option value="3">
+                                                                            3
+                                                                        </option>
+                                                                        <option value="4">
+                                                                            4
+                                                                        </option>
+                                                                        <option value="5">
+                                                                            5
                                                                         </option>
                                                                     </select>
                                                                 </div>
 
-                                                                <div class="col-md-6 mb-3 mb-lg-4">
-                                                                    <h6 class="form-label text-black">Bodywork</h6>
-
-                                                                    <div class="d-flex gap-2">
-                                                                        <div class="form-check form-check--card active">
-                                                                            <input type="radio" name="bodywork"
-                                                                                class="form-check-input" id="bw1">
-                                                                            <label for="bw1"
-                                                                                class="form-check-label fw-medium">
-                                                                                <img src="./../../assets/images/icons/car-gray.svg"
-                                                                                    alt="">
-                                                                                Hatchback
-                                                                            </label>
-                                                                        </div>
-
-                                                                        <div class="form-check form-check--card">
-                                                                            <input type="radio" name="bodywork"
-                                                                                class="form-check-input" id="bw2">
-                                                                            <label for="bw2"
-                                                                                class="form-check-label fw-medium">
-                                                                                <img src="./../../assets/images/icons/car-gray.svg"
-                                                                                    alt="">
-                                                                                Sedan
-                                                                            </label>
-                                                                        </div>
-
-                                                                        <div class="form-check form-check--card">
-                                                                            <input type="radio" name="bodywork"
-                                                                                class="form-check-input" id="bw3">
-                                                                            <label for="bw3"
-                                                                                class="form-check-label fw-medium">
-                                                                                <img src="./../../assets/images/icons/car-gray.svg"
-                                                                                    alt="">
-                                                                                SUV
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-
-
-                                                                </div>
-
-                                                                <div class="col-md-6">
-                                                                    <h6 class="form-label text-black">Fuel</h6>
-
-                                                                    <div
-                                                                        class="d-flex row-gap-2 row-gap-md-3 column-gap-2 flex-wrap">
-                                                                        <div class="form-check form-check--pill ps-0">
-                                                                            <input type="radio" id="fl1" name="fuel"
-                                                                                class="form-check-input d-none">
-                                                                            <label for="fl1"
-                                                                                class="form-check-label border rounded-pill px-3 py-2">
-                                                                                <img src="./../../assets/images/icons/diesel.svg"
-                                                                                    alt="Diesel icon"> Diesel
-                                                                            </label>
-                                                                        </div>
-                                                                        <div class="form-check form-check--pill ps-0">
-                                                                            <input type="radio" id="fl2" name="fuel"
-                                                                                class="form-check-input d-none">
-                                                                            <label for="fl2"
-                                                                                class="form-check-label border rounded-pill px-3 py-2">
-                                                                                <img src="./../../assets/images/icons/hybrid.svg"
-                                                                                    alt="Hybrid icon"> Hybrid
-                                                                            </label>
-                                                                        </div>
-                                                                        <div class="form-check form-check--pill ps-0">
-                                                                            <input type="radio" id="fl3" name="fuel"
-                                                                                class="form-check-input d-none">
-                                                                            <label for="fl3"
-                                                                                class="form-check-label border rounded-pill px-3 py-2">
-                                                                                <img src="./../../assets/images/icons/CNG.svg"
-                                                                                    alt="CNG icon"> CNG
-                                                                            </label>
-                                                                        </div>
-                                                                        <div class="form-check form-check--pill ps-0">
-                                                                            <input type="radio" id="fl4" name="fuel"
-                                                                                class="form-check-input d-none">
-                                                                            <label for="fl4"
-                                                                                class="form-check-label border rounded-pill px-3 py-2">
-                                                                                <img src="./../../assets/images/icons/petrol.svg"
-                                                                                    alt="Petrol icon"> Petrol
-                                                                            </label>
-                                                                        </div>
-                                                                        <div class="form-check form-check--pill ps-0">
-                                                                            <input type="radio" id="fl5" name="fuel"
-                                                                                class="form-check-input d-none">
-                                                                            <label for="fl5"
-                                                                                class="form-check-label border rounded-pill px-3 py-2">
-                                                                                <img src="./../../assets/images/icons/electric.svg"
-                                                                                    alt="Electric icon"> Electric
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- details -->
-                                                        <div class="step__tab">
-                                                            <!-- step title -->
-                                                            <div class="step__title mb-3 mb-md-4 mb-xl-5">
-                                                                <h2 class="fw-bold mb-2 mb-lg-3">
-                                                                    Add Your Listing
-                                                                    Details
-                                                                </h2>
-                                                                <h5 class="text-dark-gray">
-                                                                    Enter key details to attract buyers.
-                                                                </h5>
-                                                            </div>
-
-                                                            <!-- form controls -->
-                                                            <h6 class="form-label text-black">Transmission</h6>
-
-                                                            <div class="step__transmission d-flex flex-wrap gap-2 mb-4">
-                                                                <div class="form-check d-flex align-items-center">
-                                                                    <input name="transmission" type="radio"
-                                                                        class="form-check-input" id="tns1">
-                                                                    <label for="tns1"
-                                                                        class="form-check-label ms-2">Manual
-                                                                        (MT)</label>
-                                                                </div>
-                                                                <div class="form-check d-flex align-items-center">
-                                                                    <input name="transmission" type="radio"
-                                                                        class="form-check-input" id="tns2">
-                                                                    <label for="tns2"
-                                                                        class="form-check-label ms-2">Continuously
-                                                                        Variable (CVT)</label>
-                                                                </div>
-                                                                <div class="form-check d-flex align-items-center">
-                                                                    <input name="transmission" type="radio"
-                                                                        class="form-check-input" id="tns3">
-                                                                    <label for="tns3"
-                                                                        class="form-check-label ms-2">Dual-Clutch (DCT
-                                                                        or DSG)</label>
-                                                                </div>
-                                                                <div class="form-check d-flex align-items-center">
-                                                                    <input name="transmission" type="radio"
-                                                                        class="form-check-input" id="tns4">
-                                                                    <label for="tns4"
-                                                                        class="form-check-label ms-2">Automatic
-                                                                        (AT)</label>
-                                                                </div>
-                                                                <div class="form-check d-flex align-items-center">
-                                                                    <input name="transmission" type="radio"
-                                                                        class="form-check-input" id="tns5">
-                                                                    <label for="tns5"
-                                                                        class="form-check-label ms-2">Automated Manual
-                                                                        (AMT)</label>
-                                                                </div>
-                                                                <div class="form-check d-flex align-items-center">
-                                                                    <input name="transmission" type="radio"
-                                                                        class="form-check-input" id="tns6">
-                                                                    <label for="tns6"
-                                                                        class="form-check-label ms-2">Tiptronic or
-                                                                        Semi-Automatic</label>
-                                                                </div>
-                                                            </div>
-
-
-                                                            <div class="row gx-3">
-                                                                <div class="col-md-12">
+                                                                <div class="col-md-3">
                                                                     <div class="mb-3 mb-lg-4">
-                                                                        <h6 class="form-label text-black">Color</h6>
-                                                                        <select class="form-select" id="Color"
-                                                                            name="Color">
+                                                                        <h6 class="form-label text-black">Block Type
+                                                                        </h6>
+                                                                        <select class="form-select" name="block-type"
+                                                                            id="block-type">
                                                                             <option value="" disabled selected>
                                                                                 Select
                                                                             </option>
-                                                                            <option value="black">
-                                                                                Black
+                                                                            <option value="apartment">
+                                                                                Apartment
                                                                             </option>
-                                                                            <option value="white">
-                                                                                White
+                                                                            <option value="house">
+                                                                                House
                                                                             </option>
-                                                                            <option value="red">
-                                                                                Red
+                                                                            <option value="villa">
+                                                                                Villa
                                                                             </option>
-                                                                            <option value="blue">
-                                                                                Blue
-                                                                            </option>
-                                                                            <option value="silver">
-                                                                                Silver
+                                                                            <option value="duplex">
+                                                                                Duplex
                                                                             </option>
                                                                         </select>
+
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <div class="mb-3 mb-lg-4">
-                                                                        <h6 class="form-label text-black">Horse power
-                                                                        </h6>
-                                                                        <select class="form-select" id="horsepower"
-                                                                            name="horsepower">
-                                                                            <option value="" disabled selected>
-                                                                                Select
-                                                                            </option>
-                                                                            <option value="100">
-                                                                                100
-                                                                            </option>
-                                                                            <option value="150">
-                                                                                150
-                                                                            </option>
-                                                                            <option value="200">
-                                                                                200
-                                                                            </option>
-                                                                            <option value="250">
-                                                                                250
-                                                                            </option>
-                                                                            <option value="300">
-                                                                                300
-                                                                            </option>
-                                                                        </select>
+                                                                        <h6 class="form-label text-black">Bathroom</h6>
+                                                                        <input type="number" class="form-control"
+                                                                            placeholder="0">
+
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <div class="mb-3 mb-lg-4">
-                                                                        <h6 class="form-label text-black">Capacity</h6>
-                                                                        <select class="form-select" id="capacity"
-                                                                            name="capacity">
+                                                                        <h6 class="form-label text-black">Floor</h6>
+                                                                        <select class="form-select" name="floor"
+                                                                            id="floor">
                                                                             <option value="" disabled selected>
-                                                                                00
+                                                                                0
                                                                             </option>
-                                                                            <option value="1.0">
-                                                                                1.0 L
-                                                                            </option>
-                                                                            <option value="1.5">
-                                                                                1.5 L
-                                                                            </option>
-                                                                            <option value="2.0">
-                                                                                2.0 L
-                                                                            </option>
-                                                                            <option value="2.5">
-                                                                                2.5 L
-                                                                            </option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="mb-3 mb-lg-4">
-                                                                        <h6 class="form-label text-black">Km run</h6>
-                                                                        <select class="form-select" id="kmrun"
-                                                                            name="kmrun">
-                                                                            <option value="" disabled selected>
-                                                                                0km
-                                                                            </option>
-                                                                            <option value="1000">
-                                                                                1,000km
-                                                                            </option>
-                                                                            <option value="5000">
-                                                                                5,000km
-                                                                            </option>
-                                                                            <option value="10000">
-                                                                                10,000km
-                                                                            </option>
-                                                                            <option value="20000">
-                                                                                20,000km
-                                                                            </option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="mb-3 mb-lg-4">
-                                                                        <h6 class="form-label text-black">No. places
-                                                                        </h6>
-                                                                        <select class="form-select" id="places"
-                                                                            name="places">
-                                                                            <option value="" disabled selected>
-                                                                                00
+                                                                            <option value="1">
+                                                                                1
                                                                             </option>
                                                                             <option value="2">
                                                                                 2
                                                                             </option>
+                                                                            <option value="3">
+                                                                                3
+                                                                            </option>
                                                                             <option value="4">
                                                                                 4
                                                                             </option>
-                                                                            <option value="5">
-                                                                                5
-                                                                            </option>
-                                                                            <option value="7">
-                                                                                7
-                                                                            </option>
-                                                                            <option value="8">
-                                                                                8
-                                                                            </option>
                                                                         </select>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="mb-3 mb-lg-4">
+                                                                        <h6 class="form-label text-black">NO Block
+                                                                            floors</h6>
+                                                                        <input type="number" class="form-control"
+                                                                            placeholder="0">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -796,29 +675,28 @@
 
                                                             <div class="d-flex gap-3 flex-wrap">
                                                                 <div class="form-upload__preview">
-                                                                    <img src="./../../assets/images//thumbs/detail-slider/car/car-img-01.png"
+                                                                    <img src="./../../assets/images/thumbs/explore/house-1.webp"
                                                                         alt="car placeholder">
                                                                 </div>
                                                                 <div class="form-upload__preview">
-                                                                    <img src="./../../assets/images//thumbs/detail-slider/car/car-img-05.png"
+                                                                    <img src="./../../assets/images/thumbs/explore/house-2.webp"
                                                                         alt="car placeholder">
                                                                 </div>
                                                                 <div class="form-upload__preview">
-                                                                    <img src="./../../assets/images//thumbs/detail-slider/car/car-img-03.png"
+                                                                    <img src="./../../assets/images/thumbs/explore/house-3.webp"
                                                                         alt="car placeholder">
                                                                 </div>
                                                                 <div class="form-upload__preview">
-                                                                    <img src="./../../assets/images//thumbs/detail-slider/car/car-img-04.png"
+                                                                    <img src="./../../assets/images/thumbs/explore/house-4.webp"
                                                                         alt="car placeholder">
                                                                 </div>
                                                                 <div class="form-upload__preview">
-                                                                    <img src="./../../assets/images//thumbs/detail-slider/car/car-img-05.png"
+                                                                    <img src="./../../assets/images/thumbs/explore/house-3.webp"
                                                                         alt="car placeholder">
                                                                 </div>
                                                                 <div class="form-upload__preview">
-                                                                    <img src="./../../assets/images//thumbs/detail-slider/car/car-img-02.png"
-                                                                        alt="car placeholder"
-                                                                        class="border border-black">
+                                                                    <img src="./../../assets/images/thumbs/explore/house-2.webp"
+                                                                        alt="car placeholder">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -981,7 +859,8 @@
                                                                                     <h5 class="fw-normal">Business plan
                                                                                     </h5>
                                                                                     <h2 class="fw-bold mb-4">$15
-                                                                                        <small>/ month</small></h2>
+                                                                                        <small>/ month</small>
+                                                                                    </h2>
                                                                                 </div>
                                                                                 <span
                                                                                     class="rounded-pill bg-light px-3 py-1 px-md-4 py-md-2 fw-bold text-nowrap"><img
@@ -1069,11 +948,12 @@
                                     <img class="step__publish__title-img mb-3 mb-md-4 mb-lg-5"
                                         src="./../../assets/images/icons/publish.svg" alt="Publish checked">
 
-                                    <h2 class="fw-semibold text-black">Your Car is Live!</h2>
+                                    <h2 class="fw-semibold text-black">Your Home is Live!</h2>
                                     <p class="fw-medium">Your listing is now visible to thousands of buyers. Get ready
                                         for inquiries!</p>
 
-                                    <div class="d-flex flex-column flex-lg-row gap-3 mt-3 mt-md-4 mt-lg-5 justify-content-center">
+                                    <div
+                                        class="d-flex flex-column flex-lg-row gap-3 mt-3 mt-md-4 mt-lg-5 justify-content-center">
                                         <button type="button" class="btn">View My Listing</button>
                                         <button type="button" class="btn">Promote Listing</button>
                                     </div>
@@ -1113,42 +993,52 @@
 
                         <div class="sticky-guild__cards">
                             <div class="mb-5">
-                                <div class="card rounded-4 overflow-hidden">                                    
-                                    <img class="card-img" src="./../../assets/images/thumbs/sticky-cards/1.svg" alt="card">
+                                <div class="card rounded-4 overflow-hidden">
+                                    <img class="card-img" src="./../../assets/images/thumbs/sticky-cards/1.svg"
+                                        alt="card">
                                     <div class="card-img-overlay rounded-3 py-3 py-lg-4">
-                                        <h4 class="fw-medium card-title mb-0">Select the right category to ensure your listing reaches the right audience.</h4>
+                                        <h4 class="fw-medium card-title mb-0">Select the right category to ensure your
+                                            listing reaches the right audience.</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="mb-5">
-                                <div class="card rounded-4 overflow-hidden">                                    
-                                    <img class="card-img" src="./../../assets/images/thumbs/sticky-cards/2.svg" alt="card">
+                                <div class="card rounded-4 overflow-hidden">
+                                    <img class="card-img" src="./../../assets/images/thumbs/sticky-cards/2.svg"
+                                        alt="card">
                                     <div class="card-img-overlay rounded-3 py-3 py-lg-4">
-                                        <h4 class="fw-medium card-title mb-0">Upload clear photos and key details to show your item accurately.</h4>
+                                        <h4 class="fw-medium card-title mb-0">Upload clear photos and key details to
+                                            show your item accurately.</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="mb-5">
-                                <div class="card rounded-4 overflow-hidden">                                    
-                                    <img class="card-img" src="./../../assets/images/thumbs/sticky-cards/3.svg" alt="card">
+                                <div class="card rounded-4 overflow-hidden">
+                                    <img class="card-img" src="./../../assets/images/thumbs/sticky-cards/3.svg"
+                                        alt="card">
                                     <div class="card-img-overlay rounded-3 py-3 py-lg-4">
-                                        <h4 class="fw-medium card-title mb-0">This small step builds trust, enhances visibility, and fosters meaningful connections.</h4>
+                                        <h4 class="fw-medium card-title mb-0">This small step builds trust, enhances
+                                            visibility, and fosters meaningful connections.</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="mb-5">
-                                <div class="card rounded-4 overflow-hidden">                                    
-                                    <img class="card-img" src="./../../assets/images/thumbs/sticky-cards/4.svg" alt="card">
+                                <div class="card rounded-4 overflow-hidden">
+                                    <img class="card-img" src="./../../assets/images/thumbs/sticky-cards/4.svg"
+                                        alt="card">
                                     <div class="card-img-overlay rounded-3 py-3 py-lg-4">
-                                        <h4 class="fw-medium card-title mb-0">Our plans enhance visibility, priority placement, and tools to sell faster.</h4>
+                                        <h4 class="fw-medium card-title mb-0">Our plans enhance visibility, priority
+                                            placement, and tools to sell faster.</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="mb-5">
-                                <div class="card rounded-4 overflow-hidden">                                    
-                                    <img class="card-img" src="./../../assets/images/thumbs/sticky-cards/5.svg" alt="card">
+                                <div class="card rounded-4 overflow-hidden">
+                                    <img class="card-img" src="./../../assets/images/thumbs/sticky-cards/5.svg"
+                                        alt="card">
                                     <div class="card-img-overlay rounded-3 py-3 py-lg-4">
-                                        <h4 class="fw-medium card-title mb-0">Our plans enhance visibility, priority placement, and tools to sell faster.</h4>
+                                        <h4 class="fw-medium card-title mb-0">Our plans enhance visibility, priority
+                                            placement, and tools to sell faster.</h4>
                                     </div>
                                 </div>
                             </div>
@@ -1159,6 +1049,7 @@
             </div>
         </section>
         <!-- STICKY GUILD end -->
+
 
 
         <!-- blogs Section Start -->

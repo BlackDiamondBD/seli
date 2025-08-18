@@ -32,6 +32,12 @@
     .card-body {
         display: flex;
         flex-direction: column;
+        h2{
+            small{
+                font-size: .57em;
+                font-weight: normal;
+            }
+        }
         .feature-list{
             flex: 1;
         }

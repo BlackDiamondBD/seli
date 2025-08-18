@@ -47,6 +47,7 @@ label.form-label{
         &--otp {
             width: 100%;
             height: 4rem !important;
+            font-size: 1.25rem;
             &:focus{
                 background: linear-gradient(90deg, rgba($primary, .2), rgba($secondary, .2));
                 border-color: $cool-gray;
@@ -54,6 +55,7 @@ label.form-label{
             @include media-query(breakpoint-md) {
                 width: 3.75rem;
                 height: 6.25rem !important;
+                font-size: 1.5rem;
             }
         }
     }

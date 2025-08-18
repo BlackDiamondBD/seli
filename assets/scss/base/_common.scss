@@ -91,6 +91,9 @@
 }
 
 .w{
+  &-70{
+    width: 70% !important;
+  }
   &-lg{
     &-auto{
       @include media-query(breakpoint-lg) {
