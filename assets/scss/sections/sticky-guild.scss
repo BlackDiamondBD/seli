@@ -12,29 +12,100 @@
 
         
         &__nav {
-            li{
-                color: #6A6D6F;
-                font-size: 2rem;
-                font-weight: 500;
-                padding: 1.2rem;
-                &.active{
-                    color: $text-black;
+            ul{
+                --bar-line: 0.3rem;
+                border-left: var(--bar-line) solid rgba($secondary, 0.3);
+                @include media-query(breakpoint-lg) {
+                    --bar-line: 0.55rem;
                 }
-                &:before {
-                    height: 100%;
-                    width: 1.125rem;
-                    content: "";
-                    background: #BCE9DB;
-                }
+                li{
+                    color: #6A6D6F;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    @include media-query(breakpoint-lg) {
+                        font-size: 1.2rem;
+                    }
+                    @include media-query(breakpoint-xl) {
+                        font-size: 2rem;
+                    }
+                    font-weight: 500;
+                    padding: 1.2rem;
+                    position: relative;
+                    padding-left: 1.25rem;
+                    @include media-query(breakpoint-lg) {
+                        padding: 1.5rem;
+                        padding-left: 2rem;
+                    }
+                    @include media-query(breakpoint-xl) {
+                        padding: 2.125rem;
+                        padding-left: 2.5rem;
+                    }
+                    &.active{
+                        color: $text-black;
+                        font-weight: 600;
+                        &:before {
+                            opacity: 1;
+                            height: 100%;
+                        }                    
+                    }
+                    &:before {
+                        height: 0%;
+                        width: var(--bar-line);
+                        content: "";
+                        background: $secondary;
+                        position: absolute;
+                        left: calc( var(--bar-line) * -1 );
+                        top: 0;
+                        transition: .3s ease;
+                        opacity: 0;
+                    }
 
-                span {
-                    font-weight: 600;
-                    font-size: 3.5rem;
-                    display: inline-block;
-                    width: 5.25rem;
+                    span {
+                        font-weight: 600;
+                        display: inline-block;
+                        font-size: 1.5rem;
+                        width: 2.5rem;
+                        @include media-query(breakpoint-lg) {
+                            font-size: 2.5rem;
+                            width: 4rem;
+                        }
+                        @include media-query(breakpoint-xl) {
+                            font-size: 3.5rem;
+                            width: 5.25rem;
+                        }
+                    }
                 }
             }
         }
+
+        .card{
+            &-title{
+                font-size: 1rem;
+                @include media-query(breakpoint-lg) {
+                    font-size: 1.2rem;
+                }
+                @include media-query(breakpoint-xl) {
+                    font-size: calc(1.275rem + .3vw);
+                }
+            }
+            &-img{
+                width: calc(100% + 5px);
+                max-width: none;
+                
+                &-overlay {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                    @include media-query(breakpoint-lg) {
+                        padding-left: 2rem;
+                        padding-right: 2rem;
+                    }
+                    top: auto;
+                    background: rgba($secondary, 0.2);
+                }
+            }
+        }
+
+        
 
 
     }

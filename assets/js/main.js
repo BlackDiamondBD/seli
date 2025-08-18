@@ -135,6 +135,54 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // ===== Sticky cards =====
+    const stickyCardContainer = document.querySelectorAll('.sticky-guild');
+    stickyCardContainer.forEach(container => {
+        const links = container.querySelectorAll('.sticky-guild__nav li');
+        const cards = container.querySelectorAll('.sticky-guild__cards .card');
+
+        // when scroll to the corresponding card, active the link
+        window.addEventListener('scroll', () => {           
+
+            cards.forEach((card, index) => {
+                let top = card.getBoundingClientRect().top + window.scrollY;
+                let bottom = top + card.offsetHeight;
+                let scrollY = window.scrollY + window.innerHeight / 2; // Middle of the viewport
+                const isVisible = (top < scrollY);
+
+                // If the card is visible in the viewport
+                if (isVisible) {
+                    // Add active class to the current card and link
+                    card.classList.add('active');
+                    links[index].classList.add('active');
+                }else{
+                    card.classList.remove('active');
+                    links[index].classList.remove('active');
+                }
+            });
+        });
+
+        
+
+        // Click event for links to scroll to the corresponding card
+        links.forEach((link, index) => {
+            link.addEventListener('click', () => {
+                // Scroll to the corresponding card
+                const cardTop = cards[index].getBoundingClientRect().top + window.scrollY - window.innerHeight / 2 + cards[index].clientHeight / 2;
+                
+                
+                window.scrollTo({
+                    top: cardTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    });
+
+
+
+
 
     
     // ===== Phone Input Internationalization =====
