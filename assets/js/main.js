@@ -140,13 +140,14 @@ document.addEventListener('DOMContentLoaded', function () {
     stickyCardContainer.forEach(container => {
         const links = container.querySelectorAll('.sticky-guild__nav li');
         const cards = container.querySelectorAll('.sticky-guild__cards .card');
+        const bar = container.querySelectorAll('.progress-bar')
 
         // when scroll to the corresponding card, active the link
         window.addEventListener('scroll', () => {           
 
             cards.forEach((card, index) => {
                 let top = card.getBoundingClientRect().top + window.scrollY;
-                let bottom = top + card.offsetHeight;
+                // let bottom = top + card.offsetHeight;
                 let scrollY = window.scrollY + window.innerHeight / 2; // Middle of the viewport
                 const isVisible = (top < scrollY);
 
@@ -155,6 +156,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     // Add active class to the current card and link
                     card.classList.add('active');
                     links[index].classList.add('active');
+                    // Update the progress bar
+                    bar.forEach(b => {
+                        b.style.height = `${(index + 1) / links.length * 100}%`;
+                    });
+
                 }else{
                     card.classList.remove('active');
                     links[index].classList.remove('active');
