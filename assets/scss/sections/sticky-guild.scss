@@ -27,7 +27,7 @@
                 position: absolute;
                 left: calc( var(--bar-line) * -1 );
                 top: 0;
-                transition: .3s ease-out;
+                transition: .3s linear;
                 border-radius: 1rem;
             }
 
