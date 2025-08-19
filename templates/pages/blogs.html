@@ -546,35 +546,55 @@
                             explore blog on seli
                         </h2>
 
+                        <!-- sort-dropdown -->
                         <div
-                            class="shortBy d-flex justify-content-between gap-1 flex-shrink-0"
+                            class="dropdown dropdown__select d-none d-lg-inline-block"
                         >
-                            <div>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="25"
-                                    viewBox="0 0 24 25"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M3.38394 6.16687C2.6276 5.32155 2.24943 4.89889 2.23516 4.53968C2.22277 4.22764 2.35687 3.92772 2.59768 3.72889C2.87489 3.5 3.44203 3.5 4.57633 3.5H19.4193C20.5536 3.5 21.1207 3.5 21.3979 3.72889C21.6387 3.92772 21.7728 4.22764 21.7604 4.53968C21.7462 4.89889 21.368 5.32155 20.6116 6.16687L14.9054 12.5444C14.7546 12.7129 14.6793 12.7972 14.6255 12.8931C14.5778 12.9781 14.5428 13.0697 14.5217 13.1648C14.4978 13.2721 14.4978 13.3852 14.4978 13.6113V18.9584C14.4978 19.1539 14.4978 19.2517 14.4663 19.3363C14.4384 19.411 14.3931 19.4779 14.334 19.5315C14.2673 19.5922 14.1765 19.6285 13.9949 19.7012L10.5949 21.0612C10.2274 21.2082 10.0436 21.2817 9.89607 21.251C9.76706 21.2242 9.65385 21.1476 9.58104 21.0377C9.49779 20.9122 9.49779 20.7142 9.49779 20.3184V13.6113C9.49779 13.3852 9.49779 13.2721 9.47391 13.1648C9.45274 13.0697 9.41776 12.9781 9.37008 12.8931C9.31633 12.7972 9.24095 12.7129 9.09018 12.5444L3.38394 6.16687Z"
-                                        stroke="#6A6D6F"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
-                                </svg>
-
-                                <span>Sort by:</span>
-                            </div>
-
-                            <select name="sortby" id="">
-                                <option value="newest">Newest</option>
-                                <option value="newest">Popular</option>
-                                <option value="newest">Oldest</option>
-                            </select>
+                            <button
+                                class="btn btn--dropdown dropdown-toggle"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <span class="icon">
+                                    <svg
+                                        width="22"
+                                        height="20"
+                                        viewBox="0 0 22 20"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M2.38394 4.16687C1.6276 3.32155 1.24943 2.89889 1.23516 2.53968C1.22277 2.22764 1.35687 1.92772 1.59768 1.72889C1.87489 1.5 2.44203 1.5 3.57633 1.5H18.4193C19.5536 1.5 20.1207 1.5 20.3979 1.72889C20.6387 1.92772 20.7728 2.22764 20.7604 2.53968C20.7462 2.89889 20.368 3.32155 19.6116 4.16687L13.9054 10.5444C13.7546 10.7129 13.6793 10.7972 13.6255 10.8931C13.5778 10.9781 13.5428 11.0697 13.5217 11.1648C13.4978 11.2721 13.4978 11.3852 13.4978 11.6113V16.9584C13.4978 17.1539 13.4978 17.2517 13.4663 17.3363C13.4384 17.411 13.3931 17.4779 13.334 17.5315C13.2673 17.5922 13.1765 17.6285 12.9949 17.7012L9.59491 19.0612C9.22736 19.2082 9.04359 19.2817 8.89607 19.251C8.76706 19.2242 8.65385 19.1476 8.58104 19.0377C8.49779 18.9122 8.49779 18.7142 8.49779 18.3184V11.6113C8.49779 11.3852 8.49779 11.2721 8.47391 11.1648C8.45274 11.0697 8.41776 10.9781 8.37008 10.8931C8.31633 10.7972 8.24095 10.7129 8.09018 10.5444L2.38394 4.16687Z"
+                                            stroke="#212529"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </span>
+                                <span class="text-status">Sort by:</span>
+                                <span class="text-value">Newest</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Low to High</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Another action</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Something else here</a
+                                    >
+                                </li>
+                            </ul>
                         </div>
+                        <!-- sort-dropdown--end -->
                     </div>
 
                     <div class="mt-4 pt-2 pt-md-0 mt-md-5">
@@ -582,7 +602,7 @@
                             class="row blogs-cards gy-4 gy-md-4 gy-lg-4 gy-xxl-5 gx-2"
                         >
                             <div class="col-md-6 col-lg-4">
-                                <a href="#" class="card--blog d-inline-block">
+                                <a href="#" class="card card--blog d-inline-block">
                                     <div class="card--blog-thumb">
                                         <img
                                             src="../../assets/images/thumbs/blog/blog-1.png"
@@ -660,7 +680,7 @@
                             </div>
 
                             <div class="col-md-6 col-lg-4">
-                                <a href="#" class="card--blog d-inline-block">
+                                <a href="#" class="card card--blog d-inline-block">
                                     <div class="card--blog-thumb">
                                         <img
                                             src="../../assets/images/thumbs/blog/blog-2.png"
@@ -742,7 +762,7 @@
                             </div>
 
                             <div class="col-md-6 col-lg-4">
-                                <a href="#" class="card--blog d-inline-block">
+                                <a href="#" class="card card--blog d-inline-block">
                                     <div class="card--blog-thumb">
                                         <img
                                             src="../../assets/images/thumbs/blog/blog-3.png"
@@ -823,7 +843,7 @@
                             </div>
 
                             <div class="col-md-6 col-lg-4">
-                                <a href="#" class="card--blog d-inline-block">
+                                <a href="#" class="card card--blog d-inline-block">
                                     <div class="card--blog-thumb">
                                         <img
                                             src="../../assets/images/thumbs/blog/blog-4.png"
@@ -901,7 +921,7 @@
                             </div>
 
                             <div class="col-md-6 col-lg-4">
-                                <a href="#" class="card--blog d-inline-block">
+                                <a href="#" class="card card--blog d-inline-block">
                                     <div class="card--blog-thumb">
                                         <img
                                             src="../../assets/images/thumbs/blog/blog-5.png"
@@ -983,7 +1003,7 @@
                             </div>
 
                             <div class="col-md-6 col-lg-4">
-                                <a href="#" class="card--blog d-inline-block">
+                                <a href="#" class="card card--blog d-inline-block">
                                     <div class="card--blog-thumb">
                                         <img
                                             src="../../assets/images/thumbs/blog/blog-6.png"

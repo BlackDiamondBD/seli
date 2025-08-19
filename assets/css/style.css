@@ -4702,21 +4702,6 @@ label.form-label {
     padding-block: 70px 90px;
   }
 }
-.blogs .shortBy {
-  border-radius: 8px;
-  border: 1px solid var(--Light-greay, #ebebeb);
-  background: #fff;
-  padding-block: 13px 10px;
-  padding-inline: 15px;
-}
-.blogs .shortBy svg {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-}
-.blogs .shortBy select {
-  font-weight: 600;
-}
 
 .blog__head {
   padding: 40px 0 24px;
