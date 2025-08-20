@@ -192,7 +192,11 @@
                             More Options
                         </h4>
                         <div class="d-inline-flex align-items-center gap-3">
-                            <a href="#" class="btn btn--dm">
+                            <a
+                                href="#"
+                                aria-label="Direct Message Button"
+                                class="btn btn--dm"
+                            >
                                 <span class="btn__icon">
                                     <svg
                                         class="btn__icon__shake"
@@ -303,7 +307,11 @@
                         <div
                             class="header__action__btns d-none d-xl-inline-flex align-items-center gap-3 gap-xl-4"
                         >
-                            <a href="#" class="btn btn--dm">
+                            <a
+                                href="#"
+                                aria-label="Direct Message Button"
+                                class="btn btn--dm"
+                            >
                                 <span class="btn__icon">
                                     <svg
                                         class="btn__icon__shake"
@@ -353,15 +361,13 @@
 
                         <!-- Language Switcher -->
                         <div class="lang-switcher position-relative z-1">
-                            <button
+                            <div
                                 id="lang-switcher__btn"
                                 class="lang-switcher__btn d-inline-flex align-items-center"
                             >
-                                <span class="lang-switcher__btn__text">
-                                    En
-                                </span>
-                                <span class="lang-switcher__icon"
-                                    ><svg
+                                <span class="lang-switcher__btn__text">En</span>
+                                <span class="lang-switcher__icon">
+                                    <svg
                                         width="18"
                                         height="9"
                                         viewBox="0 0 18 9"
@@ -416,7 +422,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </button>
+                            </div>
                         </div>
 
                         <!-- Mobile (Hamburger) Menu-->
@@ -490,19 +496,21 @@
                                         >
                                             <img
                                                 src="../../assets/images/icons-objs/seli-item-car.svg"
-                                                alt="seli car" loading="lazy" class="intro__card__thumb__img intro__card__thumb__img--one"
+                                                alt="seli car"
+                                                loading="lazy"
+                                                class="intro__card__thumb__img intro__card__thumb__img--one"
                                             />
                                         </div>
 
                                         <div
                                             class="intro__card__text text-center text-lg-start pt-xxl-2"
                                         >
-                                            <h4
+                                            <h2
                                                 class="intro__card__title fs-4 text-primary fw-bold text-uppercase mb-3 pb-xl-2 pb-xxl-0"
                                             >
                                                 Buy or Sell Cars with
                                                 <br />Ease
-                                            </h4>
+                                            </h2>
                                             <p
                                                 class="intro__card__desc fw-semibold"
                                             >
@@ -590,19 +598,21 @@
                                         >
                                             <img
                                                 src="../../assets/images/icons-objs/seli-item-house.svg"
-                                                alt="seli car" loading="lazy" class="intro__card__thumb__img intro__card__thumb__img--two"
+                                                alt="seli car"
+                                                loading="lazy"
+                                                class="intro__card__thumb__img intro__card__thumb__img--two"
                                             />
                                         </div>
 
                                         <div
                                             class="intro__card__text text-center text-lg-start pt-xxl-2"
                                         >
-                                            <h4
+                                            <h2
                                                 class="intro__card__title fs-4 text-primary fw-bold text-uppercase mb-3 pb-xl-2 pb-xxl-0"
                                             >
                                                 Buy or Sell Homes,
                                                 <br />Hassle-Free
-                                            </h4>
+                                            </h2>
                                             <p
                                                 class="intro__card__desc fw-semibold"
                                             >
@@ -688,6 +698,7 @@
                     <img
                         src="../../assets/images/icons-objs/intro-obj.svg"
                         alt="seli"
+                        loading="lazy"
                         class="intro__obj position-absolute start-0 top-0 h-100 w-auto z-n1"
                     />
                 </div>
@@ -878,22 +889,8 @@
         <!-- ===== Footer Area End ===== -->
 
         <!-- === jQuery CDNs & Scripts === -->
-        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
-        <script src="../../assets/js/swiper-bundle.min.js"></script>
-
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-            integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-            integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
-
-        <script src="../../assets/js/main.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js" defer></script>
+        <script src="../../assets/js/swiper-bundle.min.js" defer></script>
+        <script src="../../assets/js/main.js" defer></script>
     </body>
 </html>

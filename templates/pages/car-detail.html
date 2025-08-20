@@ -192,7 +192,11 @@
                             More Options
                         </h4>
                         <div class="d-inline-flex align-items-center gap-3">
-                            <a href="#" class="btn btn--dm">
+                            <a
+                                href="#"
+                                aria-label="Direct Message Button"
+                                class="btn btn--dm"
+                            >
                                 <span class="btn__icon">
                                     <svg
                                         class="btn__icon__shake"
@@ -303,7 +307,11 @@
                         <div
                             class="header__action__btns d-none d-xl-inline-flex align-items-center gap-3 gap-xl-4"
                         >
-                            <a href="#" class="btn btn--dm">
+                            <a
+                                href="#"
+                                aria-label="Direct Message Button"
+                                class="btn btn--dm"
+                            >
                                 <span class="btn__icon">
                                     <svg
                                         class="btn__icon__shake"
@@ -458,9 +466,9 @@
         <!-- ===== Main Area Start ===== -->
         <main class="main">
             <!-- Breadcrumb Start -->
-            <div aria-label="breadcrumb" class="breadcrumb__wrap bg-white">
+            <div class="breadcrumb__wrap bg-white">
                 <div class="container">
-                    <nav class="breadcrumb__nav">
+                    <nav aria-label="breadcrumb" class="breadcrumb__nav">
                         <ul class="breadcrumb mb-0">
                             <li class="breadcrumb-item">
                                 <a href="#" class="breadcrumb-page fw-semibold"
@@ -629,6 +637,7 @@
                                             <img
                                                 src="../../assets/images/thumbs/detail-slider/car/thumb-01.png"
                                                 alt="thumb image"
+                                                loading="lazy"
                                                 class="w-100 h-100"
                                             />
                                         </div>
@@ -636,6 +645,7 @@
                                             <img
                                                 src="../../assets/images/thumbs/detail-slider/car/thumb-02.png"
                                                 alt="thumb image"
+                                                loading="lazy"
                                                 class="w-100 h-100"
                                             />
                                         </div>
@@ -643,6 +653,7 @@
                                             <img
                                                 src="../../assets/images/thumbs/detail-slider/car/thumb-03.png"
                                                 alt="thumb image"
+                                                loading="lazy"
                                                 class="w-100 h-100"
                                             />
                                         </div>
@@ -650,6 +661,7 @@
                                             <img
                                                 src="../../assets/images/thumbs/detail-slider/car/thumb-04.png"
                                                 alt="thumb image"
+                                                loading="lazy"
                                                 class="w-100 h-100"
                                             />
                                         </div>
@@ -657,6 +669,7 @@
                                             <img
                                                 src="../../assets/images/thumbs/detail-slider/car/thumb-05.png"
                                                 alt="thumb image"
+                                                loading="lazy"
                                                 class="w-100 h-100"
                                             />
                                         </div>
@@ -678,6 +691,8 @@
                                                 <img
                                                     src="../../assets/images/thumbs/detail-slider/car/featured-img-01.png"
                                                     alt="featured image 01"
+                                                    fetchpriority="high"
+                                                    decoding="async"
                                                     class="w-100 h-100"
                                                 />
                                             </div>
@@ -695,6 +710,7 @@
                                                 <img
                                                     src="../../assets/images/thumbs/detail-slider/car/featured-img-02.png"
                                                     alt="featured image 02"
+                                                    loading="lazy"
                                                     class="w-100 h-100"
                                                 />
                                             </div>
@@ -712,6 +728,7 @@
                                                 <img
                                                     src="../../assets/images/thumbs/detail-slider/car/featured-img-03.png"
                                                     alt="featured image 03"
+                                                    loading="lazy"
                                                     class="w-100 h-100"
                                                 />
                                             </div>
@@ -729,6 +746,7 @@
                                                 <img
                                                     src="../../assets/images/thumbs/detail-slider/car/featured-img-04.png"
                                                     alt="featured image 04"
+                                                    loading="lazy"
                                                     class="w-100 h-100"
                                                 />
                                             </div>
@@ -746,6 +764,7 @@
                                                 <img
                                                     src="../../assets/images/thumbs/detail-slider/car/featured-img-05.png"
                                                     alt="featured image 05"
+                                                    loading="lazy"
                                                     class="w-100 h-100"
                                                 />
                                             </div>
@@ -753,15 +772,12 @@
                                         <!-- Slider Item End -->
                                     </div>
 
-                                    
-
                                     <!-- Product Badge -->
                                     <span
                                         class="badge badge--bestseller d-inline-flex align-items-center justify-content-center fw-semibold"
                                         style="
                                             background: url('../../assets/images/icons-objs/badge-bestseller.svg')
-                                                no-repeat center / 100%
-                                                100%;
+                                                no-repeat center / 100% 100%;
                                         "
                                         >Bestseller</span
                                     >
@@ -1389,8 +1405,8 @@
                                                                             >
                                                                                 <button
                                                                                     type="button"
+                                                                                    aria-label="Direct Message Button"
                                                                                     class="message"
-                                                                                    aria-label="message-btn"
                                                                                 >
                                                                                     <svg
                                                                                         width="24"
@@ -1551,8 +1567,8 @@
                                                                             >
                                                                                 <button
                                                                                     type="button"
+                                                                                    aria-label="Direct Message Button"
                                                                                     class="message"
-                                                                                    aria-label="message-btn"
                                                                                 >
                                                                                     <svg
                                                                                         width="24"
@@ -1713,8 +1729,8 @@
                                                                             >
                                                                                 <button
                                                                                     type="button"
+                                                                                    aria-label="Direct Message Button"
                                                                                     class="message"
-                                                                                    aria-label="message-btn"
                                                                                 >
                                                                                     <svg
                                                                                         width="24"
@@ -1875,8 +1891,8 @@
                                                                             >
                                                                                 <button
                                                                                     type="button"
+                                                                                    aria-label="Direct Message Button"
                                                                                     class="message"
-                                                                                    aria-label="message-btn"
                                                                                 >
                                                                                     <svg
                                                                                         width="24"
@@ -2029,7 +2045,10 @@
                                                     <div
                                                         class="action-buttons d-inline-flex align-items-center"
                                                     >
-                                                        <button class="message">
+                                                        <button
+                                                            aria-label="Direct Message Button"
+                                                            class="message"
+                                                        >
                                                             <svg
                                                                 width="24"
                                                                 height="25"
@@ -2116,6 +2135,7 @@
                                                     >
                                                         <a
                                                             href="#"
+                                                            aria-label="whatsapp-link"
                                                             class="social-link d-inline-flex align-items-center justify-content-center"
                                                         >
                                                             <svg
@@ -2143,6 +2163,7 @@
                                                         </a>
                                                         <a
                                                             href="#"
+                                                            aria-label="facebook-link"
                                                             class="social-link d-inline-flex align-items-center justify-content-center"
                                                         >
                                                             <svg
@@ -2177,6 +2198,7 @@
                                                         </a>
                                                         <a
                                                             href="#"
+                                                            aria-label="telegram-link"
                                                             class="social-link d-inline-flex align-items-center justify-content-center"
                                                         >
                                                             <svg
@@ -2430,22 +2452,8 @@
         <!-- ===== Footer Area End ===== -->
 
         <!-- === jQuery CDNs & Scripts === -->
-        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
-        <script src="../../assets/js/swiper-bundle.min.js"></script>
-
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-            integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-            integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
-
-        <script src="../../assets/js/main.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js" defer></script>
+        <script src="../../assets/js/swiper-bundle.min.js" defer></script>
+        <script src="../../assets/js/main.js" defer></script>
     </body>
 </html>
