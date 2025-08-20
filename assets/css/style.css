@@ -4936,10 +4936,26 @@ label.form-label {
   }
 }
 
+.step__container .form-select {
+  font-weight: normal;
+  padding: 0rem 0.75rem;
+  font-size: 1rem;
+}
+.step__container .form-control {
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 0.75rem;
+}
+.step__container .form-check-label {
+  font-size: 1rem;
+  font-weight: normal;
+}
 .step__nav li {
-  font-weight: 600;
   flex: 1;
   text-align: center;
+}
+.step__nav li.active {
+  font-weight: 600;
 }
 .step__nav li::before {
   content: "";
@@ -4953,7 +4969,7 @@ label.form-label {
 }
 @media (min-width: 62rem) {
   .step__nav li::before {
-    height: 0.375em;
+    height: 0.45em;
   }
 }
 .step__nav li.active::before {
@@ -5010,6 +5026,17 @@ label.form-label {
     font-size: 1.125rem;
   }
 }
+.step__buttons .btn {
+  height: 3rem;
+}
+.step__transmission input:checked ~ .form-check-label {
+  color: #212529;
+}
+.step__transmission .form-check-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6a6d6f;
+}
 .step__transmission > div {
   flex: 100%;
 }
@@ -5044,11 +5071,6 @@ label.form-label {
 }
 .step-box .form-label {
   margin-bottom: 0.75rem;
-}
-@media (min-width: 62rem) {
-  .step-box .form-label {
-    margin-bottom: 1rem;
-  }
 }
 .step__publish {
   position: relative;
@@ -5100,14 +5122,25 @@ label.form-label {
 .sticky-guild__cards .card-body {
   background-color: #C3E3DD;
 }
-.sticky-guild__nav ul {
+.sticky-guild__nav {
   --bar-line: 0.3rem;
   border-left: var(--bar-line) solid rgba(60, 205, 170, 0.3);
+  position: relative;
 }
 @media (min-width: 62rem) {
-  .sticky-guild__nav ul {
+  .sticky-guild__nav {
     --bar-line: 0.55rem;
   }
+}
+.sticky-guild__nav .progress-bar {
+  height: 0%;
+  width: var(--bar-line);
+  background: #3ccdaa;
+  position: absolute;
+  left: calc(var(--bar-line) * -1);
+  top: 0;
+  transition: 0.3s linear;
+  border-radius: 1rem;
 }
 .sticky-guild__nav ul li {
   color: #6A6D6F;
@@ -5143,21 +5176,6 @@ label.form-label {
 .sticky-guild__nav ul li.active {
   color: #212529;
   font-weight: 600;
-}
-.sticky-guild__nav ul li.active:before {
-  opacity: 1;
-  height: 100%;
-}
-.sticky-guild__nav ul li:before {
-  height: 0%;
-  width: var(--bar-line);
-  content: "";
-  background: #3ccdaa;
-  position: absolute;
-  left: calc(var(--bar-line) * -1);
-  top: 0;
-  transition: 0.3s ease;
-  opacity: 0;
 }
 .sticky-guild__nav ul li span {
   font-weight: 600;

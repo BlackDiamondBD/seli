@@ -187,7 +187,11 @@
                             More Options
                         </h4>
                         <div class="d-inline-flex align-items-center gap-3">
-                            <a href="#" class="btn btn--dm">
+                            <a
+                                href="#"
+                                aria-label="Direct Message Button"
+                                class="btn btn--dm"
+                            >
                                 <span class="btn__icon">
                                     <svg
                                         class="btn__icon__shake"
@@ -299,7 +303,11 @@
                         <div
                             class="header__action__btns d-none d-xl-inline-flex align-items-center gap-3 gap-xl-4"
                         >
-                            <a href="#" class="btn btn--dm">
+                            <a
+                                href="#"
+                                aria-label="Direct Message Button"
+                                class="btn btn--dm"
+                            >
                                 <span class="btn__icon">
                                     <svg
                                         class="btn__icon__shake"
@@ -453,9 +461,9 @@
         <!-- ===== Main Area Start ===== -->
         <main class="main">
             <!-- nav-links -->
-            <div aria-label="breadcrumb" class="breadcrumb__wrap bg-white">
+            <div class="breadcrumb__wrap bg-white">
                 <div class="container">
-                    <nav class="breadcrumb__nav">
+                    <nav aria-label="breadcrumb" class="breadcrumb__nav">
                         <ul class="breadcrumb mb-0">
                             <li class="breadcrumb-item">
                                 <a href="#" class="breadcrumb-page fw-semibold"
@@ -541,7 +549,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- sort-dropdown--end -->
+                        <!-- sort-dropdown-end -->
                     </div>
                     <div class="row listing__row listing__row--topSearchbar">
                         <div class="col-lg-4 col-xxl-3">
@@ -559,7 +567,6 @@
                                             data-bs-target="#house-tab-pane"
                                             type="button"
                                             role="tab"
-                                            aria-controls="house-tab-pane"
                                             aria-selected="true"
                                         >
                                             Car
@@ -573,7 +580,6 @@
                                             data-bs-target="#car-tab-pane"
                                             type="button"
                                             role="tab"
-                                            aria-controls="car-tab-pane"
                                             aria-selected="false"
                                         >
                                             House
@@ -676,11 +682,12 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <!-- sort-dropdown--end -->
+                                    <!-- sort-dropdown-end -->
 
                                     <!-- filter-button-only-mobile-device -->
                                     <button
                                         type="button"
+                                        aria-label="filter menu button"
                                         class="btn btn__squire btn__outline-coolGray d-lg-none"
                                         id="filterToggle"
                                     >
@@ -892,7 +899,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
 
                                         <!-- single-widget -->
                                         <div class="filter__widget">
@@ -993,6 +1000,7 @@
                                                             class="range-slider__wrapper"
                                                         >
                                                             <input
+                                                                aria-label="value handler one"
                                                                 type="range"
                                                                 min="1000000"
                                                                 max="6000000"
@@ -1001,6 +1009,7 @@
                                                                 class="range-slider__thumb range-slider__thumb--min"
                                                             />
                                                             <input
+                                                                aria-label="value handler two"
                                                                 type="range"
                                                                 min="1000000"
                                                                 max="6000000"
@@ -1033,7 +1042,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
 
                                         <!-- single-widget -->
                                         <div class="filter__widget">
@@ -1150,6 +1159,7 @@
                                                                         data-bs-target="#tataCollaps"
                                                                         aria-expanded="false"
                                                                         aria-controls="tataCollaps"
+                                                                        aria-label="more models of tata"
                                                                     >
                                                                         <span
                                                                             class="icon"
@@ -1296,9 +1306,10 @@
                                                                         class="filter__widget-btn collapsed"
                                                                         type="button"
                                                                         data-bs-toggle="collapse"
-                                                                        data-bs-target="#hyundai"
+                                                                        data-bs-target="#hyundaiCollapse"
                                                                         aria-expanded="false"
                                                                         aria-controls="hyundai"
+                                                                        aria-label="more models of hyundai"
                                                                     >
                                                                         <span
                                                                             class="icon"
@@ -1325,7 +1336,7 @@
                                                             </div>
                                                             <div
                                                                 class="collapse"
-                                                                id="hyundai"
+                                                                id="hyundaiCollapse"
                                                             >
                                                                 <ul
                                                                     class="filter__checkBox--inner"
@@ -1409,9 +1420,10 @@
                                                                         class="filter__widget-btn collapsed"
                                                                         type="button"
                                                                         data-bs-toggle="collapse"
-                                                                        data-bs-target="#mg"
+                                                                        data-bs-target="#mgCollapse"
                                                                         aria-expanded="false"
                                                                         aria-controls="mg"
+                                                                        aria-label="more models of mg"
                                                                     >
                                                                         <span
                                                                             class="icon"
@@ -1438,7 +1450,7 @@
                                                             </div>
                                                             <div
                                                                 class="collapse"
-                                                                id="mg"
+                                                                id="mgCollapse"
                                                             >
                                                                 <ul
                                                                     class="filter__checkBox--inner"
@@ -1521,9 +1533,10 @@
                                                                         class="filter__widget-btn collapsed"
                                                                         type="button"
                                                                         data-bs-toggle="collapse"
-                                                                        data-bs-target="#skoda"
+                                                                        data-bs-target="#skodaCollapse"
                                                                         aria-expanded="false"
                                                                         aria-controls="skoda"
+                                                                        aria-label="more models of skoda"
                                                                     >
                                                                         <span
                                                                             class="icon"
@@ -1550,7 +1563,7 @@
                                                             </div>
                                                             <div
                                                                 class="collapse"
-                                                                id="skoda"
+                                                                id="skodaCollapse"
                                                             >
                                                                 <ul
                                                                     class="filter__checkBox--inner"
@@ -1633,9 +1646,10 @@
                                                                         class="filter__widget-btn"
                                                                         type="button"
                                                                         data-bs-toggle="collapse"
-                                                                        data-bs-target="#jeep"
+                                                                        data-bs-target="#jeepCollapse"
                                                                         aria-expanded="true"
                                                                         aria-controls="jeep"
+                                                                        aria-label="more models of jeep"
                                                                     >
                                                                         <span
                                                                             class="icon"
@@ -1662,7 +1676,7 @@
                                                             </div>
                                                             <div
                                                                 class="collapse show"
-                                                                id="jeep"
+                                                                id="jeepCollapse"
                                                             >
                                                                 <ul
                                                                     class="filter__checkBox--inner"
@@ -1820,9 +1834,10 @@
                                                                         class="filter__widget-btn collapsed"
                                                                         type="button"
                                                                         data-bs-toggle="collapse"
-                                                                        data-bs-target="#kia"
+                                                                        data-bs-target="#kiaCollapse"
                                                                         aria-expanded="true"
                                                                         aria-controls="kia"
+                                                                        aria-label="more models of kia"
                                                                     >
                                                                         <span
                                                                             class="icon"
@@ -1849,7 +1864,7 @@
                                                             </div>
                                                             <div
                                                                 class="collapse"
-                                                                id="kia"
+                                                                id="kiaCollapse"
                                                             >
                                                                 <ul
                                                                     class="filter__checkBox--inner"
@@ -1898,7 +1913,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
 
                                         <!-- single-widget -->
                                         <div class="filter__widget">
@@ -1955,6 +1970,7 @@
                                                             class="range-slider__wrapper"
                                                         >
                                                             <input
+                                                                aria-label="value handler one"
                                                                 type="range"
                                                                 min="1990"
                                                                 max="2025"
@@ -1963,6 +1979,7 @@
                                                                 class="range-slider__thumb range-slider__thumb--min"
                                                             />
                                                             <input
+                                                                aria-label="value handler two"
                                                                 type="range"
                                                                 min="1990"
                                                                 max="2025"
@@ -1995,7 +2012,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
 
                                         <!-- single-widget -->
                                         <div class="filter__widget">
@@ -2268,7 +2285,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
 
                                         <!-- single-widget -->
                                         <div class="filter__widget">
@@ -2418,7 +2435,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
 
                                         <!-- single-widget -->
                                         <div class="filter__widget">
@@ -2859,7 +2876,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
 
                                         <!-- single-widget -->
                                         <div class="filter__widget">
@@ -3043,7 +3060,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
 
                                         <!-- single-widget -->
                                         <div class="filter__widget">
@@ -3245,7 +3262,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
 
                                         <!-- single-widget -->
                                         <div class="filter__widget">
@@ -3366,7 +3383,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
                                     </div>
                                 </div>
                             </div>
@@ -3577,6 +3594,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-1.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -3585,6 +3603,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-2.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -3593,6 +3612,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-3.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -3601,6 +3621,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-4.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                 </div>
@@ -3871,7 +3892,7 @@
                                                     </span>
                                                     2018
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -3896,7 +3917,7 @@
                                                     </span>
                                                     40K Miles
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -3917,7 +3938,7 @@
                                                     </span>
                                                     Automatic
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -3941,7 +3962,7 @@
                                                     </span>
                                                     6 Months Included
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                             </div>
                                             <div
                                                 class="card__content-brands d-flex align-items-center justify-content-between"
@@ -4009,7 +4030,10 @@
                                                 <div
                                                     class="action-buttons d-inline-flex align-items-center gap-1 gap-xl-2"
                                                 >
-                                                    <button class="message">
+                                                    <button
+                                                        aria-label="Direct Message Button"
+                                                        class="message"
+                                                    >
                                                         <svg
                                                             width="24"
                                                             height="25"
@@ -4065,6 +4089,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-2.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -4073,6 +4098,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-3.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -4081,6 +4107,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-4.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -4089,6 +4116,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-5.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                 </div>
@@ -4359,7 +4387,7 @@
                                                     </span>
                                                     2018
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -4384,7 +4412,7 @@
                                                     </span>
                                                     40K Miles
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -4405,7 +4433,7 @@
                                                     </span>
                                                     Automatic
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -4429,7 +4457,7 @@
                                                     </span>
                                                     6 Months Included
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                             </div>
                                             <div
                                                 class="card__content-brands d-flex align-items-center justify-content-between"
@@ -4497,7 +4525,10 @@
                                                 <div
                                                     class="action-buttons d-inline-flex align-items-center gap-1 gap-xl-2"
                                                 >
-                                                    <button class="message">
+                                                    <button
+                                                        aria-label="Direct Message Button"
+                                                        class="message"
+                                                    >
                                                         <svg
                                                             width="24"
                                                             height="25"
@@ -4553,6 +4584,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-3.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -4561,6 +4593,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-4.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -4569,6 +4602,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-5.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -4577,6 +4611,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-6.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                 </div>
@@ -4837,7 +4872,7 @@
                                                     </span>
                                                     2018
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -4862,7 +4897,7 @@
                                                     </span>
                                                     40K Miles
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -4883,7 +4918,7 @@
                                                     </span>
                                                     Automatic
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -4907,7 +4942,7 @@
                                                     </span>
                                                     6 Months Included
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                             </div>
                                             <div
                                                 class="card__content-brands d-flex align-items-center justify-content-between"
@@ -4975,7 +5010,10 @@
                                                 <div
                                                     class="action-buttons d-inline-flex align-items-center gap-1 gap-xl-2"
                                                 >
-                                                    <button class="message">
+                                                    <button
+                                                        aria-label="Direct Message Button"
+                                                        class="message"
+                                                    >
                                                         <svg
                                                             width="24"
                                                             height="25"
@@ -5031,6 +5069,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-4.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -5039,6 +5078,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-5.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -5047,6 +5087,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-6.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -5055,6 +5096,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-7.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                 </div>
@@ -5315,7 +5357,7 @@
                                                     </span>
                                                     2018
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -5340,7 +5382,7 @@
                                                     </span>
                                                     40K Miles
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -5361,7 +5403,7 @@
                                                     </span>
                                                     Automatic
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -5385,7 +5427,7 @@
                                                     </span>
                                                     6 Months Included
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                             </div>
                                             <div
                                                 class="card__content-brands d-flex align-items-center justify-content-between"
@@ -5453,7 +5495,10 @@
                                                 <div
                                                     class="action-buttons d-inline-flex align-items-center gap-1 gap-xl-2"
                                                 >
-                                                    <button class="message">
+                                                    <button
+                                                        aria-label="Direct Message Button"
+                                                        class="message"
+                                                    >
                                                         <svg
                                                             width="24"
                                                             height="25"
@@ -5509,6 +5554,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-5.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -5517,6 +5563,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-6.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -5525,6 +5572,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-7.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -5533,6 +5581,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-8.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                 </div>
@@ -5793,7 +5842,7 @@
                                                     </span>
                                                     2018
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -5818,7 +5867,7 @@
                                                     </span>
                                                     40K Miles
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -5839,7 +5888,7 @@
                                                     </span>
                                                     Automatic
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -5863,7 +5912,7 @@
                                                     </span>
                                                     6 Months Included
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                             </div>
                                             <div
                                                 class="card__content-brands d-flex align-items-center justify-content-between"
@@ -5931,7 +5980,10 @@
                                                 <div
                                                     class="action-buttons d-inline-flex align-items-center gap-1 gap-xl-2"
                                                 >
-                                                    <button class="message">
+                                                    <button
+                                                        aria-label="Direct Message Button"
+                                                        class="message"
+                                                    >
                                                         <svg
                                                             width="24"
                                                             height="25"
@@ -5987,6 +6039,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-6.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -5995,6 +6048,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-7.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -6003,6 +6057,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-8.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -6011,6 +6066,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-1.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                 </div>
@@ -6271,7 +6327,7 @@
                                                     </span>
                                                     2018
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -6296,7 +6352,7 @@
                                                     </span>
                                                     40K Miles
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -6317,7 +6373,7 @@
                                                     </span>
                                                     Automatic
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -6341,7 +6397,7 @@
                                                     </span>
                                                     6 Months Included
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                             </div>
                                             <div
                                                 class="card__content-brands d-flex align-items-center justify-content-between"
@@ -6409,7 +6465,10 @@
                                                 <div
                                                     class="action-buttons d-inline-flex align-items-center gap-1 gap-xl-2"
                                                 >
-                                                    <button class="message">
+                                                    <button
+                                                        aria-label="Direct Message Button"
+                                                        class="message"
+                                                    >
                                                         <svg
                                                             width="24"
                                                             height="25"
@@ -6465,6 +6524,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-7.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -6473,6 +6533,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-8.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -6481,6 +6542,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-1.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -6489,6 +6551,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-2.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                 </div>
@@ -6749,7 +6812,7 @@
                                                     </span>
                                                     2018
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -6774,7 +6837,7 @@
                                                     </span>
                                                     40K Miles
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -6795,7 +6858,7 @@
                                                     </span>
                                                     Automatic
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -6819,7 +6882,7 @@
                                                     </span>
                                                     6 Months Included
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                             </div>
                                             <div
                                                 class="card__content-brands d-flex align-items-center justify-content-between"
@@ -6887,7 +6950,10 @@
                                                 <div
                                                     class="action-buttons d-inline-flex align-items-center gap-1 gap-xl-2"
                                                 >
-                                                    <button class="message">
+                                                    <button
+                                                        aria-label="Direct Message Button"
+                                                        class="message"
+                                                    >
                                                         <svg
                                                             width="24"
                                                             height="25"
@@ -6943,6 +7009,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-8.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -6951,6 +7018,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-1.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -6959,6 +7027,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-2.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -6967,6 +7036,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/car-list-3.webp"
                                                             alt="car-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                 </div>
@@ -7227,7 +7297,7 @@
                                                     </span>
                                                     2018
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -7252,7 +7322,7 @@
                                                     </span>
                                                     40K Miles
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -7273,7 +7343,7 @@
                                                     </span>
                                                     Automatic
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -7297,7 +7367,7 @@
                                                     </span>
                                                     6 Months Included
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                             </div>
                                             <div
                                                 class="card__content-brands d-flex align-items-center justify-content-between"
@@ -7365,7 +7435,10 @@
                                                 <div
                                                     class="action-buttons d-inline-flex align-items-center gap-1 gap-xl-2"
                                                 >
-                                                    <button class="message">
+                                                    <button
+                                                        aria-label="Direct Message Button"
+                                                        class="message"
+                                                    >
                                                         <svg
                                                             width="24"
                                                             height="25"
@@ -7411,27 +7484,13 @@
                     </div>
                 </div>
             </section>
-            <!-- Explore On Seli == Product listing section--end  -->
+            <!-- Explore On Seli == Product listing section-end  -->
         </main>
         <!-- ===== Main Area End ===== -->
 
         <!-- === jQuery CDNs & Scripts === -->
-        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
-        <script src="../../assets/js/swiper-bundle.min.js"></script>
-
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-            integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-            integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
-
-        <script src="../../assets/js/main.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js" defer></script>
+        <script src="../../assets/js/swiper-bundle.min.js" defer></script>
+        <script src="../../assets/js/main.js" defer></script>
     </body>
 </html>

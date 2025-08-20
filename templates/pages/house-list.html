@@ -187,7 +187,11 @@
                             More Options
                         </h4>
                         <div class="d-inline-flex align-items-center gap-3">
-                            <a href="#" class="btn btn--dm">
+                            <a
+                                href="#"
+                                aria-label="Direct Message Button"
+                                class="btn btn--dm"
+                            >
                                 <span class="btn__icon">
                                     <svg
                                         class="btn__icon__shake"
@@ -299,7 +303,11 @@
                         <div
                             class="header__action__btns d-none d-xl-inline-flex align-items-center gap-3 gap-xl-4"
                         >
-                            <a href="#" class="btn btn--dm">
+                            <a
+                                href="#"
+                                aria-label="Direct Message Button"
+                                class="btn btn--dm"
+                            >
                                 <span class="btn__icon">
                                     <svg
                                         class="btn__icon__shake"
@@ -453,9 +461,9 @@
         <!-- ===== Main Area Start ===== -->
         <main class="main">
             <!-- nav-links -->
-            <div aria-label="breadcrumb" class="breadcrumb__wrap bg-white">
+            <div class="breadcrumb__wrap bg-white">
                 <div class="container">
-                    <nav class="breadcrumb__nav">
+                    <nav aria-label="breadcrumb" class="breadcrumb__nav">
                         <ul class="breadcrumb mb-0">
                             <li class="breadcrumb-item">
                                 <a href="#" class="breadcrumb-page fw-semibold"
@@ -541,7 +549,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- sort-dropdown--end -->
+                        <!-- sort-dropdown-end -->
                     </div>
                     <div class="row listing__row listing__row--topSearchbar">
                         <div class="col-lg-4 col-xxl-3">
@@ -559,7 +567,6 @@
                                             data-bs-target="#house-tab-pane"
                                             type="button"
                                             role="tab"
-                                            aria-controls="house-tab-pane"
                                             aria-selected="true"
                                         >
                                             Car
@@ -573,7 +580,6 @@
                                             data-bs-target="#car-tab-pane"
                                             type="button"
                                             role="tab"
-                                            aria-controls="car-tab-pane"
                                             aria-selected="false"
                                         >
                                             House
@@ -676,11 +682,12 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <!-- sort-dropdown--end -->
+                                    <!-- sort-dropdown-end -->
 
                                     <!-- filter-button-only-mobile-device -->
                                     <button
                                         type="button"
+                                        aria-label="filter menu button"
                                         class="btn btn__squire btn__outline-coolGray d-lg-none"
                                         id="filterToggle"
                                     >
@@ -892,7 +899,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
 
                                         <!-- single-widget -->
                                         <div class="filter__widget">
@@ -993,6 +1000,7 @@
                                                             class="range-slider__wrapper"
                                                         >
                                                             <input
+                                                                aria-label="value handler one"
                                                                 type="range"
                                                                 min="1000000"
                                                                 max="6000000"
@@ -1001,6 +1009,7 @@
                                                                 class="range-slider__thumb range-slider__thumb--min"
                                                             />
                                                             <input
+                                                                aria-label="value handler two"
                                                                 type="range"
                                                                 min="1000000"
                                                                 max="6000000"
@@ -1033,7 +1042,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
 
                                         <!-- single-widget -->
                                         <div class="filter__widget">
@@ -1151,6 +1160,7 @@
                                                                         data-bs-target="#detachedHouseCollaps"
                                                                         aria-expanded="false"
                                                                         aria-controls="detachedHouseCollaps"
+                                                                        aria-label="more options of detached house"
                                                                     >
                                                                         <span
                                                                             class="icon"
@@ -1298,9 +1308,10 @@
                                                                         class="filter__widget-btn collapsed"
                                                                         type="button"
                                                                         data-bs-toggle="collapse"
-                                                                        data-bs-target="#appartmentFlat"
+                                                                        data-bs-target="#appartmentFlatCollapse"
                                                                         aria-expanded="false"
-                                                                        aria-controls="appartmentFlat"
+                                                                        aria-controls="appartmentFlatCollapse"
+                                                                        aria-label="more options of appartment flat"
                                                                     >
                                                                         <span
                                                                             class="icon"
@@ -1327,7 +1338,7 @@
                                                             </div>
                                                             <div
                                                                 class="collapse"
-                                                                id="appartmentFlat"
+                                                                id="appartmentFlatCollapse"
                                                             >
                                                                 <ul
                                                                     class="filter__checkBox--inner"
@@ -1411,9 +1422,10 @@
                                                                         class="filter__widget-btn collapsed"
                                                                         type="button"
                                                                         data-bs-toggle="collapse"
-                                                                        data-bs-target="#townhouse"
+                                                                        data-bs-target="#townhouseCollapse"
                                                                         aria-expanded="false"
-                                                                        aria-controls="townhouse"
+                                                                        aria-controls="townhouseCollapse"
+                                                                        aria-label="more options of town house"
                                                                     >
                                                                         <span
                                                                             class="icon"
@@ -1440,7 +1452,7 @@
                                                             </div>
                                                             <div
                                                                 class="collapse"
-                                                                id="townhouse"
+                                                                id="townhouseCollapse"
                                                             >
                                                                 <ul
                                                                     class="filter__checkBox--inner"
@@ -1524,9 +1536,10 @@
                                                                         class="filter__widget-btn collapsed"
                                                                         type="button"
                                                                         data-bs-toggle="collapse"
-                                                                        data-bs-target="#bungalowCottage"
+                                                                        data-bs-target="#bungalowCottageCollapse"
                                                                         aria-expanded="false"
-                                                                        aria-controls="bungalowCottage"
+                                                                        aria-controls="bungalowCottageCollapse"
+                                                                        aria-label="more options of bungalow cottage"
                                                                     >
                                                                         <span
                                                                             class="icon"
@@ -1553,7 +1566,7 @@
                                                             </div>
                                                             <div
                                                                 class="collapse"
-                                                                id="bungalowCottage"
+                                                                id="bungalowCottageCollapse"
                                                             >
                                                                 <ul
                                                                     class="filter__checkBox--inner"
@@ -1636,9 +1649,10 @@
                                                                         class="filter__widget-btn"
                                                                         type="button"
                                                                         data-bs-toggle="collapse"
-                                                                        data-bs-target="#condo"
+                                                                        data-bs-target="#condoCollapse"
                                                                         aria-expanded="true"
-                                                                        aria-controls="condo"
+                                                                        aria-controls="condoCollapse"
+                                                                        aria-label="more options of condo"
                                                                     >
                                                                         <span
                                                                             class="icon"
@@ -1665,7 +1679,7 @@
                                                             </div>
                                                             <div
                                                                 class="collapse show"
-                                                                id="condo"
+                                                                id="condoCollapse"
                                                             >
                                                                 <ul
                                                                     class="filter__checkBox--inner"
@@ -1827,9 +1841,10 @@
                                                                         class="filter__widget-btn collapsed"
                                                                         type="button"
                                                                         data-bs-toggle="collapse"
-                                                                        data-bs-target="#duplexTriplex"
+                                                                        data-bs-target="#duplexTriplexCollapse"
                                                                         aria-expanded="true"
-                                                                        aria-controls="duplexTriplex"
+                                                                        aria-controls="duplexTriplexCollapse"
+                                                                        aria-label="more options of duplex triplex"
                                                                     >
                                                                         <span
                                                                             class="icon"
@@ -1856,7 +1871,7 @@
                                                             </div>
                                                             <div
                                                                 class="collapse"
-                                                                id="duplexTriplex"
+                                                                id="duplexTriplexCollapse"
                                                             >
                                                                 <ul
                                                                     class="filter__checkBox--inner"
@@ -1905,7 +1920,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
 
                                         <!-- single-widget -->
                                         <div class="filter__widget">
@@ -1962,6 +1977,7 @@
                                                             class="range-slider__wrapper"
                                                         >
                                                             <input
+                                                                aria-label="value handler one"
                                                                 type="range"
                                                                 min="1990"
                                                                 max="2025"
@@ -1970,6 +1986,7 @@
                                                                 class="range-slider__thumb range-slider__thumb--min"
                                                             />
                                                             <input
+                                                                aria-label="value handler one"
                                                                 type="range"
                                                                 min="1990"
                                                                 max="2025"
@@ -2002,7 +2019,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
 
                                         <!-- single-widget -->
                                         <div class="filter__widget">
@@ -2279,7 +2296,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
 
                                         <!-- single-widget -->
                                         <div class="filter__widget">
@@ -2427,7 +2444,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
 
                                         <!-- single-widget -->
                                         <div class="filter__widget">
@@ -2871,7 +2888,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
 
                                         <!-- single-widget -->
                                         <div class="filter__widget">
@@ -3054,7 +3071,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
 
                                         <!-- single-widget -->
                                         <div class="filter__widget">
@@ -3253,7 +3270,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
 
                                         <!-- single-widget -->
                                         <div class="filter__widget">
@@ -3378,7 +3395,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- single-widget--end -->
+                                        <!-- single-widget-end -->
                                     </div>
                                 </div>
                             </div>
@@ -3567,6 +3584,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-1.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -3575,6 +3593,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-2.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -3583,6 +3602,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-3.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -3591,6 +3611,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-4.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                 </div>
@@ -3861,7 +3882,7 @@
                                                     </span>
                                                     2016
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -3882,7 +3903,7 @@
                                                     </span>
                                                     2,400 Sq Ft
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -3903,7 +3924,7 @@
                                                     </span>
                                                     4 Bed
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -3924,7 +3945,7 @@
                                                     </span>
                                                     3 Bath
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -3945,7 +3966,7 @@
                                                     </span>
                                                     Fully Furnished
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -3971,7 +3992,7 @@
                                                     </span>
                                                     2-Car Garage
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                             </div>
                                             <div
                                                 class="card__content-brands d-flex align-items-center justify-content-between"
@@ -4039,7 +4060,10 @@
                                                 <div
                                                     class="action-buttons d-inline-flex align-items-center gap-1 gap-xl-2"
                                                 >
-                                                    <button class="message">
+                                                    <button
+                                                        aria-label="Direct Message Button"
+                                                        class="message"
+                                                    >
                                                         <svg
                                                             width="24"
                                                             height="25"
@@ -4095,6 +4119,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-2.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -4103,6 +4128,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-3.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -4111,6 +4137,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-4.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -4119,6 +4146,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-5.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                 </div>
@@ -4389,7 +4417,7 @@
                                                     </span>
                                                     2016
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -4410,7 +4438,7 @@
                                                     </span>
                                                     2,400 Sq Ft
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -4431,7 +4459,7 @@
                                                     </span>
                                                     4 Bed
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -4452,7 +4480,7 @@
                                                     </span>
                                                     3 Bath
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -4473,7 +4501,7 @@
                                                     </span>
                                                     Fully Furnished
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -4499,7 +4527,7 @@
                                                     </span>
                                                     2-Car Garage
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                             </div>
                                             <div
                                                 class="card__content-brands d-flex align-items-center justify-content-between"
@@ -4567,7 +4595,10 @@
                                                 <div
                                                     class="action-buttons d-inline-flex align-items-center gap-1 gap-xl-2"
                                                 >
-                                                    <button class="message">
+                                                    <button
+                                                        aria-label="Direct Message Button"
+                                                        class="message"
+                                                    >
                                                         <svg
                                                             width="24"
                                                             height="25"
@@ -4623,6 +4654,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-3.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -4631,6 +4663,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-4.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -4639,6 +4672,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-5.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -4647,6 +4681,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-6.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                 </div>
@@ -4907,7 +4942,7 @@
                                                     </span>
                                                     2016
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -4928,7 +4963,7 @@
                                                     </span>
                                                     2,400 Sq Ft
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -4949,7 +4984,7 @@
                                                     </span>
                                                     4 Bed
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -4970,7 +5005,7 @@
                                                     </span>
                                                     3 Bath
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -4991,7 +5026,7 @@
                                                     </span>
                                                     Fully Furnished
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -5017,7 +5052,7 @@
                                                     </span>
                                                     2-Car Garage
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                             </div>
                                             <div
                                                 class="card__content-brands d-flex align-items-center justify-content-between"
@@ -5085,7 +5120,10 @@
                                                 <div
                                                     class="action-buttons d-inline-flex align-items-center gap-1 gap-xl-2"
                                                 >
-                                                    <button class="message">
+                                                    <button
+                                                        aria-label="Direct Message Button"
+                                                        class="message"
+                                                    >
                                                         <svg
                                                             width="24"
                                                             height="25"
@@ -5141,6 +5179,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-4.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -5149,6 +5188,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-5.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -5157,6 +5197,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-6.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -5165,6 +5206,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-7.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                 </div>
@@ -5425,7 +5467,7 @@
                                                     </span>
                                                     2016
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -5446,7 +5488,7 @@
                                                     </span>
                                                     2,400 Sq Ft
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -5467,7 +5509,7 @@
                                                     </span>
                                                     4 Bed
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -5488,7 +5530,7 @@
                                                     </span>
                                                     3 Bath
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -5509,7 +5551,7 @@
                                                     </span>
                                                     Fully Furnished
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -5535,7 +5577,7 @@
                                                     </span>
                                                     2-Car Garage
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                             </div>
                                             <div
                                                 class="card__content-brands d-flex align-items-center justify-content-between"
@@ -5603,7 +5645,10 @@
                                                 <div
                                                     class="action-buttons d-inline-flex align-items-center gap-1 gap-xl-2"
                                                 >
-                                                    <button class="message">
+                                                    <button
+                                                        aria-label="Direct Message Button"
+                                                        class="message"
+                                                    >
                                                         <svg
                                                             width="24"
                                                             height="25"
@@ -5659,6 +5704,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-5.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -5667,6 +5713,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-6.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -5675,6 +5722,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-7.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -5683,6 +5731,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-8.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                 </div>
@@ -5943,7 +5992,7 @@
                                                     </span>
                                                     2016
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -5964,7 +6013,7 @@
                                                     </span>
                                                     2,400 Sq Ft
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -5985,7 +6034,7 @@
                                                     </span>
                                                     4 Bed
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -6006,7 +6055,7 @@
                                                     </span>
                                                     3 Bath
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -6027,7 +6076,7 @@
                                                     </span>
                                                     Fully Furnished
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -6053,7 +6102,7 @@
                                                     </span>
                                                     2-Car Garage
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                             </div>
                                             <div
                                                 class="card__content-brands d-flex align-items-center justify-content-between"
@@ -6121,7 +6170,10 @@
                                                 <div
                                                     class="action-buttons d-inline-flex align-items-center gap-1 gap-xl-2"
                                                 >
-                                                    <button class="message">
+                                                    <button
+                                                        aria-label="Direct Message Button"
+                                                        class="message"
+                                                    >
                                                         <svg
                                                             width="24"
                                                             height="25"
@@ -6177,6 +6229,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-6.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -6185,6 +6238,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-7.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -6193,6 +6247,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-8.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -6201,6 +6256,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-1.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                 </div>
@@ -6461,7 +6517,7 @@
                                                     </span>
                                                     2016
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -6482,7 +6538,7 @@
                                                     </span>
                                                     2,400 Sq Ft
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -6503,7 +6559,7 @@
                                                     </span>
                                                     4 Bed
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -6524,7 +6580,7 @@
                                                     </span>
                                                     3 Bath
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -6545,7 +6601,7 @@
                                                     </span>
                                                     Fully Furnished
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -6571,7 +6627,7 @@
                                                     </span>
                                                     2-Car Garage
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                             </div>
                                             <div
                                                 class="card__content-brands d-flex align-items-center justify-content-between"
@@ -6639,7 +6695,10 @@
                                                 <div
                                                     class="action-buttons d-inline-flex align-items-center gap-1 gap-xl-2"
                                                 >
-                                                    <button class="message">
+                                                    <button
+                                                        aria-label="Direct Message Button"
+                                                        class="message"
+                                                    >
                                                         <svg
                                                             width="24"
                                                             height="25"
@@ -6695,6 +6754,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-7.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -6703,6 +6763,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-8.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -6711,6 +6772,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-1.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -6719,6 +6781,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-2.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                 </div>
@@ -6979,7 +7042,7 @@
                                                     </span>
                                                     2016
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -7000,7 +7063,7 @@
                                                     </span>
                                                     2,400 Sq Ft
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -7021,7 +7084,7 @@
                                                     </span>
                                                     4 Bed
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -7042,7 +7105,7 @@
                                                     </span>
                                                     3 Bath
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -7063,7 +7126,7 @@
                                                     </span>
                                                     Fully Furnished
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -7089,7 +7152,7 @@
                                                     </span>
                                                     2-Car Garage
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                             </div>
                                             <div
                                                 class="card__content-brands d-flex align-items-center justify-content-between"
@@ -7157,7 +7220,10 @@
                                                 <div
                                                     class="action-buttons d-inline-flex align-items-center gap-1 gap-xl-2"
                                                 >
-                                                    <button class="message">
+                                                    <button
+                                                        aria-label="Direct Message Button"
+                                                        class="message"
+                                                    >
                                                         <svg
                                                             width="24"
                                                             height="25"
@@ -7213,6 +7279,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-8.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -7221,6 +7288,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-1.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -7229,6 +7297,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-2.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                     <div
@@ -7237,6 +7306,7 @@
                                                         <img
                                                             src="../../assets/images/thumbs/listing/house-list-3.webp"
                                                             alt="house-img"
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                 </div>
@@ -7497,7 +7567,7 @@
                                                     </span>
                                                     2016
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -7518,7 +7588,7 @@
                                                     </span>
                                                     2,400 Sq Ft
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -7539,7 +7609,7 @@
                                                     </span>
                                                     4 Bed
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -7560,7 +7630,7 @@
                                                     </span>
                                                     3 Bath
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -7581,7 +7651,7 @@
                                                     </span>
                                                     Fully Furnished
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                                 <!-- featureItem -->
                                                 <div class="tag tag--secondary">
                                                     <span class="icon">
@@ -7607,7 +7677,7 @@
                                                     </span>
                                                     2-Car Garage
                                                 </div>
-                                                <!-- featureItem--end -->
+                                                <!-- featureItem-end -->
                                             </div>
                                             <div
                                                 class="card__content-brands d-flex align-items-center justify-content-between"
@@ -7675,7 +7745,10 @@
                                                 <div
                                                     class="action-buttons d-inline-flex align-items-center gap-1 gap-xl-2"
                                                 >
-                                                    <button class="message">
+                                                    <button
+                                                        aria-label="Direct Message Button"
+                                                        class="message"
+                                                    >
                                                         <svg
                                                             width="24"
                                                             height="25"
@@ -7721,27 +7794,13 @@
                     </div>
                 </div>
             </section>
-            <!-- Explore On Seli == Product listing section--end  -->
+            <!-- Explore On Seli == Product listing section-end  -->
         </main>
         <!-- ===== Main Area End ===== -->
 
         <!-- === jQuery CDNs & Scripts === -->
-        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
-        <script src="../../assets/js/swiper-bundle.min.js"></script>
-
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-            integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-            integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
-
-        <script src="../../assets/js/main.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js" defer></script>
+        <script src="../../assets/js/swiper-bundle.min.js" defer></script>
+        <script src="../../assets/js/main.js" defer></script>
     </body>
 </html>
