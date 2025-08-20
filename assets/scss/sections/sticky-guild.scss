@@ -1,4 +1,5 @@
-@use "../utils/" as *;   
+@use "../utils/" as *;   @use '../utils/' as *;
+@use '../base/' as *;
     
     .sticky-guild{
         &__cards{
@@ -12,12 +13,28 @@
 
         
         &__nav {
+            --bar-line: 0.3rem;
+            @include media-query(breakpoint-lg) {
+                --bar-line: 0.55rem;
+            }
+
+            border-left: var(--bar-line) solid rgba($secondary, 0.3);
+            position: relative;
+        
+            .progress-bar {
+                height: 0%;
+                width: var(--bar-line);
+                background: $secondary;
+                position: absolute;
+                left: calc( var(--bar-line) * -1 );
+                top: 0;
+                transition: .3s linear;
+                border-radius: 1rem;
+            }
+
             ul{
-                --bar-line: 0.3rem;
-                border-left: var(--bar-line) solid rgba($secondary, 0.3);
-                @include media-query(breakpoint-lg) {
-                    --bar-line: 0.55rem;
-                }
+                
+
                 li{
                     color: #6A6D6F;
                     font-size: 1rem;
@@ -42,22 +59,7 @@
                     }
                     &.active{
                         color: $text-black;
-                        font-weight: 600;
-                        &:before {
-                            opacity: 1;
-                            height: 100%;
-                        }                    
-                    }
-                    &:before {
-                        height: 0%;
-                        width: var(--bar-line);
-                        content: "";
-                        background: $secondary;
-                        position: absolute;
-                        left: calc( var(--bar-line) * -1 );
-                        top: 0;
-                        transition: .3s ease;
-                        opacity: 0;
+                        font-weight: 600;              
                     }
 
                     span {
