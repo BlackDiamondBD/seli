@@ -1,4 +1,5 @@
 @use '../utils/' as *;
+@use '../base/' as *;
 
 .card__step{
     --bs-card-border-radius: 1.25rem;
@@ -16,11 +17,29 @@
     }
 }
 .step{
+    &__container{
+        .form-select{
+            font-weight: normal;
+            padding: 0rem .75rem;
+            font-size: 1rem;
+        }
+        .form-control{
+            font-size: 1rem;
+            font-weight: normal;
+            padding: .75rem;
+        }
+        .form-check-label{
+            font-size: 1rem;
+            font-weight: normal;
+        }
+    }
     &__nav{
         li {
-            font-weight: 600;
             flex: 1;
-            text-align: center;            
+            text-align: center;        
+            &.active{
+                font-weight: 600;
+            }    
 
             &::before {
                 content: '';
@@ -33,7 +52,7 @@
                 background: $light-gray;
                 
                 @include media-query(breakpoint-lg){
-                    height: 0.375em;
+                    height: 0.45em;
                 }
             }
             &.active::before {
@@ -82,8 +101,21 @@
         }
     }
 
+    &__buttons{
+        .btn{
+            height: 3rem;
+        }
+    }
     
     &__transmission{
+        input:checked ~ .form-check-label{
+            color: $text-black;
+        }
+        .form-check-label{
+            font-size: 1rem;
+            font-weight: 500;
+            color: $dark-gray;
+        }
         > div{
                 flex: 100%;
         }        
@@ -121,9 +153,6 @@
     &-box{
         .form-label{
             margin-bottom: .75rem;
-            @include media-query(breakpoint-lg) {
-                margin-bottom: 1rem;
-            }
         }
     }
 
@@ -171,3 +200,4 @@
     }
 
 }
+
