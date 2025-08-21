@@ -4,8 +4,16 @@
     background-color: #9DE6D4;
 }
 .package-cards{
+    .planStatus{
+        font-size: .875rem;
+        display: block;
+        @include media-query(breakpoint-lg) {
+            font-size: 1.25rem;
+        }        
+    }
     h5{
         font-size: .875rem;
+        display: block;
         @include media-query(breakpoint-lg) {
             font-size: 1.25rem;
         }        

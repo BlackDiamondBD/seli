@@ -10,7 +10,7 @@
         width: 100%;
         height: calc(100vh - 3.875rem);
         overflow-y: scroll;
-        max-width: 400px;
+        max-width: 25rem;
         z-index: 12;
         padding: 0.9375rem 0;
         transform: translateX(-100%);
@@ -22,21 +22,21 @@
             position: inherit;
             height: inherit;
             max-width: 100%;
-            border: 1px solid $cool-gray;
+            border: .0625rem solid $cool-gray;
             border-radius: 0.625rem;
             overflow: inherit;
             transform: translateX(0%);
         }
         @include media-query(breakpoint-xl) {
-            padding: 20px 0;
+            padding: 1.25rem 0;
         }
         @include media-query(breakpoint-xxl-2) {
-            padding: 25px 0;
+            padding: 1.5625rem 0;
         }
     }
 
     &__widget {
-        border-bottom: 1px dashed $light-gray;
+        border-bottom: .0625rem dashed $light-gray;
         padding: 0.9375rem;
         &:first-child {
             padding-top: 0;
@@ -46,10 +46,10 @@
             border: none;
         }
         @include media-query(breakpoint-xl) {
-            padding: 20px 15px;
+            padding: 1.25rem .9375rem;
         }
         @include media-query(breakpoint-xxl-2) {
-            padding: 25px 15px;
+            padding: 1.5625rem .9375rem;
         }
 
         &-btn {
@@ -94,7 +94,7 @@
             flex-direction: column;
             gap: 0.625rem;
             & .form-checkBox {
-                font-size: 14px;
+                font-size: .875rem;
                 & label {
                     & span.indicator {
                         width: 1.25rem;
@@ -108,14 +108,14 @@
             align-items: center;
             justify-content: space-between;
             color: $dark-gray;
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: 500;
             &--borderd {
                 padding: 0.9375rem 0.8125rem;
                 border: 0.0375rem solid $light-gray;
                 border-radius: 0.3125rem;
                 background: #ffffff1a;
-                backdrop-filter: blur(20.53333282470703px);
+                backdrop-filter: blur(1.2833rem);
             }
         }
         &-right {
@@ -125,7 +125,7 @@
             width: max-content;
             flex: 0 0 auto;
             & .resultCount {
-                font-size: 14px;
+                font-size: .875rem;
                 display: block;
             }
         }
