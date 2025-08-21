@@ -1,1374 +1,890 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Basic SEO -->
-        <meta
-            name="description"
-            content="Discover beautiful homes and cars, expert advice, and a smoother path to buying or selling your property."
-        />
-        <meta
-            name="keywords"
-            content="seli, car, homes, buy car, buy home, buying and selling, trusted car and home marketplace, buy and sell"
-        />
-        <meta name="author" content="seli" />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
-        <meta property="og:title" content="Discover Beautiful Homes and Cars" />
-        <meta
-            property="og:description"
-            content="Expert advice and a smoother path to buying or selling your property."
-        />
-        <meta
-            property="og:image"
-            content="https://yourdomain.com/path-to-image.jpg"
-        />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:url" content="https://yourdomain.com" />
-        <meta property="og:type" content="website" />
-        <!-- Twitter Cards -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-            name="twitter:title"
-            content="Discover Beautiful Homes and Cars"
-        />
-        <meta
-            name="twitter:description"
-            content="Expert advice and a smoother path to buying or selling your property."
-        />
-        <meta
-            name="twitter:image"
-            content="https://yourdomain.com/path-to-image.jpg"
-        />
-        <meta name="twitter:site" content="@YourTwitterHandle" />
-        <!-- Canonical -->
-        <link rel="canonical" href="https://yourdomain.com" />
-        <!-- Theme color & Icons -->
-        <meta name="theme-color" content="#053C5A" />
+    <!-- Basic SEO -->
+    <meta
+      name="description"
+      content="Discover beautiful homes and cars, expert advice, and a smoother path to buying or selling your property."
+    />
+    <meta
+      name="keywords"
+      content="seli, car, homes, buy car, buy home, buying and selling, trusted car and home marketplace, buy and sell"
+    />
+    <meta name="author" content="seli" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:title" content="Discover Beautiful Homes and Cars" />
+    <meta property="og:description" content="Expert advice and a smoother path to buying or selling your property." />
+    <meta property="og:image" content="https://yourdomain.com/path-to-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:type" content="website" />
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Discover Beautiful Homes and Cars" />
+    <meta name="twitter:description" content="Expert advice and a smoother path to buying or selling your property." />
+    <meta name="twitter:image" content="https://yourdomain.com/path-to-image.jpg" />
+    <meta name="twitter:site" content="@YourTwitterHandle" />
+    <!-- Canonical -->
+    <link rel="canonical" href="https://yourdomain.com" />
+    <!-- Theme color & Icons -->
+    <meta name="theme-color" content="#053C5A" />
 
-        <!-- Title&Favicon -->
-        <title>Seli</title>
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="../../assets/images/logos-favicon/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="../../assets/images/logos-favicon/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="../../assets/images/logos-favicon/favicon-16x16.png"
-        />
-        <link
-            rel="manifest"
-            href="../../assets/images/logos-favicon/site.webmanifest"
-        />
+    <!-- Title&Favicon -->
+    <title>Seli</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/logos-favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/logos-favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/logos-favicon/favicon-16x16.png" />
+    <link rel="manifest" href="../../assets/images/logos-favicon/site.webmanifest" />
 
-        <!-- === CSS CDNs & StyleSheets === -->
-        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="../../assets/css/style.css" />
-    </head>
+    <!-- === CSS CDNs & StyleSheets === -->
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+  </head>
 
-    <body class="body-color-light-deep">
-        <!-- ===== Mobile Menu Start ===== -->
-        <div class="menu">
-            <div
-                class="offcanvas offcanvas-start"
-                tabindex="-1"
-                id="mobile-menu"
-                aria-labelledby="mobile-menu-Label"
+  <body class="body-color-light-deep">
+    <!-- ===== Mobile Menu Start ===== -->
+    <div class="menu">
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="mobile-menu" aria-labelledby="mobile-menu-Label">
+        <div class="offcanvas-header justify-content-between align-items-center">
+          <div class="offcanvas-title" id="mobile-menu-Label">
+            <!-- Logo -->
+            <div class="logo">
+              <a href="index.html">
+                <img src="../../assets/images/logos-favicon/logo.svg" alt="seli" />
+              </a>
+            </div>
+          </div>
+          <button type="button" class="menu__offcanvas__close" data-bs-dismiss="offcanvas" aria-label="Close">
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 26 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="btn__icon__symbol"
+              role="img"
+              aria-label="Close"
             >
-                <div
-                    class="offcanvas-header justify-content-between align-items-center"
-                >
-                    <div class="offcanvas-title" id="mobile-menu-Label">
-                        <!-- Logo -->
-                        <div class="logo">
-                            <a href="index.html">
-                                <img
-                                    src="../../assets/images/logos-favicon/logo.svg"
-                                    alt="seli"
-                                />
-                            </a>
-                        </div>
-                    </div>
-                    <button
-                        type="button"
-                        class="menu__offcanvas__close"
-                        data-bs-dismiss="offcanvas"
-                        aria-label="Close"
-                    >
-                        <svg
-                            width="26"
-                            height="26"
-                            viewBox="0 0 26 26"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="btn__icon__symbol"
-                            role="img"
-                            aria-label="Close"
-                        >
-                            <path
-                                d="M8 8L18 18"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                                stroke-miterlimit="10"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                            <path
-                                d="M18 8L8 18"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                                stroke-miterlimit="10"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                        </svg>
-                    </button>
-                </div>
-                <div class="offcanvas-body py-4">
-                    <nav class="menu__nav">
-                        <ul class="menu__ul">
-                            <li class="menu__item">
-                                <a
-                                    href="#"
-                                    class="menu__link text-capitalize d-flex active"
-                                >
-                                    Home
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a
-                                    href="#"
-                                    class="menu__link text-capitalize d-flex"
-                                >
-                                    Cars
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a
-                                    href="#"
-                                    class="menu__link text-capitalize d-flex"
-                                >
-                                    Real Estate
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a
-                                    href="#"
-                                    class="menu__link text-capitalize d-flex"
-                                >
-                                    Blog
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a
-                                    href="#"
-                                    class="menu__link text-capitalize d-flex"
-                                >
-                                    Pricing
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-
-                    <div class="menu__contact pt-5">
-                        <h4
-                            class="menu__contact__title h-4 text-primary fw-bold text-capitalize pb-3 mb-4"
-                        >
-                            More Options
-                        </h4>
-                        <div class="d-inline-flex align-items-center gap-3">
-                            <a
-                                href="#"
-                                aria-label="Direct Message Button"
-                                class="btn btn--dm"
-                            >
-                                <span class="btn__icon">
-                                    <svg
-                                        class="btn__icon__shake"
-                                        width="26"
-                                        height="26"
-                                        viewBox="0 0 26 26"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M19.25 0.5H6.75C3.3 0.5 0.5 3.2875 0.5 6.725V14.2V15.45C0.5 18.8875 3.3 21.675 6.75 21.675H8.625C8.9625 21.675 9.4125 21.9 9.625 22.175L11.5 24.6625C12.325 25.7625 13.675 25.7625 14.5 24.6625L16.375 22.175C16.6125 21.8625 16.9875 21.675 17.375 21.675H19.25C22.7 21.675 25.5 18.8875 25.5 15.45V6.725C25.5 3.2875 22.7 0.5 19.25 0.5ZM8 13C7.3 13 6.75 12.4375 6.75 11.75C6.75 11.0625 7.3125 10.5 8 10.5C8.6875 10.5 9.25 11.0625 9.25 11.75C9.25 12.4375 8.7 13 8 13ZM13 13C12.3 13 11.75 12.4375 11.75 11.75C11.75 11.0625 12.3125 10.5 13 10.5C13.6875 10.5 14.25 11.0625 14.25 11.75C14.25 12.4375 13.7 13 13 13ZM18 13C17.3 13 16.75 12.4375 16.75 11.75C16.75 11.0625 17.3125 10.5 18 10.5C18.6875 10.5 19.25 11.0625 19.25 11.75C19.25 12.4375 18.7 13 18 13Z"
-                                            fill="currentColor"
-                                        /></svg
-                                ></span>
-                            </a>
-                            <a href="#" class="btn btn--primary">
-                                I want to Sell
-                                <span class="btn__icon">
-                                    <svg
-                                        width="26"
-                                        height="26"
-                                        viewBox="0 0 26 26"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="btn__icon__symbol"
-                                    >
-                                        <path
-                                            d="M15.6325 6.42419L22.2083 13L15.6325 19.5759"
-                                            stroke="currentColor"
-                                            stroke-width="1.5"
-                                            stroke-miterlimit="10"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                        <path
-                                            d="M3.79166 13H22.0242"
-                                            stroke="currentColor"
-                                            stroke-width="1.5"
-                                            stroke-miterlimit="10"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+              <path
+                d="M8 8L18 18"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18 8L8 18"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
-        <!-- ===== Mobile Menu End ===== -->
+        <div class="offcanvas-body py-4">
+          <nav class="menu__nav">
+            <ul class="menu__ul">
+              <li class="menu__item">
+                <a href="#" class="menu__link text-capitalize d-flex active">Home</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link text-capitalize d-flex">Cars</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link text-capitalize d-flex">Real Estate</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link text-capitalize d-flex">Blog</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link text-capitalize d-flex">Pricing</a>
+              </li>
+            </ul>
+          </nav>
 
-        <!-- ===== Header Area Start ===== -->
-        <header class="header header--section">
-            <div class="container">
-                <div
-                    class="header__wrapper d-flex align-items-center justify-content-between"
-                >
-                    <!-- Header Left -->
-                    <div class="header__left">
-                        <!-- Logo -->
-                        <div class="logo">
-                            <a href="index.html">
-                                <img
-                                    src="../../assets/images/logos-favicon/logo.svg"
-                                    alt="seli"
-                                />
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Header Right -->
-                    <div class="header__right d-inline-flex align-items-center">
-                        <!-- Header Navigation -->
-                        <nav class="header__nav d-none d-xl-inline-flex">
-                            <ul
-                                class="header__nav__ul d-inline-flex align-items-center"
-                            >
-                                <li class="header__nav__item">
-                                    <a href="#" class="header__nav__link active"
-                                        >Home</a
-                                    >
-                                </li>
-                                <li class="header__nav__item">
-                                    <a href="#" class="header__nav__link"
-                                        >Cars</a
-                                    >
-                                </li>
-                                <li class="header__nav__item">
-                                    <a href="#" class="header__nav__link"
-                                        >Real Estate</a
-                                    >
-                                </li>
-                                <li class="header__nav__item">
-                                    <a href="#" class="header__nav__link"
-                                        >Blog</a
-                                    >
-                                </li>
-                                <li class="header__nav__item">
-                                    <a href="#" class="header__nav__link"
-                                        >Pricing</a
-                                    >
-                                </li>
-                            </ul>
-                        </nav>
-
-                        <!-- Action Buttons -->
-                        <div
-                            class="header__action__btns d-none d-xl-inline-flex align-items-center gap-3 gap-xl-4"
-                        >
-                            <a
-                                href="#"
-                                aria-label="Direct Message Button"
-                                class="btn btn--dm"
-                            >
-                                <span class="btn__icon">
-                                    <svg
-                                        class="btn__icon__shake"
-                                        width="26"
-                                        height="26"
-                                        viewBox="0 0 26 26"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M19.25 0.5H6.75C3.3 0.5 0.5 3.2875 0.5 6.725V14.2V15.45C0.5 18.8875 3.3 21.675 6.75 21.675H8.625C8.9625 21.675 9.4125 21.9 9.625 22.175L11.5 24.6625C12.325 25.7625 13.675 25.7625 14.5 24.6625L16.375 22.175C16.6125 21.8625 16.9875 21.675 17.375 21.675H19.25C22.7 21.675 25.5 18.8875 25.5 15.45V6.725C25.5 3.2875 22.7 0.5 19.25 0.5ZM8 13C7.3 13 6.75 12.4375 6.75 11.75C6.75 11.0625 7.3125 10.5 8 10.5C8.6875 10.5 9.25 11.0625 9.25 11.75C9.25 12.4375 8.7 13 8 13ZM13 13C12.3 13 11.75 12.4375 11.75 11.75C11.75 11.0625 12.3125 10.5 13 10.5C13.6875 10.5 14.25 11.0625 14.25 11.75C14.25 12.4375 13.7 13 13 13ZM18 13C17.3 13 16.75 12.4375 16.75 11.75C16.75 11.0625 17.3125 10.5 18 10.5C18.6875 10.5 19.25 11.0625 19.25 11.75C19.25 12.4375 18.7 13 18 13Z"
-                                            fill="currentColor"
-                                        /></svg
-                                ></span>
-                            </a>
-                            <a href="#" class="btn btn--primary">
-                                I want to Sell
-                                <span class="btn__icon">
-                                    <svg
-                                        width="26"
-                                        height="26"
-                                        viewBox="0 0 26 26"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="btn__icon__symbol"
-                                    >
-                                        <path
-                                            d="M15.6325 6.42419L22.2083 13L15.6325 19.5759"
-                                            stroke="currentColor"
-                                            stroke-width="1.5"
-                                            stroke-miterlimit="10"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                        <path
-                                            d="M3.79166 13H22.0242"
-                                            stroke="currentColor"
-                                            stroke-width="1.5"
-                                            stroke-miterlimit="10"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-
-                        <!-- Language Switcher -->
-                        <div class="lang-switcher position-relative z-1">
-                            <div
-                                id="lang-switcher__btn"
-                                class="lang-switcher__btn d-inline-flex align-items-center"
-                            >
-                                <span class="lang-switcher__btn__text">
-                                    En
-                                </span>
-                                <span class="lang-switcher__icon"
-                                    ><svg
-                                        width="18"
-                                        height="9"
-                                        viewBox="0 0 18 9"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M1.07992 8.05L7.59992 1.53C8.36992 0.759998 9.62992 0.759998 10.3999 1.53L16.9199 8.05"
-                                            stroke="currentColor"
-                                            stroke-width="1.5"
-                                            stroke-miterlimit="10"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                    </svg>
-                                </span>
-
-                                <div class="lang-switcher__box">
-                                    <ul class="lang-switcher__options">
-                                        <li class="lang-switcher__item">
-                                            <a
-                                                href="#"
-                                                class="lang-switcher__link d-flex align-items-center justify-content-between active"
-                                            >
-                                                En
-                                                <span
-                                                    class="lang-switcher__link__icon"
-                                                ></span>
-                                            </a>
-                                        </li>
-                                        <li class="lang-switcher__item">
-                                            <a
-                                                href="#"
-                                                class="lang-switcher__link d-flex align-items-center justify-content-between"
-                                            >
-                                                Ru
-                                                <span
-                                                    class="lang-switcher__link__icon"
-                                                ></span>
-                                            </a>
-                                        </li>
-                                        <li class="lang-switcher__item">
-                                            <a
-                                                href="#"
-                                                class="lang-switcher__link d-flex align-items-center justify-content-between border-0"
-                                            >
-                                                RO
-                                                <span
-                                                    class="lang-switcher__link__icon"
-                                                ></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Mobile (Hamburger) Menu-->
-                        <button
-                            class="menu-offcanvas-show d-xl-none ms-2 ms-md-3 ms-lg-4"
-                            type="button"
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#mobile-menu"
-                            aria-controls="mobile-menu"
-                            aria-label="offcanvas-bar-icon"
-                        >
-                            <svg
-                                width="40"
-                                height="40"
-                                viewBox="0 0 40 40"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M35 12.9167H5C4.31667 12.9167 3.75 12.35 3.75 11.6667C3.75 10.9833 4.31667 10.4167 5 10.4167H35C35.6833 10.4167 36.25 10.9833 36.25 11.6667C36.25 12.35 35.6833 12.9167 35 12.9167Z"
-                                    fill="currentColor"
-                                />
-                                <path
-                                    d="M35 21.25H5C4.31667 21.25 3.75 20.6833 3.75 20C3.75 19.3167 4.31667 18.75 5 18.75H35C35.6833 18.75 36.25 19.3167 36.25 20C36.25 20.6833 35.6833 21.25 35 21.25Z"
-                                    fill="currentColor"
-                                />
-                                <path
-                                    d="M35 29.5833H5C4.31667 29.5833 3.75 29.0167 3.75 28.3333C3.75 27.65 4.31667 27.0833 5 27.0833H35C35.6833 27.0833 36.25 27.65 36.25 28.3333C36.25 29.0167 35.6833 29.5833 35 29.5833Z"
-                                    fill="currentColor"
-                                />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- ===== Header Area End ===== -->
-
-        <!-- ===== Main Area Start ===== -->
-        <main class="main">
-            <section class="section select-category position-relative">
-                <img
-                    src="../../assets/images/icons-objs/category-obj.png"
-                    alt="obj"
-                    class="position-absolute select-category-obj select-category-obj--1"
-                />
-                <img
-                    src="../../assets/images/icons-objs/category-obj.png"
-                    alt="obj"
-                    class="position-absolute select-category-obj select-category-obj--2"
-                />
-                <div class="container">
-                    <div class="text-center">
-                        <h1 class="text-primary fw-bold fs-50 text-uppercase">
-                            IDEAS THAT INSPire
-                        </h1>
-                        <p
-                            class="fs-5 fw-medium mt-1 mt-md-3 pt-1 pt-md-2 select-category--short-desc text-black"
-                        >
-                            Explore expert tips, real stories, and market trends
-                            to help you buy or sell your car or home with
-                            confidence. Stay informed, stay ahead.
-                        </p>
-
-                        <div class="category mt-5 bg-white">
-                            <h2
-                                class="category--title text-primary text-center"
-                            >
-                                Select Category
-                            </h2>
-                            <div class="category-list scrolling-part">
-                                <button
-                                    class="category-list--item text-capitalize"
-                                >
-                                    Car Buying Tips
-                                </button>
-
-                                <button
-                                    class="category-list--item text-capitalize"
-                                >
-                                    Home Selling Guides
-                                </button>
-
-                                <button
-                                    class="category-list--item text-capitalize"
-                                >
-                                    Market Trends & Insights
-                                </button>
-
-                                <button
-                                    class="category-list--item text-capitalize"
-                                >
-                                    Finance & Loan Advice
-                                </button>
-
-                                <button
-                                    class="category-list--item text-capitalize"
-                                >
-                                    Finance & Loan Advice
-                                </button>
-
-                                <button
-                                    class="category-list--item text-capitalize"
-                                >
-                                    Real Estate Investment
-                                </button>
-
-                                <button
-                                    class="category-list--item text-capitalize"
-                                >
-                                    Car Buying Tips
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="blogs section">
-                <div class="container">
-                    <div
-                        class="d-md-flex justify-content-between align-items-center"
-                    >
-                        <h2
-                            class="blogs--title text-black mb-2 mb-md-0 text-uppercase"
-                        >
-                            explore blog on seli
-                        </h2>
-
-                        <!-- sort-dropdown -->
-                        <div
-                            class="dropdown dropdown__select d-none d-lg-inline-block"
-                        >
-                            <button
-                                class="btn btn--dropdown dropdown-toggle"
-                                type="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                <span class="icon">
-                                    <svg
-                                        width="22"
-                                        height="20"
-                                        viewBox="0 0 22 20"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M2.38394 4.16687C1.6276 3.32155 1.24943 2.89889 1.23516 2.53968C1.22277 2.22764 1.35687 1.92772 1.59768 1.72889C1.87489 1.5 2.44203 1.5 3.57633 1.5H18.4193C19.5536 1.5 20.1207 1.5 20.3979 1.72889C20.6387 1.92772 20.7728 2.22764 20.7604 2.53968C20.7462 2.89889 20.368 3.32155 19.6116 4.16687L13.9054 10.5444C13.7546 10.7129 13.6793 10.7972 13.6255 10.8931C13.5778 10.9781 13.5428 11.0697 13.5217 11.1648C13.4978 11.2721 13.4978 11.3852 13.4978 11.6113V16.9584C13.4978 17.1539 13.4978 17.2517 13.4663 17.3363C13.4384 17.411 13.3931 17.4779 13.334 17.5315C13.2673 17.5922 13.1765 17.6285 12.9949 17.7012L9.59491 19.0612C9.22736 19.2082 9.04359 19.2817 8.89607 19.251C8.76706 19.2242 8.65385 19.1476 8.58104 19.0377C8.49779 18.9122 8.49779 18.7142 8.49779 18.3184V11.6113C8.49779 11.3852 8.49779 11.2721 8.47391 11.1648C8.45274 11.0697 8.41776 10.9781 8.37008 10.8931C8.31633 10.7972 8.24095 10.7129 8.09018 10.5444L2.38394 4.16687Z"
-                                            stroke="#212529"
-                                            stroke-width="1.5"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                    </svg>
-                                </span>
-                                <span class="text-status">Sort by:</span>
-                                <span class="text-value">Newest</span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        >Low to High</a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        >Another action</a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        >Something else here</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- sort-dropdown-end -->
-                    </div>
-
-                    <div class="mt-4 pt-2 pt-md-0 mt-md-5">
-                        <div
-                            class="row blogs-cards gy-4 gy-md-4 gy-lg-4 gy-xxl-5 gx-2"
-                        >
-                            <div class="col-md-6 col-lg-4">
-                                <a
-                                    href="#"
-                                    class="card card--blog d-inline-block"
-                                >
-                                    <div class="card--blog-thumb">
-                                        <img
-                                            src="../../assets/images/thumbs/blog/blog-1.png"
-                                            alt="blog card one"
-                                            loading="lazy"
-                                        />
-                                    </div>
-
-                                    <div class="content">
-                                        <h3 class="blog-title">
-                                            Why Electric Cars Are the Future of
-                                            Car Industries
-                                        </h3>
-                                        <span class="date">March 9, 2024</span>
-                                        <p class="short-desc">
-                                            With rapidly advancing technology,
-                                            increasing charging infrastructure,
-                                            and growing environmental and
-                                            growing environmental
-                                        </p>
-                                    </div>
-
-                                    <div
-                                        class="mt-2 pt-1 pt-lg-0 mt-lg-3 pt-xxl-2 mt-xl-3 mt-xxl-4 d-flex justify-content-between align-items-center"
-                                    >
-                                        <div class="seen d-flex gap-0">
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-08.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-09.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-10.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-11.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                        </div>
-
-                                        <span
-                                            ><svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="32"
-                                                height="39"
-                                                viewBox="0 0 32 39"
-                                                fill="none"
-                                            >
-                                                <path
-                                                    d="M19.2383 10.0076L27.3316 19.575L19.2383 29.1425"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                />
-                                                <path
-                                                    d="M4.66797 19.575H27.108"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                /></svg
-                                        ></span>
-                                    </div>
-
-                                    <span class="d-block responses">
-                                        144 Responses
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div class="col-md-6 col-lg-4">
-                                <a
-                                    href="#"
-                                    class="card card--blog d-inline-block"
-                                >
-                                    <div class="card--blog-thumb">
-                                        <img
-                                            src="../../assets/images/thumbs/blog/blog-2.png"
-                                            alt="blog card two"
-                                            loading="lazy"
-                                        />
-                                    </div>
-
-                                    <div class="content">
-                                        <h3 class="blog-title">
-                                            Why SUVs Are Taking Over the Roads —
-                                            and Hearts
-                                        </h3>
-                                        <span class="date">Apr 10, 2025</span>
-                                        <p class="short-desc">
-                                            Whether you're navigating city
-                                            streets or exploring rugged
-                                            terrains, modern SUVs offer the
-                                            perfect mix of space, safety, and
-                                            style. Discover how this versatile
-                                            vehicle category became the top pick
-                                            for families, adventurers, and even
-                                            luxury lovers alike.
-                                        </p>
-                                    </div>
-
-                                    <div
-                                        class="mt-2 pt-1 pt-lg-0 mt-lg-3 pt-xxl-2 mt-xl-3 mt-xxl-4 d-flex justify-content-between align-items-center"
-                                    >
-                                        <div class="seen d-flex gap-0">
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-08.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-09.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-10.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-11.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                        </div>
-
-                                        <span
-                                            ><svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="32"
-                                                height="39"
-                                                viewBox="0 0 32 39"
-                                                fill="none"
-                                            >
-                                                <path
-                                                    d="M19.2383 10.0076L27.3316 19.575L19.2383 29.1425"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                />
-                                                <path
-                                                    d="M4.66797 19.575H27.108"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                /></svg
-                                        ></span>
-                                    </div>
-
-                                    <span class="d-block responses">
-                                        89 Responses
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div class="col-md-6 col-lg-4">
-                                <a
-                                    href="#"
-                                    class="card card--blog d-inline-block"
-                                >
-                                    <div class="card--blog-thumb">
-                                        <img
-                                            src="../../assets/images/thumbs/blog/blog-3.png"
-                                            alt="blog card three"
-                                            loading="lazy"
-                                        />
-                                    </div>
-
-                                    <div class="content">
-                                        <h3 class="blog-title">
-                                            Why the Sports Sedan Is the Perfect
-                                            Blend of Power and Comfort
-                                        </h3>
-                                        <span class="date">Jun 12, 2023</span>
-                                        <p class="short-desc">
-                                            Tired of choosing between
-                                            performance and practicality? Sports
-                                            sedans offer thrilling acceleration,
-                                            sleek design, and daily driving
-                                            comfort all in one package. Learn
-                                            why this often-overlooked segment is
-                                            making a powerful comeback.
-                                        </p>
-                                    </div>
-
-                                    <div
-                                        class="mt-2 pt-1 pt-lg-0 mt-lg-3 pt-xxl-2 mt-xl-3 mt-xxl-4 d-flex justify-content-between align-items-center"
-                                    >
-                                        <div class="seen d-flex gap-0">
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-08.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-09.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-10.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-11.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                        </div>
-
-                                        <span
-                                            ><svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="32"
-                                                height="39"
-                                                viewBox="0 0 32 39"
-                                                fill="none"
-                                            >
-                                                <path
-                                                    d="M19.2383 10.0076L27.3316 19.575L19.2383 29.1425"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                />
-                                                <path
-                                                    d="M4.66797 19.575H27.108"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                /></svg
-                                        ></span>
-                                    </div>
-
-                                    <span class="d-block responses">
-                                        212 Responses
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div class="col-md-6 col-lg-4">
-                                <a
-                                    href="#"
-                                    class="card card--blog d-inline-block"
-                                >
-                                    <div class="card--blog-thumb">
-                                        <img
-                                            src="../../assets/images/thumbs/blog/blog-4.png"
-                                            alt="blog card four"
-                                            loading="lazy"
-                                        />
-                                    </div>
-
-                                    <div class="content">
-                                        <h3 class="blog-title">
-                                            Why Electric Cars Are the Future of
-                                            Car Industries
-                                        </h3>
-                                        <span class="date">March 9, 2024</span>
-                                        <p class="short-desc">
-                                            With rapidly advancing technology,
-                                            increasing charging infrastructure,
-                                            and growing environmental and
-                                            growing environmental
-                                        </p>
-                                    </div>
-
-                                    <div
-                                        class="mt-2 pt-1 pt-lg-0 mt-lg-3 pt-xxl-2 mt-xl-3 mt-xxl-4 d-flex justify-content-between align-items-center"
-                                    >
-                                        <div class="seen d-flex gap-0">
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-08.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-09.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-10.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-11.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                        </div>
-
-                                        <span
-                                            ><svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="32"
-                                                height="39"
-                                                viewBox="0 0 32 39"
-                                                fill="none"
-                                            >
-                                                <path
-                                                    d="M19.2383 10.0076L27.3316 19.575L19.2383 29.1425"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                />
-                                                <path
-                                                    d="M4.66797 19.575H27.108"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                /></svg
-                                        ></span>
-                                    </div>
-
-                                    <span class="d-block responses">
-                                        144 Responses
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div class="col-md-6 col-lg-4">
-                                <a
-                                    href="#"
-                                    class="card card--blog d-inline-block"
-                                >
-                                    <div class="card--blog-thumb">
-                                        <img
-                                            src="../../assets/images/thumbs/blog/blog-5.png"
-                                            alt="blog card five"
-                                            loading="lazy"
-                                        />
-                                    </div>
-
-                                    <div class="content">
-                                        <h3 class="blog-title">
-                                            Why SUVs Are Taking Over the Roads —
-                                            and Hearts
-                                        </h3>
-                                        <span class="date">Apr 10, 2025</span>
-                                        <p class="short-desc">
-                                            Whether you're navigating city
-                                            streets or exploring rugged
-                                            terrains, modern SUVs offer the
-                                            perfect mix of space, safety, and
-                                            style. Discover how this versatile
-                                            vehicle category became the top pick
-                                            for families, adventurers, and even
-                                            luxury lovers alike.
-                                        </p>
-                                    </div>
-
-                                    <div
-                                        class="mt-2 pt-1 pt-lg-0 mt-lg-3 pt-xxl-2 mt-xl-3 mt-xxl-4 d-flex justify-content-between align-items-center"
-                                    >
-                                        <div class="seen d-flex gap-0">
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-08.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-09.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-10.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-11.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                        </div>
-
-                                        <span
-                                            ><svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="32"
-                                                height="39"
-                                                viewBox="0 0 32 39"
-                                                fill="none"
-                                            >
-                                                <path
-                                                    d="M19.2383 10.0076L27.3316 19.575L19.2383 29.1425"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                />
-                                                <path
-                                                    d="M4.66797 19.575H27.108"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                /></svg
-                                        ></span>
-                                    </div>
-
-                                    <span class="d-block responses">
-                                        89 Responses
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div class="col-md-6 col-lg-4">
-                                <a
-                                    href="#"
-                                    class="card card--blog d-inline-block"
-                                >
-                                    <div class="card--blog-thumb">
-                                        <img
-                                            src="../../assets/images/thumbs/blog/blog-6.png"
-                                            alt="blog card six"
-                                            loading="lazy"
-                                        />
-                                    </div>
-
-                                    <div class="content">
-                                        <h3 class="blog-title">
-                                            Why the Sports Sedan Is the Perfect
-                                            Blend of Power and Comfort
-                                        </h3>
-                                        <span class="date">Jun 12, 2023</span>
-                                        <p class="short-desc">
-                                            Tired of choosing between
-                                            performance and practicality? Sports
-                                            sedans offer thrilling acceleration,
-                                            sleek design, and daily driving
-                                            comfort all in one package. Learn
-                                            why this often-overlooked segment is
-                                            making a powerful comeback.
-                                        </p>
-                                    </div>
-
-                                    <div
-                                        class="mt-2 pt-1 pt-lg-0 mt-lg-3 pt-xxl-2 mt-xl-3 mt-xxl-4 d-flex justify-content-between align-items-center"
-                                    >
-                                        <div class="seen d-flex gap-0">
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-08.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-09.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-10.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                            <img
-                                                src="../../assets/images/thumbs/avatar/avatar-11.png"
-                                                alt="blog readers"
-                                                loading="lazy"
-                                            />
-                                        </div>
-
-                                        <span
-                                            ><svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="32"
-                                                height="39"
-                                                viewBox="0 0 32 39"
-                                                fill="none"
-                                            >
-                                                <path
-                                                    d="M19.2383 10.0076L27.3316 19.575L19.2383 29.1425"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                />
-                                                <path
-                                                    d="M4.66797 19.575H27.108"
-                                                    stroke="black"
-                                                    stroke-width="3"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                /></svg
-                                        ></span>
-                                    </div>
-
-                                    <span class="d-block responses">
-                                        212 Responses
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div
-                            class="d-flex justify-content-center pt-4 mt-2 mt-lg-2 pt-lg-5"
-                        >
-                            <a href="#" class="btn mt-1">
-                                Load More
-                                <span class="btn__icon">
-                                    <svg
-                                        width="26"
-                                        height="26"
-                                        viewBox="0 0 26 26"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="btn__icon__symbol"
-                                    >
-                                        <path
-                                            d="M15.6325 6.42419L22.2083 13L15.6325 19.5759"
-                                            stroke="currentColor"
-                                            stroke-width="1.5"
-                                            stroke-miterlimit="10"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                        <path
-                                            d="M3.79166 13H22.0242"
-                                            stroke="currentColor"
-                                            stroke-width="1.5"
-                                            stroke-miterlimit="10"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <!-- ===== Main Area End ===== -->
-
-        <!-- ===== Footer Area End ===== -->
-        <footer class="footer footer--section">
-            <div class="footer__content position-relative z-1 mx-auto">
-                <div class="container">
-                    <div
-                        class="footer__wrapper d-flex flex-wrap align-items-center justify-content-between"
-                    >
-                        <!-- Logo -->
-                        <div class="logo">
-                            <a href="index.html">
-                                <img
-                                    src="../../assets/images/logos-favicon/logo.svg"
-                                    alt="seli"
-                                    loading="lazy"
-                                />
-                            </a>
-                        </div>
-
-                        <!-- Footer Social Contact -->
-                        <div
-                            class="social-contact d-inline-flex align-items-center order-lg-3"
-                        >
-                            <a
-                                href="#"
-                                class="social-contact__link"
-                                aria-label="twitter-link"
-                            >
-                                <svg
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M21.0808 5.77756C20.3652 6.09357 19.61 6.29108 18.8149 6.40958C19.61 5.93557 20.246 5.18504 20.5242 4.27651C19.769 4.71102 18.9342 5.02703 18.0199 5.22454C17.3044 4.47402 16.2708 4 15.1578 4C13.0112 4 11.2621 5.73806 11.2621 7.87113C11.2621 8.18714 11.3019 8.46365 11.3814 8.74016C8.1615 8.58216 5.25963 7.0416 3.3118 4.67152C2.99379 5.26404 2.79503 5.89606 2.79503 6.60709C2.79503 7.95013 3.47081 9.13517 4.5441 9.8462C3.90808 9.8067 3.3118 9.64869 2.75528 9.37218V9.41168C2.75528 11.3077 4.10683 12.8878 5.89566 13.2433C5.57764 13.3223 5.21988 13.3618 4.86211 13.3618C4.6236 13.3618 4.34534 13.3223 4.10683 13.2828C4.6236 14.8234 6.05466 15.9689 7.76398 15.9689C6.41243 16.9959 4.74286 17.628 2.91429 17.628C2.59627 17.628 2.27826 17.628 2 17.5885C3.74907 18.6945 5.7764 19.3265 8.00249 19.3265C15.1975 19.3265 19.1329 13.4013 19.1329 8.26614C19.1329 8.10814 19.1329 7.91063 19.1329 7.75263C19.8882 7.23911 20.564 6.56759 21.0808 5.77756Z"
-                                        fill="currentColor"
-                                    />
-                                </svg>
-                            </a>
-                            <a
-                                href="#"
-                                class="social-contact__link"
-                                aria-label="facebook-link"
-                            >
-                                <svg
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M10.1913 22.6592V13.2356H7V9.56298H10.1913V6.85457C10.1913 3.71147 12.1232 2 14.9448 2C16.2964 2 17.458 2.1 17.7965 2.14469V5.42941L15.8396 5.43029C14.305 5.43029 14.0079 6.15489 14.0079 7.21821V9.56298H17.6677L17.1912 13.2356H14.0079V22.6592H10.1913Z"
-                                        fill="currentColor"
-                                    />
-                                </svg>
-                            </a>
-                            <a
-                                href="#"
-                                class="social-contact__link"
-                                aria-label="intagram-link"
-                            >
-                                <svg
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M11.5677 3.07127C14.6563 3.07127 15.0221 3.08276 16.2422 3.13805C16.9758 3.14697 17.7024 3.28083 18.3905 3.5338C18.8894 3.72502 19.3426 4.01795 19.7207 4.39373C20.0989 4.76951 20.3937 5.21981 20.5861 5.71564C20.8407 6.39938 20.9754 7.12143 20.9844 7.85041C21.0395 9.06284 21.0516 9.4263 21.0516 12.4954C21.0516 15.5646 21.04 15.928 20.9844 17.1405C20.9754 17.8694 20.8407 18.5915 20.5861 19.2752C20.3937 19.7711 20.0989 20.2214 19.7207 20.5971C19.3426 20.9729 18.8894 21.2659 18.3905 21.4571C17.7024 21.71 16.9758 21.8439 16.2422 21.8528C15.0226 21.9076 14.6568 21.9196 11.5677 21.9196C8.47858 21.9196 8.11282 21.9081 6.89326 21.8528C6.15966 21.8439 5.43303 21.71 4.74497 21.4571C4.24599 21.2659 3.79284 20.9729 3.41468 20.5971C3.03652 20.2214 2.74174 19.7711 2.5493 19.2752C2.29473 18.5915 2.16002 17.8694 2.15104 17.1405C2.09596 15.928 2.08384 15.5646 2.08384 12.4954C2.08384 9.4263 2.09541 9.06284 2.15104 7.85041C2.16002 7.12143 2.29473 6.39938 2.5493 5.71564C2.74174 5.21981 3.03652 4.76951 3.41468 4.39373C3.79284 4.01795 4.24599 3.72502 4.74497 3.5338C5.43303 3.28083 6.15966 3.14697 6.89326 3.13805C8.11337 3.08331 8.47913 3.07127 11.5677 3.07127ZM11.5677 1C8.42791 1 8.0324 1.01314 6.79851 1.06897C5.83842 1.08795 4.88851 1.26859 3.98921 1.60321C3.21775 1.89204 2.519 2.34466 1.94172 2.9295C1.35265 3.50335 0.89677 4.1981 0.605928 4.96519C0.269186 5.85883 0.0874012 6.80276 0.0683046 7.75681C0.0132203 8.98183 0 9.37485 0 12.4949C0 15.6149 0.0132202 16.0079 0.0694062 17.2341C0.0885028 18.1881 0.270288 19.132 0.60703 20.0257C0.897549 20.7927 1.35305 21.4874 1.94172 22.0614C2.51932 22.6463 3.21846 23.099 3.99031 23.3877C4.88962 23.7223 5.83952 23.9029 6.79961 23.9219C8.0335 23.9766 8.42736 23.9909 11.5688 23.9909C14.7103 23.9909 15.1041 23.9777 16.338 23.9219C17.2981 23.9029 18.248 23.7223 19.1473 23.3877C19.9155 23.0918 20.6131 22.6398 21.1955 22.0607C21.7779 21.4816 22.2322 20.7881 22.5295 20.0246C22.8662 19.1309 23.048 18.187 23.0671 17.233C23.1222 16.0079 23.1354 15.6149 23.1354 12.4949C23.1354 9.37485 23.1222 8.98183 23.066 7.75571C23.0469 6.80166 22.8651 5.85774 22.5284 4.96409C22.2379 4.1971 21.7824 3.50237 21.1937 2.9284C20.6161 2.34344 19.917 1.8908 19.1451 1.60211C18.2458 1.26749 17.2959 1.08685 16.3358 1.06787C15.103 1.01314 14.7075 1 11.5677 1Z"
-                                        fill="currentColor"
-                                    />
-                                    <path
-                                        d="M11.5653 6.59082C10.3904 6.59082 9.24192 6.93702 8.26505 7.58564C7.28817 8.23426 6.52679 9.15616 6.07718 10.2348C5.62757 11.3134 5.50994 12.5003 5.73914 13.6453C5.96835 14.7904 6.53411 15.8422 7.36488 16.6677C8.19564 17.4932 9.2541 18.0554 10.4064 18.2832C11.5587 18.511 12.7531 18.3941 13.8386 17.9473C14.924 17.5005 15.8517 16.7439 16.5045 15.7732C17.1572 14.8025 17.5056 13.6612 17.5056 12.4937C17.5056 10.9282 16.8797 9.42675 15.7657 8.31974C14.6517 7.21273 13.1408 6.59082 11.5653 6.59082ZM11.5653 16.3254C10.8027 16.3254 10.0572 16.1006 9.42307 15.6796C8.78897 15.2586 8.29475 14.6602 8.00291 13.96C7.71106 13.2599 7.6347 12.4895 7.78348 11.7462C7.93227 11.0029 8.29951 10.3202 8.83876 9.78435C9.37802 9.24849 10.0651 8.88356 10.813 8.73571C11.561 8.58787 12.3363 8.66375 13.0409 8.95376C13.7455 9.24376 14.3477 9.73487 14.7714 10.365C15.1951 10.9951 15.4212 11.7359 15.4212 12.4937C15.4212 13.5099 15.015 14.4845 14.2918 15.2031C13.5687 15.9217 12.5879 16.3254 11.5653 16.3254Z"
-                                        fill="currentColor"
-                                    />
-                                    <path
-                                        d="M17.7419 7.73814C18.5085 7.73814 19.13 7.12057 19.13 6.35876C19.13 5.59694 18.5085 4.97937 17.7419 4.97937C16.9752 4.97937 16.3538 5.59694 16.3538 6.35876C16.3538 7.12057 16.9752 7.73814 17.7419 7.73814Z"
-                                        fill="currentColor"
-                                    />
-                                </svg>
-                            </a>
-                            <a
-                                href="#"
-                                class="social-contact__link"
-                                aria-label="whatsapp-link"
-                            >
-                                <svg
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <g clip-path="url(#clip0_2372_2915)">
-                                        <path
-                                            d="M16.048 14.1151L16.0397 14.1839C14.024 13.1792 13.8131 13.0454 13.5528 13.4359C13.3722 13.7063 12.846 14.3195 12.6875 14.501C12.527 14.6798 12.3675 14.6935 12.0953 14.5698C11.8203 14.4323 10.9375 14.1435 9.89255 13.2085C9.07855 12.4798 8.53222 11.586 8.37088 11.311C8.1023 10.8472 8.66422 10.7812 9.17572 9.81319C9.26738 9.62069 9.22063 9.46944 9.1528 9.33286C9.08405 9.19536 8.5368 7.84786 8.30763 7.31069C8.08763 6.77536 7.86122 6.84319 7.69163 6.84319C7.16363 6.79736 6.77772 6.80469 6.43763 7.15853C4.95813 8.78469 5.33122 10.4622 6.59713 12.246C9.08497 15.502 10.4105 16.1015 12.8341 16.9339C13.4886 17.1419 14.0854 17.1126 14.5575 17.0448C15.0836 16.9614 16.1772 16.3839 16.4055 15.7376C16.6392 15.0914 16.6392 14.5551 16.5705 14.4314C16.5026 14.3076 16.323 14.2389 16.048 14.1151Z"
-                                            fill="currentColor"
-                                        />
-                                        <path
-                                            d="M18.81 4.16198C11.7618 -2.6516 0.0971667 2.29015 0.0925833 11.9023C0.0925833 13.8236 0.595833 15.6973 1.55467 17.3519L0 23.0004L5.80708 21.4861C13.0533 25.4002 21.9963 20.2027 22 11.9078C22 8.99648 20.8633 6.25656 18.7962 4.19773L18.81 4.16198ZM20.1685 11.8776C20.163 18.8745 12.4823 23.2442 6.4075 19.6729L6.0775 19.4767L2.64 20.3705L3.56125 17.0292L3.34217 16.6855C-0.438167 10.6676 3.905 2.80256 11.066 2.80256C12.2619 2.79956 13.4464 3.03377 14.5512 3.49165C15.6559 3.94952 16.6588 4.62197 17.5019 5.47006C18.3496 6.30751 19.022 7.30542 19.4798 8.40555C19.9377 9.50567 20.1718 10.686 20.1685 11.8776Z"
-                                            fill="currentColor"
-                                        />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_2372_2915">
-                                            <rect
-                                                width="22"
-                                                height="22"
-                                                fill="white"
-                                                transform="translate(0 1)"
-                                            />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </a>
-                        </div>
-
-                        <!-- Footer Navigation -->
-                        <nav class="footer__nav">
-                            <ul
-                                class="footer__nav__ul d-flex flex-column flex-lg-row"
-                            >
-                                <li class="footer__nav__item text-center">
-                                    <a
-                                        href="#"
-                                        class="footer__nav__link text-capitalize"
-                                        >About</a
-                                    >
-                                </li>
-                                <li class="footer__nav__item text-center">
-                                    <a
-                                        href="#"
-                                        class="footer__nav__link text-capitalize"
-                                        >Privacy Policy
-                                    </a>
-                                </li>
-                                <li class="footer__nav__item text-center">
-                                    <a
-                                        href="#"
-                                        class="footer__nav__link text-capitalize"
-                                        >Terms & Conditions</a
-                                    >
-                                </li>
-                                <li class="footer__nav__item text-center">
-                                    <a
-                                        href="#"
-                                        class="footer__nav__link text-capitalize"
-                                        >Support</a
-                                    >
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-
-                    <div class="footer__copyright">
-                        <p class="fw-semibold text-center">
-                            © Copyright 2022, All Rights Reserved
-                        </p>
-                    </div>
-                </div>
-
-                <div
-                    class="footer__obj position-absolute top-0 start-0 w-100 h-100 z-n1 d-flex flex-wrap justify-content-between align-items-center"
-                >
-                    <img
-                        src="../../assets/images/icons-objs/footer-obj-sm.webp"
-                        alt="seli.md"
-                        class="footer__obj__item"
-                        loading="lazy"
-                        aria-hidden="true"
+          <div class="menu__contact pt-5">
+            <h4 class="menu__contact__title h-4 text-primary fw-bold text-capitalize pb-3 mb-4">More Options</h4>
+            <div class="d-inline-flex align-items-center gap-3">
+              <a href="#" aria-label="Direct Message Button" class="btn btn--dm">
+                <span class="btn__icon">
+                  <svg
+                    class="btn__icon__shake"
+                    width="26"
+                    height="26"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.25 0.5H6.75C3.3 0.5 0.5 3.2875 0.5 6.725V14.2V15.45C0.5 18.8875 3.3 21.675 6.75 21.675H8.625C8.9625 21.675 9.4125 21.9 9.625 22.175L11.5 24.6625C12.325 25.7625 13.675 25.7625 14.5 24.6625L16.375 22.175C16.6125 21.8625 16.9875 21.675 17.375 21.675H19.25C22.7 21.675 25.5 18.8875 25.5 15.45V6.725C25.5 3.2875 22.7 0.5 19.25 0.5ZM8 13C7.3 13 6.75 12.4375 6.75 11.75C6.75 11.0625 7.3125 10.5 8 10.5C8.6875 10.5 9.25 11.0625 9.25 11.75C9.25 12.4375 8.7 13 8 13ZM13 13C12.3 13 11.75 12.4375 11.75 11.75C11.75 11.0625 12.3125 10.5 13 10.5C13.6875 10.5 14.25 11.0625 14.25 11.75C14.25 12.4375 13.7 13 13 13ZM18 13C17.3 13 16.75 12.4375 16.75 11.75C16.75 11.0625 17.3125 10.5 18 10.5C18.6875 10.5 19.25 11.0625 19.25 11.75C19.25 12.4375 18.7 13 18 13Z"
+                      fill="currentColor"
                     />
-                    <img
-                        src="../../assets/images/icons-objs/footer-obj-sm.webp"
-                        alt="seli.md"
-                        class="footer__obj__item"
-                        loading="lazy"
-                        aria-hidden="true"
+                  </svg>
+                </span>
+              </a>
+              <a href="#" class="btn btn--primary">
+                I want to Sell
+                <span class="btn__icon">
+                  <svg
+                    width="26"
+                    height="26"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="btn__icon__symbol"
+                  >
+                    <path
+                      d="M15.6325 6.42419L22.2083 13L15.6325 19.5759"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
                     />
-                </div>
+                    <path
+                      d="M3.79166 13H22.0242"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </a>
             </div>
-        </footer>
-        <!-- ===== Footer Area End ===== -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ===== Mobile Menu End ===== -->
 
-        <!-- === jQuery CDNs & Scripts === -->
-        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
-        <script src="../../assets/js/swiper-bundle.min.js"></script>
-        <script src="../../assets/js/main.js"></script>
-    </body>
+    <!-- ===== Header Area Start ===== -->
+    <header class="header header--section">
+      <div class="container">
+        <div class="header__wrapper d-flex align-items-center justify-content-between">
+          <!-- Header Left -->
+          <div class="header__left">
+            <!-- Logo -->
+            <div class="logo">
+              <a href="index.html">
+                <img src="../../assets/images/logos-favicon/logo.svg" alt="seli" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Header Right -->
+          <div class="header__right d-inline-flex align-items-center">
+            <!-- Header Navigation -->
+            <nav class="header__nav d-none d-xl-inline-flex">
+              <ul class="header__nav__ul d-inline-flex align-items-center">
+                <li class="header__nav__item">
+                  <a href="#" class="header__nav__link active">Home</a>
+                </li>
+                <li class="header__nav__item">
+                  <a href="#" class="header__nav__link">Cars</a>
+                </li>
+                <li class="header__nav__item">
+                  <a href="#" class="header__nav__link">Real Estate</a>
+                </li>
+                <li class="header__nav__item">
+                  <a href="#" class="header__nav__link">Blog</a>
+                </li>
+                <li class="header__nav__item">
+                  <a href="#" class="header__nav__link">Pricing</a>
+                </li>
+              </ul>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="header__action__btns d-none d-xl-inline-flex align-items-center gap-3 gap-xl-4">
+              <a href="#" aria-label="Direct Message Button" class="btn btn--dm">
+                <span class="btn__icon">
+                  <svg
+                    class="btn__icon__shake"
+                    width="26"
+                    height="26"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.25 0.5H6.75C3.3 0.5 0.5 3.2875 0.5 6.725V14.2V15.45C0.5 18.8875 3.3 21.675 6.75 21.675H8.625C8.9625 21.675 9.4125 21.9 9.625 22.175L11.5 24.6625C12.325 25.7625 13.675 25.7625 14.5 24.6625L16.375 22.175C16.6125 21.8625 16.9875 21.675 17.375 21.675H19.25C22.7 21.675 25.5 18.8875 25.5 15.45V6.725C25.5 3.2875 22.7 0.5 19.25 0.5ZM8 13C7.3 13 6.75 12.4375 6.75 11.75C6.75 11.0625 7.3125 10.5 8 10.5C8.6875 10.5 9.25 11.0625 9.25 11.75C9.25 12.4375 8.7 13 8 13ZM13 13C12.3 13 11.75 12.4375 11.75 11.75C11.75 11.0625 12.3125 10.5 13 10.5C13.6875 10.5 14.25 11.0625 14.25 11.75C14.25 12.4375 13.7 13 13 13ZM18 13C17.3 13 16.75 12.4375 16.75 11.75C16.75 11.0625 17.3125 10.5 18 10.5C18.6875 10.5 19.25 11.0625 19.25 11.75C19.25 12.4375 18.7 13 18 13Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </span>
+              </a>
+              <a href="#" class="btn btn--primary">
+                I want to Sell
+                <span class="btn__icon">
+                  <svg
+                    width="26"
+                    height="26"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="btn__icon__symbol"
+                  >
+                    <path
+                      d="M15.6325 6.42419L22.2083 13L15.6325 19.5759"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.79166 13H22.0242"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+            <!-- Language Switcher -->
+            <div class="lang-switcher position-relative z-1">
+              <div id="lang-switcher__btn" class="lang-switcher__btn d-inline-flex align-items-center">
+                <span class="lang-switcher__btn__text">En</span>
+                <span class="lang-switcher__icon">
+                  <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.07992 8.05L7.59992 1.53C8.36992 0.759998 9.62992 0.759998 10.3999 1.53L16.9199 8.05"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+
+                <div class="lang-switcher__box">
+                  <ul class="lang-switcher__options">
+                    <li class="lang-switcher__item">
+                      <a href="#" class="lang-switcher__link d-flex align-items-center justify-content-between active">
+                        En
+                        <span class="lang-switcher__link__icon"></span>
+                      </a>
+                    </li>
+                    <li class="lang-switcher__item">
+                      <a href="#" class="lang-switcher__link d-flex align-items-center justify-content-between">
+                        Ru
+                        <span class="lang-switcher__link__icon"></span>
+                      </a>
+                    </li>
+                    <li class="lang-switcher__item">
+                      <a
+                        href="#"
+                        class="lang-switcher__link d-flex align-items-center justify-content-between border-0"
+                      >
+                        RO
+                        <span class="lang-switcher__link__icon"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mobile (Hamburger) Menu-->
+            <button
+              class="menu-offcanvas-show d-xl-none ms-2 ms-md-3 ms-lg-4"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mobile-menu"
+              aria-controls="mobile-menu"
+              aria-label="offcanvas-bar-icon"
+            >
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M35 12.9167H5C4.31667 12.9167 3.75 12.35 3.75 11.6667C3.75 10.9833 4.31667 10.4167 5 10.4167H35C35.6833 10.4167 36.25 10.9833 36.25 11.6667C36.25 12.35 35.6833 12.9167 35 12.9167Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M35 21.25H5C4.31667 21.25 3.75 20.6833 3.75 20C3.75 19.3167 4.31667 18.75 5 18.75H35C35.6833 18.75 36.25 19.3167 36.25 20C36.25 20.6833 35.6833 21.25 35 21.25Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M35 29.5833H5C4.31667 29.5833 3.75 29.0167 3.75 28.3333C3.75 27.65 4.31667 27.0833 5 27.0833H35C35.6833 27.0833 36.25 27.65 36.25 28.3333C36.25 29.0167 35.6833 29.5833 35 29.5833Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ===== Header Area End ===== -->
+
+    <!-- ===== Main Area Start ===== -->
+    <main class="main">
+      <section class="section select-category position-relative">
+        <img
+          src="../../assets/images/icons-objs/category-obj.png"
+          alt="obj"
+          class="position-absolute select-category-obj select-category-obj--1"
+        />
+        <img
+          src="../../assets/images/icons-objs/category-obj.png"
+          alt="obj"
+          class="position-absolute select-category-obj select-category-obj--2"
+        />
+        <div class="container">
+          <div class="text-center">
+            <h1 class="text-primary fw-bold fs-50 text-uppercase">IDEAS THAT INSPire</h1>
+            <p class="fs-5 fw-medium mt-1 mt-md-3 pt-1 pt-md-2 select-category--short-desc text-black">
+              Explore expert tips, real stories, and market trends to help you buy or sell your car or home with
+              confidence. Stay informed, stay ahead.
+            </p>
+
+            <div class="category mt-5 bg-white">
+              <h2 class="category--title text-primary text-center">Select Category</h2>
+              <div class="category-list scrolling-part">
+                <button class="category-list--item text-capitalize">Car Buying Tips</button>
+
+                <button class="category-list--item text-capitalize">Home Selling Guides</button>
+
+                <button class="category-list--item text-capitalize">Market Trends & Insights</button>
+
+                <button class="category-list--item text-capitalize">Finance & Loan Advice</button>
+
+                <button class="category-list--item text-capitalize">Finance & Loan Advice</button>
+
+                <button class="category-list--item text-capitalize">Real Estate Investment</button>
+
+                <button class="category-list--item text-capitalize">Car Buying Tips</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="blogs section">
+        <div class="container">
+          <div class="d-md-flex justify-content-between align-items-center">
+            <h2 class="blogs--title text-black mb-2 mb-md-0 text-uppercase">explore blog on seli</h2>
+
+            <!-- sort-dropdown -->
+            <div class="dropdown dropdown__select d-none d-lg-inline-block">
+              <button
+                class="btn btn--dropdown dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="icon">
+                  <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2.38394 4.16687C1.6276 3.32155 1.24943 2.89889 1.23516 2.53968C1.22277 2.22764 1.35687 1.92772 1.59768 1.72889C1.87489 1.5 2.44203 1.5 3.57633 1.5H18.4193C19.5536 1.5 20.1207 1.5 20.3979 1.72889C20.6387 1.92772 20.7728 2.22764 20.7604 2.53968C20.7462 2.89889 20.368 3.32155 19.6116 4.16687L13.9054 10.5444C13.7546 10.7129 13.6793 10.7972 13.6255 10.8931C13.5778 10.9781 13.5428 11.0697 13.5217 11.1648C13.4978 11.2721 13.4978 11.3852 13.4978 11.6113V16.9584C13.4978 17.1539 13.4978 17.2517 13.4663 17.3363C13.4384 17.411 13.3931 17.4779 13.334 17.5315C13.2673 17.5922 13.1765 17.6285 12.9949 17.7012L9.59491 19.0612C9.22736 19.2082 9.04359 19.2817 8.89607 19.251C8.76706 19.2242 8.65385 19.1476 8.58104 19.0377C8.49779 18.9122 8.49779 18.7142 8.49779 18.3184V11.6113C8.49779 11.3852 8.49779 11.2721 8.47391 11.1648C8.45274 11.0697 8.41776 10.9781 8.37008 10.8931C8.31633 10.7972 8.24095 10.7129 8.09018 10.5444L2.38394 4.16687Z"
+                      stroke="#212529"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <span class="text-status">Sort by:</span>
+                <span class="text-value">Newest</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Low to High</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Another action</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <!-- sort-dropdown-end -->
+          </div>
+
+          <div class="mt-4 pt-2 pt-md-0 mt-md-5">
+            <div class="row blogs-cards gy-4 gy-md-4 gy-lg-4 gy-xxl-5 gx-2">
+              <div class="col-md-6 col-lg-4">
+                <a href="#" class="card card--blog d-inline-block">
+                  <div class="card--blog-thumb">
+                    <img src="../../assets/images/thumbs/blog/blog-1.webp" alt="blog card one" loading="lazy" />
+                  </div>
+
+                  <div class="content">
+                    <h3 class="blog-title">Why Electric Cars Are the Future of Car Industries</h3>
+                    <span class="date">March 9, 2024</span>
+                    <p class="short-desc">
+                      With rapidly advancing technology, increasing charging infrastructure, and growing environmental
+                      and growing environmental
+                    </p>
+                  </div>
+
+                  <div
+                    class="mt-2 pt-1 pt-lg-0 mt-lg-3 pt-xxl-2 mt-xl-3 mt-xxl-4 d-flex justify-content-between align-items-center"
+                  >
+                    <div class="seen d-flex gap-0">
+                      <img src="../../assets/images/thumbs/avatar/avatar-08.png" alt="blog readers" loading="lazy" />
+                      <img src="../../assets/images/thumbs/avatar/avatar-09.png" alt="blog readers" loading="lazy" />
+                      <img src="../../assets/images/thumbs/avatar/avatar-10.png" alt="blog readers" loading="lazy" />
+                      <img src="../../assets/images/thumbs/avatar/avatar-11.png" alt="blog readers" loading="lazy" />
+                    </div>
+
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="39" viewBox="0 0 32 39" fill="none">
+                        <path
+                          d="M19.2383 10.0076L27.3316 19.575L19.2383 29.1425"
+                          stroke="black"
+                          stroke-width="3"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M4.66797 19.575H27.108"
+                          stroke="black"
+                          stroke-width="3"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <span class="d-block responses">144 Responses</span>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <a href="#" class="card card--blog d-inline-block">
+                  <div class="card--blog-thumb">
+                    <img src="../../assets/images/thumbs/blog/blog-2.webp" alt="blog card two" loading="lazy" />
+                  </div>
+
+                  <div class="content">
+                    <h3 class="blog-title">Why SUVs Are Taking Over the Roads — and Hearts</h3>
+                    <span class="date">Apr 10, 2025</span>
+                    <p class="short-desc">
+                      Whether you're navigating city streets or exploring rugged terrains, modern SUVs offer the perfect
+                      mix of space, safety, and style. Discover how this versatile vehicle category became the top pick
+                      for families, adventurers, and even luxury lovers alike.
+                    </p>
+                  </div>
+
+                  <div
+                    class="mt-2 pt-1 pt-lg-0 mt-lg-3 pt-xxl-2 mt-xl-3 mt-xxl-4 d-flex justify-content-between align-items-center"
+                  >
+                    <div class="seen d-flex gap-0">
+                      <img src="../../assets/images/thumbs/avatar/avatar-08.png" alt="blog readers" loading="lazy" />
+                      <img src="../../assets/images/thumbs/avatar/avatar-09.png" alt="blog readers" loading="lazy" />
+                      <img src="../../assets/images/thumbs/avatar/avatar-10.png" alt="blog readers" loading="lazy" />
+                      <img src="../../assets/images/thumbs/avatar/avatar-11.png" alt="blog readers" loading="lazy" />
+                    </div>
+
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="39" viewBox="0 0 32 39" fill="none">
+                        <path
+                          d="M19.2383 10.0076L27.3316 19.575L19.2383 29.1425"
+                          stroke="black"
+                          stroke-width="3"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M4.66797 19.575H27.108"
+                          stroke="black"
+                          stroke-width="3"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <span class="d-block responses">89 Responses</span>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <a href="#" class="card card--blog d-inline-block">
+                  <div class="card--blog-thumb">
+                    <img src="../../assets/images/thumbs/blog/blog-3.webp" alt="blog card three" loading="lazy" />
+                  </div>
+
+                  <div class="content">
+                    <h3 class="blog-title">Why the Sports Sedan Is the Perfect Blend of Power and Comfort</h3>
+                    <span class="date">Jun 12, 2023</span>
+                    <p class="short-desc">
+                      Tired of choosing between performance and practicality? Sports sedans offer thrilling
+                      acceleration, sleek design, and daily driving comfort all in one package. Learn why this
+                      often-overlooked segment is making a powerful comeback.
+                    </p>
+                  </div>
+
+                  <div
+                    class="mt-2 pt-1 pt-lg-0 mt-lg-3 pt-xxl-2 mt-xl-3 mt-xxl-4 d-flex justify-content-between align-items-center"
+                  >
+                    <div class="seen d-flex gap-0">
+                      <img src="../../assets/images/thumbs/avatar/avatar-08.png" alt="blog readers" loading="lazy" />
+                      <img src="../../assets/images/thumbs/avatar/avatar-09.png" alt="blog readers" loading="lazy" />
+                      <img src="../../assets/images/thumbs/avatar/avatar-10.png" alt="blog readers" loading="lazy" />
+                      <img src="../../assets/images/thumbs/avatar/avatar-11.png" alt="blog readers" loading="lazy" />
+                    </div>
+
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="39" viewBox="0 0 32 39" fill="none">
+                        <path
+                          d="M19.2383 10.0076L27.3316 19.575L19.2383 29.1425"
+                          stroke="black"
+                          stroke-width="3"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M4.66797 19.575H27.108"
+                          stroke="black"
+                          stroke-width="3"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <span class="d-block responses">212 Responses</span>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <a href="#" class="card card--blog d-inline-block">
+                  <div class="card--blog-thumb">
+                    <img src="../../assets/images/thumbs/blog/blog-4.webp" alt="blog card four" loading="lazy" />
+                  </div>
+
+                  <div class="content">
+                    <h3 class="blog-title">Why Electric Cars Are the Future of Car Industries</h3>
+                    <span class="date">March 9, 2024</span>
+                    <p class="short-desc">
+                      With rapidly advancing technology, increasing charging infrastructure, and growing environmental
+                      and growing environmental
+                    </p>
+                  </div>
+
+                  <div
+                    class="mt-2 pt-1 pt-lg-0 mt-lg-3 pt-xxl-2 mt-xl-3 mt-xxl-4 d-flex justify-content-between align-items-center"
+                  >
+                    <div class="seen d-flex gap-0">
+                      <img src="../../assets/images/thumbs/avatar/avatar-08.png" alt="blog readers" loading="lazy" />
+                      <img src="../../assets/images/thumbs/avatar/avatar-09.png" alt="blog readers" loading="lazy" />
+                      <img src="../../assets/images/thumbs/avatar/avatar-10.png" alt="blog readers" loading="lazy" />
+                      <img src="../../assets/images/thumbs/avatar/avatar-11.png" alt="blog readers" loading="lazy" />
+                    </div>
+
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="39" viewBox="0 0 32 39" fill="none">
+                        <path
+                          d="M19.2383 10.0076L27.3316 19.575L19.2383 29.1425"
+                          stroke="black"
+                          stroke-width="3"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M4.66797 19.575H27.108"
+                          stroke="black"
+                          stroke-width="3"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <span class="d-block responses">144 Responses</span>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <a href="#" class="card card--blog d-inline-block">
+                  <div class="card--blog-thumb">
+                    <img src="../../assets/images/thumbs/blog/blog-5.webp" alt="blog card five" loading="lazy" />
+                  </div>
+
+                  <div class="content">
+                    <h3 class="blog-title">Why SUVs Are Taking Over the Roads — and Hearts</h3>
+                    <span class="date">Apr 10, 2025</span>
+                    <p class="short-desc">
+                      Whether you're navigating city streets or exploring rugged terrains, modern SUVs offer the perfect
+                      mix of space, safety, and style. Discover how this versatile vehicle category became the top pick
+                      for families, adventurers, and even luxury lovers alike.
+                    </p>
+                  </div>
+
+                  <div
+                    class="mt-2 pt-1 pt-lg-0 mt-lg-3 pt-xxl-2 mt-xl-3 mt-xxl-4 d-flex justify-content-between align-items-center"
+                  >
+                    <div class="seen d-flex gap-0">
+                      <img src="../../assets/images/thumbs/avatar/avatar-08.png" alt="blog readers" loading="lazy" />
+                      <img src="../../assets/images/thumbs/avatar/avatar-09.png" alt="blog readers" loading="lazy" />
+                      <img src="../../assets/images/thumbs/avatar/avatar-10.png" alt="blog readers" loading="lazy" />
+                      <img src="../../assets/images/thumbs/avatar/avatar-11.png" alt="blog readers" loading="lazy" />
+                    </div>
+
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="39" viewBox="0 0 32 39" fill="none">
+                        <path
+                          d="M19.2383 10.0076L27.3316 19.575L19.2383 29.1425"
+                          stroke="black"
+                          stroke-width="3"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M4.66797 19.575H27.108"
+                          stroke="black"
+                          stroke-width="3"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <span class="d-block responses">89 Responses</span>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <a href="#" class="card card--blog d-inline-block">
+                  <div class="card--blog-thumb">
+                    <img src="../../assets/images/thumbs/blog/blog-6.webp" alt="blog card six" loading="lazy" />
+                  </div>
+
+                  <div class="content">
+                    <h3 class="blog-title">Why the Sports Sedan Is the Perfect Blend of Power and Comfort</h3>
+                    <span class="date">Jun 12, 2023</span>
+                    <p class="short-desc">
+                      Tired of choosing between performance and practicality? Sports sedans offer thrilling
+                      acceleration, sleek design, and daily driving comfort all in one package. Learn why this
+                      often-overlooked segment is making a powerful comeback.
+                    </p>
+                  </div>
+
+                  <div
+                    class="mt-2 pt-1 pt-lg-0 mt-lg-3 pt-xxl-2 mt-xl-3 mt-xxl-4 d-flex justify-content-between align-items-center"
+                  >
+                    <div class="seen d-flex gap-0">
+                      <img src="../../assets/images/thumbs/avatar/avatar-08.png" alt="blog readers" loading="lazy" />
+                      <img src="../../assets/images/thumbs/avatar/avatar-09.png" alt="blog readers" loading="lazy" />
+                      <img src="../../assets/images/thumbs/avatar/avatar-10.png" alt="blog readers" loading="lazy" />
+                      <img src="../../assets/images/thumbs/avatar/avatar-11.png" alt="blog readers" loading="lazy" />
+                    </div>
+
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="39" viewBox="0 0 32 39" fill="none">
+                        <path
+                          d="M19.2383 10.0076L27.3316 19.575L19.2383 29.1425"
+                          stroke="black"
+                          stroke-width="3"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M4.66797 19.575H27.108"
+                          stroke="black"
+                          stroke-width="3"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <span class="d-block responses">212 Responses</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center pt-4 mt-2 mt-lg-2 pt-lg-5">
+              <a href="#" class="btn mt-1">
+                Load More
+                <span class="btn__icon">
+                  <svg
+                    width="26"
+                    height="26"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="btn__icon__symbol"
+                  >
+                    <path
+                      d="M15.6325 6.42419L22.2083 13L15.6325 19.5759"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.79166 13H22.0242"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ===== Main Area End ===== -->
+
+    <!-- ===== Footer Area End ===== -->
+    <footer class="footer footer--section">
+      <div class="footer__content position-relative z-1 mx-auto">
+        <div class="container">
+          <div class="footer__wrapper d-flex flex-wrap align-items-center justify-content-between">
+            <!-- Logo -->
+            <div class="logo">
+              <a href="index.html">
+                <img src="../../assets/images/logos-favicon/logo.svg" alt="seli" loading="lazy" />
+              </a>
+            </div>
+
+            <!-- Footer Social Contact -->
+            <div class="social-contact d-inline-flex align-items-center order-lg-3">
+              <a href="#" class="social-contact__link" aria-label="twitter-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M21.0808 5.77756C20.3652 6.09357 19.61 6.29108 18.8149 6.40958C19.61 5.93557 20.246 5.18504 20.5242 4.27651C19.769 4.71102 18.9342 5.02703 18.0199 5.22454C17.3044 4.47402 16.2708 4 15.1578 4C13.0112 4 11.2621 5.73806 11.2621 7.87113C11.2621 8.18714 11.3019 8.46365 11.3814 8.74016C8.1615 8.58216 5.25963 7.0416 3.3118 4.67152C2.99379 5.26404 2.79503 5.89606 2.79503 6.60709C2.79503 7.95013 3.47081 9.13517 4.5441 9.8462C3.90808 9.8067 3.3118 9.64869 2.75528 9.37218V9.41168C2.75528 11.3077 4.10683 12.8878 5.89566 13.2433C5.57764 13.3223 5.21988 13.3618 4.86211 13.3618C4.6236 13.3618 4.34534 13.3223 4.10683 13.2828C4.6236 14.8234 6.05466 15.9689 7.76398 15.9689C6.41243 16.9959 4.74286 17.628 2.91429 17.628C2.59627 17.628 2.27826 17.628 2 17.5885C3.74907 18.6945 5.7764 19.3265 8.00249 19.3265C15.1975 19.3265 19.1329 13.4013 19.1329 8.26614C19.1329 8.10814 19.1329 7.91063 19.1329 7.75263C19.8882 7.23911 20.564 6.56759 21.0808 5.77756Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-contact__link" aria-label="facebook-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.1913 22.6592V13.2356H7V9.56298H10.1913V6.85457C10.1913 3.71147 12.1232 2 14.9448 2C16.2964 2 17.458 2.1 17.7965 2.14469V5.42941L15.8396 5.43029C14.305 5.43029 14.0079 6.15489 14.0079 7.21821V9.56298H17.6677L17.1912 13.2356H14.0079V22.6592H10.1913Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-contact__link" aria-label="intagram-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11.5677 3.07127C14.6563 3.07127 15.0221 3.08276 16.2422 3.13805C16.9758 3.14697 17.7024 3.28083 18.3905 3.5338C18.8894 3.72502 19.3426 4.01795 19.7207 4.39373C20.0989 4.76951 20.3937 5.21981 20.5861 5.71564C20.8407 6.39938 20.9754 7.12143 20.9844 7.85041C21.0395 9.06284 21.0516 9.4263 21.0516 12.4954C21.0516 15.5646 21.04 15.928 20.9844 17.1405C20.9754 17.8694 20.8407 18.5915 20.5861 19.2752C20.3937 19.7711 20.0989 20.2214 19.7207 20.5971C19.3426 20.9729 18.8894 21.2659 18.3905 21.4571C17.7024 21.71 16.9758 21.8439 16.2422 21.8528C15.0226 21.9076 14.6568 21.9196 11.5677 21.9196C8.47858 21.9196 8.11282 21.9081 6.89326 21.8528C6.15966 21.8439 5.43303 21.71 4.74497 21.4571C4.24599 21.2659 3.79284 20.9729 3.41468 20.5971C3.03652 20.2214 2.74174 19.7711 2.5493 19.2752C2.29473 18.5915 2.16002 17.8694 2.15104 17.1405C2.09596 15.928 2.08384 15.5646 2.08384 12.4954C2.08384 9.4263 2.09541 9.06284 2.15104 7.85041C2.16002 7.12143 2.29473 6.39938 2.5493 5.71564C2.74174 5.21981 3.03652 4.76951 3.41468 4.39373C3.79284 4.01795 4.24599 3.72502 4.74497 3.5338C5.43303 3.28083 6.15966 3.14697 6.89326 3.13805C8.11337 3.08331 8.47913 3.07127 11.5677 3.07127ZM11.5677 1C8.42791 1 8.0324 1.01314 6.79851 1.06897C5.83842 1.08795 4.88851 1.26859 3.98921 1.60321C3.21775 1.89204 2.519 2.34466 1.94172 2.9295C1.35265 3.50335 0.89677 4.1981 0.605928 4.96519C0.269186 5.85883 0.0874012 6.80276 0.0683046 7.75681C0.0132203 8.98183 0 9.37485 0 12.4949C0 15.6149 0.0132202 16.0079 0.0694062 17.2341C0.0885028 18.1881 0.270288 19.132 0.60703 20.0257C0.897549 20.7927 1.35305 21.4874 1.94172 22.0614C2.51932 22.6463 3.21846 23.099 3.99031 23.3877C4.88962 23.7223 5.83952 23.9029 6.79961 23.9219C8.0335 23.9766 8.42736 23.9909 11.5688 23.9909C14.7103 23.9909 15.1041 23.9777 16.338 23.9219C17.2981 23.9029 18.248 23.7223 19.1473 23.3877C19.9155 23.0918 20.6131 22.6398 21.1955 22.0607C21.7779 21.4816 22.2322 20.7881 22.5295 20.0246C22.8662 19.1309 23.048 18.187 23.0671 17.233C23.1222 16.0079 23.1354 15.6149 23.1354 12.4949C23.1354 9.37485 23.1222 8.98183 23.066 7.75571C23.0469 6.80166 22.8651 5.85774 22.5284 4.96409C22.2379 4.1971 21.7824 3.50237 21.1937 2.9284C20.6161 2.34344 19.917 1.8908 19.1451 1.60211C18.2458 1.26749 17.2959 1.08685 16.3358 1.06787C15.103 1.01314 14.7075 1 11.5677 1Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M11.5653 6.59082C10.3904 6.59082 9.24192 6.93702 8.26505 7.58564C7.28817 8.23426 6.52679 9.15616 6.07718 10.2348C5.62757 11.3134 5.50994 12.5003 5.73914 13.6453C5.96835 14.7904 6.53411 15.8422 7.36488 16.6677C8.19564 17.4932 9.2541 18.0554 10.4064 18.2832C11.5587 18.511 12.7531 18.3941 13.8386 17.9473C14.924 17.5005 15.8517 16.7439 16.5045 15.7732C17.1572 14.8025 17.5056 13.6612 17.5056 12.4937C17.5056 10.9282 16.8797 9.42675 15.7657 8.31974C14.6517 7.21273 13.1408 6.59082 11.5653 6.59082ZM11.5653 16.3254C10.8027 16.3254 10.0572 16.1006 9.42307 15.6796C8.78897 15.2586 8.29475 14.6602 8.00291 13.96C7.71106 13.2599 7.6347 12.4895 7.78348 11.7462C7.93227 11.0029 8.29951 10.3202 8.83876 9.78435C9.37802 9.24849 10.0651 8.88356 10.813 8.73571C11.561 8.58787 12.3363 8.66375 13.0409 8.95376C13.7455 9.24376 14.3477 9.73487 14.7714 10.365C15.1951 10.9951 15.4212 11.7359 15.4212 12.4937C15.4212 13.5099 15.015 14.4845 14.2918 15.2031C13.5687 15.9217 12.5879 16.3254 11.5653 16.3254Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M17.7419 7.73814C18.5085 7.73814 19.13 7.12057 19.13 6.35876C19.13 5.59694 18.5085 4.97937 17.7419 4.97937C16.9752 4.97937 16.3538 5.59694 16.3538 6.35876C16.3538 7.12057 16.9752 7.73814 17.7419 7.73814Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-contact__link" aria-label="whatsapp-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_2372_2915)">
+                    <path
+                      d="M16.048 14.1151L16.0397 14.1839C14.024 13.1792 13.8131 13.0454 13.5528 13.4359C13.3722 13.7063 12.846 14.3195 12.6875 14.501C12.527 14.6798 12.3675 14.6935 12.0953 14.5698C11.8203 14.4323 10.9375 14.1435 9.89255 13.2085C9.07855 12.4798 8.53222 11.586 8.37088 11.311C8.1023 10.8472 8.66422 10.7812 9.17572 9.81319C9.26738 9.62069 9.22063 9.46944 9.1528 9.33286C9.08405 9.19536 8.5368 7.84786 8.30763 7.31069C8.08763 6.77536 7.86122 6.84319 7.69163 6.84319C7.16363 6.79736 6.77772 6.80469 6.43763 7.15853C4.95813 8.78469 5.33122 10.4622 6.59713 12.246C9.08497 15.502 10.4105 16.1015 12.8341 16.9339C13.4886 17.1419 14.0854 17.1126 14.5575 17.0448C15.0836 16.9614 16.1772 16.3839 16.4055 15.7376C16.6392 15.0914 16.6392 14.5551 16.5705 14.4314C16.5026 14.3076 16.323 14.2389 16.048 14.1151Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M18.81 4.16198C11.7618 -2.6516 0.0971667 2.29015 0.0925833 11.9023C0.0925833 13.8236 0.595833 15.6973 1.55467 17.3519L0 23.0004L5.80708 21.4861C13.0533 25.4002 21.9963 20.2027 22 11.9078C22 8.99648 20.8633 6.25656 18.7962 4.19773L18.81 4.16198ZM20.1685 11.8776C20.163 18.8745 12.4823 23.2442 6.4075 19.6729L6.0775 19.4767L2.64 20.3705L3.56125 17.0292L3.34217 16.6855C-0.438167 10.6676 3.905 2.80256 11.066 2.80256C12.2619 2.79956 13.4464 3.03377 14.5512 3.49165C15.6559 3.94952 16.6588 4.62197 17.5019 5.47006C18.3496 6.30751 19.022 7.30542 19.4798 8.40555C19.9377 9.50567 20.1718 10.686 20.1685 11.8776Z"
+                      fill="currentColor"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2372_2915">
+                      <rect width="22" height="22" fill="white" transform="translate(0 1)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Footer Navigation -->
+            <nav class="footer__nav">
+              <ul class="footer__nav__ul d-flex flex-column flex-lg-row">
+                <li class="footer__nav__item text-center">
+                  <a href="#" class="footer__nav__link text-capitalize">About</a>
+                </li>
+                <li class="footer__nav__item text-center">
+                  <a href="#" class="footer__nav__link text-capitalize">Privacy Policy</a>
+                </li>
+                <li class="footer__nav__item text-center">
+                  <a href="#" class="footer__nav__link text-capitalize">Terms & Conditions</a>
+                </li>
+                <li class="footer__nav__item text-center">
+                  <a href="#" class="footer__nav__link text-capitalize">Support</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer__copyright">
+            <p class="fw-semibold text-center">© Copyright 2022, All Rights Reserved</p>
+          </div>
+        </div>
+
+        <div
+          class="footer__obj position-absolute top-0 start-0 w-100 h-100 z-n1 d-flex flex-wrap justify-content-between align-items-center"
+        >
+          <img
+            src="../../assets/images/icons-objs/footer-obj-sm.webp"
+            alt="seli.md"
+            class="footer__obj__item"
+            loading="lazy"
+            aria-hidden="true"
+          />
+          <img
+            src="../../assets/images/icons-objs/footer-obj-sm.webp"
+            alt="seli.md"
+            class="footer__obj__item"
+            loading="lazy"
+            aria-hidden="true"
+          />
+        </div>
+      </div>
+    </footer>
+    <!-- ===== Footer Area End ===== -->
+
+    <!-- === jQuery CDNs & Scripts === -->
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/swiper-bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+  </body>
 </html>

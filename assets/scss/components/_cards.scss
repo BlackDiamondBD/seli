@@ -23,8 +23,8 @@
                     align-items: center;
                     gap: 0.5rem;
                     position: relative;
-                    padding-right: 8px;
-                    margin-right: 8px;
+                    padding-right: .5rem;
+                    margin-right: .5rem;
                     &:last-child {
                         padding-right: 0;
                         margin-right: 0;
@@ -43,16 +43,16 @@
                     }
                     @include media-query(breakpoint-md) {
                         font-size: 0.875rem;
-                        padding-right: 10px;
-                        margin-right: 10px;
+                        padding-right: .625rem;
+                        margin-right: .625rem;
                     }
                     @include media-query(breakpoint-lg) {
                         gap: 0.375rem;
                     }
                     @include media-query(breakpoint-xl) {
                         font-size: 0.875rem;
-                        padding-right: 12px;
-                        margin-right: 12px;
+                        padding-right: .75rem;
+                        margin-right: .75rem;
                     }
                     & span.icon {
                         & img {
@@ -82,7 +82,7 @@
         border-radius: 0.625rem;
         background-color: #fff;
         box-shadow: 0rem 0.25rem 0.25rem 0rem #9999991a;
-        border: 1px solid $light-gray;
+        border: .0625rem solid $light-gray;
 
         & .card {
             &__thumb {
@@ -130,7 +130,7 @@
                     padding: 0.9375rem 0.9375rem 1.1875rem 0.9375rem;
                 }
                 &-info {
-                    margin-bottom: 5px;
+                    margin-bottom: .3125rem;
                     @include media-query(breakpoint-md) {
                         margin-bottom: 1.25rem;
                     }
@@ -436,8 +436,8 @@
 
     // Card-Lisging-produtct
     &--listing {
-        border: 1px solid $light-gray;
-        border-radius: 10px;
+        border: .0625rem solid $light-gray;
+        border-radius: .625rem;
         &:hover {
             @include hover-shadow;
         }
@@ -445,7 +445,7 @@
             display: flex;
             align-items: stretch;
             flex-direction: row;
-            padding: 17px 15px;
+            padding: 1.0625rem .9375rem;
             border-radius: 0.625rem;
         }
         & .card {
@@ -458,7 +458,7 @@
                 }
                 @include media-query(breakpoint-xl) {
                     width: 20rem;
-                    border: 1px solid $light-gray;
+                    border: .0625rem solid $light-gray;
                 }
                 @include media-query(breakpoint-xxl) {
                     width: 24.8125rem;
@@ -469,7 +469,7 @@
                 &-img {
                     height: 15.375rem;
                     overflow: hidden;
-                    border-radius: 10px;
+                    border-radius: .625rem;
                     @include media-query(breakpoint-xl) {
                         width: 100%;
                         height: 100%;
@@ -524,7 +524,7 @@
                     font-weight: bold;
                     color: $text-black;
                     @include media-query(breakpoint-lg) {
-                        font-size: 22px;
+                        font-size: 1.375rem;
                     }
                 }
                 &-title {
@@ -542,7 +542,7 @@
                     }
                 }
                 &-meta {
-                    margin-bottom: 20px;
+                    margin-bottom: 1.25rem;
 
                     & ul {
                         & li {
@@ -573,7 +573,7 @@
                     }
                     &.gap-2 {
                         @include media-query(breakpoint-xl) {
-                            gap: 10px 8px !important;
+                            gap: .625rem .5rem !important;
                         }
                     }
                     & .tag {
@@ -602,7 +602,7 @@
                         border-radius: 50%;
                         height: 1.5625rem;
                         border: 0.0444rem solid #053c5a1a;
-                        box-shadow: 0px 2.86px 2.86px 0px #9c9c9c1a;
+                        box-shadow: 0rem .1787rem .1787rem 0rem #9c9c9c1a;
                         background: radial-gradient(
                             50% 50% at 50% 50%,
                             rgba(255, 255, 255, 0.1) 70.67%,
@@ -653,7 +653,7 @@
                     }
                     & .action-buttons {
                         & .btn {
-                            font-size: 12px;
+                            font-size: .75rem;
                             font-weight: 600;
                             padding: 0.5rem 0.75rem;
                             min-height: inherit;
@@ -689,11 +689,11 @@
                 }
                 &--sm {
                     & button {
-                        width: 26px;
-                        height: 26px;
+                        width: 1.625rem;
+                        height: 1.625rem;
                         & svg {
-                            max-width: 6px;
-                            max-height: 10px;
+                            max-width: .375rem;
+                            max-height: .625rem;
 
                             path {
                                 stroke: #fff;
@@ -703,12 +703,12 @@
                 }
             }
             &-pagination {
-                bottom: 16px;
+                bottom: 1rem;
                 @include media-query(breakpoint-xl) {
-                    bottom: 32px;
+                    bottom: 2rem;
                 }
                 @include media-query(breakpoint-xxl-2) {
-                    bottom: 40px;
+                    bottom: 2.5rem;
                 }
                 &-bullet {
                     width: 0.625rem;
@@ -733,89 +733,89 @@
     // Ads Card Start
     &--ads {
         width: 100%;
-        height: 300px;
+        height: 18.75rem;
         padding: 0.5rem;
         border-radius: 0.625rem;
         box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(153, 153, 153, 0.1);
         background-color: $white-color;
         @include media-query(breakpoint-md) {
-            height: 352px;
+            height: 22rem;
         }
         @include media-query(breakpoint-xl) {
-            height: 600px;
+            height: 37.5rem;
         }
         @include media-query(breakpoint-xxl-2) {
-            height: 916px;
+            height: 57.25rem;
         }
     }
     // Ads Card End
 
     // Profile Card Start
     &--profile {
-        border: 1px solid $light-gray;
-        border-radius: 10px;
+        border: .0625rem solid $light-gray;
+        border-radius: .625rem;
         background-color: $white-color;
 
         .head {
-            padding: 16px;
-            border-bottom: 1px dashed $light-gray;
+            padding: 1rem;
+            border-bottom: .0625rem dashed $light-gray;
             .title {
                 color: $black-color;
-                font-size: 18px;
+                font-size: 1.125rem;
                 font-weight: 600;
                 @include media-query(breakpoint-lg) {
-                    font-size: 21px;
+                    font-size: 1.3125rem;
                 }
                 @include media-query(breakpoint-xxl-2) {
-                    font-size: 24px;
+                    font-size: 1.5rem;
                 }
             }
         }
         .details {
-            padding: 16px;
+            padding: 1rem;
         }
 
         .thumb {
-            width: 40px;
-            height: 40px;
+            width: 2.5rem;
+            height: 2.5rem;
             border-radius: 50%;
             overflow: hidden;
             @include media-query(breakpoint-lg) {
-                width: 50px;
-                height: 50px;
+                width: 3.125rem;
+                height: 3.125rem;
             }
         }
         .info__text {
-            gap: 4px;
+            gap: .25rem;
         }
         .name {
             color: $text-black;
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: 600;
             @include media-query(breakpoint-lg) {
-                font-size: 18px;
+                font-size: 1.125rem;
             }
             @include media-query(breakpoint-xxl-2) {
-                font-size: 20px;
+                font-size: 1.25rem;
             }
         }
         .action-buttons {
-            gap: 10px;
+            gap: .625rem;
             .message {
-                width: 24px;
-                height: 24px;
+                width: 1.5rem;
+                height: 1.5rem;
                 svg {
                     width: 100%;
                     height: 100%;
                 }
             }
             .btn {
-                font-size: 13px;
-                padding: 8px 13px;
-                height: 35px;
-                min-width: 80px;
+                font-size: .8125rem;
+                padding: .5rem .8125rem;
+                height: 2.1875rem;
+                min-width: 5rem;
                 @include media-query(breakpoint-lg) {
-                    min-width: 128px;
+                    min-width: 8rem;
                 }
             }
         }
@@ -847,43 +847,43 @@
 
     // Blog Card Start
     &--blog {
-        padding: 15px;
-        border-radius: 15px;
-        border: 1px solid #cbcbcb;
+        padding: .9375rem;
+        border-radius: .9375rem;
+        border: .0625rem solid #cbcbcb;
         background: #fff;
 
         @include media-query(breakpoint-md) {
-            border-radius: 22px;
-            -webkit-border-radius: 22px;
-            -moz-border-radius: 22px;
-            -ms-border-radius: 22px;
-            -o-border-radius: 22px;
+            border-radius: 1.375rem;
+            -webkit-border-radius: 1.375rem;
+            -moz-border-radius: 1.375rem;
+            -ms-border-radius: 1.375rem;
+            -o-border-radius: 1.375rem;
         }
 
         &-thumb {
             width: 100%;
-            height: 200px;
+            height: 12.5rem;
             overflow: hidden;
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
+            border-radius: .625rem;
+            -webkit-border-radius: .625rem;
+            -moz-border-radius: .625rem;
+            -ms-border-radius: .625rem;
+            -o-border-radius: .625rem;
             @include media-query(breakpoint-sm) {
-                height: 256px;
+                height: 16rem;
             }
             @include media-query(breakpoint-md) {
-                border-radius: 15px;
-                -webkit-border-radius: 15px;
-                -moz-border-radius: 15px;
-                -ms-border-radius: 15px;
-                -o-border-radius: 15px;
+                border-radius: .9375rem;
+                -webkit-border-radius: .9375rem;
+                -moz-border-radius: .9375rem;
+                -ms-border-radius: .9375rem;
+                -o-border-radius: .9375rem;
             }
             @include media-query(breakpoint-xl) {
-                height: 288px;
+                height: 18rem;
             }
             @include media-query(breakpoint-xxl) {
-                height: 322px;
+                height: 20.125rem;
             }
 
             img {
@@ -894,19 +894,19 @@
 
         .blog-title {
             color: #000;
-            margin-top: 20px;
-            font-size: 20px;
+            margin-top: 1.25rem;
+            font-size: 1.25rem;
             font-style: normal;
             font-weight: 500;
-            line-height: normal; /* 38.88px */
+            line-height: normal; /* 2.43rem */
             @include media-query(breakpoint-md) {
-                font-size: 22px;
-                margin-top: 20px;
+                font-size: 1.375rem;
+                margin-top: 1.25rem;
             }
 
             @include media-query(breakpoint-xxl) {
-                font-size: 24px;
-                margin-top: 36px;
+                font-size: 1.5rem;
+                margin-top: 2.25rem;
             }
 
             overflow: hidden;
@@ -919,51 +919,51 @@
 
         .date {
             display: inline-block;
-            margin-top: 5px;
+            margin-top: .3125rem;
             color: var(--Dark-Grey, #6a6d6f);
-            font-size: 16px;
+            font-size: 1rem;
             font-style: normal;
             font-weight: 500;
-            line-height: 162%; /* 32.4px */
+            line-height: 162%; /* 2.025rem */
             @include media-query(breakpoint-md) {
-                margin-top: 3px !important;
-                font-size: 18px;
+                margin-top: .1875rem !important;
+                font-size: 1.125rem;
             }
 
             @include media-query(breakpoint-xxl) {
-                margin-top: 10px;
-                font-size: 20px;
+                margin-top: .625rem;
+                font-size: 1.25rem;
             }
         }
 
         .short-desc {
-            margin-top: 8px;
+            margin-top: .5rem;
             overflow: hidden;
             text-overflow: ellipsis;
             overflow: hidden;
             color: var(--text---black, #212529);
 
-            font-size: 16px;
+            font-size: 1rem;
             font-style: normal;
             font-weight: 400;
-            line-height: 162%; /* 25.92px */
+            line-height: 162%; /* 1.62rem */
 
             display: -webkit-box; /* must */
             -webkit-box-orient: vertical; /* must */
             -webkit-line-clamp: 2; /* 1 line clamp */
             @include media-query(breakpoint-md) {
-                margin-top: 5px !important;
+                margin-top: .3125rem !important;
             }
 
             @include media-query(breakpoint-xxl) {
-                margin-top: 30px !important;
-                margin-bottom: 10px !important;
+                margin-top: 1.875rem !important;
+                margin-bottom: .625rem !important;
             }
         }
 
         .seen {
             img {
-                max-width: 36px;
+                max-width: 2.25rem;
                 overflow: hidden;
                 aspect-ratio: 1;
                 border-radius: 50%;
@@ -973,37 +973,37 @@
                 -o-border-radius: 50%;
 
                 @include media-query(breakpoint-md) {
-                    max-width: 40px;
+                    max-width: 2.5rem;
                 }
 
                 @include media-query(breakpoint-xxl) {
-                    max-width: 50px;
+                    max-width: 3.125rem;
                 }
             }
             img:not(:first-child) {
-                margin-left: -15px;
+                margin-left: -0.9375rem;
             }
 
             & + span svg {
-                width: 24px !important;
+                width: 1.5rem !important;
                 @include media-query(breakpoint-md) {
-                    width: 32px !important;
+                    width: 2rem !important;
                 }
             }
         }
 
         .responses {
-            margin-top: 8px;
+            margin-top: .5rem;
             color: var(--Primary---blue, #053c5a);
             font-family: Montserrat;
-            font-size: 16px;
+            font-size: 1rem;
             font-style: normal;
             font-weight: 500;
-            line-height: 162%; /* 29.16px */
+            line-height: 162%; /* 1.8225rem */
 
             @include media-query(breakpoint-xxl) {
-                font-size: 18px;
-                margin-top: 15px;
+                font-size: 1.125rem;
+                margin-top: .9375rem;
             }
         }
     }
@@ -1011,59 +1011,59 @@
 
     // MiniBlog Card Start
     &--miniBlog {
-        padding: 10px;
-        border: 1px solid $cool-gray;
-        border-radius: 10px;
+        padding: .625rem;
+        border: .0625rem solid $cool-gray;
+        border-radius: .625rem;
         background-color: $white-color;
         @include media-query(breakpoint-xl) {
-            padding: 15px;
+            padding: .9375rem;
         }
         &:hover {
             @include hover-shadow;
         }
 
         & .thumb {
-            width: 88px;
-            height: 88px;
-            border-radius: 5px;
+            width: 5.5rem;
+            height: 5.5rem;
+            border-radius: .3125rem;
             @include media-query(breakpoint-xl) {
-                width: 100px;
-                height: 100px;
+                width: 6.25rem;
+                height: 6.25rem;
             }
             @include media-query(breakpoint-xxl-2) {
-                width: 126px;
-                height: 126px;
+                width: 7.875rem;
+                height: 7.875rem;
             }
         }
 
         & .content {
             & .title {
-                font-size: 16px;
+                font-size: 1rem;
                 line-height: 1.36;
                 font-weight: 600;
                 font-family: $secondary-font;
                 @include media-query(breakpoint-xl) {
-                    font-size: 18px;
+                    font-size: 1.125rem;
                 }
                 @include media-query(breakpoint-xxl) {
-                    font-size: 20px;
+                    font-size: 1.25rem;
                     font-weight: 700;
                 }
                 @include media-query(breakpoint-xxl-2) {
-                    font-size: 22px;
+                    font-size: 1.375rem;
                 }
             }
 
             & .date {
-                font-size: 13px;
+                font-size: .8125rem;
                 color: #939191;
                 line-height: 1.39;
                 font-family: $secondary-font;
                 @include media-query(breakpoint-md) {
-                    font-size: 16px;
+                    font-size: 1rem;
                 }
                 @include media-query(breakpoint-xxl) {
-                    font-size: 18px;
+                    font-size: 1.125rem;
                 }
             }
         }
@@ -1078,7 +1078,7 @@
             font-size: 1em;
             small {
                 font-size: 0.85em;
-                margin-bottom: 3px;
+                margin-bottom: .1875rem;
             }
         }
         .card {

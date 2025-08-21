@@ -62,15 +62,15 @@
     // Details Info Header (Details Page)
 
     &--detailsInfo {
-        border-radius: 10px;
-        border: 1px solid $light-gray;
+        border-radius: .625rem;
+        border: .0625rem solid $light-gray;
         background-color: $white-color;
-        box-shadow: 0 4px 4px 0 rgba(153, 153, 153, 0.07);
+        box-shadow: 0 .25rem .25rem 0 rgba(153, 153, 153, 0.07);
         overflow: hidden;
-        margin-bottom: 30px;
+        margin-bottom: 1.875rem;
 
         &__nav {
-            margin: 0 16px;
+            margin: 0 1rem;
             overflow-x: auto;
 
             // Custom scrollbar
@@ -82,11 +82,11 @@
         }
 
         &__ul {
-            gap: 20px;
+            gap: 1.25rem;
         }
 
         &__link {
-            padding: 18px 0;
+            padding: 1.125rem 0;
             color: $dark-gray;
             font-weight: 500;
             @include transition-common;
@@ -94,7 +94,7 @@
             &::after {
                 content: '';
                 width: 50%;
-                height: 2px;
+                height: .125rem;
                 position: absolute;
                 bottom: 0;
                 left: 50%;
@@ -102,10 +102,10 @@
                 background-color: $primary;
                 @include transition-common;
                 @include media-query(breakpoint-xl) {
-                    height: 3px;
+                    height: .1875rem;
                 }
                 @include media-query(breakpoint-xxl-2) {
-                    height: 4px;
+                    height: .25rem;
                 }
             }
 
@@ -122,14 +122,14 @@
             }
 
             @include media-query(breakpoint-md) {
-                padding: 22px 14px;
+                padding: 1.375rem .875rem;
             }
             @include media-query(breakpoint-xl) {
-                font-size: 18px;
-                padding: 27px 14px;
+                font-size: 1.125rem;
+                padding: 1.6875rem .875rem;
             }
             @include media-query(breakpoint-xxl-2) {
-                font-size: 20px;
+                font-size: 1.25rem;
             }
         }
     }

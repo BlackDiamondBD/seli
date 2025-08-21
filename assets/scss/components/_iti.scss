@@ -27,8 +27,8 @@
         height: 0.5rem;
         width: 0.5rem;
         border: 0;
-        border-left: 1px solid;
-        border-bottom: 1px solid;
+        border-left: .0625rem solid;
+        border-bottom: .0625rem solid;
         border-color: #282930;
         transform: translateY(-35%) rotate(-45deg);
 
@@ -41,7 +41,7 @@
     &__search-input {
         width: 100%;
         border-width: 0;
-        border-radius: 3px;
+        border-radius: .1875rem;
         margin: 0.5em;
     }
 }

@@ -4,31 +4,31 @@
 .cta {
     &__wrapper {
         background-color: $primary;
-        padding: 48px 16px;
+        padding: 3rem 1rem;
         @include media-query(breakpoint-md) {
-            padding: 64px 26px;
+            padding: 4rem 1.625rem;
         }
         @include media-query(breakpoint-lg) {
-            max-width: 730px;
-            margin-left: 25px;
+            max-width: 45.625rem;
+            margin-left: 1.5625rem;
         }
         @include media-query(breakpoint-xl) {
-            padding: 96px 36px;
-            margin-left: 50px;
+            padding: 6rem 2.25rem;
+            margin-left: 3.125rem;
         }
         @include media-query(breakpoint-xxl-2) {
-            padding: 128px 45px;
-            margin-left: 75px;
+            padding: 8rem 2.8125rem;
+            margin-left: 4.6875rem;
         }
 
 		&__content {
-			max-width: 570px;
+			max-width: 35.625rem;
 		}
     }
 
     & .btn {
         &--white {
-            border-radius: 12px;
+            border-radius: .75rem;
             &:hover {
                 border-color: $secondary;
                 background-color: $secondary;

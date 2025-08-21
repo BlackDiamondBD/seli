@@ -112,10 +112,10 @@
 
                 &--one {
                     @include media-query(breakpoint-xl) {
-                        margin-bottom: -12px;
+                        margin-bottom: -0.75rem;
                     }
                     @include media-query(breakpoint-xxl-2) {
-                        margin-bottom: -24px;
+                        margin-bottom: -1.5rem;
                     }
                 }
             }

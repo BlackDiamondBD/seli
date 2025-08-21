@@ -5,32 +5,32 @@
     flex-shrink: 0;
     width: 100%;
     @include media-query(breakpoint-lg) {
-        width: 400px;
+        width: 25rem;
     }
     @include media-query(breakpoint-xxl) {
-        width: 460px;
+        width: 28.75rem;
     }
     &--item {
         & .card {
             &--profile {
                 & .thumb {
                     @include media-query(breakpoint-xl) {
-                        width: 60px;
-                        height: 60px;
+                        width: 3.75rem;
+                        height: 3.75rem;
                     }
                 }
             }
         }
         &__buttons {
             .btn {
-                height: 52px;
-                border-radius: 10px;
+                height: 3.25rem;
+                border-radius: .625rem;
 
                 @include media-query(breakpoint-xl) {
-                    height: 58px;
+                    height: 3.625rem;
                 }
                 @include media-query(breakpoint-xxl-2) {
-                    height: 65px;
+                    height: 4.0625rem;
                 }
             }
         }
